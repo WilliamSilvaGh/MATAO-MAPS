@@ -1,0 +1,6 @@
+@MataoMaps.API_HostAddress = http://localhost:5085
+
+GET {{MataoMaps.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MataoMaps.API", "MataoMaps.API\MataoMaps.API.csproj", "{705246B6-D1FF-4FF8-8A5E-C673B6DC94EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Presentation", "01 - Presentation", "{D6E50AE5-61C1-4827-905C-6FDCFF4A1B7F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - WebAPI", "02 - WebAPI", "{717CCC6E-0FA2-4738-9982-9A2A9DF9F610}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Domain", "03 - Domain", "{E64E5C4D-4F06-4345-A5DE-D58403DE1764}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Infra", "04 - Infra", "{F65A58B8-D8BB-4CF4-A9FE-87BA8D144F80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MataoMaps.Domain", "MataoMaps.Domain\MataoMaps.Domain.csproj", "{CF7F5AFD-6667-4D9F-B592-22A1036658AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MataoMaps.Data", "MataoMaps.Data\MataoMaps.Data.csproj", "{0C389CF2-D586-4E1E-8760-59B864D911D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04.01 - Data", "04.01 - Data", "{11D8450B-2198-41D7-B426-CC8A8FD69963}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04.02 - CrossCutting", "04.02 - CrossCutting", "{AE2BF40B-01FE-47A6-8D6B-40EBCE66273B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MataoMaps.CrossCutting", "MataoMaps.CrossCutting\MataoMaps.CrossCutting.csproj", "{1D287727-53AC-449D-9F52-15D56742576E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MataoMaps.Presentation", "MataoMaps.Presentation\MataoMaps.Presentation.csproj", "{E4603A88-F100-425A-A3C4-CFD095133867}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{705246B6-D1FF-4FF8-8A5E-C673B6DC94EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{705246B6-D1FF-4FF8-8A5E-C673B6DC94EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{705246B6-D1FF-4FF8-8A5E-C673B6DC94EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{705246B6-D1FF-4FF8-8A5E-C673B6DC94EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF7F5AFD-6667-4D9F-B592-22A1036658AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF7F5AFD-6667-4D9F-B592-22A1036658AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF7F5AFD-6667-4D9F-B592-22A1036658AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF7F5AFD-6667-4D9F-B592-22A1036658AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C389CF2-D586-4E1E-8760-59B864D911D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C389CF2-D586-4E1E-8760-59B864D911D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C389CF2-D586-4E1E-8760-59B864D911D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C389CF2-D586-4E1E-8760-59B864D911D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D287727-53AC-449D-9F52-15D56742576E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D287727-53AC-449D-9F52-15D56742576E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D287727-53AC-449D-9F52-15D56742576E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D287727-53AC-449D-9F52-15D56742576E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4603A88-F100-425A-A3C4-CFD095133867}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4603A88-F100-425A-A3C4-CFD095133867}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4603A88-F100-425A-A3C4-CFD095133867}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E4603A88-F100-425A-A3C4-CFD095133867}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4603A88-F100-425A-A3C4-CFD095133867}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4603A88-F100-425A-A3C4-CFD095133867}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{705246B6-D1FF-4FF8-8A5E-C673B6DC94EE} = {717CCC6E-0FA2-4738-9982-9A2A9DF9F610}
+		{CF7F5AFD-6667-4D9F-B592-22A1036658AF} = {E64E5C4D-4F06-4345-A5DE-D58403DE1764}
+		{0C389CF2-D586-4E1E-8760-59B864D911D3} = {11D8450B-2198-41D7-B426-CC8A8FD69963}
+		{11D8450B-2198-41D7-B426-CC8A8FD69963} = {F65A58B8-D8BB-4CF4-A9FE-87BA8D144F80}
+		{AE2BF40B-01FE-47A6-8D6B-40EBCE66273B} = {F65A58B8-D8BB-4CF4-A9FE-87BA8D144F80}
+		{1D287727-53AC-449D-9F52-15D56742576E} = {AE2BF40B-01FE-47A6-8D6B-40EBCE66273B}
+		{E4603A88-F100-425A-A3C4-CFD095133867} = {D6E50AE5-61C1-4827-905C-6FDCFF4A1B7F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25BB1D5A-7818-4013-9FBE-E03F935D2BE2}
+	EndGlobalSection
+EndGlobal
