@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace HelpTech.Domain.Extensions
+namespace MataoMaps.Domain.Extensions
 {
     public static class Encrypt
     {

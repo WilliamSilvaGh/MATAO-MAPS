@@ -1,8 +1,8 @@
-﻿using HelpTech.Domain.Entities;
+﻿using MataoMaps.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace HelpTech.Data.Configuration
+namespace MataoMaps.Data.Configuration
 {
     public class OcorrenciaConfiguration :
         IEntityTypeConfiguration<Ocorrencia>
@@ -11,23 +11,18 @@ namespace HelpTech.Data.Configuration
         {
             builder.HasKey(p => p.Id);
 
+            builder.Property(p => p.FotoBase64)
+                .HasMaxLength(1000)
+                .IsRequired(false);
+
             builder.Property(p => p.Descricao)
                 .HasMaxLength(1000)
-                .IsRequired();
-
-            builder.Property(p => p.TipoOcorrencia)
-                .IsRequired();
-
-            builder.Property(p => p.Data)
-                .IsRequired();
-
-            builder.Property(p => p.Hora)
                 .IsRequired();
 
             builder.Property(p => p.Status)
                 .IsRequired();
 
-            builder.Property(p => p.DescricaoResolucao)
+            builder.Property(p => p.Resolucao)
                 .HasMaxLength(1000)
                 .IsRequired(false);
 

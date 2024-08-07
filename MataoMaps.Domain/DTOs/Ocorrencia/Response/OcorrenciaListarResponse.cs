@@ -1,19 +1,17 @@
-﻿using HelpTech.Domain.Enumerators;
+﻿using MataoMaps.Domain.Enumerators;
 using System.Text.Json.Serialization;
 
-namespace HelpTech.Domain.DTOs.Ocorrencia.Response
+namespace MataoMaps.Domain.DTOs.Ocorrencia.Response
 {
     public class OcorrenciaListarResponse
     {
         public Guid Id { get; set; }  
         public string UsuarioNome { get; set; }
+        public string? FotoBase64 { get; set; }
 
         [JsonConverter(typeof(JsonStringEnumConverter))]
-        public EnumTipoOcorrencia TipoOcorrencia { get; set; }
-        public DateOnly Data { get; set; }
-        public TimeOnly Hora { get; set; }
         public string Descricao { get; set; }
-        public string DescricaoResolucao { get; set; }
+        public string Resolucao { get; set; }
 
         [JsonConverter(typeof(JsonStringEnumConverter))]
         public EnumStatus Status {  get; set; }

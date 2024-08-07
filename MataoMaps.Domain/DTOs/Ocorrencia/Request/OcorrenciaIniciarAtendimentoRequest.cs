@@ -1,4 +1,4 @@
-﻿namespace HelpTech.Domain.DTOs.Ocorrencia.Request
+﻿namespace MataoMaps.Domain.DTOs.Ocorrencia.Request
 {
     public class OcorrenciaIniciarAtendimentoRequest
     {

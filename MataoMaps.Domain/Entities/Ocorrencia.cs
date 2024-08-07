@@ -1,21 +1,17 @@
-﻿using HelpTech.Domain.Entities.Base;
-using HelpTech.Domain.Enumerators;
+﻿using MataoMaps.Domain.Entities.Base;
+using MataoMaps.Domain.Enumerators;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace HelpTech.Domain.Entities
+namespace MataoMaps.Domain.Entities
 {
     public class Ocorrencia : EntityBase
     {
+        public string FotoBase64 { get; set; }
         public string Descricao { get; set; }
 
         [Column(TypeName = "varchar(15)")]
-        public EnumTipoOcorrencia TipoOcorrencia { get; set; }
-        public DateOnly Data { get; set; }
-        public TimeOnly Hora { get; set; }
-
-        [Column(TypeName = "varchar(15)")]
         public EnumStatus Status { get; set; }
-        public string DescricaoResolucao { get; set; }
+        public string Resolucao { get; set; }
         public Guid UsuarioId { get; set; }
         public Guid? UsuarioResolucaoId { get; set; }
         public virtual Usuario Usuario { get; set; }
@@ -24,31 +20,25 @@ namespace HelpTech.Domain.Entities
         protected Ocorrencia() {}
 
         public Ocorrencia(
+            string? fotoBase64,
             string descricao,
-            EnumTipoOcorrencia tipoOcorrencia,
-            DateOnly dataHora,
-            TimeOnly hora,
             Guid usuarioId)
         {
             Id = Guid.NewGuid();
+            FotoBase64 = fotoBase64;
             Descricao = descricao;
-            TipoOcorrencia = tipoOcorrencia;
-            Data = dataHora;
-            Hora = hora;
             Status = EnumStatus.AFazer;
             UsuarioId = usuarioId;
         }
 
-        public void Atualizar(string descricao, EnumTipoOcorrencia tipoOcorrencia)
+        public void Atualizar(string descricao)
         {
             Descricao = descricao;
-            TipoOcorrencia = tipoOcorrencia;
         }
 
-        public void Atualizar(string descricao, EnumTipoOcorrencia tipoOcorrencia, EnumStatus status)
+        public void Atualizar(string descricao, EnumStatus status)
         {
             Descricao = descricao;
-            TipoOcorrencia = tipoOcorrencia;
             Status = status;
         }
 
@@ -57,9 +47,9 @@ namespace HelpTech.Domain.Entities
             Status = EnumStatus.EmAndamento;
         }
 
-        public void Encerrar(string descricaoResolucao, Guid usuarioResolucaoId)
+        public void Encerrar(string resolucao, Guid usuarioResolucaoId)
         {
-            DescricaoResolucao = descricaoResolucao;
+            Resolucao = resolucao;
             UsuarioResolucaoId = usuarioResolucaoId;
             Status = EnumStatus.Concluido;
         }

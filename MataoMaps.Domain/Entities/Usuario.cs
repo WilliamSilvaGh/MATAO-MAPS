@@ -1,7 +1,7 @@
-﻿using HelpTech.Domain.Entities.Base;
+﻿using MataoMaps.Domain.Entities.Base;
 using System.Security.Claims;
 
-namespace HelpTech.Domain.Entities
+namespace MataoMaps.Domain.Entities
 {
     public class Usuario : EntityBase
     {

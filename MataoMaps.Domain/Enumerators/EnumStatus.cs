@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace HelpTech.Domain.Enumerators
+namespace MataoMaps.Domain.Enumerators
 {
     public enum EnumStatus
     {

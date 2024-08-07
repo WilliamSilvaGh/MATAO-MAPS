@@ -1,0 +1,13 @@
+C:\Users\William\Desktop\MATAO-MAPS\MataoMaps.CrossCutting\bin\Debug\net8.0\MataoMaps.CrossCutting.deps.json
+C:\Users\William\Desktop\MATAO-MAPS\MataoMaps.CrossCutting\bin\Debug\net8.0\MataoMaps.CrossCutting.dll
+C:\Users\William\Desktop\MATAO-MAPS\MataoMaps.CrossCutting\bin\Debug\net8.0\MataoMaps.CrossCutting.pdb
+C:\Users\William\Desktop\MATAO-MAPS\MataoMaps.CrossCutting\obj\Debug\net8.0\MataoMaps.CrossCutting.csproj.AssemblyReference.cache
+C:\Users\William\Desktop\MATAO-MAPS\MataoMaps.CrossCutting\obj\Debug\net8.0\MataoMaps.CrossCutting.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\William\Desktop\MATAO-MAPS\MataoMaps.CrossCutting\obj\Debug\net8.0\MataoMaps.CrossCutting.AssemblyInfoInputs.cache
+C:\Users\William\Desktop\MATAO-MAPS\MataoMaps.CrossCutting\obj\Debug\net8.0\MataoMaps.CrossCutting.AssemblyInfo.cs
+C:\Users\William\Desktop\MATAO-MAPS\MataoMaps.CrossCutting\obj\Debug\net8.0\MataoMaps.CrossCutting.csproj.CoreCompileInputs.cache
+C:\Users\William\Desktop\MATAO-MAPS\MataoMaps.CrossCutting\obj\Debug\net8.0\MataoMaps.CrossCutting.sourcelink.json
+C:\Users\William\Desktop\MATAO-MAPS\MataoMaps.CrossCutting\obj\Debug\net8.0\MataoMaps.CrossCutting.dll
+C:\Users\William\Desktop\MATAO-MAPS\MataoMaps.CrossCutting\obj\Debug\net8.0\refint\MataoMaps.CrossCutting.dll
+C:\Users\William\Desktop\MATAO-MAPS\MataoMaps.CrossCutting\obj\Debug\net8.0\MataoMaps.CrossCutting.pdb
+C:\Users\William\Desktop\MATAO-MAPS\MataoMaps.CrossCutting\obj\Debug\net8.0\ref\MataoMaps.CrossCutting.dll

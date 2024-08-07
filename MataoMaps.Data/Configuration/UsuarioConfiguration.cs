@@ -1,8 +1,9 @@
-﻿using HelpTech.Domain.Entities;
+﻿
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
+using MataoMaps.Domain.Entities;
 
-namespace HelpTech.Data.Configuration
+namespace MataoMaps.Data.Configuration
 {
     internal class UsuarioConfiguration :
         IEntityTypeConfiguration<Usuario>

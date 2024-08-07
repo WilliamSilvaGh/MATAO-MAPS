@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
-namespace HelpTech.CrossCutting
+namespace MataoMaps.CrossCutting
 {
     public static class SetupJWT
     {
@@ -18,8 +18,8 @@ namespace HelpTech.CrossCutting
                         ValidateAudience = true,
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
-                        ValidIssuer = "help.tech",
-                        ValidAudience = "help.tech",
+                        ValidIssuer = "matao.maps",
+                        ValidAudience = "matao.maps",
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("{469e8343-8fa6-42b9-9553-2f6e182c21fa}"))
                     };
                 });

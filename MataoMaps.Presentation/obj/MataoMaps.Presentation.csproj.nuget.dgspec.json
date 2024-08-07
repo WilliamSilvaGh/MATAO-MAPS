@@ -1,25 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lenovo\\Desktop\\MataoMaps\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj": {}
+    "C:\\Users\\William\\Desktop\\MATAO-MAPS\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lenovo\\Desktop\\MataoMaps\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj": {
+    "C:\\Users\\William\\Desktop\\MATAO-MAPS\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lenovo\\Desktop\\MataoMaps\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj",
+        "projectUniqueName": "C:\\Users\\William\\Desktop\\MATAO-MAPS\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj",
         "projectName": "MataoMaps.Presentation",
-        "projectPath": "C:\\Users\\lenovo\\Desktop\\MataoMaps\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj",
-        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lenovo\\Desktop\\MataoMaps\\MataoMaps.Presentation\\obj\\",
+        "projectPath": "C:\\Users\\William\\Desktop\\MATAO-MAPS\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj",
+        "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\William\\Desktop\\MATAO-MAPS\\MataoMaps.Presentation\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\William\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

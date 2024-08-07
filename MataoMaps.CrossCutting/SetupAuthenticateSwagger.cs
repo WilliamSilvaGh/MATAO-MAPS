@@ -1,12 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace HelpTech.CrossCutting
+namespace MataoMaps.CrossCutting
 {
     public static class SetupAuthenticateSwagger
     {
@@ -17,7 +12,7 @@ namespace HelpTech.CrossCutting
             {
                 config.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "HelpTech WebApi",
+                    Title = "MataoMaps WebApi",
                     Version = "v1"
                 });
                 config.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme

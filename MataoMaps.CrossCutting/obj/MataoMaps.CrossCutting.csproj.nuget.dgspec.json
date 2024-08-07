@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lenovo\\Desktop\\MataoMaps\\MataoMaps.CrossCutting\\MataoMaps.CrossCutting.csproj": {}
+    "C:\\Users\\William\\Desktop\\MATAO-MAPS\\MataoMaps.CrossCutting\\MataoMaps.CrossCutting.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lenovo\\Desktop\\MataoMaps\\MataoMaps.CrossCutting\\MataoMaps.CrossCutting.csproj": {
+    "C:\\Users\\William\\Desktop\\MATAO-MAPS\\MataoMaps.CrossCutting\\MataoMaps.CrossCutting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lenovo\\Desktop\\MataoMaps\\MataoMaps.CrossCutting\\MataoMaps.CrossCutting.csproj",
+        "projectUniqueName": "C:\\Users\\William\\Desktop\\MATAO-MAPS\\MataoMaps.CrossCutting\\MataoMaps.CrossCutting.csproj",
         "projectName": "MataoMaps.CrossCutting",
-        "projectPath": "C:\\Users\\lenovo\\Desktop\\MataoMaps\\MataoMaps.CrossCutting\\MataoMaps.CrossCutting.csproj",
-        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lenovo\\Desktop\\MataoMaps\\MataoMaps.CrossCutting\\obj\\",
+        "projectPath": "C:\\Users\\William\\Desktop\\MATAO-MAPS\\MataoMaps.CrossCutting\\MataoMaps.CrossCutting.csproj",
+        "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\William\\Desktop\\MATAO-MAPS\\MataoMaps.CrossCutting\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\William\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -45,6 +44,20 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.7.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

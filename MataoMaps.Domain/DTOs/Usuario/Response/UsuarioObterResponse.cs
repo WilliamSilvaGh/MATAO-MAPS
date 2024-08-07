@@ -1,4 +1,4 @@
-﻿namespace HelpTech.Domain.DTOs.Usuario.Response
+﻿namespace MataoMaps.Domain.DTOs.Usuario.Response
 {
     public class UsuarioObterResponse
     {

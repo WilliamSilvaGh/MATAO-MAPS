@@ -1,8 +1,8 @@
-﻿namespace HelpTech.Domain.DTOs.Ocorrencia.Request
+﻿namespace MataoMaps.Domain.DTOs.Ocorrencia.Request
 {
     public class OcorrenciaEncerrarRequest
     {
         public Guid Id { get; set; }
-        public string DescricaoResolucao { get; set; }
+        public string Resolucao { get; set; }
     }
 }

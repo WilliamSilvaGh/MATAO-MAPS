@@ -1,4 +1,4 @@
-﻿namespace HelpTech.Domain.DTOs.Usuario.Request
+﻿namespace MataoMaps.Domain.DTOs.Usuario.Request
 {
     public class UsuarioAdicionarRequest
     {
