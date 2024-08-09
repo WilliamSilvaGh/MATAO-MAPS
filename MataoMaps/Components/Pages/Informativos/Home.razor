@@ -1,0 +1,20 @@
+﻿@page "/home"
+
+@* @inherits LayoutComponentBase *@
+@inject NavigationManager navigationManager
+
+<h1 style="text-align: center;margin-top: 3rem;">Seja bem-vindo ao Matão Maps!</h1>
+
+@* Click=@(args => OnClick("Light button")) *@
+<RadzenStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Center" Gap="1rem" Wrap="FlexWrap.Wrap" Style="justify-content: center;">
+    <RadzenButton Variant="Variant.Flat" Text="Nova Ocorrência" ButtonStyle="ButtonStyle.Light" Click="Redirecionar" />
+</RadzenStack>
+
+@code {
+
+    public void Redirecionar()
+    {
+        navigationManager.NavigateTo("/ocorrencia/create");
+    }
+
+}

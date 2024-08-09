@@ -1,27 +1,27 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\William\\Desktop\\MATAO-MAPS\\MataoMaps.Presentation\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\MataoMaps.Presentation.styles.css",
+      "Id": "C:\\Users\\lenovo\\Desktop\\MATAO-MAPS\\MataoMaps.Presentation\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\MataoMaps.Presentation.styles.css",
       "PackagePath": "staticwebassets\\MataoMaps.Presentation.styles.css"
     },
     {
-      "Id": "C:\\Users\\William\\Desktop\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\css\\app.css",
+      "Id": "C:\\Users\\lenovo\\Desktop\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\William\\Desktop\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\lenovo\\Desktop\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\William\\Desktop\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\lenovo\\Desktop\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\William\\Desktop\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\lenovo\\Desktop\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\William\\Desktop\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\index.html",
+      "Id": "C:\\Users\\lenovo\\Desktop\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {

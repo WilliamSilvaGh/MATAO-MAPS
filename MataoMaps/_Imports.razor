@@ -1,0 +1,24 @@
+﻿@using System.Net.Http
+@using System.Net.Http.Json
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components.Web.Virtualization
+@using Microsoft.JSInterop
+@using MataoMaps
+@using MataoMaps.Components
+@using System.Net
+@using Radzen
+@using Radzen.Blazor
+@using System.Text.Json
+
+@inherits LayoutComponentBase
+
+@inject IJSRuntime JSRuntime
+@inject NavigationManager NavigationManager
+@inject HttpClient HttpClient
+@inject DialogService DialogService
+@inject NotificationService NotificationService
+@inject Blazored.SessionStorage.ISessionStorageService SessionStorage
+@inject AuthService AuthService
+@inject UsuarioLogado UsuarioLogado
