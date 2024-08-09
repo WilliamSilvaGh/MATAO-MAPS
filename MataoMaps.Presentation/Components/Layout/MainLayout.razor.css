@@ -1,15 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .page {
     position: relative;
     display: flex;
     flex-direction: column;
+    background-color: black;
+    min-height: 100vh;
+}
+
+body {
+    overflow-x: hidden; /* Impede o overflow horizontal */
 }
 
 main {
+    color: white;
     flex: 1;
+    background-color: black;
+    width: 100%;
+    opacity: 0.95;
 }
 
 .sidebar {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    /*    background-image: linear-gradient(180deg, #C21616, black);*/
+    /*background-image: linear-gradient(180deg, #00bfff, black);*/
+    background-image: linear-gradient(45deg, #243949, #517fa4);
 }
 
 .top-row {
@@ -35,8 +53,8 @@ main {
             overflow: hidden;
             text-overflow: ellipsis;
         }
-
-@media (max-width: 640.98px) {
+/* 640.98 px*/
+@media (max-width: 768px) {
     .top-row {
         justify-content: space-between;
     }
@@ -46,7 +64,14 @@ main {
         }
 }
 
-@media (min-width: 641px) {
+@media (max-width: 768px) {
+    .rz-row {
+        margin-bottom: 100px; /* Ajuste o valor conforme necess�rio */
+    }
+}
+
+/* 640px*/
+@media (min-width: 768px) {
     .page {
         flex-direction: row;
     }
