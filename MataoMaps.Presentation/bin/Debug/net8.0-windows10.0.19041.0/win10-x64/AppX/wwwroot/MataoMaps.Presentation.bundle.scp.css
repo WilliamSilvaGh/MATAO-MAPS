@@ -9,7 +9,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: rgb(232, 232, 232);
     min-height: 100vh;
 }
 
@@ -20,15 +20,15 @@ body[b-l5uj9cdamt] {
 main[b-l5uj9cdamt] {
     color: white;
     flex: 1;
-    background-color: black;
+    background-color: rgb(232, 232, 232);
     width: 100%;
-    opacity: 0.95;
 }
 
 .sidebar[b-l5uj9cdamt] {
     /*    background-image: linear-gradient(180deg, #C21616, black);*/
     /*background-image: linear-gradient(180deg, #00bfff, black);*/
-    background-image: linear-gradient(45deg, #243949, #517fa4);
+    background-color: #3685CD;
+    border-radius: 0 0 1rem 1rem;
 }
 
 .top-row[b-l5uj9cdamt] {
@@ -110,7 +110,7 @@ main[b-l5uj9cdamt] {
     color: white;
     position: absolute;
     top: 0.5rem;
-    right: 1rem;
+    left: 1rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") no-repeat center/1.75rem rgba(255, 255, 255, 0.1);
 }
@@ -120,12 +120,18 @@ main[b-l5uj9cdamt] {
     }
 
 .top-row[b-f9nat5od3m] {
-    height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
+    height: 7rem;
+
 }
 
 .navbar-brand[b-f9nat5od3m] {
     font-size: 1.1rem;
+    width: 100%;
+    margin-top: 3.5rem;
+}
+
+.container-fluid[b-f9nat5od3m] {
+    text-align: center;
 }
 
 .bi[b-f9nat5od3m] {

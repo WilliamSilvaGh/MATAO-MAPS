@@ -1,17 +1,27 @@
 ﻿<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">MataoMaps</a>
+        <h2 class="navbar-brand">OCORRÊNCIAS</h2>
     </div>
 </div>
 
-<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+<input type="checkbox" id="navbar-toggler" title="Navigation menu" class="navbar-toggler" />
+<label for="navbar-toggler" class="navbar-toggler-label">
+    <span></span>
+    <span></span>
+    <span></span>
+</label>
 
-<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+<div class="nav-scrollable">
     <nav class="flex-column">
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
                 <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
             </NavLink>
+            <NavLink class="nav-link" href="/ocorrencia/create">
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Ocorrência
+            </NavLink>
         </div>
+        <nav class="flex-column">
+        </nav>
     </nav>
 </div>
