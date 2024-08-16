@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using Radzen;
 
 namespace MataoMaps.Presentation
 {
@@ -15,9 +16,18 @@ namespace MataoMaps.Presentation
                 });
 
             builder.Services.AddMauiBlazorWebView();
+            builder.Services.AddScoped(httpClient => new HttpClient
+            {
+                //BaseAddress = new Uri("https://localhost:7219/")
+                BaseAddress = new Uri("https://helptech-api.tccnapratica.com.br")
+            });
+            builder.Services.AddScoped<DialogService>();
+            builder.Services.AddScoped<NotificationService>();
+            builder.Services.AddScoped<AuthService>();
+            builder.Services.AddScoped<UsuarioLogado>();
 
 #if DEBUG
-    		builder.Services.AddBlazorWebViewDeveloperTools();
+            builder.Services.AddBlazorWebViewDeveloperTools();
     		builder.Logging.AddDebug();
 #endif
 

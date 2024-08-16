@@ -7,3 +7,14 @@
 @using Microsoft.JSInterop
 @using MataoMaps.Presentation
 @using MataoMaps.Presentation.Components
+@using Radzen
+
+@inherits LayoutComponentBase
+
+@inject IJSRuntime JSRuntime
+@inject NavigationManager NavigationManager
+@inject HttpClient HttpClient
+@inject DialogService DialogService
+@inject NotificationService NotificationService
+@inject AuthService AuthService
+@inject UsuarioLogado UsuarioLogado

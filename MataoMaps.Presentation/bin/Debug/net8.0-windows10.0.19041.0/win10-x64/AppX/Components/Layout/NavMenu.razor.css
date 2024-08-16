@@ -86,7 +86,7 @@
     display: block;
 }
 
-@media (min-width: 641px) {
+@media (min-width: 768px) {
     .navbar-toggler {
         display: none;
     }
@@ -97,5 +97,19 @@
         /* Allow sidebar to scroll for tall menus */
         height: calc(100vh - 3.5rem);
         overflow-y: auto;
+    }
+}
+
+/* Ocultar Sair 2 para telas menores que 768px */
+@media (max-width: 767px) {
+    .d-md-flex {
+        display: none !important;
+    }
+}
+
+/* Ocultar Sair 1 para telas maiores ou iguais a 768px */
+@media (min-width: 768px) {
+    .d-md-none {
+        display: none !important;
     }
 }
