@@ -7,6 +7,8 @@ namespace MataoMaps.Domain.DTOs.Ocorrencia.Response
     {
         public Guid Id { get; set; }  
         public string UsuarioNome { get; set; }
+        public decimal Latitude { get; set; }
+        public decimal Longitude { get; set; }
         public string? FotoBase64 { get; set; }
 
         [JsonConverter(typeof(JsonStringEnumConverter))]

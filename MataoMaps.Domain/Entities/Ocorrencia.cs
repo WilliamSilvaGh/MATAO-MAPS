@@ -6,10 +6,10 @@ namespace MataoMaps.Domain.Entities
 {
     public class Ocorrencia : EntityBase
     {
+        public decimal Latitude { get; set; }
+        public decimal Longitude { get; set; }
         public string FotoBase64 { get; set; }
         public string Descricao { get; set; }
-
-        [Column(TypeName = "varchar(15)")]
         public EnumStatus Status { get; set; }
         public string Resolucao { get; set; }
         public Guid UsuarioId { get; set; }
@@ -20,11 +20,15 @@ namespace MataoMaps.Domain.Entities
         protected Ocorrencia() {}
 
         public Ocorrencia(
+            decimal latitude,
+            decimal longitude,
             string? fotoBase64,
             string descricao,
             Guid usuarioId)
         {
             Id = Guid.NewGuid();
+            Latitude = latitude;
+            Longitude = longitude;
             FotoBase64 = fotoBase64;
             Descricao = descricao;
             Status = EnumStatus.AFazer;

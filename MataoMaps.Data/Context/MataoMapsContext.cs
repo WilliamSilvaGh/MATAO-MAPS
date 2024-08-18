@@ -18,7 +18,7 @@ namespace MataoMaps.Data.Context
 
             protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             {
-                const string conexao = "server=mysql.tccnapratica.com.br;database=tccnapratica05;port=3306;uid=tccnapratica05;password=a05C80";
+                const string conexao = "server=mysql.tccnapratica.com.br;database=tccnapratica07;port=3306;uid=tccnapratica07;password=Wil1708liam";
                 optionsBuilder.UseMySql(conexao, ServerVersion.AutoDetect(conexao));
                 base.OnConfiguring(optionsBuilder);
             }

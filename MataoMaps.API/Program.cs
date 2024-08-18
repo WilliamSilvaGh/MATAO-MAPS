@@ -56,6 +56,8 @@ app.MapGet("/ocorrencia/listar", (MataoMapsContext context, ClaimsPrincipal user
             {
                 Id = ocorrencia.Id,
                 UsuarioNome = ocorrencia.Usuario.Nome,
+                Latitude = ocorrencia.Latitude,
+                Longitude = ocorrencia.Longitude,
                 FotoBase64 = ocorrencia.FotoBase64,
                 Descricao = ocorrencia.Descricao,
                 Resolucao = ocorrencia.Resolucao,
@@ -69,6 +71,8 @@ app.MapGet("/ocorrencia/listar", (MataoMapsContext context, ClaimsPrincipal user
         {
             Id = ocorrencia.Id,
             UsuarioNome = ocorrencia.Usuario.Nome,
+            Latitude = ocorrencia.Latitude,
+            Longitude = ocorrencia.Longitude,
             FotoBase64 = ocorrencia.FotoBase64,
             Descricao = ocorrencia.Descricao,
             Resolucao = ocorrencia.Resolucao,
@@ -104,6 +108,8 @@ app.MapGet("/ocorrencia/{ocorrenciaId}", (MataoMapsContext context, Guid ocorren
     {
         Id = ocorrencia.Id,
         UsuarioId = ocorrencia.UsuarioId,
+        Latitude = ocorrencia.Latitude,
+        Longitude = ocorrencia.Longitude,
         FotoBase64 = ocorrencia.FotoBase64,
         Descricao = ocorrencia.Descricao,
         Resolucao = ocorrencia.Resolucao,
@@ -132,6 +138,8 @@ app.MapPost("/ocorrencia/adicionar", (MataoMapsContext context, ClaimsPrincipal 
         SetarDadosToken(user);
 
         var ocorrencia = new Ocorrencia(
+            ocorrenciaAdicionarRequest.Latitude,
+            ocorrenciaAdicionarRequest.Longitude,
             ocorrenciaAdicionarRequest.FotoBase64,
             ocorrenciaAdicionarRequest.Descricao,
             usuarioLogadoId
@@ -324,8 +332,7 @@ app.MapPost("/usuario/adicionar", (MataoMapsContext context, UsuarioAdicionarReq
         operation.Summary = "Novo Usuário";
         return operation;
     })
-    .WithTags("Usuários")
-    .RequireAuthorization();
+    .WithTags("Usuários");
 
 app.MapPut("/usuario/alterar-senha", (MataoMapsContext context, UsuarioAtualizarRequest usuarioAtualizarRequest) =>
 {

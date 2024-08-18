@@ -11,8 +11,15 @@ namespace MataoMaps.Data.Configuration
         {
             builder.HasKey(p => p.Id);
 
+            builder.Property(P => P.Latitude)
+                .IsRequired();
+
+            builder.Property(P => P.Longitude)
+                .IsRequired();
+
             builder.Property(p => p.FotoBase64)
                 .HasMaxLength(1000)
+                .HasColumnType("text")
                 .IsRequired(false);
 
             builder.Property(p => p.Descricao)

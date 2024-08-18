@@ -8,9 +8,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - WebAPI", "02 - WebAPI", "{717CCC6E-0FA2-4738-9982-9A2A9DF9F610}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Domain", "03 - Domain", "{E64E5C4D-4F06-4345-A5DE-D58403DE1764}"
-	ProjectSection(SolutionItems) = preProject
-		MataoMaps.API\MataoMaps.API.http = MataoMaps.API\MataoMaps.API.http
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Infra", "04 - Infra", "{F65A58B8-D8BB-4CF4-A9FE-87BA8D144F80}"
 EndProject
