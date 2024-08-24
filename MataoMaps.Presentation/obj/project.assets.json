@@ -46634,11 +46634,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj",
+      "projectUniqueName": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj",
       "projectName": "MataoMaps.Presentation",
-      "projectPath": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj",
+      "projectPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj",
       "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\obj\\",
+      "outputPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Presentation\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [

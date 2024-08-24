@@ -7,23 +7,63 @@
     position: absolute;
     top: 0.5rem;
     left: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") no-repeat center/1.75rem rgba(255, 255, 255, 0.1);
+    background: none;
+    padding: 0; /* Remove qualquer padding interno */
+    border: none; /* Remove qualquer borda */
+    display: none;
 }
 
-    .navbar-toggler:checked {
-        background-color: rgba(255, 255, 255, 0.5);
+.navbar-toggler-label { /* Novo elemento para os três riscos */
+    appearance: none;
+    cursor: pointer;
+    width: 3.5rem;
+    height: 2.5rem;
+    color: white;
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    background: none;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+}
+
+    .navbar-toggler-label span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+        transition: 0.3s;
     }
+
+.navbar-toggler:checked + .navbar-toggler-label span:nth-child(1) {
+    transform: rotate(45deg) translate(9px, 8px); /* Aumentamos um pouco a translação */
+}
+
+.navbar-toggler:checked + .navbar-toggler-label span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggler:checked + .navbar-toggler-label span:nth-child(3) {
+    transform: rotate(-45deg) translate(3px, -2px); /* Aumentamos um pouco a translação */
+}
+
+/*    .navbar-toggler:checked {
+        background-color: rgba(255, 255, 255, 0.5);
+    }*/
 
 .top-row {
     height: 7rem;
-
 }
 
 .navbar-brand {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
     width: 100%;
-    margin-top: 3.5rem;
+    margin-top: 3rem;
 }
 
 .container-fluid {
