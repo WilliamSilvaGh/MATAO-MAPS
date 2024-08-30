@@ -95,8 +95,8 @@ app.MapGet("/ocorrencia/listar", (MataoMapsContext context, ClaimsPrincipal user
     operation.Summary = "Listar todas as Ocorrencias";
     return operation;
 })
-    .WithTags("Ocorrencias");
-    //.RequireAuthorization();
+    .WithTags("Ocorrencias")
+    .RequireAuthorization();
 
 app.MapGet("/ocorrencia/{ocorrenciaId}", (MataoMapsContext context, Guid ocorrenciaId) =>
 {
@@ -125,8 +125,8 @@ app.MapGet("/ocorrencia/{ocorrenciaId}", (MataoMapsContext context, Guid ocorren
         operation.Parameters[0].Description = "Id da Ocorrencia";
         return operation;
     })
-    .WithTags("Ocorrencias");
-    //.RequireAuthorization();
+    .WithTags("Ocorrencias")
+    .RequireAuthorization();
 
 app.MapPost("/ocorrencia/adicionar", (MataoMapsContext context, ClaimsPrincipal user, OcorrenciaAdicionarRequest ocorrenciaAdicionarRequest) =>
 {
@@ -161,8 +161,8 @@ app.MapPost("/ocorrencia/adicionar", (MataoMapsContext context, ClaimsPrincipal 
         operation.Summary = "Nova Ocorrencia";
         return operation;
     })
-    .WithTags("Ocorrencias");
-    //.RequireAuthorization();
+    .WithTags("Ocorrencias")
+    .RequireAuthorization();
 
 app.MapPut("/ocorrencia/encerrar", (MataoMapsContext context, ClaimsPrincipal user, OcorrenciaEncerrarRequest ocorrenciaEncerrarRequest) =>
 {
@@ -194,8 +194,8 @@ app.MapPut("/ocorrencia/encerrar", (MataoMapsContext context, ClaimsPrincipal us
         operation.Summary = "Encerrar Ocorrencia";
         return operation;
     })
-    .WithTags("Ocorrencias");
-    //.RequireAuthorization();
+    .WithTags("Ocorrencias")
+    .RequireAuthorization();
 
 app.MapPut("/ocorrencia/iniciar-atendimento", (MataoMapsContext context, ClaimsPrincipal user, OcorrenciaIniciarAtendimentoRequest ocorrenciaIniciarAtendimentoRequest) =>
 {
@@ -230,8 +230,8 @@ app.MapPut("/ocorrencia/iniciar-atendimento", (MataoMapsContext context, ClaimsP
         operation.Summary = "Iniciar uma Ocorrencia";
         return operation;
     })
-    .WithTags("Ocorrencias");
-    //.RequireAuthorization();
+    .WithTags("Ocorrencias")
+    .RequireAuthorization();
 
 #endregion
 
@@ -268,8 +268,8 @@ app.MapGet("/usuario/listar", (MataoMapsContext context, ClaimsPrincipal user) =
         operation.Summary = "Listar todos os Usuários";
         return operation;
     })
-    .WithTags("Usuários");
-//.RequireAuthorization();
+    .WithTags("Usuários")
+    .RequireAuthorization();
 
 app.MapGet("/usuario/{usuarioId}", (MataoMapsContext context, Guid usuarioId) =>
 {
@@ -294,8 +294,8 @@ app.MapGet("/usuario/{usuarioId}", (MataoMapsContext context, Guid usuarioId) =>
         operation.Parameters[0].Description = "Id do Usuário";
         return operation;
     })
-    .WithTags("Usuários");
-    //.RequireAuthorization();
+    .WithTags("Usuários")
+    .RequireAuthorization();
 
 app.MapPost("/usuario/adicionar", (MataoMapsContext context, UsuarioAdicionarRequest usuarioAdicionarRequest) =>
 {
@@ -364,8 +364,8 @@ app.MapPut("/usuario/alterar-senha", (MataoMapsContext context, UsuarioAtualizar
         operation.Summary = "Alterar Senha";
         return operation;
     })
-    .WithTags("Usuários");
-//.RequireAuthorization();
+    .WithTags("Usuários")
+    .RequireAuthorization();
 
 app.MapPut("/usuario/alterar-visibilidade/{usuarioId}", (MataoMapsContext context, ClaimsPrincipal user, Guid usuarioId) =>
 {
@@ -402,8 +402,8 @@ app.MapPut("/usuario/alterar-visibilidade/{usuarioId}", (MataoMapsContext contex
     operation.Parameters[0].Description = "Id do usuário";
     return operation;
 })
-    .WithTags("Usuários");
-//.RequireAuthorization();
+    .WithTags("Usuários")
+    .RequireAuthorization();
 
 
 app.MapDelete("/usuario/{usuarioId}", (MataoMapsContext context, Guid usuarioId, ClaimsPrincipal user) =>
@@ -441,8 +441,8 @@ app.MapDelete("/usuario/{usuarioId}", (MataoMapsContext context, Guid usuarioId,
         operation.Parameters[0].Description = "Id do Usuário";
         return operation;
     })
-    .WithTags("Usuários");
-    //.RequireAuthorization();
+    .WithTags("Usuários")
+    .RequireAuthorization();
 
 #endregion
 
