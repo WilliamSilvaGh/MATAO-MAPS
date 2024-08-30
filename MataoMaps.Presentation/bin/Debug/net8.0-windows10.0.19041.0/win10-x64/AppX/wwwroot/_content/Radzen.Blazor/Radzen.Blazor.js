@@ -1163,6 +1163,7 @@ window.Radzen = {
         if (lastPopup) {
             currentPopup.instance = lastPopup.instance;
             currentPopup.callback = lastPopup.callback;
+            currentPopup.parent = lastPopup.parent;
         }
 
         if(e.type == 'contextmenu' || !e.target || !closeOnDocumentClick) return;
@@ -1178,8 +1179,8 @@ window.Radzen = {
                 Radzen.closeAllPopups();
             }
         }
-        if (parent) {
-          if (e.type == 'mousedown' && !parent.contains(e.target) && !currentPopup.contains(e.target)) {
+        if (currentPopup.parent) {
+          if (e.type == 'mousedown' && !currentPopup.parent.contains(e.target) && !currentPopup.contains(e.target)) {
               Radzen.closePopup(currentPopup.id, currentPopup.instance, currentPopup.callback, e);
           }
         } else {
@@ -1193,7 +1194,7 @@ window.Radzen = {
         Radzen.popups = [];
     }
 
-    Radzen.popups.push({ id, instance, callback });
+    Radzen.popups.push({ id, instance, callback, parent });
 
     document.body.appendChild(popup);
     document.removeEventListener('mousedown', Radzen[id]);
@@ -1861,7 +1862,15 @@ window.Radzen = {
                     var status = xhr.status;
                     if (status === 0 || (status >= 200 && status < 400)) {
                         var result = JSON.parse(xhr.responseText);
-                        document.execCommand("insertHTML", false, '<img src="' + result.url + '">');
+                        var html = '<img src="' + result.url + '">';
+                        if (paste) {
+                            instance.invokeMethodAsync('OnPaste', html)
+                                .then(function (html) {
+                                    document.execCommand("insertHTML", false, html);
+                                });
+                        } else {
+                          document.execCommand("insertHTML", false, '<img src="' + result.url + '">');
+                        }
                     } else {
                         instance.invokeMethodAsync('OnError', xhr.responseText);
                     }
@@ -1877,7 +1886,16 @@ window.Radzen = {
         } else {
             var reader = new FileReader();
             reader.onload = function (e) {
-                document.execCommand("insertHTML", false, '<img src="' + e.target.result + '">');
+              var html = '<img src="' + e.target.result + '">';
+
+              if (paste) {
+                instance.invokeMethodAsync('OnPaste', html)
+                  .then(function (html) {
+                    document.execCommand("insertHTML", false, html);
+                  });
+              } else {
+                document.execCommand("insertHTML", false, html);
+              }
             };
             reader.readAsDataURL(file);
         }

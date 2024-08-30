@@ -64,7 +64,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Components.WebView.Maui": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
@@ -72,11 +72,11 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
@@ -86,7 +86,7 @@
             },
             "Radzen.Blazor": {
               "target": "Package",
-              "version": "[5.0.9, )"
+              "version": "[5.1.5, )"
             }
           },
           "imports": [
@@ -115,7 +115,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Components.WebView.Maui": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
@@ -123,11 +123,11 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
@@ -137,7 +137,7 @@
             },
             "Radzen.Blazor": {
               "target": "Package",
-              "version": "[5.0.9, )"
+              "version": "[5.1.5, )"
             }
           },
           "imports": [
@@ -166,7 +166,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Components.WebView.Maui": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
@@ -174,11 +174,11 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
@@ -188,7 +188,7 @@
             },
             "Radzen.Blazor": {
               "target": "Package",
-              "version": "[5.0.9, )"
+              "version": "[5.1.5, )"
             }
           },
           "imports": [
@@ -218,7 +218,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Components.WebView.Maui": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
@@ -226,15 +226,15 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.82, )"
             },
             "Radzen.Blazor": {
               "target": "Package",
-              "version": "[5.0.9, )"
+              "version": "[5.1.5, )"
             }
           },
           "imports": [
