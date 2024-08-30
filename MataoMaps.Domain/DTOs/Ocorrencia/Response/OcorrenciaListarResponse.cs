@@ -10,12 +10,8 @@ namespace MataoMaps.Domain.DTOs.Ocorrencia.Response
         public decimal Latitude { get; set; }
         public decimal Longitude { get; set; }
         public string? FotoBase64 { get; set; }
-
-        [JsonConverter(typeof(JsonStringEnumConverter))]
         public string Descricao { get; set; }
         public string Resolucao { get; set; }
-
-        [JsonConverter(typeof(JsonStringEnumConverter))]
         public EnumStatus Status {  get; set; }
     }
 }
