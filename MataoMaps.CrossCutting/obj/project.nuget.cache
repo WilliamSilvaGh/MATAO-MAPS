@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tJSlLBqRdqx52phgAXVBLGO7ex5sNdnRPIm1cAXFgjWX2m02FYZZiX1kMSQRN4q0rKqd60FjB2gmdzzTQRENPw==",
+  "dgSpecHash": "d+vv0TJetHF+RGEbCkLxIAMwrdgwlYzzvcUgc62/Fn22X709tUxkGUetmChCqPVQmmtrCm3mGx+W5g7b4DfgoA==",
   "success": true,
-  "projectFilePath": "C:\\MATAO-MAPS\\MataoMaps.CrossCutting\\MataoMaps.CrossCutting.csproj",
+  "projectFilePath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.CrossCutting\\MataoMaps.CrossCutting.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lenovo\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.7\\microsoft.aspnetcore.authentication.jwtbearer.8.0.7.nupkg.sha512",
     "C:\\Users\\lenovo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512",
