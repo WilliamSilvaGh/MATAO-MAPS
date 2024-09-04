@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj": {}
+    "C:\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj": {
+    "C:\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj",
+        "projectUniqueName": "C:\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj",
         "projectName": "MataoMaps.Domain",
-        "projectPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj",
+        "projectPath": "C:\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj",
         "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Domain\\obj\\",
+        "outputPath": "C:\\MATAO-MAPS\\MataoMaps.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

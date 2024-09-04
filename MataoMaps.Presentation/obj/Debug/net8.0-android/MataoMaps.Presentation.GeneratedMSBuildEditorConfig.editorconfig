@@ -13,93 +13,93 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MataoMaps.Presentation
 build_property.RootNamespace = MataoMaps.Presentation
-build_property.ProjectDir = C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\
+build_property.ProjectDir = C:\MATAO-MAPS\MataoMaps.Presentation\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation
+build_property.MSBuildProjectDirectory = C:\MATAO-MAPS\MataoMaps.Presentation
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/lenovo/MATAO-MAPS/MataoMaps.Presentation/App.xaml]
+[C:/MATAO-MAPS/MataoMaps.Presentation/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MataoMaps.Presentation.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/MATAO-MAPS/MataoMaps.Presentation/MainPage.xaml]
+[C:/MATAO-MAPS/MataoMaps.Presentation/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MataoMaps.Presentation.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/MATAO-MAPS/MataoMaps.Presentation/Components/Pages/Administrador/UsuarioAdministradorCreate.razor]
+[C:/MATAO-MAPS/MataoMaps.Presentation/Components/Pages/Administrador/UsuarioAdministradorCreate.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbmlzdHJhZG9yXFVzdWFyaW9BZG1pbmlzdHJhZG9yQ3JlYXRlLnJhem9y
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/MATAO-MAPS/MataoMaps.Presentation/Components/Pages/Ocorrencia/OcorrenciaCreate.razor]
+[C:/MATAO-MAPS/MataoMaps.Presentation/Components/Pages/Ocorrencia/OcorrenciaCreate.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xPY29ycmVuY2lhXE9jb3JyZW5jaWFDcmVhdGUucmF6b3I=
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/MATAO-MAPS/MataoMaps.Presentation/Components/Pages/Ocorrencia/OcorrenciaList.razor]
+[C:/MATAO-MAPS/MataoMaps.Presentation/Components/Pages/Ocorrencia/OcorrenciaList.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xPY29ycmVuY2lhXE9jb3JyZW5jaWFMaXN0LnJhem9y
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/MATAO-MAPS/MataoMaps.Presentation/Components/Pages/Sobre/Sobre.razor]
+[C:/MATAO-MAPS/MataoMaps.Presentation/Components/Pages/Sobre/Sobre.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTb2JyZVxTb2JyZS5yYXpvcg==
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/MATAO-MAPS/MataoMaps.Presentation/Components/Pages/Usuario/UsuarioCadastro.razor]
+[C:/MATAO-MAPS/MataoMaps.Presentation/Components/Pages/Usuario/UsuarioCadastro.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xVc3VhcmlvXFVzdWFyaW9DYWRhc3Ryby5yYXpvcg==
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/MATAO-MAPS/MataoMaps.Presentation/Components/Pages/Usuario/UsuarioLogin.razor]
+[C:/MATAO-MAPS/MataoMaps.Presentation/Components/Pages/Usuario/UsuarioLogin.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xVc3VhcmlvXFVzdWFyaW9Mb2dpbi5yYXpvcg==
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/MATAO-MAPS/MataoMaps.Presentation/Routes.razor]
+[C:/MATAO-MAPS/MataoMaps.Presentation/Routes.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
 build_metadata.AdditionalFiles.TargetPath = Um91dGVzLnJhem9y
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/MATAO-MAPS/MataoMaps.Presentation/_Imports.razor]
+[C:/MATAO-MAPS/MataoMaps.Presentation/_Imports.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/MATAO-MAPS/MataoMaps.Presentation/Components/Layout/MainLayout.razor]
+[C:/MATAO-MAPS/MataoMaps.Presentation/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = b-l5uj9cdamt
 
-[C:/Users/lenovo/MATAO-MAPS/MataoMaps.Presentation/Components/Layout/NavMenu.razor]
+[C:/MATAO-MAPS/MataoMaps.Presentation/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
