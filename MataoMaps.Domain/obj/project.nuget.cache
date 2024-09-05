@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u9Fp6DY7IFU9X95uL7b0zuxJDBulgxMQhV+hhnlHlHOU7llXuVtlZmkCoGIQlI24IADZZx6O+yx0atwfX6lsow==",
+  "dgSpecHash": "ZQ8N8JhK9uSAkTVKkrSdEJ/eZQ742kKK8g6B6n9ap2LuDWfgx4+JXJb65jMCPoUDuKEH0VpmTeCFxS/LhJybBg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj",
+  "projectFilePath": "C:\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
