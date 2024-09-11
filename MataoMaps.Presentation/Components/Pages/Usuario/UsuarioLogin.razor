@@ -1,18 +1,173 @@
 ﻿@page "/"
+@using MataoMaps.Domain.DTOs.Usuario.Request
+@using System.Text.Json
+@using MataoMaps.Domain.DTOs.Usuario.Response
 
-<div id="fundo" style="display: flex; justify-content: center; height: 60vh; border: solid 3px  ;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px; background-color: #E8E8E8;">
-    <RadzenStack AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center">
-        <RadzenImage Path="Images/logo.png" Style="width: 11rem; height: 13rem; margin-top: 20%;" AlternateText="community" />
-    </RadzenStack>
+
+<div class="fundo">
+    <div class="sobre-fundo">
+        <img src="/Images/logo.png" class="img-logo" />
+        <div class="login">
+            <div class="icone-input">
+                <input type="email" placeholder="Email" @bind="usuarioAutenticarRequest.EmailLogin" />
+            </div>
+            <div class="icone-input">
+                <input type="password" placeholder="Senha" @bind="usuarioAutenticarRequest.Senha" />
+            </div>
+
+            <button class="btn-publicar" @onclick="Autenticar">Login</button>
+
+            <p>Não tem uma conta? <a href="/usuario/cadastro" style="color: #3685cd; text-decoration: none;">Criar uma conta</a></p>
+        </div>
+        <img src="/Images/mapa.png" class="img-mapa" />
+    </div>
 </div>
 
-<div id="fundo2" style="display: flex; justify-content: center; height: 35vh; background-color: #3685CD; width: 100%;">
-    <RadzenStack AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center">
-        <RadzenImage Path="Images/mapa.png" Style="width: 8rem; height: 6rem; opacity: 50%; transform: rotate(12deg); margin-top: 80%;" AlternateText="community" />
-    </RadzenStack>
-</div>
 
 
+<style>
+
+    .img-logo {
+        width: 11rem;
+        margin: auto;
+        display: flex;
+        padding-top: 1rem;
+    }
+
+    .img-mapa {
+        width: 100px;
+        display: flex;
+        margin: auto;
+        padding-top: 45vh;
+        opacity: 0.5;
+    }
+
+    .icone-input {
+    }
+
+    p{
+        text-align: center;
+        font-size: 12px;
+        color: black;
+    }
+
+    input {
+        width: 80%;
+        border: none;
+        border-radius: 2rem;
+        height: 2rem;
+        padding: 1rem;
+        margin: 1rem auto;
+        display: block;
+        outline: none;
+        background-color: #e8e8e8;
+    }
+
+    .login {
+        background-color: #ffffff;
+        width: 85%;
+        height: 40%;
+        max-width: 400px;
+        max-height: 400px;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 2;
+        border-radius: 1rem;
+    }
+
+    .fundo {
+        background-color: #3685CD;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .sobre-fundo {
+        background-color: #e8e8e8;
+        width: 100%;
+        height: 70vh;
+        border-radius: 0 0.5rem 0.5rem;
+    }
+
+    .btn-publicar {
+        display: block;
+        width: 80%;
+        margin: 1rem auto;
+        padding: 0.5rem;
+        border: none;
+        border-radius: 2rem;
+        background-color: #f9d857;
+        color: white;
+        font-weight: bold;
+        font-size: 1rem;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        z-index: 10;
+        position: relative;
+        margin-top: 3.5rem;
+    }
+
+        .btn-publicar:hover {
+            background-color: #f8db52; /* Cor de fundo mais escura ao passar o mouse */
+        }
+
+</style>
 
 @code {
+    private bool isLoading = false;
+
+    private UsuarioAutenticarRequest usuarioAutenticarRequest = new UsuarioAutenticarRequest();
+
+    protected override async Task OnInitializedAsync()
+    {
+        isLoading = false;
+    }
+
+    private async Task Autenticar()
+    {
+        if (string.IsNullOrEmpty(usuarioAutenticarRequest.EmailLogin) || string.IsNullOrEmpty(usuarioAutenticarRequest.Senha))
+        {
+            NotificationService.Notify(new NotificationMessage
+                {
+                    Severity = NotificationSeverity.Error,
+                    Summary = "Erro",
+                    Detail = "Por favor, preencha todos os campos.",
+                    Duration = 4000
+                });
+            return;
+        }
+
+        isLoading = true;
+
+        var response = await HttpClient.PostAsJsonAsync("autenticar", usuarioAutenticarRequest);
+
+        if (response.IsSuccessStatusCode)
+        {
+            var content = await response.Content.ReadAsStringAsync();
+            var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            var usuarioAutenticarResponse = JsonSerializer.Deserialize<UsuarioAutenticarResponse>(content, options);
+
+            HttpClient.DefaultRequestHeaders.Clear();
+            HttpClient.DefaultRequestHeaders.Add("authorization", $"bearer {usuarioAutenticarResponse.AccessToken}");
+
+            isLoading = false;
+
+            NavigationManager.NavigateTo("/ocorrencia/create");
+        }
+        else
+        {
+            isLoading = false;
+            NotificationService.Notify(new NotificationMessage
+                {
+                    Severity = NotificationSeverity.Error,
+                    Summary = "Erro",
+                    Detail = "Usuário ou senha inválidos.",
+                    Duration = 4000
+                });
+        }
+    }
 }
+

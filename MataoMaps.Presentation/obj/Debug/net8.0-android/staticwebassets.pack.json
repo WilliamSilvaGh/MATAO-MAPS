@@ -37,14 +37,6 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\package-lock.json",
-      "PackagePath": "staticwebassets\\package-lock.json"
-    },
-    {
-      "Id": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\package.json",
-      "PackagePath": "staticwebassets\\package.json"
-    },
-    {
       "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.MataoMaps.Presentation.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
