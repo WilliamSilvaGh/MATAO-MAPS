@@ -2,24 +2,23 @@
 
 <h3>Adicionar fotos</h3>
 
-<label for="file-upload" class="custom-file-upload">
-    <div class="upload-square">
-        <RadzenImage Path="Images/camera.png" Style="width: 4rem; height: 3rem;" AlternateText="camera" />
+    <label for="file-upload" class="custom-file-upload">
+        <div class="upload-square">
+            <RadzenImage Path="Images/camera.png" Style="width: 4rem; height: 3rem;" AlternateText="camera" />
+        </div>
+    </label>
+    <input id="file-upload" type="file" multiple />
+
+    <input type="text" placeholder="Endereço" class="text-input" />
+
+    <div class="fundo-problema">
+        <h4>DESCREVA O PROBLEMA</h4>
+        <textarea class="text-area" rows="4"></textarea>
     </div>
-</label>
-<input id="file-upload" type="file" multiple />
 
-<input type="text" placeholder="Endereço" class="text-input" />
-
-<div class="fundo-problema">
-    <h4>DESCREVA O PROBLEMA</h4>
-    <textarea class="text-area" rows="4"></textarea>
-</div>
-
-<button class="btn-publicar">PUBLICAR</button>
+    <button class="btn-publicar">PUBLICAR</button>
 
 <style>
-
 
     .fundo-problema {
         background-color: #f9d857;
@@ -40,11 +39,11 @@
         outline: none; /* Remove a borda ao focar */
     }
 
-    h4{
+    h4 {
         color: black;
         font-size: 1rem;
         text-align: center;
-        font-weight: bold;
+        font-weight: 700;
         padding-top: 0.5rem;
     }
 
@@ -68,6 +67,11 @@
         border-radius: 2rem; /* Borda arredondada */
         padding-left: 1rem; /* Espaçamento interno à esquerda */
     }
+
+        .text-input::placeholder {
+            color: black;
+            font-weight: 500;
+        }
 
     .custom-file-upload {
         display: flex;
@@ -99,7 +103,7 @@
         padding: 0.75rem; /* Adiciona espaçamento interno ao botão */
         border: none; /* Remove a borda padrão do botão */
         border-radius: 2rem; /* Borda arredondada para combinar com outros elementos */
-        background-color: #007bff; /* Cor de fundo azul para o botão */
+        background-color: #3685cd; /* Cor de fundo azul para o botão */
         color: white; /* Cor do texto */
         font-weight: bold; /* Texto em negrito */
         font-size: 1rem; /* Tamanho da fonte */
@@ -109,7 +113,6 @@
         z-index: 10; /* Adiciona um z-index para garantir que o botão fique acima de outros elementos */
         position: relative; /* Faz com que o z-index funcione */
         margin-top: 8rem; /* Adiciona um espaçamento superior ao botão */
-        
     }
 
         .btn-publicar:hover {
@@ -117,3 +120,11 @@
         }
 
 </style>
+
+
+@code {
+    protected override void OnInitialized()
+    {
+        PageTitleService.SetPageTitle("OCORRÊNCIA");
+    }
+}
