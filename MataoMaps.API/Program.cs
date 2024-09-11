@@ -482,7 +482,8 @@ app.MapPost("/autenticar", (MataoMapsContext context, UsuarioAutenticarRequest u
     {
         UsuarioId = usuario.Id,
         UsuarioNome = usuario.Nome,
-        AccessToken = new JwtSecurityTokenHandler().WriteToken(token)
+        AccessToken = new JwtSecurityTokenHandler().WriteToken(token),
+        EhAdmin = usuario.EhAdmin
     });
 })
     .WithOpenApi(operation =>

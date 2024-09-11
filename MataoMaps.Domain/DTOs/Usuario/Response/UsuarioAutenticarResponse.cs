@@ -6,14 +6,18 @@
         public string Nome { get; set; }
         public string AccessToken { get; set; }
 
+        public bool EhAdmin { get; set; }
+
         public UsuarioAutenticarResponse(
             Guid id,
             string nome,
-            string accessToken)
+            string accessToken,
+            bool ehAdmin)
         {
             Id = id;
             Nome = nome;
             AccessToken = accessToken;
+            EhAdmin = ehAdmin;
         }
     }
 }
