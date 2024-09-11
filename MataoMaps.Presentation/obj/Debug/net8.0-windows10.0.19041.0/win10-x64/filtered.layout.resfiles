@@ -1,5 +1,6 @@
 Components\Layout\MainLayout.razor.css
 Components\Layout\NavMenu.razor.css
+Components\Pages\Ocorrencia\OcorrenciaCreate.razor.css
 OpenSans-Regular.ttf
 appicon.ico
 appiconLargeTile.scale-100.png
@@ -64,6 +65,9 @@ wwwroot\css\app.css
 wwwroot\css\bootstrap\bootstrap.min.css
 wwwroot\css\bootstrap\bootstrap.min.css.map
 wwwroot\favicon.png
+wwwroot\Images\camera.png
+wwwroot\Images\logo.png
+wwwroot\Images\mapa.png
 wwwroot\index.html
 wwwroot\package.json
 wwwroot\package-lock.json

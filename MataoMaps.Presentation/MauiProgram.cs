@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using MataoMaps.Presentation.Services;
+using Microsoft.Extensions.Logging;
 using Radzen;
 
 namespace MataoMaps.Presentation
@@ -24,6 +25,7 @@ namespace MataoMaps.Presentation
             builder.Services.AddScoped<DialogService>();
             builder.Services.AddScoped<NotificationService>();
             builder.Services.AddScoped<AuthService>();
+            builder.Services.AddSingleton<PageTitleService>();
             builder.Services.AddScoped<UsuarioLogado>();
 
 #if DEBUG

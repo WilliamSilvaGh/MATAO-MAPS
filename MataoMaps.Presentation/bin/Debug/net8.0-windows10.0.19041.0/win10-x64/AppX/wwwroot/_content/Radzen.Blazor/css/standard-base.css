@@ -8300,13 +8300,15 @@ i.rzi {
 .rz-pager-element:not(.rz-state-disabled), .rz-button:not(.rz-state-disabled) {
   cursor: pointer;
 }
-.rz-pager-element:not(.rz-state-disabled):hover:not(:active), .rz-button:not(.rz-state-disabled):hover:not(:active) {
-  text-decoration: none;
-  background-image: var(--rz-button-hover-gradient);
-  background-size: var(--rz-button-hover-background-size);
-  box-shadow: var(--rz-button-hover-shadow);
+@media (hover: hover) and (pointer: fine) {
+  .rz-pager-element:not(.rz-state-disabled):not(:active):hover, .rz-button:not(.rz-state-disabled):not(:active):hover {
+    text-decoration: none;
+    background-image: var(--rz-button-hover-gradient);
+    background-size: var(--rz-button-hover-background-size);
+    box-shadow: var(--rz-button-hover-shadow);
+  }
 }
-.rz-pager-element:not(.rz-state-disabled):focus-visible:not(:active), .rz-button:not(.rz-state-disabled):focus-visible:not(:active) {
+.rz-pager-element:not(.rz-state-disabled):not(:active):focus-visible, .rz-button:not(.rz-state-disabled):not(:active):focus-visible {
   text-decoration: none;
   background-image: var(--rz-button-focus-gradient);
   background-size: var(--rz-button-focus-background-size);
@@ -8673,7 +8675,14 @@ i.rzi {
   box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-primary-darker);
   color: var(--rz-primary-darker);
 }
-.rz-button.rz-variant-outlined.rz-primary:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-primary:not(.rz-state-disabled):focus-visible:not(:active), .rz-button.rz-variant-outlined.rz-primary:not(.rz-state-disabled):active {
+@media (hover: hover) and (pointer: fine) {
+  .rz-button.rz-variant-outlined.rz-primary:not(.rz-state-disabled):hover {
+    background-color: var(--rz-primary-lighter);
+    color: var(--rz-on-primary-lighter);
+    background-image: none;
+  }
+}
+.rz-button.rz-variant-outlined.rz-primary:not(.rz-state-disabled):active {
   background-color: var(--rz-primary-lighter);
   color: var(--rz-on-primary-lighter);
   background-image: none;
@@ -8702,7 +8711,14 @@ i.rzi {
   box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-secondary-darker);
   color: var(--rz-secondary-darker);
 }
-.rz-button.rz-variant-outlined.rz-secondary:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-secondary:not(.rz-state-disabled):focus-visible:not(:active), .rz-button.rz-variant-outlined.rz-secondary:not(.rz-state-disabled):active {
+@media (hover: hover) and (pointer: fine) {
+  .rz-button.rz-variant-outlined.rz-secondary:not(.rz-state-disabled):hover {
+    background-color: var(--rz-secondary-lighter);
+    color: var(--rz-on-secondary-lighter);
+    background-image: none;
+  }
+}
+.rz-button.rz-variant-outlined.rz-secondary:not(.rz-state-disabled):active {
   background-color: var(--rz-secondary-lighter);
   color: var(--rz-on-secondary-lighter);
   background-image: none;
@@ -8731,7 +8747,14 @@ i.rzi {
   box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-info-darker);
   color: var(--rz-info-darker);
 }
-.rz-button.rz-variant-outlined.rz-info:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-info:not(.rz-state-disabled):focus-visible:not(:active), .rz-button.rz-variant-outlined.rz-info:not(.rz-state-disabled):active {
+@media (hover: hover) and (pointer: fine) {
+  .rz-button.rz-variant-outlined.rz-info:not(.rz-state-disabled):hover {
+    background-color: var(--rz-info-lighter);
+    color: var(--rz-on-info-lighter);
+    background-image: none;
+  }
+}
+.rz-button.rz-variant-outlined.rz-info:not(.rz-state-disabled):active {
   background-color: var(--rz-info-lighter);
   color: var(--rz-on-info-lighter);
   background-image: none;
@@ -8760,7 +8783,14 @@ i.rzi {
   box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-warning-darker);
   color: var(--rz-warning-darker);
 }
-.rz-button.rz-variant-outlined.rz-warning:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-warning:not(.rz-state-disabled):focus-visible:not(:active), .rz-button.rz-variant-outlined.rz-warning:not(.rz-state-disabled):active {
+@media (hover: hover) and (pointer: fine) {
+  .rz-button.rz-variant-outlined.rz-warning:not(.rz-state-disabled):hover {
+    background-color: var(--rz-warning-lighter);
+    color: var(--rz-on-warning-lighter);
+    background-image: none;
+  }
+}
+.rz-button.rz-variant-outlined.rz-warning:not(.rz-state-disabled):active {
   background-color: var(--rz-warning-lighter);
   color: var(--rz-on-warning-lighter);
   background-image: none;
@@ -8789,7 +8819,14 @@ i.rzi {
   box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-error-darker);
   color: var(--rz-error-darker);
 }
-.rz-button.rz-variant-outlined.rz-error:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-error:not(.rz-state-disabled):focus-visible:not(:active), .rz-button.rz-variant-outlined.rz-error:not(.rz-state-disabled):active {
+@media (hover: hover) and (pointer: fine) {
+  .rz-button.rz-variant-outlined.rz-error:not(.rz-state-disabled):hover {
+    background-color: var(--rz-error-lighter);
+    color: var(--rz-on-error-lighter);
+    background-image: none;
+  }
+}
+.rz-button.rz-variant-outlined.rz-error:not(.rz-state-disabled):active {
   background-color: var(--rz-error-lighter);
   color: var(--rz-on-error-lighter);
   background-image: none;
@@ -8818,7 +8855,14 @@ i.rzi {
   box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-danger-darker);
   color: var(--rz-danger-darker);
 }
-.rz-button.rz-variant-outlined.rz-danger:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-danger:not(.rz-state-disabled):focus-visible:not(:active), .rz-button.rz-variant-outlined.rz-danger:not(.rz-state-disabled):active {
+@media (hover: hover) and (pointer: fine) {
+  .rz-button.rz-variant-outlined.rz-danger:not(.rz-state-disabled):hover {
+    background-color: var(--rz-danger-lighter);
+    color: var(--rz-on-danger-lighter);
+    background-image: none;
+  }
+}
+.rz-button.rz-variant-outlined.rz-danger:not(.rz-state-disabled):active {
   background-color: var(--rz-danger-lighter);
   color: var(--rz-on-danger-lighter);
   background-image: none;
@@ -8847,7 +8891,14 @@ i.rzi {
   box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-success-darker);
   color: var(--rz-success-darker);
 }
-.rz-button.rz-variant-outlined.rz-success:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-success:not(.rz-state-disabled):focus-visible:not(:active), .rz-button.rz-variant-outlined.rz-success:not(.rz-state-disabled):active {
+@media (hover: hover) and (pointer: fine) {
+  .rz-button.rz-variant-outlined.rz-success:not(.rz-state-disabled):hover {
+    background-color: var(--rz-success-lighter);
+    color: var(--rz-on-success-lighter);
+    background-image: none;
+  }
+}
+.rz-button.rz-variant-outlined.rz-success:not(.rz-state-disabled):active {
   background-color: var(--rz-success-lighter);
   color: var(--rz-on-success-lighter);
   background-image: none;
@@ -8876,7 +8927,14 @@ i.rzi {
   box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-base-darker);
   color: var(--rz-base-darker);
 }
-.rz-button.rz-variant-outlined.rz-base:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-base:not(.rz-state-disabled):focus-visible:not(:active), .rz-button.rz-variant-outlined.rz-base:not(.rz-state-disabled):active {
+@media (hover: hover) and (pointer: fine) {
+  .rz-button.rz-variant-outlined.rz-base:not(.rz-state-disabled):hover {
+    background-color: var(--rz-base-lighter);
+    color: var(--rz-on-base-lighter);
+    background-image: none;
+  }
+}
+.rz-button.rz-variant-outlined.rz-base:not(.rz-state-disabled):active {
   background-color: var(--rz-base-lighter);
   color: var(--rz-on-base-lighter);
   background-image: none;
@@ -8889,7 +8947,13 @@ i.rzi {
   box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-base-200);
   color: var(--rz-base-200);
 }
-.rz-button.rz-variant-outlined.rz-light:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-light:not(.rz-state-disabled):focus-visible:not(:active), .rz-button.rz-variant-outlined.rz-light:not(.rz-state-disabled):active {
+@media (hover: hover) and (pointer: fine) {
+  .rz-button.rz-variant-outlined.rz-light:not(.rz-state-disabled):hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    background-image: none;
+  }
+}
+.rz-button.rz-variant-outlined.rz-light:not(.rz-state-disabled):active {
   background-color: rgba(255, 255, 255, 0.12);
   background-image: none;
 }
@@ -8901,7 +8965,13 @@ i.rzi {
   box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-base-900);
   color: var(--rz-base-900);
 }
-.rz-button.rz-variant-outlined.rz-dark:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-dark:not(.rz-state-disabled):focus-visible:not(:active), .rz-button.rz-variant-outlined.rz-dark:not(.rz-state-disabled):active {
+@media (hover: hover) and (pointer: fine) {
+  .rz-button.rz-variant-outlined.rz-dark:not(.rz-state-disabled):hover {
+    background-color: rgba(0, 0, 0, 0.12);
+    background-image: none;
+  }
+}
+.rz-button.rz-variant-outlined.rz-dark:not(.rz-state-disabled):active {
   background-color: rgba(0, 0, 0, 0.12);
   background-image: none;
 }
@@ -8925,7 +8995,15 @@ i.rzi {
 .rz-button.rz-variant-text.rz-primary.rz-shade-darker {
   color: var(--rz-primary-darker);
 }
-.rz-button.rz-variant-text.rz-primary:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-text.rz-primary:not(.rz-state-disabled):focus-visible:not(:active), .rz-button.rz-variant-text.rz-primary:not(.rz-state-disabled):active {
+@media (hover: hover) and (pointer: fine) {
+  .rz-button.rz-variant-text.rz-primary:not(.rz-state-disabled):hover {
+    background-color: var(--rz-primary-lighter);
+    color: var(--rz-on-primary-lighter);
+    background-image: none;
+    box-shadow: none;
+  }
+}
+.rz-button.rz-variant-text.rz-primary:not(.rz-state-disabled):active {
   background-color: var(--rz-primary-lighter);
   color: var(--rz-on-primary-lighter);
   background-image: none;
@@ -8951,7 +9029,15 @@ i.rzi {
 .rz-button.rz-variant-text.rz-secondary.rz-shade-darker {
   color: var(--rz-secondary-darker);
 }
-.rz-button.rz-variant-text.rz-secondary:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-text.rz-secondary:not(.rz-state-disabled):focus-visible:not(:active), .rz-button.rz-variant-text.rz-secondary:not(.rz-state-disabled):active {
+@media (hover: hover) and (pointer: fine) {
+  .rz-button.rz-variant-text.rz-secondary:not(.rz-state-disabled):hover {
+    background-color: var(--rz-secondary-lighter);
+    color: var(--rz-on-secondary-lighter);
+    background-image: none;
+    box-shadow: none;
+  }
+}
+.rz-button.rz-variant-text.rz-secondary:not(.rz-state-disabled):active {
   background-color: var(--rz-secondary-lighter);
   color: var(--rz-on-secondary-lighter);
   background-image: none;
@@ -8977,7 +9063,15 @@ i.rzi {
 .rz-button.rz-variant-text.rz-info.rz-shade-darker {
   color: var(--rz-info-darker);
 }
-.rz-button.rz-variant-text.rz-info:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-text.rz-info:not(.rz-state-disabled):focus-visible:not(:active), .rz-button.rz-variant-text.rz-info:not(.rz-state-disabled):active {
+@media (hover: hover) and (pointer: fine) {
+  .rz-button.rz-variant-text.rz-info:not(.rz-state-disabled):hover {
+    background-color: var(--rz-info-lighter);
+    color: var(--rz-on-info-lighter);
+    background-image: none;
+    box-shadow: none;
+  }
+}
+.rz-button.rz-variant-text.rz-info:not(.rz-state-disabled):active {
   background-color: var(--rz-info-lighter);
   color: var(--rz-on-info-lighter);
   background-image: none;
@@ -9003,7 +9097,15 @@ i.rzi {
 .rz-button.rz-variant-text.rz-warning.rz-shade-darker {
   color: var(--rz-warning-darker);
 }
-.rz-button.rz-variant-text.rz-warning:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-text.rz-warning:not(.rz-state-disabled):focus-visible:not(:active), .rz-button.rz-variant-text.rz-warning:not(.rz-state-disabled):active {
+@media (hover: hover) and (pointer: fine) {
+  .rz-button.rz-variant-text.rz-warning:not(.rz-state-disabled):hover {
+    background-color: var(--rz-warning-lighter);
+    color: var(--rz-on-warning-lighter);
+    background-image: none;
+    box-shadow: none;
+  }
+}
+.rz-button.rz-variant-text.rz-warning:not(.rz-state-disabled):active {
   background-color: var(--rz-warning-lighter);
   color: var(--rz-on-warning-lighter);
   background-image: none;
@@ -9029,7 +9131,15 @@ i.rzi {
 .rz-button.rz-variant-text.rz-error.rz-shade-darker {
   color: var(--rz-error-darker);
 }
-.rz-button.rz-variant-text.rz-error:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-text.rz-error:not(.rz-state-disabled):focus-visible:not(:active), .rz-button.rz-variant-text.rz-error:not(.rz-state-disabled):active {
+@media (hover: hover) and (pointer: fine) {
+  .rz-button.rz-variant-text.rz-error:not(.rz-state-disabled):hover {
+    background-color: var(--rz-error-lighter);
+    color: var(--rz-on-error-lighter);
+    background-image: none;
+    box-shadow: none;
+  }
+}
+.rz-button.rz-variant-text.rz-error:not(.rz-state-disabled):active {
   background-color: var(--rz-error-lighter);
   color: var(--rz-on-error-lighter);
   background-image: none;
@@ -9055,7 +9165,15 @@ i.rzi {
 .rz-button.rz-variant-text.rz-danger.rz-shade-darker {
   color: var(--rz-danger-darker);
 }
-.rz-button.rz-variant-text.rz-danger:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-text.rz-danger:not(.rz-state-disabled):focus-visible:not(:active), .rz-button.rz-variant-text.rz-danger:not(.rz-state-disabled):active {
+@media (hover: hover) and (pointer: fine) {
+  .rz-button.rz-variant-text.rz-danger:not(.rz-state-disabled):hover {
+    background-color: var(--rz-danger-lighter);
+    color: var(--rz-on-danger-lighter);
+    background-image: none;
+    box-shadow: none;
+  }
+}
+.rz-button.rz-variant-text.rz-danger:not(.rz-state-disabled):active {
   background-color: var(--rz-danger-lighter);
   color: var(--rz-on-danger-lighter);
   background-image: none;
@@ -9081,7 +9199,15 @@ i.rzi {
 .rz-button.rz-variant-text.rz-success.rz-shade-darker {
   color: var(--rz-success-darker);
 }
-.rz-button.rz-variant-text.rz-success:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-text.rz-success:not(.rz-state-disabled):focus-visible:not(:active), .rz-button.rz-variant-text.rz-success:not(.rz-state-disabled):active {
+@media (hover: hover) and (pointer: fine) {
+  .rz-button.rz-variant-text.rz-success:not(.rz-state-disabled):hover {
+    background-color: var(--rz-success-lighter);
+    color: var(--rz-on-success-lighter);
+    background-image: none;
+    box-shadow: none;
+  }
+}
+.rz-button.rz-variant-text.rz-success:not(.rz-state-disabled):active {
   background-color: var(--rz-success-lighter);
   color: var(--rz-on-success-lighter);
   background-image: none;
@@ -9107,7 +9233,15 @@ i.rzi {
 .rz-button.rz-variant-text.rz-base.rz-shade-darker {
   color: var(--rz-base-darker);
 }
-.rz-button.rz-variant-text.rz-base:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-text.rz-base:not(.rz-state-disabled):focus-visible:not(:active), .rz-button.rz-variant-text.rz-base:not(.rz-state-disabled):active {
+@media (hover: hover) and (pointer: fine) {
+  .rz-button.rz-variant-text.rz-base:not(.rz-state-disabled):hover {
+    background-color: var(--rz-base-lighter);
+    color: var(--rz-on-base-lighter);
+    background-image: none;
+    box-shadow: none;
+  }
+}
+.rz-button.rz-variant-text.rz-base:not(.rz-state-disabled):active {
   background-color: var(--rz-base-lighter);
   color: var(--rz-on-base-lighter);
   background-image: none;
@@ -9119,7 +9253,14 @@ i.rzi {
   background-color: transparent;
   box-shadow: none;
 }
-.rz-button.rz-variant-text.rz-light:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-text.rz-light:not(.rz-state-disabled):focus-visible:not(:active), .rz-button.rz-variant-text.rz-light:not(.rz-state-disabled):active {
+@media (hover: hover) and (pointer: fine) {
+  .rz-button.rz-variant-text.rz-light:not(.rz-state-disabled):hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    background-image: none;
+    box-shadow: none;
+  }
+}
+.rz-button.rz-variant-text.rz-light:not(.rz-state-disabled):active {
   background-color: rgba(255, 255, 255, 0.12);
   background-image: none;
   box-shadow: none;
@@ -9130,7 +9271,14 @@ i.rzi {
   background-color: transparent;
   box-shadow: none;
 }
-.rz-button.rz-variant-text.rz-dark:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-text.rz-dark:not(.rz-state-disabled):focus-visible:not(:active), .rz-button.rz-variant-text.rz-dark:not(.rz-state-disabled):active {
+@media (hover: hover) and (pointer: fine) {
+  .rz-button.rz-variant-text.rz-dark:not(.rz-state-disabled):hover {
+    background-color: rgba(0, 0, 0, 0.12);
+    background-image: none;
+    box-shadow: none;
+  }
+}
+.rz-button.rz-variant-text.rz-dark:not(.rz-state-disabled):active {
   background-color: rgba(0, 0, 0, 0.12);
   background-image: none;
   box-shadow: none;
@@ -13540,6 +13688,7 @@ a:focus-visible .rz-fieldset-toggler {
 .rz-treenode-content .rz-treenode-label {
   display: flex;
   align-items: center;
+  cursor: inherit;
   padding-block: var(--rz-tree-node-padding-block);
   padding-inline: var(--rz-tree-node-padding-inline);
 }
@@ -15055,16 +15204,24 @@ a:focus-visible .rz-fieldset-toggler {
   position: absolute;
   background-color: var(--rz-progressbar-value-background-color);
   height: 100%;
-  width: 100%;
+  width: var(--rz-progressbar-value);
   transition: var(--rz-progressbar-value-transition);
 }
 
-.rz-progressbar-label {
-  position: relative;
-  width: 100%;
+.rz-progressbar-label,
+.rz-progressbar-label-value {
+  position: absolute;
+  inset-inline: 0;
+  inset-block-start: 50%;
+  margin-top: calc(-1 * var(--rz-progressbar-height) / 2);
   text-align: center;
   font-size: var(--rz-progressbar-font-size);
-  line-height: var(--rz-progressbar-font-size);
+  line-height: var(--rz-progressbar-height);
+}
+
+.rz-progressbar-label-value {
+  color: var(--rz-progressbar-color);
+  clip-path: inset(0 0 0 var(--rz-progressbar-value));
 }
 
 .rz-progressbar-circular {
@@ -16291,8 +16448,8 @@ a:focus-visible .rz-fieldset-toggler {
 .rz-legend-item {
   display: flex;
   align-items: center;
-  gap: 4px;
-  margin: 4px;
+  gap: 0.25rem;
+  margin: 0.25rem;
   cursor: pointer;
 }
 .rz-legend-item:focus {
@@ -16321,9 +16478,10 @@ a:focus-visible .rz-fieldset-toggler {
   background: var(--rz-chart-tooltip-background);
   color: var(--rz-chart-tooltip-color);
   box-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.15);
-  padding: 0.25rem 0.5rem;
-  border-radius: var(--rz-border-radius);
+  padding: 0.5rem;
+  border-radius: var(--rz-chart-tooltip-border-radius);
   white-space: nowrap;
+  font-size: var(--rz-chart-tooltip-font-size);
 }
 
 .rz-chart-tooltip:not(.rz-pie-tooltip) .rz-chart-tooltip-content {
@@ -16341,6 +16499,39 @@ a:focus-visible .rz-fieldset-toggler {
   transform: translate(-50%, -11px) rotate(45deg);
   border-bottom: inherit;
   border-right: inherit;
+}
+
+.rz-chart-tooltip-title {
+  font-weight: 700;
+}
+
+.rz-chart-tooltip-item-value {
+  font-weight: 600;
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.rz-chart-shared-tooltip:has(.rz-chart-tooltip-item-content) .rz-chart-tooltip-title {
+  padding: 0 0.5rem;
+}
+.rz-chart-shared-tooltip:has(.rz-chart-tooltip-item-content) .rz-chart-tooltip-content {
+  border: none;
+}
+
+.rz-chart-tooltip-item-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: var(--rz-chart-tooltip-item-border-radius);
+}
+.rz-chart-tooltip-item-content:hover {
+  background-color: var(--rz-chart-tooltip-item-hover-background-color);
+}
+.rz-chart-tooltip-item-content .rz-legend-item {
+  margin: 0;
+  cursor: inherit;
 }
 
 .rz-link {
@@ -18952,6 +19143,8 @@ button.rz-colorpicker-trigger .rzi:before {
   --rz-input-height: var(--rz-form-field-filled-height);
   --rz-input-padding-block: var(--rz-form-field-filled-padding-block);
   --rz-input-padding-inline: var(--rz-form-field-filled-padding-inline);
+  --rz-dropdown-chips-padding-block: var(--rz-form-field-filled-padding-block);
+  --rz-dropdown-chips-padding-inline: var(--rz-form-field-filled-padding-inline);
   --rz-numeric-input-padding-block: var(--rz-form-field-filled-numeric-padding-block);
   --rz-numeric-input-padding-inline: var(--rz-form-field-filled-numeric-padding-inline);
   --rz-form-field-label-floating-top: var(--rz-form-field-filled-label-floating-top);
@@ -20296,6 +20489,10 @@ button.rz-colorpicker-trigger .rzi:before {
   --rz-chart-legend-focus-outline-offset: var(--rz-outline-offset);
   --rz-chart-tooltip-background: var(--rz-base-background-color);
   --rz-chart-tooltip-color: var(--rz-text-color);
+  --rz-chart-tooltip-border-radius: var(--rz-tooltip-border-radius);
+  --rz-chart-tooltip-font-size: var(--rz-tooltip-font-size);
+  --rz-chart-tooltip-item-border-radius: var(--rz-border-radius);
+  --rz-chart-tooltip-item-hover-background-color: var(--rz-grid-stripe-background-color);
   --rz-chart-marker-stroke: var(--rz-base-background-color);
   /* Checkbox */
   --rz-checkbox-width: 1.25rem;
@@ -20933,7 +21130,9 @@ button.rz-colorpicker-trigger .rzi:before {
   --rz-profile-menu-item-icon-font-size: var(--rz-icon-size);
   --rz-profile-menu-item-icon-margin-inline: 0 0.5rem;
   /* ProgressBar */
+  --rz-progressbar-value: 100%;
   --rz-progressbar-background-color: var(--rz-base-200);
+  --rz-progressbar-color: var(--rz-text-color);
   --rz-progressbar-font-size: var(--rz-body-font-size);
   --rz-progressbar-height: 1.25rem;
   --rz-progressbar-border-radius: var(--rz-border-radius);

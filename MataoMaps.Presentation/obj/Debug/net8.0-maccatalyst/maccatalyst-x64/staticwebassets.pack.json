@@ -25,6 +25,13 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
+<<<<<<< HEAD
+=======
+      "Id": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\logo.png",
+      "PackagePath": "staticwebassets\\logo.png"
+    },
+    {
+>>>>>>> origin/frontend
       "Id": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\package-lock.json",
       "PackagePath": "staticwebassets\\package-lock.json"
     },

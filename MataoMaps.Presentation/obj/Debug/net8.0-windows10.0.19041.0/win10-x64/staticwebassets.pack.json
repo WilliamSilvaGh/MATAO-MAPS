@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\MataoMaps.Presentation.styles.css"
     },
     {
+      "Id": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\Images\\camera.png",
+      "PackagePath": "staticwebassets\\Images\\camera.png"
+    },
+    {
+      "Id": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\Images\\logo.png",
+      "PackagePath": "staticwebassets\\Images\\logo.png"
+    },
+    {
+      "Id": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\Images\\mapa.png",
+      "PackagePath": "staticwebassets\\Images\\mapa.png"
+    },
+    {
       "Id": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },

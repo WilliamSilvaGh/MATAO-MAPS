@@ -8,7 +8,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: rgb(232, 232, 232);
+    background-color: #ffffff;
     min-height: 100vh;
 }
 
@@ -19,7 +19,7 @@ body[b-l5uj9cdamt] {
 main[b-l5uj9cdamt] {
     color: white;
     flex: 1;
-    background-color: rgb(232, 232, 232);
+    background-color: #ffffff;
     width: 100%;
 }
 

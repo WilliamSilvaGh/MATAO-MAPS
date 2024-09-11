@@ -8,7 +8,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: rgb(232, 232, 232);
     min-height: 100vh;
 }
 
@@ -19,15 +19,15 @@ body[b-l5uj9cdamt] {
 main[b-l5uj9cdamt] {
     color: white;
     flex: 1;
-    background-color: black;
+    background-color: rgb(232, 232, 232);
     width: 100%;
-    opacity: 0.95;
 }
 
 .sidebar[b-l5uj9cdamt] {
     /*    background-image: linear-gradient(180deg, #C21616, black);*/
     /*background-image: linear-gradient(180deg, #00bfff, black);*/
-    background-image: linear-gradient(45deg, #243949, #517fa4);
+    background-color: #3685CD;
+    border-radius: 0 0 1rem 1rem;
 }
 
 .top-row[b-l5uj9cdamt] {

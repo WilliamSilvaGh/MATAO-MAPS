@@ -339,6 +339,7 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x6
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauifont.inputs
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauisplash.inputs
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauisplash.stamp
+<<<<<<< HEAD
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon29x29@2x.png
@@ -355,6 +356,28 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x6
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@2x.png
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@3x.png
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauiimage.stamp
+=======
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon76x76@2x.png
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon60x60@3x.png
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon60x60@2x.png
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon40x40@3x.png
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon40x40@2x.png
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon29x29@3x.png
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon29x29@2x.png
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\logo@3x.png
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\logo@2x.png
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\logo.png
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@3x.png
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@2x.png
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot.png
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauiimage.stamp
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauiimage.outputs
+>>>>>>> origin/frontend
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\f\MauiInfo.plist
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauifont.stamp
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\f\OpenSans-Regular.ttf
@@ -380,3 +403,9 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x6
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\MataoMaps.Presentation.pdb
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\MataoMaps.Presentation.genruntimeconfig.cache
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\ref\MataoMaps.Presentation.dll
+<<<<<<< HEAD
+=======
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\yt@3x.jpg
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\yt@2x.jpg
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\yt.jpg
+>>>>>>> origin/frontend

@@ -10,15 +10,14 @@
         "projectUniqueName": "C:\\MATAO-MAPS\\MataoMaps.API\\MataoMaps.API.csproj",
         "projectName": "MataoMaps.API",
         "projectPath": "C:\\MATAO-MAPS\\MataoMaps.API\\MataoMaps.API.csproj",
-        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
         "outputPath": "C:\\MATAO-MAPS\\MataoMaps.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\William\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -55,29 +54,29 @@
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[8.0.7, )"
+              "version": "[8.0.8, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.7, )"
+              "version": "[8.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.7, )"
+              "version": "[8.0.8, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.7.0, )"
+              "version": "[6.7.3, )"
             },
             "Swashbuckle.AspNetCore.Annotations": {
               "target": "Package",
-              "version": "[6.7.0, )"
+              "version": "[6.7.3, )"
             },
             "Swashbuckle.AspNetCore.SwaggerGen": {
               "target": "Package",
-              "version": "[6.7.0, )"
+              "version": "[6.7.3, )"
             }
           },
           "imports": [
@@ -109,15 +108,14 @@
         "projectUniqueName": "C:\\MATAO-MAPS\\MataoMaps.CrossCutting\\MataoMaps.CrossCutting.csproj",
         "projectName": "MataoMaps.CrossCutting",
         "projectPath": "C:\\MATAO-MAPS\\MataoMaps.CrossCutting\\MataoMaps.CrossCutting.csproj",
-        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
         "outputPath": "C:\\MATAO-MAPS\\MataoMaps.CrossCutting\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\William\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -184,15 +182,14 @@
         "projectUniqueName": "C:\\MATAO-MAPS\\MataoMaps.Data\\MataoMaps.Data.csproj",
         "projectName": "MataoMaps.Data",
         "projectPath": "C:\\MATAO-MAPS\\MataoMaps.Data\\MataoMaps.Data.csproj",
-        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
         "outputPath": "C:\\MATAO-MAPS\\MataoMaps.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\William\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -269,15 +266,14 @@
         "projectUniqueName": "C:\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj",
         "projectName": "MataoMaps.Domain",
         "projectPath": "C:\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj",
-        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
         "outputPath": "C:\\MATAO-MAPS\\MataoMaps.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\William\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
