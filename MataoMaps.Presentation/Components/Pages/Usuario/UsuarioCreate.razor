@@ -1,0 +1,146 @@
+﻿@page "/usuario/cadastro"
+@using MataoMaps.Domain.DTOs.Usuario.Request
+
+<!-- Formulário de Cadastro -->
+<div class="align">
+    <EditForm Model="@usuarioAdicionarRequest" OnValidSubmit="@AdicionarUsuario">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="form-group">
+            <InputText id="Nome" @bind-Value="usuarioAdicionarRequest.Nome" placeholder="Nome Completo" class="text-input" />
+        </div>
+
+        <div class="form-group">
+            <InputText id="EmailLogin" @bind-Value="usuarioAdicionarRequest.EmailLogin" placeholder="Email" class="text-input" />
+        </div>
+
+        <div class="form-group">
+            <InputText id="EmailLoginConfirmacao" @bind-Value="usuarioAdicionarRequest.EmailLoginConfirmacao" placeholder="Confirme o Email" class="text-input" />
+        </div>
+
+        <div class="form-group">
+            <InputText id="Senha" @bind-Value="usuarioAdicionarRequest.Senha" placeholder="Senha" type="password" class="text-input" />
+        </div>
+
+        <div class="form-group">
+            <InputText id="SenhaConfirmacao" @bind-Value="usuarioAdicionarRequest.SenhaConfirmacao" placeholder="Confirme a senha" type="password" class="text-input" />
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn-publicar" disabled="@isLoading">
+                @if (isLoading)
+                {
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span class="visually-hidden">Loading...</span>
+                }
+                else
+                {
+                    <span>Criar conta</span>
+                }
+            </button>
+        </div>
+    </EditForm>
+</div>
+
+<RadzenNotification />
+
+<style>
+    .text-input {
+        width: 80%;
+        border: none;
+        border-radius: 2rem;
+        height: 2rem;
+        padding: 1.5rem;
+        margin: 2rem auto;
+        display: block;
+        outline: none;
+        background-color: #e8e8e8;
+    }
+
+    .align {
+        margin-top: 3rem;
+        text-align: center; /* Alinha o conteúdo ao centro */
+    }
+
+    .btn-publicar {
+        display: block;
+        width: 80%;
+        margin: 1rem auto;
+        padding: 0.75rem;
+        border: none;
+        border-radius: 2rem;
+        background-color: #3685cd;
+        color: white;
+        font-weight: bold;
+        font-size: 1rem;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        z-index: 10;
+        position: relative;
+        margin-top: 3rem;
+    }
+
+        .btn-publicar:hover {
+            background-color: #0056b3;
+        }
+</style>
+
+@code {
+    protected override void OnInitialized()
+    {
+        PageTitleService.SetPageTitle("CRIE SUA CONTA");
+    }
+
+    public bool isLoading = false;
+    public UsuarioAdicionarRequest usuarioAdicionarRequest = new UsuarioAdicionarRequest();
+
+    public async Task AdicionarUsuario()
+    {
+        if (string.IsNullOrEmpty(usuarioAdicionarRequest.Nome) ||
+            string.IsNullOrEmpty(usuarioAdicionarRequest.EmailLogin) ||
+            string.IsNullOrEmpty(usuarioAdicionarRequest.EmailLoginConfirmacao) ||
+            string.IsNullOrEmpty(usuarioAdicionarRequest.Senha) ||
+            string.IsNullOrEmpty(usuarioAdicionarRequest.SenhaConfirmacao))
+        {
+            NotificationService.Notify(new NotificationMessage
+                {
+                    Severity = NotificationSeverity.Error,
+                    Summary = "Erro",
+                    Detail = "Por favor, preencha todos os campos.",
+                    Duration = 4000
+                });
+            return;
+        }
+
+        isLoading = true;
+
+        var response = await HttpClient.PostAsJsonAsync("usuario/adicionar", usuarioAdicionarRequest);
+        if (response.IsSuccessStatusCode)
+        {
+            NotificationService.Notify(new NotificationMessage
+                {
+                    Severity = NotificationSeverity.Success,
+                    Summary = "Sucesso",
+                    Detail = "Seu usuário foi criado com sucesso",
+                    Duration = 4000
+                });
+
+            NavigationManager.NavigateTo("/");
+        }
+        else
+        {
+            var errorContent = await response.Content.ReadAsStringAsync();
+            NotificationService.Notify(new NotificationMessage
+                {
+                    Severity = NotificationSeverity.Error,
+                    Summary = "Erro",
+                    Detail = errorContent,
+                    Duration = 4000
+                });
+        }
+
+        isLoading = false;
+    }
+}

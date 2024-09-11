@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\MataoMaps.Presentation.styles.css"
     },
     {
+      "Id": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\Images\\camera.png",
+      "PackagePath": "staticwebassets\\Images\\camera.png"
+    },
+    {
+      "Id": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\Images\\logo.png",
+      "PackagePath": "staticwebassets\\Images\\logo.png"
+    },
+    {
+      "Id": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\Images\\mapa.png",
+      "PackagePath": "staticwebassets\\Images\\mapa.png"
+    },
+    {
       "Id": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
@@ -23,21 +35,6 @@
     {
       "Id": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
-    },
-    {
-<<<<<<< HEAD
-=======
-      "Id": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\logo.png",
-      "PackagePath": "staticwebassets\\logo.png"
-    },
-    {
->>>>>>> origin/frontend
-      "Id": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\package-lock.json",
-      "PackagePath": "staticwebassets\\package-lock.json"
-    },
-    {
-      "Id": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\package.json",
-      "PackagePath": "staticwebassets\\package.json"
     },
     {
       "Id": "obj\\Debug\\net8.0-maccatalyst\\maccatalyst-x64\\staticwebassets\\msbuild.MataoMaps.Presentation.Microsoft.AspNetCore.StaticWebAssets.props",

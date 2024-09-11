@@ -1,10 +1,6 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-  "Hash": "qc9w3A3NPtac4Rb/4Zzg06Ty83hiZUk0/wb7DMS71sE=",
-=======
-  "Hash": "AK3aRy5pB7Qd/40N/SyhSNfZsu3gbk/RQq0VYttTV00=",
->>>>>>> origin/frontend
+  "Hash": "pKGZYn5k+ljHovRFVMS9CG62y6H9dTLOJtoP0Q/mMCc=",
   "Source": "MataoMaps.Presentation",
   "BasePath": "/",
   "Mode": "Root",
@@ -135,6 +131,63 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
+      "Identity": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\Images\\camera.png",
+      "SourceId": "MataoMaps.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "Images/camera.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\camera.png"
+    },
+    {
+      "Identity": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\Images\\logo.png",
+      "SourceId": "MataoMaps.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "Images/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\logo.png"
+    },
+    {
+      "Identity": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\Images\\mapa.png",
+      "SourceId": "MataoMaps.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "Images/mapa.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\mapa.png"
+    },
+    {
       "Identity": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\index.html",
       "SourceId": "MataoMaps.Presentation",
       "SourceType": "Discovered",
@@ -154,81 +207,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\package.json",
-      "SourceId": "MataoMaps.Presentation",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\",
-=======
-      "Identity": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\logo.png",
-      "SourceId": "MataoMaps.Presentation",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "logo.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\logo.png"
-    },
-    {
-      "Identity": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\package.json",
-      "SourceId": "MataoMaps.Presentation",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\",
->>>>>>> origin/frontend
-      "BasePath": "/",
-      "RelativePath": "package.json",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\package.json"
-    },
-    {
-      "Identity": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\package-lock.json",
-      "SourceId": "MataoMaps.Presentation",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "package-lock.json",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\package-lock.json"
-    },
-    {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\dark.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\dark.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\dark.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/dark.css",
       "AssetKind": "All",
@@ -241,23 +223,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\dark.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\dark.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\dark-base.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\dark-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\dark.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\dark-base.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/dark-base.css",
       "AssetKind": "All",
@@ -270,23 +242,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\dark-base.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\dark-base.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\dark-wcag.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\dark-wcag.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\dark-base.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\dark-wcag.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/dark-wcag.css",
       "AssetKind": "All",
@@ -299,23 +261,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\dark-wcag.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\dark-wcag.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\default.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\default.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\dark-wcag.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\default.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/default.css",
       "AssetKind": "All",
@@ -328,23 +280,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\default.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\default.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\default-base.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\default-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\default.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\default-base.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/default-base.css",
       "AssetKind": "All",
@@ -357,23 +299,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\default-base.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\default-base.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\default-wcag.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\default-wcag.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\default-base.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\default-wcag.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/default-wcag.css",
       "AssetKind": "All",
@@ -386,23 +318,89 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\default-wcag.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\default-wcag.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\humanistic.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\fluent.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\default-wcag.css"
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/fluent.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\fluent.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\humanistic.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\fluent-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/fluent-base.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\fluent-base.css"
+    },
+    {
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\fluent-dark.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/fluent-dark.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\fluent-dark.css"
+    },
+    {
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\fluent-dark-base.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/fluent-dark-base.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\fluent-dark-base.css"
+    },
+    {
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\humanistic.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/humanistic.css",
       "AssetKind": "All",
@@ -415,23 +413,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\humanistic.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\humanistic.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\humanistic-base.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\humanistic-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\humanistic.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\humanistic-base.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/humanistic-base.css",
       "AssetKind": "All",
@@ -444,23 +432,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\humanistic-base.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\humanistic-base.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\humanistic-dark.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\humanistic-dark.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\humanistic-base.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\humanistic-dark.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/humanistic-dark.css",
       "AssetKind": "All",
@@ -473,23 +451,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\humanistic-dark.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\humanistic-dark.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\humanistic-dark-base.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\humanistic-dark-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\humanistic-dark.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\humanistic-dark-base.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/humanistic-dark-base.css",
       "AssetKind": "All",
@@ -502,23 +470,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\humanistic-dark-base.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\humanistic-dark-base.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\humanistic-dark-wcag.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\humanistic-dark-wcag.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\humanistic-dark-base.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\humanistic-dark-wcag.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/humanistic-dark-wcag.css",
       "AssetKind": "All",
@@ -531,23 +489,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\humanistic-dark-wcag.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\humanistic-dark-wcag.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\humanistic-wcag.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\humanistic-wcag.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\humanistic-dark-wcag.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\humanistic-wcag.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/humanistic-wcag.css",
       "AssetKind": "All",
@@ -560,23 +508,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\humanistic-wcag.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\humanistic-wcag.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\material.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\material.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\humanistic-wcag.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\material.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/material.css",
       "AssetKind": "All",
@@ -589,23 +527,89 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\material.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\material.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\material-base.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\material3.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\material.css"
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/material3.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\material3.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\material-base.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\material3-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/material3-base.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\material3-base.css"
+    },
+    {
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\material3-dark.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/material3-dark.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\material3-dark.css"
+    },
+    {
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\material3-dark-base.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/material3-dark-base.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\material3-dark-base.css"
+    },
+    {
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\material-base.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/material-base.css",
       "AssetKind": "All",
@@ -618,23 +622,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\material-base.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\material-base.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\material-dark.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\material-dark.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\material-base.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\material-dark.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/material-dark.css",
       "AssetKind": "All",
@@ -647,23 +641,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\material-dark.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\material-dark.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\material-dark-base.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\material-dark-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\material-dark.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\material-dark-base.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/material-dark-base.css",
       "AssetKind": "All",
@@ -676,23 +660,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\material-dark-base.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\material-dark-base.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\material-dark-wcag.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\material-dark-wcag.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\material-dark-base.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\material-dark-wcag.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/material-dark-wcag.css",
       "AssetKind": "All",
@@ -705,23 +679,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\material-dark-wcag.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\material-dark-wcag.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\material-wcag.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\material-wcag.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\material-dark-wcag.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\material-wcag.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/material-wcag.css",
       "AssetKind": "All",
@@ -734,23 +698,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\material-wcag.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\material-wcag.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\software.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\software.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\material-wcag.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\software.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/software.css",
       "AssetKind": "All",
@@ -763,23 +717,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\software.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\software.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\software-base.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\software-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\software.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\software-base.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/software-base.css",
       "AssetKind": "All",
@@ -792,23 +736,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\software-base.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\software-base.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\software-dark.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\software-dark.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\software-base.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\software-dark.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/software-dark.css",
       "AssetKind": "All",
@@ -821,23 +755,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\software-dark.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\software-dark.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\software-dark-base.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\software-dark-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\software-dark.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\software-dark-base.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/software-dark-base.css",
       "AssetKind": "All",
@@ -850,23 +774,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\software-dark-base.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\software-dark-base.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\software-dark-wcag.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\software-dark-wcag.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\software-dark-base.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\software-dark-wcag.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/software-dark-wcag.css",
       "AssetKind": "All",
@@ -879,23 +793,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\software-dark-wcag.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\software-dark-wcag.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\software-wcag.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\software-wcag.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\software-dark-wcag.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\software-wcag.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/software-wcag.css",
       "AssetKind": "All",
@@ -908,23 +812,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\software-wcag.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\software-wcag.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\standard.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\standard.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\software-wcag.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\standard.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/standard.css",
       "AssetKind": "All",
@@ -937,23 +831,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\standard.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\standard.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\standard-base.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\standard-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\standard.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\standard-base.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/standard-base.css",
       "AssetKind": "All",
@@ -966,23 +850,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\standard-base.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\standard-base.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\standard-dark.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\standard-dark.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\standard-base.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\standard-dark.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/standard-dark.css",
       "AssetKind": "All",
@@ -995,23 +869,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\standard-dark.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\standard-dark.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\standard-dark-base.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\standard-dark-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\standard-dark.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\standard-dark-base.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/standard-dark-base.css",
       "AssetKind": "All",
@@ -1024,23 +888,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\standard-dark-base.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\standard-dark-base.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\standard-dark-wcag.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\standard-dark-wcag.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\standard-dark-base.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\standard-dark-wcag.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/standard-dark-wcag.css",
       "AssetKind": "All",
@@ -1053,23 +907,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\standard-dark-wcag.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\standard-dark-wcag.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\standard-wcag.css",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\standard-wcag.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\standard-dark-wcag.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\standard-wcag.css",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/standard-wcag.css",
       "AssetKind": "All",
@@ -1082,23 +926,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\css\\standard-wcag.css"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\standard-wcag.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\fonts\\MaterialSymbolsOutlined.woff2",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\fonts\\MaterialSymbolsOutlined.woff2",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\css\\standard-wcag.css"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\fonts\\MaterialSymbolsOutlined.woff2",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/MaterialSymbolsOutlined.woff2",
       "AssetKind": "All",
@@ -1111,23 +945,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\fonts\\MaterialSymbolsOutlined.woff2"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\fonts\\MaterialSymbolsOutlined.woff2"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\fonts\\RobotoFlex.woff2",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\fonts\\RobotoFlex.woff2",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\fonts\\MaterialSymbolsOutlined.woff2"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\fonts\\RobotoFlex.woff2",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/RobotoFlex.woff2",
       "AssetKind": "All",
@@ -1140,23 +964,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\fonts\\RobotoFlex.woff2"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\fonts\\RobotoFlex.woff2"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\fonts\\SourceSans3VF-Italic.ttf.woff2",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\fonts\\SourceSans3VF-Italic.ttf.woff2",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\fonts\\RobotoFlex.woff2"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\fonts\\SourceSans3VF-Italic.ttf.woff2",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSans3VF-Italic.ttf.woff2",
       "AssetKind": "All",
@@ -1169,23 +983,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\fonts\\SourceSans3VF-Italic.ttf.woff2"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\fonts\\SourceSans3VF-Italic.ttf.woff2"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\fonts\\SourceSans3VF-Upright.ttf.woff2",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\fonts\\SourceSans3VF-Upright.ttf.woff2",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\fonts\\SourceSans3VF-Italic.ttf.woff2"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\fonts\\SourceSans3VF-Upright.ttf.woff2",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSans3VF-Upright.ttf.woff2",
       "AssetKind": "All",
@@ -1198,23 +1002,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\fonts\\SourceSans3VF-Upright.ttf.woff2"
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\fonts\\SourceSans3VF-Upright.ttf.woff2"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\Radzen.Blazor.js",
+      "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\Radzen.Blazor.js",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\fonts\\SourceSans3VF-Upright.ttf.woff2"
-    },
-    {
-      "Identity": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\Radzen.Blazor.js",
-      "SourceId": "Radzen.Blazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\",
->>>>>>> origin/frontend
+      "ContentRoot": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "Radzen.Blazor.js",
       "AssetKind": "All",
@@ -1227,11 +1021,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.0.9\\staticwebassets\\Radzen.Blazor.js"
-=======
-      "OriginalItemSpec": "C:\\Users\\lenovo\\.nuget\\packages\\radzen.blazor\\5.1.5\\staticwebassets\\Radzen.Blazor.js"
->>>>>>> origin/frontend
+      "OriginalItemSpec": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\Radzen.Blazor.js"
     }
   ]
 }

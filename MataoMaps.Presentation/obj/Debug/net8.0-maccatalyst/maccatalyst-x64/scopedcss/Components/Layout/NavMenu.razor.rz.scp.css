@@ -13,7 +13,7 @@
     display: none;
 }
 
-.navbar-toggler-label[b-f9nat5od3m] { /* Novo elemento para os três riscos */
+.navbar-toggler-label[b-f9nat5od3m] { /* Novo elemento para os tr�s riscos */
     appearance: none;
     cursor: pointer;
     width: 3.5rem;
@@ -38,7 +38,7 @@
     }
 
 .navbar-toggler:checked + .navbar-toggler-label span:nth-child(1)[b-f9nat5od3m] {
-    transform: rotate(45deg) translate(9px, 8px); /* Aumentamos um pouco a translação */
+    transform: rotate(45deg) translate(9px, 8px); /* Aumentamos um pouco a transla��o */
 }
 
 .navbar-toggler:checked + .navbar-toggler-label span:nth-child(2)[b-f9nat5od3m] {
@@ -46,7 +46,7 @@
 }
 
 .navbar-toggler:checked + .navbar-toggler-label span:nth-child(3)[b-f9nat5od3m] {
-    transform: rotate(-45deg) translate(3px, -2px); /* Aumentamos um pouco a translação */
+    transform: rotate(-45deg) translate(3px, -2px); /* Aumentamos um pouco a transla��o */
 }
 
 /*    .navbar-toggler:checked {
@@ -60,10 +60,9 @@
 .navbar-brand[b-f9nat5od3m] {
     font-size: 1.5rem;
     text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
-    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     width: 100%;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .container-fluid[b-f9nat5od3m] {

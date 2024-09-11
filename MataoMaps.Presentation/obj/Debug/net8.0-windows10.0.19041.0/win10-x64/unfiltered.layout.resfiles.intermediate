@@ -1,6 +1,5 @@
 Components\Layout\MainLayout.razor.css
 Components\Layout\NavMenu.razor.css
-Components\Pages\Ocorrencia\OcorrenciaCreate.razor.css
 OpenSans-Regular.ttf
 appicon.ico
 appiconLargeTile.scale-100.png
@@ -69,14 +68,16 @@ wwwroot\Images\camera.png
 wwwroot\Images\logo.png
 wwwroot\Images\mapa.png
 wwwroot\index.html
-wwwroot\package.json
-wwwroot\package-lock.json
 wwwroot\_content\Radzen.Blazor\css\dark.css
 wwwroot\_content\Radzen.Blazor\css\dark-base.css
 wwwroot\_content\Radzen.Blazor\css\dark-wcag.css
 wwwroot\_content\Radzen.Blazor\css\default.css
 wwwroot\_content\Radzen.Blazor\css\default-base.css
 wwwroot\_content\Radzen.Blazor\css\default-wcag.css
+wwwroot\_content\Radzen.Blazor\css\fluent.css
+wwwroot\_content\Radzen.Blazor\css\fluent-base.css
+wwwroot\_content\Radzen.Blazor\css\fluent-dark.css
+wwwroot\_content\Radzen.Blazor\css\fluent-dark-base.css
 wwwroot\_content\Radzen.Blazor\css\humanistic.css
 wwwroot\_content\Radzen.Blazor\css\humanistic-base.css
 wwwroot\_content\Radzen.Blazor\css\humanistic-dark.css
@@ -84,6 +85,10 @@ wwwroot\_content\Radzen.Blazor\css\humanistic-dark-base.css
 wwwroot\_content\Radzen.Blazor\css\humanistic-dark-wcag.css
 wwwroot\_content\Radzen.Blazor\css\humanistic-wcag.css
 wwwroot\_content\Radzen.Blazor\css\material.css
+wwwroot\_content\Radzen.Blazor\css\material3.css
+wwwroot\_content\Radzen.Blazor\css\material3-base.css
+wwwroot\_content\Radzen.Blazor\css\material3-dark.css
+wwwroot\_content\Radzen.Blazor\css\material3-dark-base.css
 wwwroot\_content\Radzen.Blazor\css\material-base.css
 wwwroot\_content\Radzen.Blazor\css\material-dark.css
 wwwroot\_content\Radzen.Blazor\css\material-dark-base.css

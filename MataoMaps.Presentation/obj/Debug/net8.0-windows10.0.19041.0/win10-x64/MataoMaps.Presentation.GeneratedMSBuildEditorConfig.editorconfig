@@ -32,31 +32,17 @@ build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/MATAO-MAPS/MataoMaps.Presentation/Components/Pages/Administrador/UsuarioAdministradorCreate.razor]
+[C:/MATAO-MAPS/MataoMaps.Presentation/Components/Pages/Ocorrencia/OcorrenciaCreate.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbmlzdHJhZG9yXFVzdWFyaW9BZG1pbmlzdHJhZG9yQ3JlYXRlLnJhem9y
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xPY29ycmVuY2lhXE9jb3JyZW5jaWFDcmVhdGUucmF6b3I=
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/MATAO-MAPS/MataoMaps.Presentation/Components/Pages/Ocorrencia/OcorrenciaList.razor]
+[C:/MATAO-MAPS/MataoMaps.Presentation/Components/Pages/Usuario/UsuarioCreate.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xPY29ycmVuY2lhXE9jb3JyZW5jaWFMaXN0LnJhem9y
-build_metadata.AdditionalFiles.RelativePath = 
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/MATAO-MAPS/MataoMaps.Presentation/Components/Pages/Sobre/Sobre.razor]
-build_metadata.AdditionalFiles.GenKind = 
-build_metadata.AdditionalFiles.ManifestResourceName = 
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTb2JyZVxTb2JyZS5yYXpvcg==
-build_metadata.AdditionalFiles.RelativePath = 
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/MATAO-MAPS/MataoMaps.Presentation/Components/Pages/Usuario/UsuarioCadastro.razor]
-build_metadata.AdditionalFiles.GenKind = 
-build_metadata.AdditionalFiles.ManifestResourceName = 
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xVc3VhcmlvXFVzdWFyaW9DYWRhc3Ryby5yYXpvcg==
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xVc3VhcmlvXFVzdWFyaW9DcmVhdGUucmF6b3I=
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
@@ -94,10 +80,3 @@ build_metadata.AdditionalFiles.ManifestResourceName =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = b-f9nat5od3m
-
-[C:/MATAO-MAPS/MataoMaps.Presentation/Components/Pages/Ocorrencia/OcorrenciaCreate.razor]
-build_metadata.AdditionalFiles.GenKind = 
-build_metadata.AdditionalFiles.ManifestResourceName = 
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xPY29ycmVuY2lhXE9jb3JyZW5jaWFDcmVhdGUucmF6b3I=
-build_metadata.AdditionalFiles.RelativePath = 
-build_metadata.AdditionalFiles.CssScope = b-dmcgc12z5g

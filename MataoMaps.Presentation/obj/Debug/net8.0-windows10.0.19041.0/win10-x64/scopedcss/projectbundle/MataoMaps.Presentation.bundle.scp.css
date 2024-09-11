@@ -117,7 +117,7 @@ main[b-l5uj9cdamt] {
     display: none;
 }
 
-.navbar-toggler-label[b-f9nat5od3m] { /* Novo elemento para os três riscos */
+.navbar-toggler-label[b-f9nat5od3m] { /* Novo elemento para os tr�s riscos */
     appearance: none;
     cursor: pointer;
     width: 3.5rem;
@@ -142,7 +142,7 @@ main[b-l5uj9cdamt] {
     }
 
 .navbar-toggler:checked + .navbar-toggler-label span:nth-child(1)[b-f9nat5od3m] {
-    transform: rotate(45deg) translate(9px, 8px); /* Aumentamos um pouco a translação */
+    transform: rotate(45deg) translate(9px, 8px); /* Aumentamos um pouco a transla��o */
 }
 
 .navbar-toggler:checked + .navbar-toggler-label span:nth-child(2)[b-f9nat5od3m] {
@@ -150,7 +150,7 @@ main[b-l5uj9cdamt] {
 }
 
 .navbar-toggler:checked + .navbar-toggler-label span:nth-child(3)[b-f9nat5od3m] {
-    transform: rotate(-45deg) translate(3px, -2px); /* Aumentamos um pouco a translação */
+    transform: rotate(-45deg) translate(3px, -2px); /* Aumentamos um pouco a transla��o */
 }
 
 /*    .navbar-toggler:checked {
@@ -262,4 +262,3 @@ main[b-l5uj9cdamt] {
         display: none !important;
     }
 }
-/* /Components/Pages/Ocorrencia/OcorrenciaCreate.razor.rz.scp.css */
