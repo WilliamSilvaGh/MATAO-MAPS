@@ -30,37 +30,37 @@
     <AppXManifest Include="C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-09-11T21:37:28.542</Modified>
+      <Modified>2024-09-11T23:55:50.126</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-09-11T18:48:40.258</Modified>
+      <Modified>2024-09-11T23:08:27.286</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MataoMaps.Presentation.runtimeconfig.json">
       <PackagePath>MataoMaps.Presentation.runtimeconfig.json</PackagePath>
-      <Modified>2024-09-11T20:12:44.200</Modified>
+      <Modified>2024-09-11T22:59:00.752</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MataoMaps.Presentation.dll">
       <PackagePath>MataoMaps.Presentation.dll</PackagePath>
-      <Modified>2024-09-11T21:34:45.348</Modified>
+      <Modified>2024-09-11T23:54:17.116</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MataoMaps.Presentation.exe</PackagePath>
-      <Modified>2024-09-11T21:34:45.438</Modified>
+      <Modified>2024-09-11T23:54:17.335</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
-      <Modified>2024-09-11T17:53:18.628</Modified>
+      <Modified>2024-09-11T22:17:37.015</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\wwwroot\css\app.css">
       <PackagePath>wwwroot\css\app.css</PackagePath>
-      <Modified>2024-09-11T17:53:18.089</Modified>
+      <Modified>2024-09-11T22:17:37.953</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\wwwroot\css\bootstrap\bootstrap.min.css">
       <PackagePath>wwwroot\css\bootstrap\bootstrap.min.css</PackagePath>
-      <Modified>2024-09-11T17:53:18.094</Modified>
+      <Modified>2024-09-11T22:17:37.955</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\wwwroot\css\bootstrap\bootstrap.min.css.map">
       <PackagePath>wwwroot\css\bootstrap\bootstrap.min.css.map</PackagePath>
@@ -84,27 +84,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\wwwroot\index.html">
       <PackagePath>wwwroot\index.html</PackagePath>
-      <Modified>2024-09-11T17:53:18.085</Modified>
+      <Modified>2024-09-11T22:17:37.956</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2024-09-11T17:53:53.988</Modified>
+      <Modified>2024-09-11T22:56:52.627</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2024-09-11T17:53:54.042</Modified>
+      <Modified>2024-09-11T22:56:52.682</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2024-09-11T17:53:54.124</Modified>
+      <Modified>2024-09-11T22:56:52.758</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2024-09-11T17:53:54.217</Modified>
+      <Modified>2024-09-11T22:56:52.877</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2024-09-11T17:53:54.579</Modified>
+      <Modified>2024-09-11T22:56:53.284</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
@@ -112,211 +112,211 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2024-09-11T17:53:54.688</Modified>
+      <Modified>2024-09-11T22:56:53.485</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2024-09-11T17:53:56.013</Modified>
+      <Modified>2024-09-11T22:56:55.607</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2024-09-11T17:53:56.071</Modified>
+      <Modified>2024-09-11T22:56:55.679</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2024-09-11T17:53:56.122</Modified>
+      <Modified>2024-09-11T22:56:55.739</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2024-09-11T17:53:56.206</Modified>
+      <Modified>2024-09-11T22:56:55.826</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2024-09-11T17:53:56.526</Modified>
+      <Modified>2024-09-11T22:56:56.179</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.125</Modified>
+      <Modified>2024-09-11T22:56:54.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.152</Modified>
+      <Modified>2024-09-11T22:56:54.332</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.243</Modified>
+      <Modified>2024-09-11T22:56:54.517</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.167</Modified>
+      <Modified>2024-09-11T22:56:54.369</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.196</Modified>
+      <Modified>2024-09-11T22:56:54.384</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.003</Modified>
+      <Modified>2024-09-11T22:56:54.105</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.039</Modified>
+      <Modified>2024-09-11T22:56:54.130</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.106</Modified>
+      <Modified>2024-09-11T22:56:54.269</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.058</Modified>
+      <Modified>2024-09-11T22:56:54.164</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.072</Modified>
+      <Modified>2024-09-11T22:56:54.214</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2024-09-11T17:53:54.730</Modified>
+      <Modified>2024-09-11T22:56:53.594</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2024-09-11T17:53:54.760</Modified>
+      <Modified>2024-09-11T22:56:53.709</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2024-09-11T17:53:54.787</Modified>
+      <Modified>2024-09-11T22:56:53.773</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2024-09-11T17:53:54.810</Modified>
+      <Modified>2024-09-11T22:56:53.845</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2024-09-11T17:53:54.843</Modified>
+      <Modified>2024-09-11T22:56:53.941</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2024-09-11T17:53:54.861</Modified>
+      <Modified>2024-09-11T22:56:53.963</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2024-09-11T17:53:54.876</Modified>
+      <Modified>2024-09-11T22:56:53.984</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2024-09-11T17:53:54.950</Modified>
+      <Modified>2024-09-11T22:56:54.083</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2024-09-11T17:53:54.893</Modified>
+      <Modified>2024-09-11T22:56:54.010</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2024-09-11T17:53:54.911</Modified>
+      <Modified>2024-09-11T22:56:54.038</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.480</Modified>
+      <Modified>2024-09-11T22:56:54.851</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.505</Modified>
+      <Modified>2024-09-11T22:56:54.885</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.534</Modified>
+      <Modified>2024-09-11T22:56:54.937</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.572</Modified>
+      <Modified>2024-09-11T22:56:55.024</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.650</Modified>
+      <Modified>2024-09-11T22:56:55.154</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.362</Modified>
+      <Modified>2024-09-11T22:56:54.686</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.380</Modified>
+      <Modified>2024-09-11T22:56:54.712</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.399</Modified>
+      <Modified>2024-09-11T22:56:54.738</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.422</Modified>
+      <Modified>2024-09-11T22:56:54.769</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.459</Modified>
+      <Modified>2024-09-11T22:56:54.819</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.260</Modified>
+      <Modified>2024-09-11T22:56:54.553</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.280</Modified>
+      <Modified>2024-09-11T22:56:54.581</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.295</Modified>
+      <Modified>2024-09-11T22:56:54.603</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.314</Modified>
+      <Modified>2024-09-11T22:56:54.626</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.342</Modified>
+      <Modified>2024-09-11T22:56:54.659</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.677</Modified>
+      <Modified>2024-09-11T22:56:55.197</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.707</Modified>
+      <Modified>2024-09-11T22:56:55.260</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.746</Modified>
+      <Modified>2024-09-11T22:56:55.317</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.804</Modified>
+      <Modified>2024-09-11T22:56:55.397</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.969</Modified>
+      <Modified>2024-09-11T22:56:55.558</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2024-09-11T17:53:54.788</Modified>
+      <Modified>2024-09-11T22:56:53.609</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2024-09-11T17:53:54.813</Modified>
+      <Modified>2024-09-11T22:56:53.692</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2024-09-11T17:53:54.849</Modified>
+      <Modified>2024-09-11T22:56:53.754</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2024-09-11T17:53:54.890</Modified>
+      <Modified>2024-09-11T22:56:53.823</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2024-09-11T17:53:55.031</Modified>
+      <Modified>2024-09-11T22:56:53.970</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MataoMaps.Presentation.deps.json">
       <PackagePath>MataoMaps.Presentation.deps.json</PackagePath>
-      <Modified>2024-09-11T20:12:43.948</Modified>
+      <Modified>2024-09-11T22:59:00.740</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -676,7 +676,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Domain\bin\Debug\net8.0\MataoMaps.Domain.dll">
       <PackagePath>MataoMaps.Domain.dll</PackagePath>
-      <Modified>2024-09-11T18:14:32.025</Modified>
+      <Modified>2024-09-11T22:58:31.458</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.maui.controls.compatibility\8.0.3\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
@@ -692,11 +692,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\bundle\MataoMaps.Presentation.styles.css">
       <PackagePath>wwwroot\MataoMaps.Presentation.styles.css</PackagePath>
-      <Modified>2024-09-11T20:10:00.594</Modified>
+      <Modified>2024-09-11T22:56:48.402</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\MataoMaps.Presentation.bundle.scp.css">
       <PackagePath>wwwroot\MataoMaps.Presentation.bundle.scp.css</PackagePath>
-      <Modified>2024-09-11T20:10:00.597</Modified>
+      <Modified>2024-09-11T22:56:48.410</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\William\.nuget\packages\radzen.blazor\5.1.11\staticwebassets\css\dark.css">
       <PackagePath>wwwroot\_content\Radzen.Blazor\css\dark.css</PackagePath>
@@ -872,11 +872,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\Components\Layout\MainLayout.razor.css">
       <PackagePath>Components\Layout\MainLayout.razor.css</PackagePath>
-      <Modified>2024-09-11T20:09:59.308</Modified>
+      <Modified>2024-09-11T22:17:36.975</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\Components\Layout\NavMenu.razor.css">
       <PackagePath>Components\Layout\NavMenu.razor.css</PackagePath>
-      <Modified>2024-09-11T18:21:05.810</Modified>
+      <Modified>2024-09-11T22:17:36.978</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

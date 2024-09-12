@@ -1,10 +1,11 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="page">
-    <div class="sidebar">
-@*         <NavMenu /> *@
-    </div>
-
+    @if(UsuarioLogado.IsLogged){
+        <div class="sidebar">
+            <NavMenu />
+        </div>
+    }
     <main>
         @Body
     </main>

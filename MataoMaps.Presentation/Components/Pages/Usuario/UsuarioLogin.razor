@@ -1,7 +1,6 @@
 ﻿@page "/"
 @using MataoMaps.Domain.DTOs.Usuario.Request
 @using System.Text.Json
-@using MataoMaps.Domain.DTOs.Usuario.Response
 
 
 <div class="fundo">
@@ -15,13 +14,24 @@
                 <input type="password" placeholder="Senha" @bind="usuarioAutenticarRequest.Senha" />
             </div>
 
-            <button class="btn-publicar" @onclick="Autenticar">Login</button>
+            <button type="submit" class="btn-publicar" disabled="@isLoading" @onclick="Autenticar">
+                @if (isLoading)
+                {
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span class="visually-hidden">Loading...</span>
+                }
+                else
+                {
+                    <span>Criar conta</span>
+                }
+            </button>
 
             <p>Não tem uma conta? <a href="/usuario/cadastro" style="color: #3685cd; text-decoration: none;">Criar uma conta</a></p>
         </div>
         <img src="/Images/mapa.png" class="img-mapa" />
     </div>
 </div>
+
 
 
 
@@ -118,12 +128,13 @@
 
 @code {
     private bool isLoading = false;
-
     private UsuarioAutenticarRequest usuarioAutenticarRequest = new UsuarioAutenticarRequest();
 
     protected override async Task OnInitializedAsync()
     {
         isLoading = false;
+        UsuarioLogado.IsLogged = false;
+        StateHasChanged();
     }
 
     private async Task Autenticar()
@@ -131,12 +142,12 @@
         if (string.IsNullOrEmpty(usuarioAutenticarRequest.EmailLogin) || string.IsNullOrEmpty(usuarioAutenticarRequest.Senha))
         {
             NotificationService.Notify(new NotificationMessage
-                {
-                    Severity = NotificationSeverity.Error,
-                    Summary = "Erro",
-                    Detail = "Por favor, preencha todos os campos.",
-                    Duration = 4000
-                });
+            {
+                Severity = NotificationSeverity.Error,
+                Summary = "Erro",
+                Detail = "Por favor, preencha todos os campos.",
+                Duration = 4000
+            });
             return;
         }
 
@@ -148,25 +159,43 @@
         {
             var content = await response.Content.ReadAsStringAsync();
             var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-            var usuarioAutenticarResponse = JsonSerializer.Deserialize<UsuarioAutenticarResponse>(content, options);
+            var usuarioAutenticarResponse = JsonSerializer.Deserialize<UsuarioTokenResponse>(content, options);
 
-            HttpClient.DefaultRequestHeaders.Clear();
-            HttpClient.DefaultRequestHeaders.Add("authorization", $"bearer {usuarioAutenticarResponse.AccessToken}");
+            if (usuarioAutenticarResponse != null)
+            {
+                // Atualiza o serviço UsuarioLogado
+                UsuarioLogado.IsLogged = true;
+                UsuarioLogado.EhAdmin = usuarioAutenticarResponse.EhAdmin; // Define se o usuário é admin com base na resposta
 
-            isLoading = false;
+                HttpClient.DefaultRequestHeaders.Clear();
+                HttpClient.DefaultRequestHeaders.Add("authorization", $"bearer {usuarioAutenticarResponse.AccessToken}");
 
-            NavigationManager.NavigateTo("/ocorrencia/create");
+                isLoading = false;
+
+                NavigationManager.NavigateTo("/ocorrencia/create");
+            }
+            else
+            {
+                isLoading = false;
+                NotificationService.Notify(new NotificationMessage
+                {
+                    Severity = NotificationSeverity.Error,
+                    Summary = "Erro",
+                    Detail = "Erro ao processar a resposta de autenticação.",
+                    Duration = 4000
+                });
+            }
         }
         else
         {
             isLoading = false;
             NotificationService.Notify(new NotificationMessage
-                {
-                    Severity = NotificationSeverity.Error,
-                    Summary = "Erro",
-                    Detail = "Usuário ou senha inválidos.",
-                    Duration = 4000
-                });
+            {
+                Severity = NotificationSeverity.Error,
+                Summary = "Erro",
+                Detail = "Usuário ou senha inválidos.",
+                Duration = 4000
+            });
         }
     }
 }

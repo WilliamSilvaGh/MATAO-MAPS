@@ -2,7 +2,7 @@
 {
     public class UsuarioLogado
     {
-        public string EhAdmin { get; set; }
-        public string IsLogged { get; set; }
+        public bool EhAdmin { get; set; }
+        public bool IsLogged { get; set; }
     }
 }

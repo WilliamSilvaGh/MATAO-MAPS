@@ -90,7 +90,9 @@
 @code {
     protected override void OnInitialized()
     {
+        UsuarioLogado.IsLogged = false;
         PageTitleService.SetPageTitle("CRIE SUA CONTA");
+        StateHasChanged();
     }
 
     public bool isLoading = false;
