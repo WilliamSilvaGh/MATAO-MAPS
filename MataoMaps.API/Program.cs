@@ -58,7 +58,8 @@ app.MapGet("/ocorrencia/listar", (MataoMapsContext context, ClaimsPrincipal user
                 UsuarioNome = ocorrencia.Usuario.Nome,
                 Latitude = ocorrencia.Latitude,
                 Longitude = ocorrencia.Longitude,
-                FotoBase64 = ocorrencia.FotoBase64,
+                Imagem = ocorrencia.Imagem,
+                Endereco = ocorrencia.Endereco,
                 Descricao = ocorrencia.Descricao,
                 Resolucao = ocorrencia.Resolucao,
                 Status = ocorrencia.Status
@@ -73,7 +74,8 @@ app.MapGet("/ocorrencia/listar", (MataoMapsContext context, ClaimsPrincipal user
             UsuarioNome = ocorrencia.Usuario.Nome,
             Latitude = ocorrencia.Latitude,
             Longitude = ocorrencia.Longitude,
-            FotoBase64 = ocorrencia.FotoBase64,
+            Imagem = ocorrencia.Imagem,
+            Endereco = ocorrencia.Endereco,
             Descricao = ocorrencia.Descricao,
             Resolucao = ocorrencia.Resolucao,
             Status = ocorrencia.Status
@@ -110,7 +112,8 @@ app.MapGet("/ocorrencia/{ocorrenciaId}", (MataoMapsContext context, Guid ocorren
         UsuarioId = ocorrencia.UsuarioId,
         Latitude = ocorrencia.Latitude,
         Longitude = ocorrencia.Longitude,
-        FotoBase64 = ocorrencia.FotoBase64,
+        Imagem = ocorrencia.Imagem,
+        Endereco = ocorrencia.Endereco,
         Descricao = ocorrencia.Descricao,
         Resolucao = ocorrencia.Resolucao,
         Status = ocorrencia.Status
@@ -140,7 +143,8 @@ app.MapPost("/ocorrencia/adicionar", (MataoMapsContext context, ClaimsPrincipal 
         var ocorrencia = new Ocorrencia(
             ocorrenciaAdicionarRequest.Latitude,
             ocorrenciaAdicionarRequest.Longitude,
-            ocorrenciaAdicionarRequest.FotoBase64,
+            ocorrenciaAdicionarRequest.Imagem,
+            ocorrenciaAdicionarRequest.Endereco,
             ocorrenciaAdicionarRequest.Descricao,
             usuarioLogadoId
             );

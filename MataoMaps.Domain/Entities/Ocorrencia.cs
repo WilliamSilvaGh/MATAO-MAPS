@@ -1,6 +1,5 @@
 ﻿using MataoMaps.Domain.Entities.Base;
 using MataoMaps.Domain.Enumerators;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MataoMaps.Domain.Entities
 {
@@ -8,7 +7,8 @@ namespace MataoMaps.Domain.Entities
     {
         public decimal Latitude { get; set; }
         public decimal Longitude { get; set; }
-        public string FotoBase64 { get; set; }
+        public byte[] Imagem { get; set; }
+        public string Endereco { get; set; }
         public string Descricao { get; set; }
         public EnumStatus Status { get; set; }
         public string Resolucao { get; set; }
@@ -22,14 +22,16 @@ namespace MataoMaps.Domain.Entities
         public Ocorrencia(
             decimal latitude,
             decimal longitude,
-            string? fotoBase64,
+            byte[] imagem,
+            string endereco,
             string descricao,
             Guid usuarioId)
         {
             Id = Guid.NewGuid();
             Latitude = latitude;
             Longitude = longitude;
-            FotoBase64 = fotoBase64;
+            Imagem = imagem;
+            Endereco = endereco;
             Descricao = descricao;
             Status = EnumStatus.AFazer;
             UsuarioId = usuarioId;

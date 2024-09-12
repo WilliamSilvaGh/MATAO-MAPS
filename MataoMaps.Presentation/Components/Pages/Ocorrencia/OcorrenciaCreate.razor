@@ -1,22 +1,33 @@
 ﻿@page "/ocorrencia/create"
+@using MataoMaps.Domain.DTOs.Ocorrencia.Request
+@using System.IO
 
 <h3>Adicionar fotos</h3>
+<div class="quadrado" @onclick="DisplayAction">
+    <img src="./Images/camera.png" class="camera" />
+    @if (ocorrenciaUsuarioFoto != "/Images/camera.png")
+    {
+        <img src="@ocorrenciaUsuarioFoto" class="userImage" />
+    }
+</div>
+<input type="text" placeholder="Endereço" class="text-input" @bind="ocorrenciaAdicionarRequest.Endereco" />
 
-    <label for="file-upload" class="custom-file-upload">
-        <div class="upload-square">
-            <RadzenImage Path="Images/camera.png" Style="width: 4rem; height: 3rem;" AlternateText="camera" />
-        </div>
-    </label>
-    <input id="file-upload" type="file" multiple />
+<div class="fundo-problema">
+    <h4>DESCREVA O PROBLEMA</h4>
+    <textarea class="text-area" rows="4" @bind="ocorrenciaAdicionarRequest.Descricao"></textarea>
+</div>
 
-    <input type="text" placeholder="Endereço" class="text-input" />
-
-    <div class="fundo-problema">
-        <h4>DESCREVA O PROBLEMA</h4>
-        <textarea class="text-area" rows="4"></textarea>
-    </div>
-
-    <button class="btn-publicar">PUBLICAR</button>
+<button class="btn-publicar" @onclick="PublicarOcorrencia">
+    @if (isLoading)
+    {
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        <span class="visually-hidden">Loading...</span>
+    }
+    else
+    {
+        <span>PUBLICAR</span>
+    }
+</button>
 
 <style>
 
@@ -54,10 +65,6 @@
         margin-bottom: 1rem; /* Espaçamento inferior */
     }
 
-    input[type="file"] {
-        display: none; /* Oculta o input de arquivo */
-    }
-
     .text-input {
         display: block; /* Remove o comportamento flexível desnecessário */
         width: 80%; /* Largura do input */
@@ -73,14 +80,23 @@
             font-weight: 500;
         }
 
-    .custom-file-upload {
-        display: flex;
-        justify-content: center; /* Centraliza o quadrado horizontalmente */
-        align-items: center; /* Centraliza o quadrado verticalmente */
-        width: 100%; /* Largura do contêiner para centralizar o quadrado */
+    .camera {
+        width: 4rem;
+        height: 3rem;
+        z-index: 0;
+        position: absolute;
     }
 
-    .upload-square {
+    .userImage {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        position: absolute;
+        object-fit: cover;
+    }
+
+
+    .quadrado {
         display: flex;
         justify-content: center; /* Centraliza a imagem horizontalmente dentro do quadrado */
         align-items: center; /* Centraliza a imagem verticalmente dentro do quadrado */
@@ -89,11 +105,13 @@
         border: 3px solid black; /* Borda preta */
         background-color: #f8f8f8; /* Cor de fundo opcional */
         margin: 0 auto; /* Centraliza o quadrado */
+        position: relative;
     }
 
-        .upload-square:hover {
-            background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
-        }
+        .quadrado:hover {
+        cursor: pointer; /* Altera o cursor ao passar o mouse */
+        background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
+    }
 
 
     .btn-publicar {
@@ -123,8 +141,63 @@
 
 
 @code {
+    private bool isLoading = false;
+    private string ocorrenciaUsuarioFoto = "/Images/camera.png";
+    private string _ImageBase64Data;
+
     protected override void OnInitialized()
     {
         PageTitleService.SetPageTitle("OCORRÊNCIA");
     }
+
+    private OcorrenciaAdicionarRequest ocorrenciaAdicionarRequest = new OcorrenciaAdicionarRequest();
+
+    private async void DisplayAction()
+    {
+        string response = await App.Current.MainPage.DisplayActionSheet("Escolha uma opção", "OK", null, "Tirar foto", "Escolher da galeria");
+
+        if (response == "Tirar foto")
+        {
+
+        }
+        else if (response == "Escolher da galeria")
+        {
+            var photo = await MediaPicker.Default.PickPhotoAsync();
+            if (photo != null)
+            {
+                byte[] imageBytes;
+                var newFile = Path.Combine(FileSystem.CacheDirectory, photo.FileName);
+                var stream = await photo.OpenReadAsync();
+
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    stream.CopyTo(ms);
+                    imageBytes = ms.ToArray();
+                }
+                _ImageBase64Data = Convert.ToBase64String(imageBytes);
+                ocorrenciaUsuarioFoto = string.Format("data:image/png;base64,{0}", _ImageBase64Data);
+                this.StateHasChanged();
+            }
+        }
+    }
+
+    private async Task PublicarOcorrencia()
+    {
+        isLoading = true;
+        // Aqui você pode ajustar Latitude e Longitude conforme necessário.
+        ocorrenciaAdicionarRequest.Latitude = 0; // Adapte conforme necessário
+        ocorrenciaAdicionarRequest.Longitude = 0; // Adapte conforme necessário
+
+        var response = await HttpClient.PostAsJsonAsync("/ocorrencia/adicionar", ocorrenciaAdicionarRequest);
+        if (response.IsSuccessStatusCode)
+        {
+            NotificationService.Notify(NotificationSeverity.Success, "Ocorrência publicada com sucesso!");
+        }
+        else
+        {
+            NotificationService.Notify(NotificationSeverity.Error, "Erro ao publicar ocorrência.");
+        }
+        isLoading = false;
+    }
+}
 }
