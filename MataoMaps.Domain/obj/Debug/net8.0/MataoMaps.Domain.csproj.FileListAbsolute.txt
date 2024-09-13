@@ -22,3 +22,15 @@ C:\MATAO-MAPS\MataoMaps.Domain\obj\Debug\net8.0\MataoMaps.Domain.dll
 C:\MATAO-MAPS\MataoMaps.Domain\obj\Debug\net8.0\refint\MataoMaps.Domain.dll
 C:\MATAO-MAPS\MataoMaps.Domain\obj\Debug\net8.0\MataoMaps.Domain.pdb
 C:\MATAO-MAPS\MataoMaps.Domain\obj\Debug\net8.0\ref\MataoMaps.Domain.dll
+C:\Users\lenovo\MATAO-MAPS\MataoMaps.Domain\bin\Debug\net8.0\MataoMaps.Domain.deps.json
+C:\Users\lenovo\MATAO-MAPS\MataoMaps.Domain\bin\Debug\net8.0\MataoMaps.Domain.dll
+C:\Users\lenovo\MATAO-MAPS\MataoMaps.Domain\bin\Debug\net8.0\MataoMaps.Domain.pdb
+C:\Users\lenovo\MATAO-MAPS\MataoMaps.Domain\obj\Debug\net8.0\MataoMaps.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\MATAO-MAPS\MataoMaps.Domain\obj\Debug\net8.0\MataoMaps.Domain.AssemblyInfoInputs.cache
+C:\Users\lenovo\MATAO-MAPS\MataoMaps.Domain\obj\Debug\net8.0\MataoMaps.Domain.AssemblyInfo.cs
+C:\Users\lenovo\MATAO-MAPS\MataoMaps.Domain\obj\Debug\net8.0\MataoMaps.Domain.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\MATAO-MAPS\MataoMaps.Domain\obj\Debug\net8.0\MataoMaps.Domain.sourcelink.json
+C:\Users\lenovo\MATAO-MAPS\MataoMaps.Domain\obj\Debug\net8.0\MataoMaps.Domain.dll
+C:\Users\lenovo\MATAO-MAPS\MataoMaps.Domain\obj\Debug\net8.0\refint\MataoMaps.Domain.dll
+C:\Users\lenovo\MATAO-MAPS\MataoMaps.Domain\obj\Debug\net8.0\MataoMaps.Domain.pdb
+C:\Users\lenovo\MATAO-MAPS\MataoMaps.Domain\obj\Debug\net8.0\ref\MataoMaps.Domain.dll

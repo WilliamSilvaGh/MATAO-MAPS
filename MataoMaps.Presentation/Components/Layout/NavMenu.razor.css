@@ -13,7 +13,7 @@
     display: none;
 }
 
-.navbar-toggler-label { /* Novo elemento para os três riscos */
+.navbar-toggler-label { /* Novo elemento para os trï¿½s riscos */
     appearance: none;
     cursor: pointer;
     width: 3.5rem;
@@ -38,7 +38,7 @@
     }
 
 .navbar-toggler:checked + .navbar-toggler-label span:nth-child(1) {
-    transform: rotate(45deg) translate(9px, 8px); /* Aumentamos um pouco a translação */
+    transform: rotate(45deg) translate(9px, 8px); /* Aumentamos um pouco a translaï¿½ï¿½o */
 }
 
 .navbar-toggler:checked + .navbar-toggler-label span:nth-child(2) {
@@ -46,7 +46,7 @@
 }
 
 .navbar-toggler:checked + .navbar-toggler-label span:nth-child(3) {
-    transform: rotate(-45deg) translate(3px, -2px); /* Aumentamos um pouco a translação */
+    transform: rotate(-45deg) translate(3px, -2px); /* Aumentamos um pouco a translaï¿½ï¿½o */
 }
 
 /*    .navbar-toggler:checked {

@@ -2322,23 +2322,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\William\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\lenovo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MATAO-MAPS\\MataoMaps.Data\\MataoMaps.Data.csproj",
+      "projectUniqueName": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Data\\MataoMaps.Data.csproj",
       "projectName": "MataoMaps.Data",
-      "projectPath": "C:\\MATAO-MAPS\\MataoMaps.Data\\MataoMaps.Data.csproj",
-      "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
-      "outputPath": "C:\\MATAO-MAPS\\MataoMaps.Data\\obj\\",
+      "projectPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Data\\MataoMaps.Data.csproj",
+      "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\William\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2354,8 +2356,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj": {
-              "projectPath": "C:\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj"
+            "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj": {
+              "projectPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj"
             }
           }
         }

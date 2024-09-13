@@ -29,7 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MataoMaps.API", "MataoMaps.
 		{1D287727-53AC-449D-9F52-15D56742576E} = {1D287727-53AC-449D-9F52-15D56742576E}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MataoMaps.Presentation", "MataoMaps.Presentation\MataoMaps.Presentation.csproj", "{18163A48-6210-4625-A17E-D47EAF04EAC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MataoMaps.Presentation", "MataoMaps.Presentation\MataoMaps.Presentation.csproj", "{18163A48-6210-4625-A17E-D47EAF04EAC5}"
 	ProjectSection(ProjectDependencies) = postProject
 		{CF7F5AFD-6667-4D9F-B592-22A1036658AF} = {CF7F5AFD-6667-4D9F-B592-22A1036658AF}
 	EndProjectSection
