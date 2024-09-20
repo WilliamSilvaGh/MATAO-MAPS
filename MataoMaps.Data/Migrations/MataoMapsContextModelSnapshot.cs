@@ -38,8 +38,9 @@ namespace MataoMaps.Data.Migrations
                         .HasMaxLength(1000)
                         .HasColumnType("varchar(1000)");
 
-                    b.Property<byte[]>("Imagem")
-                        .HasColumnType("varbinary(max)");
+                    b.Property<string>("FotoBase64")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<decimal>("Latitude")
                         .HasColumnType("decimal(65,30)");

@@ -7,7 +7,7 @@ namespace MataoMaps.Domain.Entities
     {
         public decimal Latitude { get; set; }
         public decimal Longitude { get; set; }
-        public byte[] Imagem { get; set; }
+        public string FotoBase64 { get; set; }
         public string Endereco { get; set; }
         public string Descricao { get; set; }
         public EnumStatus Status { get; set; }
@@ -22,7 +22,7 @@ namespace MataoMaps.Domain.Entities
         public Ocorrencia(
             decimal latitude,
             decimal longitude,
-            byte[] imagem,
+            string fotoBase64,
             string endereco,
             string descricao,
             Guid usuarioId)
@@ -30,7 +30,7 @@ namespace MataoMaps.Domain.Entities
             Id = Guid.NewGuid();
             Latitude = latitude;
             Longitude = longitude;
-            Imagem = imagem;
+            FotoBase64 = fotoBase64;
             Endereco = endereco;
             Descricao = descricao;
             Status = EnumStatus.AFazer;
