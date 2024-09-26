@@ -15,6 +15,7 @@
           "Microsoft.Maui.Controls": "8.0.3",
           "Microsoft.Maui.Controls.Compatibility": "8.0.3",
           "Radzen.Blazor": "5.1.11",
+          "SixLabors.ImageSharp": "3.1.5",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.31"
         },
         "runtime": {
@@ -649,6 +650,14 @@
           }
         }
       },
+      "SixLabors.ImageSharp/3.1.5": {
+        "runtime": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.1.5.0"
+          }
+        }
+      },
       "System.IO.Pipelines/8.0.0": {
         "runtime": {
           "lib/net8.0/System.IO.Pipelines.dll": {
@@ -975,6 +984,13 @@
       "sha512": "sha512-J3N4tmRPY0OheHaJRYs4m50qXYdoTkibVVV1HKcqvaaFtQ0S0lKCt/DLCOl1K5feQotC/VslvKIi0YEcNSb0pA==",
       "path": "radzen.blazor/5.1.11",
       "hashPath": "radzen.blazor.5.1.11.nupkg.sha512"
+    },
+    "SixLabors.ImageSharp/3.1.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lNtlq7dSI/QEbYey+A0xn48z5w4XHSffF8222cC4F4YwTXfEImuiBavQcWjr49LThT/pRmtWJRcqA/PlL+eJ6g==",
+      "path": "sixlabors.imagesharp/3.1.5",
+      "hashPath": "sixlabors.imagesharp.3.1.5.nupkg.sha512"
     },
     "System.IO.Pipelines/8.0.0": {
       "type": "package",

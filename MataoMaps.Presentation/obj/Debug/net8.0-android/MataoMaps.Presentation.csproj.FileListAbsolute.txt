@@ -1109,3 +1109,4 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\stamp\_ConvertReso
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\stamp\_GenerateJavaStubs.stamp
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\stamp\_ResolveLibraryProjectImports.stamp
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\SixLabors.ImageSharp.dll

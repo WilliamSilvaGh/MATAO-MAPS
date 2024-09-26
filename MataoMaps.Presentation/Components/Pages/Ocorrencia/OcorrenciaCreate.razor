@@ -5,11 +5,14 @@
 <h3>Adicionar fotos</h3>
 <div class="quadrado" @onclick="DisplayAction">
     <img src="./Images/camera.png" class="camera" />
-    @if (ocorrenciaUsuarioFoto != "/Images/camera.png")
+
+    @if (isImageUploaded)
     {
-        <img src="@ocorrenciaUsuarioFoto" class="userImage" />
+        <p class="success-message">Imagem carregada com sucesso!</p>
     }
+
 </div>
+
 <input type="text" placeholder="Endereço" class="text-input" @bind="ocorrenciaAdicionarRequest.Endereco" />
 
 <div class="fundo-problema">
@@ -28,6 +31,7 @@
         <span>PUBLICAR</span>
     }
 </button>
+
 
 <style>
 
@@ -87,15 +91,6 @@
         position: absolute;
     }
 
-    .userImage {
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        position: absolute;
-        object-fit: cover;
-    }
-
-
     .quadrado {
         display: flex;
         justify-content: center; /* Centraliza a imagem horizontalmente dentro do quadrado */
@@ -109,9 +104,9 @@
     }
 
         .quadrado:hover {
-        cursor: pointer; /* Altera o cursor ao passar o mouse */
-        background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
-    }
+            cursor: pointer; /* Altera o cursor ao passar o mouse */
+            background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
+        }
 
 
     .btn-publicar {
@@ -137,11 +132,19 @@
             background-color: #0056b3; /* Cor de fundo mais escura ao passar o mouse */
         }
 
+
+    .success-message {
+        color: green; /* Cor da mensagem de sucesso */
+        text-align: center; /* Centraliza o texto */
+        margin-top: 7.5rem; /* Espaçamento acima da mensagem */
+    }
 </style>
 
+<RadzenNotificationService />
 
 @code {
     private bool isLoading = false;
+    private bool isImageUploaded = false;
     private string ocorrenciaUsuarioFoto = "/Images/camera.png";
     private string _ImageBase64Data;
 
@@ -158,27 +161,60 @@
 
         if (response == "Tirar foto")
         {
-
+            if (MediaPicker.Default.IsCaptureSupported)
+            {
+                var photo = await MediaPicker.Default.CapturePhotoAsync();
+                if (photo != null)
+                {
+                    await ProcessPhoto(photo);
+                }
+            }
         }
         else if (response == "Escolher da galeria")
         {
             var photo = await MediaPicker.Default.PickPhotoAsync();
             if (photo != null)
             {
-                byte[] imageBytes;
-                var newFile = Path.Combine(FileSystem.CacheDirectory, photo.FileName);
-                var stream = await photo.OpenReadAsync();
-
-                using (MemoryStream ms = new MemoryStream())
-                {
-                    stream.CopyTo(ms);
-                    imageBytes = ms.ToArray();
-                }
-                _ImageBase64Data = Convert.ToBase64String(imageBytes);
-                ocorrenciaUsuarioFoto = string.Format("data:image/png;base64,{0}", _ImageBase64Data);
-                this.StateHasChanged();
+                await ProcessPhoto(photo);
             }
         }
+    }
+
+    private async Task ProcessPhoto(FileResult photo)
+    {
+        // Obter o tipo MIME da imagem
+        string mimeType = photo.ContentType; // Ex: "image/jpeg", "image/png", etc.
+
+        // Definir formatos suportados
+        var supportedTypes = new[] { "image/jpeg", "image/png", "image/gif" };
+
+        // Validar se o tipo MIME é suportado
+        if (!supportedTypes.Contains(mimeType))
+        {
+            // Notificar o usuário sobre o tipo não suportado
+            NotificationService.Notify(NotificationSeverity.Error, "Tipo de imagem não suportado. Por favor, escolha uma foto JPEG, PNG ou GIF.");
+            return; // Saia da função se o tipo não for suportado
+        }
+
+        byte[] imageBytes;
+        var stream = await photo.OpenReadAsync();
+
+        using (MemoryStream ms = new MemoryStream())
+        {
+            await stream.CopyToAsync(ms);
+            imageBytes = ms.ToArray();
+        }
+
+        // Log do tamanho da imagem original
+        Console.WriteLine($"Tamanho da imagem original: {imageBytes.Length} bytes");
+
+        _ImageBase64Data = Convert.ToBase64String(imageBytes);
+        ocorrenciaAdicionarRequest.FotoBase64 = _ImageBase64Data; // Armazene a imagem em base64 na requisição
+        isImageUploaded = true;
+
+        // Defina o prefixo baseado no tipo MIME
+        ocorrenciaUsuarioFoto = $"data:{mimeType};base64,{_ImageBase64Data}";
+        this.StateHasChanged();
     }
 
     private async Task PublicarOcorrencia()
@@ -192,6 +228,7 @@
         if (response.IsSuccessStatusCode)
         {
             NotificationService.Notify(NotificationSeverity.Success, "Ocorrência publicada com sucesso!");
+            NavigationManager.NavigateTo("/ocorrencia/list");
         }
         else
         {

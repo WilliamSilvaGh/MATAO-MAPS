@@ -1,0 +1,80 @@
+﻿@page "/ocorrencia/list"
+
+<h3>Ocorrências Enviadas</h3>
+
+@if (ocorrencias == null)
+{
+    <p>Carregando...</p>
+}
+else if (ocorrencias.Count == 0)
+{
+    <p>Nenhuma ocorrência encontrada.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Foto</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ocorrencia in ocorrencias)
+            {
+                <tr>
+                    <td>@ocorrencia.Email</td>
+                    <td>
+                        <img src="@($"data:image/jpeg;base64,{ocorrencia.FotoBase64}")" alt="Foto da Ocorrência" style="width: 100px; height: auto;" />
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<style>
+    .table {
+        width: 80%;
+        margin: 1rem auto;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f9d857;
+    }
+</style>
+
+@code {
+    private List<OcorrenciaResponse> ocorrencias;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadOcorrencias();
+    }
+
+    private async Task LoadOcorrencias()
+    {
+        var response = await HttpClient.GetAsync("/ocorrencia/listar");
+        if (response.IsSuccessStatusCode)
+        {
+            ocorrencias = await response.Content.ReadFromJsonAsync<List<OcorrenciaResponse>>();
+        }
+        else
+        {
+            NotificationService.Notify(NotificationSeverity.Error, "Erro ao carregar ocorrências.");
+        }
+    }
+
+    public class OcorrenciaResponse
+    {
+        public string Email { get; set; }
+        public string FotoBase64 { get; set; }
+    }
+}
