@@ -1,7 +1,7 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="page">
-    @if(UsuarioLogado.IsLogged){
+    @if(RenderWhenLogged){
         <div class="sidebar">
             <NavMenu />
         </div>
@@ -10,3 +10,24 @@
         @Body
     </main>
 </div>
+
+
+@code {
+    public bool RenderWhenLogged { get; private set; } = false;
+
+    protected override void OnInitialized()
+    {
+        AuthService.OnLogin += HandleLoggedInEvent;
+        AuthService.OnLogout += HandleLoggedOutEvent;
+    }
+
+    private void HandleLoggedInEvent()
+    {
+        RenderWhenLogged = true;
+    }
+
+    private void HandleLoggedOutEvent()
+    {
+        RenderWhenLogged = false;
+    }
+}

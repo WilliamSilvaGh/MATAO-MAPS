@@ -15,9 +15,6 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\mauif
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\mauisplash.inputs
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\sp\MauiInfo.plist
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\sp\MauiSplash.storyboard
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\sp\splash_58C11A0A2CDF3C43117FC29EECA319E6FBFEFE150B9123BB20E86A467F499449.png
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\sp\splash_58C11A0A2CDF3C43117FC29EECA319E6FBFEFE150B9123BB20E86A467F499449@2x.png
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\sp\splash_58C11A0A2CDF3C43117FC29EECA319E6FBFEFE150B9123BB20E86A467F499449@3x.png
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\mauisplash.stamp
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
