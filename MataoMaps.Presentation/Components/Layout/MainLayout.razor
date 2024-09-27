@@ -1,33 +1,27 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page">
-    @if(RenderWhenLogged){
+
+    <div class="page">
+    @if (PageTitleService.PageTitle != "LOGIN")
+    {
         <div class="sidebar">
             <NavMenu />
         </div>
     }
-    <main>
-        @Body
-    </main>
-</div>
+        <main>
+            @Body
+        </main>
+    </div>
 
 
 @code {
-    public bool RenderWhenLogged { get; private set; } = false;
-
     protected override void OnInitialized()
     {
-        AuthService.OnLogin += HandleLoggedInEvent;
-        AuthService.OnLogout += HandleLoggedOutEvent;
+        PageTitleService.OnTitleChanged += StateHasChanged;
     }
 
-    private void HandleLoggedInEvent()
+    public void Dispose()
     {
-        RenderWhenLogged = true;
-    }
-
-    private void HandleLoggedOutEvent()
-    {
-        RenderWhenLogged = false;
+        PageTitleService.OnTitleChanged -= StateHasChanged;
     }
 }

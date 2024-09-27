@@ -24,9 +24,8 @@ namespace MataoMaps.Presentation
             });
             builder.Services.AddScoped<DialogService>();
             builder.Services.AddScoped<NotificationService>();
-            builder.Services.AddScoped<AuthService>();
             builder.Services.AddSingleton<PageTitleService>();
-            builder.Services.AddScoped<UsuarioLogado>();
+            builder.Services.AddScoped<UsuarioLogadoService>();
 
 #if DEBUG
             builder.Services.AddBlazorWebViewDeveloperTools();

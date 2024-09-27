@@ -133,10 +133,10 @@
     private bool isLoading = false;
     private UsuarioAutenticarRequest usuarioAutenticarRequest = new UsuarioAutenticarRequest();
 
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
         isLoading = false;
-        UsuarioLogado.IsLogged = false;
+        PageTitleService.SetPageTitle("LOGIN");
         StateHasChanged();
     }
 
@@ -167,15 +167,15 @@
             if (usuarioAutenticarResponse != null)
             {
                 // Atualiza o serviço UsuarioLogado
-                UsuarioLogado.IsLogged = true;
-                UsuarioLogado.EhAdmin = usuarioAutenticarResponse.EhAdmin; // Define se o usuário é admin com base na resposta
+                UsuarioLogadoService.IsLogged = true;
+                UsuarioLogadoService.EhAdmin = usuarioAutenticarResponse.EhAdmin; // Define se o usuário é admin com base na resposta
 
                 HttpClient.DefaultRequestHeaders.Clear();
                 HttpClient.DefaultRequestHeaders.Add("authorization", $"bearer {usuarioAutenticarResponse.AccessToken}");
 
                 isLoading = false;
 
-                NavigationManager.NavigateTo("/ocorrencias");
+                NavigationManager.NavigateTo("/ocorrencia/create");
             }
             else
             {

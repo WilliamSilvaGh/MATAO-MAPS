@@ -88,15 +88,14 @@
 </style>
 
 @code {
-    protected override void OnInitialized()
-    {
-        UsuarioLogado.IsLogged = false;
-        PageTitleService.SetPageTitle("CRIE SUA CONTA");
-        StateHasChanged();
-    }
-
     public bool isLoading = false;
     public UsuarioAdicionarRequest usuarioAdicionarRequest = new UsuarioAdicionarRequest();
+
+    protected override void OnInitialized()
+    {
+        UsuarioLogadoService.IsLogged = true;  // Habilita o NavMenu
+        PageTitleService.SetPageTitle("CRIE SUA CONTA");
+    }
 
     public async Task AdicionarUsuario()
     {
