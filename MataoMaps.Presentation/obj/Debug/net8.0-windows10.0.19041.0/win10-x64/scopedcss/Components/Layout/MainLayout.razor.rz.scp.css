@@ -8,20 +8,14 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: #e8e8e8;
     min-height: 100vh;
+    width: 100%;
 }
 
 body[b-l5uj9cdamt] {
     overflow-x: hidden; /* Impede o overflow horizontal */
 }
 
-main[b-l5uj9cdamt] {
-    color: white;
-    flex: 1;
-    background-color: #e8e8e8;
-    width: 100%;
-}
 
 .sidebar[b-l5uj9cdamt] {
     /*    background-image: linear-gradient(180deg, #C21616, black);*/

@@ -1,16 +1,14 @@
 ﻿@inherits LayoutComponentBase
 
 
-    <div class="page">
+    <div class="page" style="background-color: @BackgroundColorService.BackgroundColor;">
     @if (PageTitleService.PageTitle != "LOGIN")
     {
         <div class="sidebar">
             <NavMenu />
         </div>
     }
-        <main>
             @Body
-        </main>
     </div>
 
 
@@ -18,10 +16,12 @@
     protected override void OnInitialized()
     {
         PageTitleService.OnTitleChanged += StateHasChanged;
+        BackgroundColorService.OnBackgroundColorChanged += StateHasChanged;
     }
 
     public void Dispose()
     {
         PageTitleService.OnTitleChanged -= StateHasChanged;
+        BackgroundColorService.OnBackgroundColorChanged -= StateHasChanged;
     }
 }

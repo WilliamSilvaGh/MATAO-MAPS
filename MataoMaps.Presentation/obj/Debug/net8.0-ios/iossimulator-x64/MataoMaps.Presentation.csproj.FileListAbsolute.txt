@@ -342,3 +342,6 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\Matao
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\MataoMaps.Presentation.genruntimeconfig.cache
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\ref\MataoMaps.Presentation.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-ios\iossimulator-x64\SixLabors.ImageSharp.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\sp\splash_58C11A0A2CDF3C43117FC29EECA319E6FBFEFE150B9123BB20E86A467F499449.png
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\sp\splash_58C11A0A2CDF3C43117FC29EECA319E6FBFEFE150B9123BB20E86A467F499449@2x.png
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\sp\splash_58C11A0A2CDF3C43117FC29EECA319E6FBFEFE150B9123BB20E86A467F499449@3x.png

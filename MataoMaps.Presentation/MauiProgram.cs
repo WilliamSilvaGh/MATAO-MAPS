@@ -25,6 +25,7 @@ namespace MataoMaps.Presentation
             builder.Services.AddScoped<DialogService>();
             builder.Services.AddScoped<NotificationService>();
             builder.Services.AddSingleton<PageTitleService>();
+            builder.Services.AddSingleton<BackgroundColorService>();
             builder.Services.AddScoped<UsuarioLogadoService>();
 
 #if DEBUG

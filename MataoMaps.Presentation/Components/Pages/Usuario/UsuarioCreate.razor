@@ -40,6 +40,8 @@
                 }
             </button>
         </div>
+
+        <p style="color: black;">Já tem uma conta? <a href="/" style="color: #3685cd; text-decoration: none;">Logar</a></p>
     </EditForm>
 </div>
 
@@ -59,8 +61,13 @@
     }
 
     .align {
-        margin-top: 3rem;
         text-align: center; /* Alinha o conteúdo ao centro */
+        background-color: #FFFFFF;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
     }
 
     .btn-publicar {
@@ -93,8 +100,8 @@
 
     protected override void OnInitialized()
     {
-        UsuarioLogadoService.IsLogged = true;  // Habilita o NavMenu
         PageTitleService.SetPageTitle("CRIE SUA CONTA");
+        BackgroundColorService.SetBackgroundColor("#FFFFFF");    
     }
 
     public async Task AdicionarUsuario()

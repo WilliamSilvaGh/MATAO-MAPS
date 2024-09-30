@@ -2,38 +2,45 @@
 @using MataoMaps.Domain.DTOs.Ocorrencia.Request
 @using System.IO
 
-<h3>Adicionar fotos</h3>
-<div class="quadrado" @onclick="DisplayAction">
-    <img src="./Images/camera.png" class="camera" />
+<div class="fundo">
+    <h3>Adicionar fotos</h3>
+    <div class="quadrado" @onclick="DisplayAction">
+        <img src="./Images/camera.png" class="camera" />
 
-    @if (isImageUploaded)
-    {
-        <p class="success-message">Imagem carregada com sucesso!</p>
-    }
+        @if (isImageUploaded)
+        {
+            <p class="success-message">Imagem carregada com sucesso!</p>
+        }
+
+    </div>
+
+    <input type="text" placeholder="Endereço" class="text-input" @bind="ocorrenciaAdicionarRequest.Endereco" />
+
+    <div class="fundo-problema">
+        <h4>DESCREVA O PROBLEMA</h4>
+        <textarea class="text-area" rows="4" @bind="ocorrenciaAdicionarRequest.Descricao"></textarea>
+    </div>
+
+    <button class="btn-publicar" @onclick="PublicarOcorrencia">
+        @if (isLoading)
+        {
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            <span class="visually-hidden">Loading...</span>
+        }
+        else
+        {
+            <span>PUBLICAR</span>
+        }
+    </button>
 
 </div>
-
-<input type="text" placeholder="Endereço" class="text-input" @bind="ocorrenciaAdicionarRequest.Endereco" />
-
-<div class="fundo-problema">
-    <h4>DESCREVA O PROBLEMA</h4>
-    <textarea class="text-area" rows="4" @bind="ocorrenciaAdicionarRequest.Descricao"></textarea>
-</div>
-
-<button class="btn-publicar" @onclick="PublicarOcorrencia">
-    @if (isLoading)
-    {
-        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-        <span class="visually-hidden">Loading...</span>
-    }
-    else
-    {
-        <span>PUBLICAR</span>
-    }
-</button>
-
-
 <style>
+
+    .fundo {
+        background-color: #e8e8e8;
+        width: 100%;
+        z-index: 0;
+    }
 
     .fundo-problema {
         background-color: #f9d857;
@@ -151,6 +158,7 @@
     protected override void OnInitialized()
     {
         PageTitleService.SetPageTitle("OCORRÊNCIA");
+        BackgroundColorService.SetBackgroundColor("#E8E8E8");
     }
 
     private OcorrenciaAdicionarRequest ocorrenciaAdicionarRequest = new OcorrenciaAdicionarRequest();

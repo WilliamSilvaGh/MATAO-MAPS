@@ -9,20 +9,14 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: #e8e8e8;
     min-height: 100vh;
+    width: 100%;
 }
 
 body[b-l5uj9cdamt] {
     overflow-x: hidden; /* Impede o overflow horizontal */
 }
 
-main[b-l5uj9cdamt] {
-    color: white;
-    flex: 1;
-    background-color: #e8e8e8;
-    width: 100%;
-}
 
 .sidebar[b-l5uj9cdamt] {
     /*    background-image: linear-gradient(180deg, #C21616, black);*/
@@ -162,11 +156,11 @@ main[b-l5uj9cdamt] {
 }
 
 .navbar-brand[b-f9nat5od3m] {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
     font-weight: bold;
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 .container-fluid[b-f9nat5od3m] {
