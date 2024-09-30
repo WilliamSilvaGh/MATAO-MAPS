@@ -18,7 +18,7 @@ namespace MataoMaps.Data.Configuration
                 .IsRequired();
 
             builder.Property(p => p.FotoBase64)
-                .HasColumnType("text");
+                .HasColumnType("longtext");
 
             builder.Property(p => p.Endereco)
                 .HasMaxLength(1000)

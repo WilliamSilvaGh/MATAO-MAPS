@@ -40,7 +40,7 @@ namespace MataoMaps.Data.Migrations
 
                     b.Property<string>("FotoBase64")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("longtext");
 
                     b.Property<decimal>("Latitude")
                         .HasColumnType("decimal(65,30)");

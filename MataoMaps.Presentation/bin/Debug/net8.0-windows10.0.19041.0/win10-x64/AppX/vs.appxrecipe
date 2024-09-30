@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-09-29T19:05:06.444</Modified>
+      <Modified>2024-09-30T08:31:56.033</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-09-29T16:08:30.257</Modified>
+      <Modified>2024-09-30T08:28:32.534</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MataoMaps.Presentation.runtimeconfig.json">
       <PackagePath>MataoMaps.Presentation.runtimeconfig.json</PackagePath>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MataoMaps.Presentation.dll">
       <PackagePath>MataoMaps.Presentation.dll</PackagePath>
-      <Modified>2024-09-29T16:11:06.206</Modified>
+      <Modified>2024-09-30T08:31:27.249</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MataoMaps.Presentation.exe</PackagePath>
-      <Modified>2024-09-29T16:11:06.228</Modified>
+      <Modified>2024-09-30T08:31:27.261</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -680,7 +680,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Domain\bin\Debug\net8.0\MataoMaps.Domain.dll">
       <PackagePath>MataoMaps.Domain.dll</PackagePath>
-      <Modified>2024-09-29T14:46:56.117</Modified>
+      <Modified>2024-09-30T08:28:06.903</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.maui.controls.compatibility\8.0.3\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
