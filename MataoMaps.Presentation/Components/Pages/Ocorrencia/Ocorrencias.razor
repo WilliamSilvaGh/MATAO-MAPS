@@ -1,5 +1,38 @@
-﻿<h3>Ocorrencias</h3>
+﻿@page "/ocorrencias"
 
+<div class="input-wrapper">
+    <i class="fa fa-search"></i>
+    <input type="text" placeholder="Pesquisar" />
+</div>
+
+<style>
+    .input-wrapper {
+        padding: 8px 12px;
+        display: flex;
+        align-items: center;    
+        gap: 6px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        border: 1px solid black;
+        width: 80%;
+        margin: 2rem auto;
+    }
+
+    .input-wrapper input {
+        background-color: transparent;
+        border: none;
+        font-size: 1rem;
+    }
+
+    .input-wrapper input:focus-visible {
+        outline: none;
+    }
+
+</style>
 @code {
-
+    protected override void OnInitialized()
+    {
+        PageTitleService.SetPageTitle("OCORRÊNCIAS");
+        BackgroundColorService.SetBackgroundColor("#E8E8E8");
+    }
 }

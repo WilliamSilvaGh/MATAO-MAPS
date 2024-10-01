@@ -17,11 +17,20 @@ namespace MataoMaps.Presentation
                 });
 
             builder.Services.AddMauiBlazorWebView();
-            builder.Services.AddScoped(httpClient => new HttpClient
+
+            //"http://10.0.2.2:5033" -> para emuladores Android
+            //5033 -> porta http
+            //7153 -> porta https e http
+
+            var baseAddress = Device.RuntimePlatform == Device.Android
+                ? "http://10.0.2.2:5033"
+                : "https://localhost:7153";
+
+            builder.Services.AddScoped(sp => new HttpClient
             {
-                BaseAddress = new Uri("https://localhost:7153/")
-                //BaseAddress = new Uri("https://helptech-api.tccnapratica.com.br")
+                BaseAddress = new Uri(baseAddress)
             });
+
             builder.Services.AddScoped<DialogService>();
             builder.Services.AddScoped<NotificationService>();
             builder.Services.AddSingleton<PageTitleService>();
