@@ -61,8 +61,14 @@
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\wwwroot\Images\mapa.png">
       <PackagePath>wwwroot\Images\mapa.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\wwwroot\Images\niveis-urgencia.png">
+      <PackagePath>wwwroot\Images\niveis-urgencia.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\wwwroot\index.html">
       <PackagePath>wwwroot\index.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\wwwroot\js\map.js">
+      <PackagePath>wwwroot\js\map.js</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>

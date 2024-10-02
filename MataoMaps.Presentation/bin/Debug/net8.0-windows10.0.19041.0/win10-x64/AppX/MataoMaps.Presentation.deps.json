@@ -16,6 +16,7 @@
           "Microsoft.Maui.Controls.Compatibility": "8.0.3",
           "Radzen.Blazor": "5.1.11",
           "SixLabors.ImageSharp": "3.1.5",
+          "leaflet": "0.7.3",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.31"
         },
         "runtime": {
@@ -35,6 +36,7 @@
         }
       },
       "DartSassBuilder/1.0.0": {},
+      "leaflet/0.7.3": {},
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Metadata": "8.0.0",
@@ -704,6 +706,13 @@
       "sha512": "sha512-bcM9YuWmNUuneEIp5rSFeHNQaZFqC0zKdK8JQvCFGzjX3pLyyQ0ReHPbawqOkTtfubQz4JPkzFzgJAo9Aixiew==",
       "path": "dartsassbuilder/1.0.0",
       "hashPath": "dartsassbuilder.1.0.0.nupkg.sha512"
+    },
+    "leaflet/0.7.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R20Vv1lXuqcu6lKeHFy8KnahLxetHaKBS0S2y/mrq+phhkTtz0zIr6isxJR89LuQR9v53aKNMFVyaxLU+zagEw==",
+      "path": "leaflet/0.7.3",
+      "hashPath": "leaflet.0.7.3.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authorization/8.0.0": {
       "type": "package",

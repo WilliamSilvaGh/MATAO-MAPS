@@ -281,6 +281,7 @@ C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-ios\iossimulator-x64\libxa
 C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-ios\iossimulator-x64\libxamarin-dotnet.dylib
 C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-ios\iossimulator-x64\MataoMaps.Domain.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-ios\iossimulator-x64\MataoMaps.Domain.pdb
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\build-signature\signature
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\staticwebassets.build.json
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\staticwebassets.development.json
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\staticwebassets\msbuild.MataoMaps.Presentation.Microsoft.AspNetCore.StaticWebAssets.props

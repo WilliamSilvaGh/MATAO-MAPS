@@ -1,15 +1,97 @@
 ﻿@page "/ocorrencias"
 
+@implements IAsyncDisposable
+
 <div class="input-wrapper">
-    <i class="fa fa-search"></i>
+    <i class="fa fa-search" style="color: black"></i>
     <input type="text" placeholder="Pesquisar" />
 </div>
 
+<div id="map" style="width: 80%; height: 250px; margin: 2rem auto;"></div>
+
+<div class="urgencia">
+    <img src="/Images/niveis-urgencia.png" alt="Níveis de Urgência" />
+    <div class="conteudo-imagem">
+        <div class="titulo">Nível de gravidade</div>
+        <div class="botoes">
+            <button style="background-color: #d83731">Urgente</button>
+            <button style="background-color: #f9d857">Intermediário</button>
+            <button style="background-color: #ede4c5">Normal</button>
+        </div>
+    </div>
+</div>
+
+<button type="submit" class="btn-fazer-ocorrencia" disabled="@isLoading" @onclick="Redirecionar">
+    @if (isLoading)
+    {
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        <span class="visually-hidden">Loading...</span>
+    }
+    else
+    {
+        <span>FAZER OCORRÊNCIA</span>
+    }
+</button>
+
 <style>
-    .input-wrapper {
-        padding: 8px 12px;
+
+    .conteudo-imagem {
+        width: 80%;
+    }
+
+    .urgencia {
+        width: 80%;
+        margin: 2rem auto;
+        position: relative;
+        text-align: center;
         display: flex;
-        align-items: center;    
+        justify-content: center;
+        align-items: center;
+    }
+
+        .urgencia img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            z-index: 1;
+            max-width: 350px;
+            max-height: 160px;
+            display: block;
+            margin: 0 auto;
+        }
+
+    .titulo {
+        position: relative;
+        z-index: 2;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        display: inline-block;
+        color: black;
+    }
+
+    .botoes {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .botoes button {
+            width: 80%;
+            font-size: 0.9rem;
+            cursor: pointer;
+            margin: 1px 0;
+            border-radius: 1rem;
+            border: none;
+            padding: 2px;
+            max-width: 300px;
+        }
+
+    .input-wrapper {
+        padding: 2px 12px;
+        display: flex;
+        align-items: center;
         gap: 6px;
         background-color: #ffffff;
         border-radius: 8px;
@@ -18,21 +100,77 @@
         margin: 2rem auto;
     }
 
-    .input-wrapper input {
-        background-color: transparent;
-        border: none;
-        font-size: 1rem;
+        .input-wrapper input {
+            background-color: transparent;
+            border: none;
+            font-size: 1rem;
+        }
+
+            .input-wrapper input:focus-visible {
+                outline: none;
+            }
+
+    .btn-fazer-ocorrencia {
+        display: block; /* Faz com que o botão se comporte como um bloco, ocupando a largura disponível */
+        width: 80%; /* Define a largura do botão */
+        margin: 1rem auto; /* Centraliza o botão horizontalmente e adiciona espaçamento acima e abaixo */
+        padding: 0.75rem; /* Adiciona espaçamento interno ao botão */
+        border: none; /* Remove a borda padrão do botão */
+        border-radius: 2rem; /* Borda arredondada para combinar com outros elementos */
+        background-color: #3685cd; /* Cor de fundo azul para o botão */
+        color: white; /* Cor do texto */
+        font-weight: bold; /* Texto em negrito */
+        font-size: 1rem; /* Tamanho da fonte */
+        text-align: center; /* Centraliza o texto */
+        cursor: pointer; /* Altera o cursor para indicar que é clicável */
+        transition: background-color 0.3s; /* Adiciona uma transição suave para a mudança de cor */
+        z-index: 10; /* Adiciona um z-index para garantir que o botão fique acima de outros elementos */
+        position: relative; /* Faz com que o z-index funcione */
+        max-width: 350px;
     }
 
-    .input-wrapper input:focus-visible {
-        outline: none;
-    }
+        .btn-fazer-ocorrencia:hover {
+            background-color: #0056b3; /* Cor de fundo mais escura ao passar o mouse */
+        }
 
 </style>
 @code {
+    private bool _isMapInitialized;
+    private bool isLoading = false;
+
     protected override void OnInitialized()
     {
         PageTitleService.SetPageTitle("OCORRÊNCIAS");
         BackgroundColorService.SetBackgroundColor("#E8E8E8");
     }
+
+
+    public void Redirecionar()
+    {
+        isLoading = true;
+        NavigationManager.NavigateTo("/ocorrencia/create");
+        isLoading = false;
+    }
+
+
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender && !_isMapInitialized)
+        {
+            await InitializeMap();
+            _isMapInitialized = true;
+        }
+    }
+
+    private async Task InitializeMap()
+    {
+        await JSRuntime.InvokeVoidAsync("initializeMap");
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        // Implementar a lógica de descarte, se necessário
+    }
+
 }

@@ -21,6 +21,9 @@
           }
         }
       },
+      "leaflet/0.7.3": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -2666,6 +2669,9 @@
           }
         }
       },
+      "leaflet/0.7.3": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -5304,6 +5310,9 @@
             "related": ".aar;.xml"
           }
         }
+      },
+      "leaflet/0.7.3": {
+        "type": "package"
       },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
@@ -7944,6 +7953,9 @@
           }
         }
       },
+      "leaflet/0.7.3": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -10582,6 +10594,9 @@
             "related": ".aar;.xml"
           }
         }
+      },
+      "leaflet/0.7.3": {
+        "type": "package"
       },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
@@ -13222,6 +13237,9 @@
           }
         }
       },
+      "leaflet/0.7.3": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -15860,6 +15878,9 @@
             "related": ".aar;.xml"
           }
         }
+      },
+      "leaflet/0.7.3": {
+        "type": "package"
       },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
@@ -18500,6 +18521,9 @@
           }
         }
       },
+      "leaflet/0.7.3": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -21126,6 +21150,9 @@
           "build/_._": {}
         }
       },
+      "leaflet/0.7.3": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -21985,6 +22012,9 @@
           "build/_._": {}
         }
       },
+      "leaflet/0.7.3": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -22837,6 +22867,9 @@
         "build": {
           "build/_._": {}
         }
+      },
+      "leaflet/0.7.3": {
+        "type": "package"
       },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
@@ -23691,6 +23724,9 @@
           "build/_._": {}
         }
       },
+      "leaflet/0.7.3": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -24543,6 +24579,9 @@
         "build": {
           "build/_._": {}
         }
+      },
+      "leaflet/0.7.3": {
+        "type": "package"
       },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
@@ -25397,6 +25436,9 @@
           "build/_._": {}
         }
       },
+      "leaflet/0.7.3": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -26249,6 +26291,9 @@
         "build": {
           "build/_._": {}
         }
+      },
+      "leaflet/0.7.3": {
+        "type": "package"
       },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
@@ -27103,6 +27148,9 @@
           "build/_._": {}
         }
       },
+      "leaflet/0.7.3": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -27955,6 +28003,9 @@
         "build": {
           "build/_._": {}
         }
+      },
+      "leaflet/0.7.3": {
+        "type": "package"
       },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
@@ -28815,6 +28866,9 @@
           "build/_._": {}
         }
       },
+      "leaflet/0.7.3": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -29667,6 +29721,9 @@
         "build": {
           "build/_._": {}
         }
+      },
+      "leaflet/0.7.3": {
+        "type": "package"
       },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
@@ -30521,6 +30578,9 @@
           "build/_._": {}
         }
       },
+      "leaflet/0.7.3": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -31373,6 +31433,9 @@
         "build": {
           "build/_._": {}
         }
+      },
+      "leaflet/0.7.3": {
+        "type": "package"
       },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
@@ -32227,6 +32290,9 @@
           "build/_._": {}
         }
       },
+      "leaflet/0.7.3": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -33079,6 +33145,9 @@
         "build": {
           "build/_._": {}
         }
+      },
+      "leaflet/0.7.3": {
+        "type": "package"
       },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
@@ -33933,6 +34002,9 @@
           "build/_._": {}
         }
       },
+      "leaflet/0.7.3": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -34785,6 +34857,9 @@
         "build": {
           "build/_._": {}
         }
+      },
+      "leaflet/0.7.3": {
+        "type": "package"
       },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
@@ -35788,6 +35863,9 @@
           "build/_._": {}
         }
       },
+      "leaflet/0.7.3": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -36755,6 +36833,9 @@
         "build": {
           "build/_._": {}
         }
+      },
+      "leaflet/0.7.3": {
+        "type": "package"
       },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
@@ -37724,6 +37805,9 @@
           "build/_._": {}
         }
       },
+      "leaflet/0.7.3": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -38691,6 +38775,9 @@
         "build": {
           "build/_._": {}
         }
+      },
+      "leaflet/0.7.3": {
+        "type": "package"
       },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
@@ -39660,6 +39747,9 @@
           "build/_._": {}
         }
       },
+      "leaflet/0.7.3": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -40628,6 +40718,9 @@
           "build/_._": {}
         }
       },
+      "leaflet/0.7.3": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -41595,6 +41688,9 @@
         "build": {
           "build/_._": {}
         }
+      },
+      "leaflet/0.7.3": {
+        "type": "package"
       },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
@@ -42620,6 +42716,25 @@
         "lib/net6.0-android31.0/GoogleGson.aar",
         "lib/net6.0-android31.0/GoogleGson.dll",
         "lib/net6.0-android31.0/GoogleGson.xml"
+      ]
+    },
+    "leaflet/0.7.3": {
+      "sha512": "R20Vv1lXuqcu6lKeHFy8KnahLxetHaKBS0S2y/mrq+phhkTtz0zIr6isxJR89LuQR9v53aKNMFVyaxLU+zagEw==",
+      "type": "package",
+      "path": "leaflet/0.7.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/Content/images/layers-2x.png",
+        "content/Content/images/layers.png",
+        "content/Content/images/marker-icon-2x.png",
+        "content/Content/images/marker-icon.png",
+        "content/Content/images/marker-shadow.png",
+        "content/Content/leaflet.css",
+        "content/Scripts/leaflet-0.7.3.js",
+        "content/Scripts/leaflet-0.7.3.min.js",
+        "leaflet.0.7.3.nupkg.sha512",
+        "leaflet.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Authorization/8.0.0": {
@@ -47497,7 +47612,8 @@
       "Microsoft.Maui.Controls.Compatibility >= 8.0.3",
       "Microsoft.NET.ILLink.Tasks >= 8.0.0",
       "Radzen.Blazor >= 5.1.11",
-      "SixLabors.ImageSharp >= 3.1.5"
+      "SixLabors.ImageSharp >= 3.1.5",
+      "leaflet >= 0.7.3"
     ],
     "net8.0-ios17.0": [
       "MataoMaps.Domain >= 1.0.0",
@@ -47507,7 +47623,8 @@
       "Microsoft.Maui.Controls.Compatibility >= 8.0.3",
       "Microsoft.NET.ILLink.Tasks >= 8.0.0",
       "Radzen.Blazor >= 5.1.11",
-      "SixLabors.ImageSharp >= 3.1.5"
+      "SixLabors.ImageSharp >= 3.1.5",
+      "leaflet >= 0.7.3"
     ],
     "net8.0-maccatalyst17.0": [
       "MataoMaps.Domain >= 1.0.0",
@@ -47517,7 +47634,8 @@
       "Microsoft.Maui.Controls.Compatibility >= 8.0.3",
       "Microsoft.NET.ILLink.Tasks >= 8.0.0",
       "Radzen.Blazor >= 5.1.11",
-      "SixLabors.ImageSharp >= 3.1.5"
+      "SixLabors.ImageSharp >= 3.1.5",
+      "leaflet >= 0.7.3"
     ],
     "net8.0-windows10.0.19041": [
       "MataoMaps.Domain >= 1.0.0",
@@ -47526,7 +47644,8 @@
       "Microsoft.Maui.Controls >= 8.0.3",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.3",
       "Radzen.Blazor >= 5.1.11",
-      "SixLabors.ImageSharp >= 3.1.5"
+      "SixLabors.ImageSharp >= 3.1.5",
+      "leaflet >= 0.7.3"
     ]
   },
   "packageFolders": {
@@ -47635,6 +47754,10 @@
           "SixLabors.ImageSharp": {
             "target": "Package",
             "version": "[3.1.5, )"
+          },
+          "leaflet": {
+            "target": "Package",
+            "version": "[0.7.3, )"
           }
         },
         "imports": [
@@ -47690,6 +47813,10 @@
           "SixLabors.ImageSharp": {
             "target": "Package",
             "version": "[3.1.5, )"
+          },
+          "leaflet": {
+            "target": "Package",
+            "version": "[0.7.3, )"
           }
         },
         "imports": [
@@ -47745,6 +47872,10 @@
           "SixLabors.ImageSharp": {
             "target": "Package",
             "version": "[3.1.5, )"
+          },
+          "leaflet": {
+            "target": "Package",
+            "version": "[0.7.3, )"
           }
         },
         "imports": [
@@ -47795,6 +47926,10 @@
           "SixLabors.ImageSharp": {
             "target": "Package",
             "version": "[3.1.5, )"
+          },
+          "leaflet": {
+            "target": "Package",
+            "version": "[0.7.3, )"
           }
         },
         "imports": [

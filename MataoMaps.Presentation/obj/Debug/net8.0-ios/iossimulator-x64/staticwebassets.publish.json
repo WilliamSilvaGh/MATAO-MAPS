@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pKGZYn5k+ljHovRFVMS9CG62y6H9dTLOJtoP0Q/mMCc=",
+  "Hash": "UWS+rxYUZfdRDAndr4P3Jb2wU9dnv0IvW0ma+gJrR0w=",
   "Source": "MataoMaps.Presentation",
   "BasePath": "/",
   "Mode": "Root",
@@ -205,6 +205,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\js\\map.js",
+      "SourceId": "MataoMaps.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "js/map.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\map.js"
     },
     {
       "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\dark.css",

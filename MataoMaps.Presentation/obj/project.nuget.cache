@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "M7Np2Dtw+JFamf7+B6KcOzgxFMg788hWxsuNyWBKdQkBdet7FJDvU/pX+c0b+Y6fKx6Di5tatlx+yoIu0DO1kw==",
+  "dgSpecHash": "xwen013CrXbpkhTrzwnlCSAw6sgenpBz+hnMBp44CpSBvda3T5pueGY2rC+gR2Zm6OpiR90cLY9YEtmFn9n/yQ==",
   "success": true,
   "projectFilePath": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\William\\.nuget\\packages\\dartsassbuilder\\1.0.0\\dartsassbuilder.1.0.0.nupkg.sha512",
     "C:\\Users\\William\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",
+    "C:\\Users\\William\\.nuget\\packages\\leaflet\\0.7.3\\leaflet.0.7.3.nupkg.sha512",
     "C:\\Users\\William\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.0\\microsoft.aspnetcore.authorization.8.0.0.nupkg.sha512",
     "C:\\Users\\William\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.0\\microsoft.aspnetcore.components.8.0.0.nupkg.sha512",
     "C:\\Users\\William\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\8.0.0\\microsoft.aspnetcore.components.analyzers.8.0.0.nupkg.sha512",

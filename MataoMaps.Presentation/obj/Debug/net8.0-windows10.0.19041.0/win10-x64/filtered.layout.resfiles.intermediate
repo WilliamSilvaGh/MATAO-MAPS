@@ -67,7 +67,9 @@ wwwroot\favicon.png
 wwwroot\Images\camera.png
 wwwroot\Images\logo.png
 wwwroot\Images\mapa.png
+wwwroot\Images\niveis-urgencia.png
 wwwroot\index.html
+wwwroot\js\map.js
 wwwroot\_content\Radzen.Blazor\css\dark.css
 wwwroot\_content\Radzen.Blazor\css\dark-base.css
 wwwroot\_content\Radzen.Blazor\css\dark-wcag.css

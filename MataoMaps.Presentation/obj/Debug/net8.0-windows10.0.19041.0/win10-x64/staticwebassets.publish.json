@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1wezcjfu+QacydGT+QxopeKlQkc0LyK/Tb5fVfz9yGI=",
+  "Hash": "QaIkuQ6xH5W+AJVjFmAza4evI+NM3jPNlZ6us0BceGo=",
   "Source": "MataoMaps.Presentation",
   "BasePath": "/",
   "Mode": "Root",
@@ -188,6 +188,25 @@
       "OriginalItemSpec": "wwwroot\\Images\\mapa.png"
     },
     {
+      "Identity": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\Images\\niveis-urgencia.png",
+      "SourceId": "MataoMaps.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "Images/niveis-urgencia.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\niveis-urgencia.png"
+    },
+    {
       "Identity": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\index.html",
       "SourceId": "MataoMaps.Presentation",
       "SourceType": "Discovered",
@@ -205,6 +224,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\js\\map.js",
+      "SourceId": "MataoMaps.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "js/map.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\map.js"
     },
     {
       "Identity": "C:\\Users\\William\\.nuget\\packages\\radzen.blazor\\5.1.11\\staticwebassets\\css\\dark.css",

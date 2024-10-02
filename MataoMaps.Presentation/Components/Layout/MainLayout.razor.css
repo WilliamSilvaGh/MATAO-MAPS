@@ -12,6 +12,13 @@
     width: 100%;
 }
 
+main {
+    color: white;
+    flex: 1;
+    background-color: #e8e8e8;
+    width: 100%;
+}
+
 body {
     overflow-x: hidden; /* Impede o overflow horizontal */
 }
@@ -65,7 +72,7 @@ body {
 }
 
 /* 640px*/
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
     .page {
         flex-direction: row;
     }
@@ -93,4 +100,4 @@ body {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
     }
-}
+}*/

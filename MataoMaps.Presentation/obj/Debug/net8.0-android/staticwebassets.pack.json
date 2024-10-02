@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\Images\\mapa.png"
     },
     {
+      "Id": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\Images\\niveis-urgencia.png",
+      "PackagePath": "staticwebassets\\Images\\niveis-urgencia.png"
+    },
+    {
       "Id": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
@@ -35,6 +39,10 @@
     {
       "Id": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\js\\map.js",
+      "PackagePath": "staticwebassets\\js\\map.js"
     },
     {
       "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.MataoMaps.Presentation.Microsoft.AspNetCore.StaticWebAssets.props",
