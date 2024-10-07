@@ -1,80 +1,215 @@
 ﻿@page "/ocorrencia/list"
+@using MataoMaps.Domain.DTOs.Ocorrencia.Response
+@using System.Text.Json
 
-<h3>Ocorrências Enviadas</h3>
+<RadzenRow Style="margin-top: 2rem;">
+    <h3>Listar Ocorrências</h3>
 
-@if (ocorrencias == null)
-{
-    <p>Carregando...</p>
-}
-else if (ocorrencias.Count == 0)
-{
-    <p>Nenhuma ocorrência encontrada.</p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Email</th>
-                <th>Foto</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var ocorrencia in ocorrencias)
+    <RadzenNotification />
+    <RadzenDialog />
+
+</RadzenRow>
+
+<div style="width: 80%">
+
+    <RadzenDataGrid lang="pt-br" class="text-wrap" AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="true" FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="10" AllowPaging="true" IsLoading="@_isLoading" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true"
+                    Data="@_listOcorrenciaListarResponse" TItem="OcorrenciaListarResponse" LogicalFilterOperator="LogicalFilterOperator.Or" GridLines="DataGridGridLines.Both" @ref="_grid">
+        <Columns>
+            <RadzenDataGridColumn TItem="OcorrenciaListarResponse" Property="Data" Title="Data" Filterable="true" Sortable="true" Width="140px" />
+            <RadzenDataGridColumn TItem="OcorrenciaListarResponse" Property="Hora" Title="Hora" Filterable="true" Sortable="true" Width="140px" />
+            <RadzenDataGridColumn TItem="OcorrenciaListarResponse" Property="UsuarioNome" Title="Nome do Usuario" Filterable="true" Sortable="true" Width="140px" MinWidth="140px" />
+            <RadzenDataGridColumn TItem="OcorrenciaListarResponse" Property="TipoOcorrencia" Title="Tipo de Ocorrencia" Filterable="true" Sortable="true" Width="140px" />
+            <RadzenDataGridColumn TItem="OcorrenciaListarResponse" Property="Descricao" Title="Descricao" Filterable="true" Sortable="true" Width="140px">
+                <Template Context="data">
+                    <div style="white-space: normal; word-wrap: break-word; text-align: justify; hyphens: auto;">
+                        @data.Descricao
+                    </div>
+                </Template>
+            </RadzenDataGridColumn>
+
+            <RadzenDataGridColumn TItem="OcorrenciaListarResponse" Property="DescricaoResolucao" Title="Resolucao" Filterable="true" Sortable="true" Width="140px">
+                <Template Context="data">
+                    <div style="white-space: normal; word-wrap: break-word; text-align: justify; hyphens: auto;">
+                        @data.Resolucao
+                    </div>
+                </Template>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="OcorrenciaListarResponse" Property="Status" Title="Status" Filterable="true" Sortable="true" Width="140px" />
+            @if (UsuarioLogadoService.EhAdmin)
             {
-                <tr>
-                    <td>@ocorrencia.Email</td>
-                    <td>
-                        <img src="@($"data:image/jpeg;base64,{ocorrencia.FotoBase64}")" alt="Foto da Ocorrência" style="width: 100px; height: auto;" />
-                    </td>
-                </tr>
+                <RadzenDataGridColumn TItem="OcorrenciaListarResponse" Property="Ações" Title="Ações" Filterable="true" Sortable="true" Width="190px">
+                    <Template Context="data">
+                        @if (data.Status.ToString() == "AFazer")
+                        {
+                            <RadzenButton Icon="edit" ButtonStyle="ButtonStyle.Primary" class="rz-border-radius-10" Text="Iniciar Atendimento" Click="() => ConfirmarEdicao(data.Id)" />
+                        }
+                        else if (data.Status.ToString() == "EmAndamento")
+                        {
+                            <RadzenButton Icon="edit" ButtonStyle="ButtonStyle.Danger" class="rz-border-radius-10" Text="Encerrar Ocorrência" Click="() => ConfirmarEncerrar(data.Id)" />
+                        }
+                    </Template>
+                </RadzenDataGridColumn>
             }
-        </tbody>
-    </table>
-}
+        </Columns>
+    </RadzenDataGrid>
+
+
+
+</div>
 
 <style>
-    .table {
-        width: 80%;
-        margin: 1rem auto;
-        border-collapse: collapse;
-    }
-
-    th, td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: left;
-    }
-
-    th {
-        background-color: #f9d857;
+    .descricao-column {
+        white-space: normal;
+        word-wrap: break-word;
     }
 </style>
 
+
+
+<div class="modal" style="display: @(modalEdicao ? "block" : "none")" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-black">Iniciar Atendimento</h5>
+                <button type="button" class="btn-close" @onclick="CancelarEdicao" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-black">
+                <p>Deseja realmente iniciar o atendimento desta ocorrência?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" @onclick="CancelarEdicao">Cancelar</button>
+                <button type="button" class="btn btn-primary" @onclick="ConfirmarEdicaoOcorrencia">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" style="display: @(modalEncerrar ? "block" : "none")" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-black">Encerrar Ocorrência</h5>
+                <button type="button" class="btn-close" @onclick="CancelarEncerrar" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-black">
+                <p>Informe a resolução da ocorrência:</p>
+                <textarea class="form-control" @bind="descricaoResolucao" required></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" @onclick="CancelarEncerrar">Cancelar</button>
+                <button type="button" class="btn btn-primary" @onclick="ConfirmarEncerrarOcorrencia">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 @code {
-    private List<OcorrenciaResponse> ocorrencias;
+    private List<OcorrenciaListarResponse> _listOcorrenciaListarResponse = new();
+    private RadzenDataGrid<OcorrenciaListarResponse>? _grid;
+    private bool _isLoading;
+    private bool modalEdicao;
+    private bool modalEncerrar;
+    private Guid ocorrenciaIdEdicao;
+    private string descricaoResolucao;
 
     protected override async Task OnInitializedAsync()
     {
-        await LoadOcorrencias();
+        _isLoading = true;
+        await CarregarOcorrencias();
     }
 
-    private async Task LoadOcorrencias()
+    private async Task ConfirmarEdicao(Guid ocorrenciaId)
     {
-        var response = await HttpClient.GetAsync("/ocorrencia/listar");
+        modalEdicao = true;
+        ocorrenciaIdEdicao = ocorrenciaId;
+    }
+
+    private void CancelarEdicao()
+    {
+        modalEdicao = false;
+    }
+
+    private async Task ConfirmarEdicaoOcorrencia()
+    {
+        _isLoading = true;
+
+        var ocorrenciaIniciarAtendimentoRequest = new { Id = ocorrenciaIdEdicao };
+        var requestContent = new StringContent(JsonSerializer.Serialize(ocorrenciaIniciarAtendimentoRequest), System.Text.Encoding.UTF8, "application/json");
+
+        var response = await HttpClient.PutAsync("ocorrencia/iniciar-atendimento", requestContent);
         if (response.IsSuccessStatusCode)
         {
-            ocorrencias = await response.Content.ReadFromJsonAsync<List<OcorrenciaResponse>>();
+            await CarregarOcorrencias();
+            modalEdicao = false;
+            NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Sucesso", Detail = "Atendimento iniciado com sucesso." });
+            _isLoading = false;
         }
         else
         {
-            NotificationService.Notify(NotificationSeverity.Error, "Erro ao carregar ocorrências.");
+            var errorMessage = await response.Content.ReadAsStringAsync();
+            NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Erro", Detail = $"Falha ao iniciar atendimento. Detalhes: {errorMessage}" });
         }
     }
 
-    public class OcorrenciaResponse
+    private async Task ConfirmarEncerrar(Guid ocorrenciaId)
     {
-        public string Email { get; set; }
-        public string FotoBase64 { get; set; }
+        modalEncerrar = true;
+        ocorrenciaIdEdicao = ocorrenciaId;
     }
+
+    private void CancelarEncerrar()
+    {
+        modalEncerrar = false;
+    }
+
+    private async Task ConfirmarEncerrarOcorrencia()
+    {
+        _isLoading = true;
+        var requestContent = new StringContent(JsonSerializer.Serialize(new { Id = ocorrenciaIdEdicao, DescricaoResolucao = descricaoResolucao }), System.Text.Encoding.UTF8, "application/json");
+        var response = await HttpClient.PutAsync("ocorrencia/encerrar", requestContent);
+        if (response.IsSuccessStatusCode)
+        {
+            await CarregarOcorrencias();
+            modalEncerrar = false;
+            NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Sucesso", Detail = "Ocorrência encerrada com sucesso." });
+            _isLoading = false;
+        }
+        else
+        {
+            var errorMessage = await response.Content.ReadAsStringAsync();
+            NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Erro", Detail = $"Falha ao encerrar ocorrência. Detalhes: {errorMessage}" });
+        }
+    }
+
+    private async Task CarregarOcorrencias()
+    {
+        try
+        {
+            _isLoading = true;
+            var ocorrencias = await HttpClient.GetFromJsonAsync<List<OcorrenciaListarResponse>>("ocorrencia/listar");
+
+            // Ordenar as ocorrências: A Fazer e Em Andamento primeiro, seguidas das concluídas
+            _listOcorrenciaListarResponse = ocorrencias.OrderBy(o =>
+            {
+                if (o.Status.ToString() == "AFazer" || o.Status.ToString() == "EmAndamento")
+                {
+                    return 0; // Ocorrências A Fazer e Em Andamento têm prioridade 0
+                }
+                else
+                {
+                    return 1; // Ocorrências Concluídas têm prioridade 1
+                }
+            }).ToList();
+        }
+        catch (Exception ex)
+        {
+            NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Erro", Detail = $"Falha ao carregar ocorrências. Detalhes: {ex.Message}" });
+        }
+        finally
+        {
+            _isLoading = false;
+        }
+    }
+
+
 }

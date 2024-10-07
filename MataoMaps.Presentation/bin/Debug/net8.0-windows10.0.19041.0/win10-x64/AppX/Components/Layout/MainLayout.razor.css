@@ -72,7 +72,7 @@ body {
 }
 
 /* 640px*/
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
     .page {
         flex-direction: row;
     }
@@ -100,4 +100,4 @@ body {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
     }
-}
+}*/

@@ -152,11 +152,9 @@
         isLoading = false;
     }
 
-
-
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender && !_isMapInitialized)
+        if (firstRender || !_isMapInitialized) 
         {
             await InitializeMap();
             _isMapInitialized = true;
@@ -166,6 +164,7 @@
     private async Task InitializeMap()
     {
         await JSRuntime.InvokeVoidAsync("initializeMap");
+        StateHasChanged();
     }
 
     public async ValueTask DisposeAsync()

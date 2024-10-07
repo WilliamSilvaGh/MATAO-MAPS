@@ -24,7 +24,7 @@ namespace MataoMaps.Presentation
 
             var baseAddress = Device.RuntimePlatform == Device.Android
                 ? "http://10.0.2.2:5033"
-                : "https://localhost:7153";
+                : "http://localhost:5033";
 
             builder.Services.AddScoped(sp => new HttpClient
             {

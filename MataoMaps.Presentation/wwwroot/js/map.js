@@ -1,20 +1,16 @@
-var map; // Declare a variável map fora da função
+var map; // Declare a variï¿½vel map fora da funï¿½ï¿½o
 
 function initializeMap() {
-    // Verifica se o mapa já foi inicializado
-    if (map) {
-        return; // Se o mapa já existe, não faça nada
-    }
 
     // Inicializa o mapa
     map = L.map('map').setView([-21.6034, -48.3665], 13); // Coordenadas iniciais
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
-        attribution: '© OpenStreetMap'
+        attribution: 'ï¿½ OpenStreetMap'
     }).addTo(map);
 
-    // Verifica se a geolocalização é suportada
+    // Verifica se a geolocalizaï¿½ï¿½o ï¿½ suportada
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
             var lat = position.coords.latitude;
@@ -23,16 +19,16 @@ function initializeMap() {
             console.log("Latitude: ", lat);
             console.log("Longitude: ", lon);
 
-            // Atualiza o mapa para a localização do usuário
+            // Atualiza o mapa para a localizaï¿½ï¿½o do usuï¿½rio
             map.setView([lat, lon], 13);
             L.marker([lat, lon]).addTo(map)
-                .bindPopup('Você está aqui!')
+                .bindPopup('Vocï¿½ estï¿½ aqui!')
                 .openPopup();
         }, function (error) {
-            console.error("Erro ao obter a localização: ", error);
-            alert("Não foi possível obter a localização: " + error.message);
+            console.error("Erro ao obter a localizaï¿½ï¿½o: ", error);
+            alert("Nï¿½o foi possï¿½vel obter a localizaï¿½ï¿½o: " + error.message);
         });
     } else {
-        alert("Geolocalização não suportada por este navegador.");
+        alert("Geolocalizaï¿½ï¿½o nï¿½o suportada por este navegador.");
     }
 }
