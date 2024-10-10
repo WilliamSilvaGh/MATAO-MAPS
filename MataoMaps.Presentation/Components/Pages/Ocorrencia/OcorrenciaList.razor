@@ -1,156 +1,269 @@
-﻿<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listar Ocorrências</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
-    <style>
-        .modal-dialog {
-            max-width: 500px;
+﻿@page "/ocorrencia/list"
+@using MataoMaps.Domain.DTOs.Ocorrencia.Response
+@using MataoMaps.Domain.DTOs.Ocorrencia.Request
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+<div class="container">
+    <h3>Lista de Ocorrências</h3>
+    <div class="ocorrencias-list">
+        @if (ocorrencias == null)
+        {
+            <p>Carregando ocorrências...</p>
         }
-
-        .text-black {
-            color: black;
-        }
-
-        .descricao-column {
-            white-space: normal;
-            word-wrap: break-word;
-            text-align: justify;
-            hyphens: auto;
-        }
-
-        .text-wrap {
-            white-space: normal;
-            word-wrap: break-word;
-        }
-    </style>
-</head>
-<body>
-    <div class="container mt-4">
-        <h3>Listar Ocorrências</h3>
-
-        <div class="alert" id="notification" style="display:none;"></div>
-
-        <div style="width: 80%;">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Data</th>
-                        <th>Hora</th>
-                        <th>Nome do Usuário</th>
-                        <th>Tipo de Ocorrência</th>
-                        <th>Descrição</th>
-                        <th>Resolução</th>
-                        <th>Status</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody id="ocorrencias-body">
-                    <!-- As ocorrências serão inseridas aqui via JavaScript -->
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Modal de Iniciar Atendimento -->
-        <div class="modal" id="modalEdicao" tabindex="-1" style="display: none;">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title text-black">Iniciar Atendimento</h5>
-                        <button type="button" class="btn-close" onclick="cancelarEdicao()" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body text-black">
-                        <p>Deseja realmente iniciar o atendimento desta ocorrência?</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" onclick="cancelarEdicao()">Cancelar</button>
-                        <button type="button" class="btn btn-primary" onclick="confirmarEdicao()">Confirmar</button>
+        else if (ocorrencias.Any())
+        {
+            foreach (var ocorrencia in ocorrencias)
+            {
+                <div class="ocorrencia-card" @onclick="() => OpenModal(ocorrencia)">
+                    <img src="@($"data:image/png;base64,{ocorrencia.FotoBase64}")" alt="Foto da Ocorrência" class="ocorrencia-img" />
+                    <div class="ocorrencia-details">
+                        <h4>@ocorrencia.Descricao</h4>
+                        <p><strong>Endereço:</strong> @ocorrencia.Endereco</p>
+                        <p><strong>Usuário:</strong> @ocorrencia.UsuarioNome</p>
+                        <p><strong>Status:</strong> @ocorrencia.Status</p>
+                        <p><strong>Resolução:</strong> @ocorrencia.Resolucao</p>
                     </div>
                 </div>
-            </div>
-        </div>
+            }
+        }
+        else
+        {
+            <p>Nenhuma ocorrência encontrada.</p>
+        }
+    </div>
+</div>
 
-        <!-- Modal de Encerrar Ocorrência -->
-        <div class="modal" id="modalEncerrar" tabindex="-1" style="display: none;">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title text-black">Encerrar Ocorrência</h5>
-                        <button type="button" class="btn-close" onclick="cancelarEncerrar()" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body text-black">
-                        <p>Informe a resolução da ocorrência:</p>
-                        <textarea class="form-control" id="descricaoResolucao" required></textarea>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" onclick="cancelarEncerrar()">Cancelar</button>
-                        <button type="button" class="btn btn-primary" onclick="confirmarEncerrar()">Confirmar</button>
-                    </div>
-                </div>
-            </div>
+@if (isModalOpen)
+{
+    <div class="modal-overlay" @onclick="CloseModal">
+        <div class="modal-content" @onclick:stopPropagation>
+            <button class="btn-close-modal" @onclick="CloseModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <h4>@selectedOcorrencia?.Descricao</h4>
+            <img src="@($"data:image/png;base64,{selectedOcorrencia?.FotoBase64}")" class="modal-image" />
+            @if (UsuarioLogadoService.EhAdmin)
+            {
+                <textarea @bind="@resolution" placeholder="Digite a resolução aqui..."></textarea>
+                <button class="btn-submit" @onclick="SubmitResolution">Enviar Resolução</button>
+            }
+            else
+            {
+                if (selectedOcorrencia?.Resolucao != null)
+                {
+                    <p style="color: black;"><strong>Resolução:</strong> @selectedOcorrencia?.Resolucao</p>
+                }
+                else
+                {
+                    <p style="color: black;"><strong>Resolução:</strong> Aguarde... Iremos resolver isso para você o quanto antes!</p>
+                }
+            }
         </div>
     </div>
+}
 
-    <script>
-        let ocorrencias = []; // Aqui você deve preencher com as ocorrências obtidas via API
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
 
-        function loadOcorrencias() {
-            const tbody = document.getElementById('ocorrencias-body');
-            tbody.innerHTML = ''; // Limpa o corpo da tabela
+    h3 {
+        text-align: center;
+        color: #333;
+    }
 
-            ocorrencias.forEach(data => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                            <td>${data.Data}</td>
-                            <td>${data.Hora}</td>
-                            <td>${data.UsuarioNome}</td>
-                            <td>${data.TipoOcorrencia}</td>
-                            <td class="descricao-column">${data.Descricao}</td>
-                            <td class="descricao-column">${data.DescricaoResolucao}</td>
-                            <td>${data.Status}</td>
-                            <td>
-                                ${data.Status === "AFazer" ? `<button class="btn btn-primary" onclick="confirmarEdicao('${data.Id}')">Iniciar Atendimento</button>` : ''}
-                                ${data.Status === "EmAndamento" ? `<button class="btn btn-danger" onclick="confirmarEncerrar('${data.Id}')">Encerrar Ocorrência</button>` : ''}
-                            </td>
-                        `;
-                tbody.appendChild(row);
-            });
+    .ocorrencias-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+        gap: 1rem;
+    }
+
+    .ocorrencia-card {
+        flex: 1 1 calc(50% - 1rem);
+        background-color: #f9f9f9;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        padding: 1rem;
+        transition: transform 0.2s;
+        cursor: pointer;
+    }
+
+        .ocorrencia-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
-        function mostrarNotificacao(mensagem, tipo) {
-            const notification = document.getElementById('notification');
-            notification.className = `alert alert-${tipo}`;
-            notification.innerHTML = mensagem;
-            notification.style.display = 'block';
+    .ocorrencia-img {
+        width: 100px;
+        height: 100px;
+        border-radius: 5px;
+        margin-right: 1rem;
+        object-fit: cover;
+    }
+
+    .ocorrencia-details {
+        flex-grow: 1;
+    }
+
+        .ocorrencia-details h4 {
+            margin: 0;
+            color: #007BFF;
         }
 
-        function confirmarEdicao(id) {
-            // Lógica para confirmar edição
-            document.getElementById('modalEdicao').style.display = 'block';
+        .ocorrencia-details p {
+            margin: 0.5rem 0;
+            color: #555;
         }
 
-        function cancelarEdicao() {
-            document.getElementById('modalEdicao').style.display = 'none';
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .modal-content {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        position: relative;
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .modal-image {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+    }
+
+    .btn-close-modal {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #007BFF; /* Fundo azul */
+        color: white; /* Cor do texto */
+        border: none;
+        border-radius: 50%; /* Botão redondo */
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .btn-close-modal:hover {
+            background-color: #0056b3; /* Escurecer ao passar o mouse */
         }
 
-        function confirmarEncerrar(id) {
-            // Lógica para confirmar encerramento
-            document.getElementById('modalEncerrar').style.display = 'block';
+    textarea {
+        width: 100%;
+        height: 100px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .btn-submit {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+    }
+
+        .btn-submit:hover {
+            background-color: #0056b3;
         }
 
-        function cancelarEncerrar() {
-            document.getElementById('modalEncerrar').style.display = 'none';
+    @@media (max-width: 600px) {
+        .ocorrencia-card {
+            flex: 1 1 100%; /* Um card por linha em telas menores */
+        }
+    }
+</style>
+
+@code {
+    private List<OcorrenciaListarResponse> ocorrencias;
+    private bool isModalOpen = false;
+    private OcorrenciaListarResponse selectedOcorrencia;
+    private string resolution;
+
+    protected override async Task OnInitializedAsync()
+    {
+        PageTitleService.SetPageTitle("LISTAR OCORRÊNCIAS");
+        BackgroundColorService.SetBackgroundColor("#FFFFFF");
+
+        await LoadOcorrencias();
+    }
+
+    private async Task LoadOcorrencias()
+    {
+        try
+        {
+            ocorrencias = await HttpClient.GetFromJsonAsync<List<OcorrenciaListarResponse>>("/ocorrencia/listar");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro ao carregar ocorrências: {ex.Message}");
+        }
+    }
+
+    private void OpenModal(OcorrenciaListarResponse ocorrencia)
+    {
+        selectedOcorrencia = ocorrencia;
+        isModalOpen = true;
+        resolution = ""; // Limpa a resolução ao abrir o modal
+    }
+
+    private void CloseModal()
+    {
+        isModalOpen = false;
+        selectedOcorrencia = null;
+    }
+
+    private async Task SubmitResolution()
+    {
+        if (string.IsNullOrWhiteSpace(resolution))
+        {
+            Console.WriteLine("A resolução não pode estar vazia.");
+            return;
         }
 
-        function confirmarEncerrar() {
-            const descricaoResolucao = document.getElementById('descricaoResolucao').value;
-            // Lógica para fazer a requisição de encerramento
-        }
+        var requestContent = new OcorrenciaEncerrarRequest
+            {
+                Id = selectedOcorrencia.Id,
+                Resolucao = resolution
+            };
 
-        // Carregamento inicial
-        window.onload = loadOcorrencias;
-    </script>
-</body>
-</html>
+        var response = await HttpClient.PutAsJsonAsync("/ocorrencia/encerrar", requestContent);
+
+        if (response.IsSuccessStatusCode)
+        {
+            Console.WriteLine($"Ocorrência {selectedOcorrencia?.Id} encerrada com sucesso.");
+            await LoadOcorrencias(); // Recarregar as ocorrências após o envio
+            CloseModal();
+        }
+        else
+        {
+            var errorMessage = await response.Content.ReadAsStringAsync();
+            Console.WriteLine($"Falha ao encerrar a ocorrência. Detalhes: {errorMessage}");
+        }
+    }
+}

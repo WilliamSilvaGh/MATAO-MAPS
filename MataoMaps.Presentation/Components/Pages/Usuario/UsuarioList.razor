@@ -24,7 +24,7 @@
                 @foreach (var usuario in _listUsuarioListarResponse)
                 {
                     <tr class="text-center">
-                        <td>@usuario.Nome</td>
+                        <td style="text-transform: capitalize;">@usuario.Nome</td>
                         <td>@(usuario.EhAdmin ? "Sim" : "Não")</td>
                         <td class="d-flex">
                             <button class="btn btn-primary w-100" @onclick="() => ConfirmarExclusao(usuario.Id)">

@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\Images\\mapa.png"
     },
     {
+      "Id": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\Images\\niveis-urgencia.png",
+      "PackagePath": "staticwebassets\\Images\\niveis-urgencia.png"
+    },
+    {
       "Id": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },

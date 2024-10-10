@@ -1,15 +1,16 @@
 ﻿@page "/ocorrencias"
+@using MataoMaps.Domain.DTOs.Ocorrencia.Response
 
 @implements IAsyncDisposable
 
-<div class="input-wrapper">
+@* <div class="input-wrapper">
     <i class="fa fa-search" style="color: black"></i>
     <input type="text" placeholder="Pesquisar" />
-</div>
+</div> *@
 
-<div id="map" style="width: 80%; height: 250px; margin: 2rem auto;"></div>
+<div id="map" style="width: 80%; height: 65vh; margin: 2rem auto;"></div>
 
-<div class="urgencia">
+@* <div class="urgencia">
     <img src="/Images/niveis-urgencia.png" alt="Níveis de Urgência" />
     <div class="conteudo-imagem">
         <div class="titulo">Nível de gravidade</div>
@@ -19,7 +20,7 @@
             <button style="background-color: #ede4c5">Normal</button>
         </div>
     </div>
-</div>
+</div> *@
 
 <button type="submit" class="btn-fazer-ocorrencia" disabled="@isLoading" @onclick="Redirecionar">
     @if (isLoading)
@@ -126,7 +127,6 @@
         transition: background-color 0.3s; /* Adiciona uma transição suave para a mudança de cor */
         z-index: 10; /* Adiciona um z-index para garantir que o botão fique acima de outros elementos */
         position: relative; /* Faz com que o z-index funcione */
-        max-width: 350px;
     }
 
         .btn-fazer-ocorrencia:hover {
@@ -160,12 +160,13 @@
             _isMapInitialized = true;
         }
     }
-
     private async Task InitializeMap()
     {
         await JSRuntime.InvokeVoidAsync("initializeMap");
+
         StateHasChanged();
     }
+
 
     public async ValueTask DisposeAsync()
     {

@@ -16,7 +16,6 @@
 main[b-l5uj9cdamt] {
     color: white;
     flex: 1;
-    background-color: #e8e8e8;
     width: 100%;
 }
 
@@ -73,35 +72,35 @@ body[b-l5uj9cdamt] {
 }
 
 /* 640px*/
-@media (min-width: 768px) {
-    .page[b-l5uj9cdamt] {
+/*@media (min-width: 768px) {
+    .page {
         flex-direction: row;
     }
 
-    .sidebar[b-l5uj9cdamt] {
+    .sidebar {
         width: 250px;
         height: 100vh;
         position: sticky;
         top: 0;
     }
 
-    .top-row[b-l5uj9cdamt] {
+    .top-row {
         position: sticky;
         top: 0;
         z-index: 1;
     }
 
-        .top-row.auth[b-l5uj9cdamt]  a:first-child {
+        .top-row.auth ::deep a:first-child {
             flex: 1;
             text-align: right;
             width: 0;
         }
 
-    .top-row[b-l5uj9cdamt], article[b-l5uj9cdamt] {
+    .top-row, article {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
     }
-}
+}*/
 /* /Components/Layout/NavMenu.razor.rz.scp.css */
 .navbar-toggler[b-f9nat5od3m] {
     appearance: none;
@@ -242,9 +241,9 @@ body[b-l5uj9cdamt] {
     }
 
     .nav-scrollable[b-f9nat5od3m] {
-        /* Never collapse the sidebar for wide screens */
+        /*Never collapse the sidebar for wide screens*/ 
         display: block;
-        /* Allow sidebar to scroll for tall menus */
+         /*Allow sidebar to scroll for tall menus*/ 
         height: calc(100vh - 3.5rem);
         overflow-y: auto;
     }

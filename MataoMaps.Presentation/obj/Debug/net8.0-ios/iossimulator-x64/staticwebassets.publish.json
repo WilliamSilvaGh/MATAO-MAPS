@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UWS+rxYUZfdRDAndr4P3Jb2wU9dnv0IvW0ma+gJrR0w=",
+  "Hash": "2S3u7CuwLotNlFZBOvWoszKOr8OMQ2+gH1SjvrD3D3Y=",
   "Source": "MataoMaps.Presentation",
   "BasePath": "/",
   "Mode": "Root",
@@ -186,6 +186,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\mapa.png"
+    },
+    {
+      "Identity": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\Images\\niveis-urgencia.png",
+      "SourceId": "MataoMaps.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "Images/niveis-urgencia.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\niveis-urgencia.png"
     },
     {
       "Identity": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\wwwroot\\index.html",

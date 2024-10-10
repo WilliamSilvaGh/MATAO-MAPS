@@ -1,142 +1,132 @@
-﻿@* @page "/usuario/admin/create"
+﻿@page "/usuario/admin/create"
+@using MataoMaps.Domain.DTOs.Usuario.Request
 
-<RadzenButton class="mt-5 rounded-circle d-flex align-items-center justify-content-center" Style="width: 48px;" Click="GoBack" ButtonType="ButtonType.Submit" Shade="Shade.Lighter" ButtonStyle="ButtonStyle.Light">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="32" fill="currentColor" class="bi bi-arrow-left d-flex justify-content-center" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
-    </svg>
-</RadzenButton>
+<!-- Formulário de Criação de Admin -->
+<div class="align">
+    <EditForm Model="@usuarioAdicionarRequest" OnValidSubmit="@AdicionarUsuario">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
 
-<RadzenTemplateForm TItem="UsuarioAdicionarRequest" Data="@usuarioAdicionarRequest" Submit="@(async args => await AdicionarUsuario(args))">
-    <RadzenRow AlignItems="AlignItems.End" Wrap="FlexWrap.Wrap" Gap="1rem" Style="margin-top: 1rem; margin-bottom: 2rem;">
+        <div class="form-group">
+            <InputText id="Nome" @bind-Value="usuarioAdicionarRequest.Nome" placeholder="Nome Completo" class="text-input" />
+        </div>
 
-        <RadzenColumn>
-            <h1>Criar um Admin</h1>
-            <h4>Preencha as informações do Usuário Administrador</h4>
-            <RadzenCard>
-                <RadzenColumn Size="12" SizeMD="6" SizeLG="3">
-                    <RadzenFormField Text="Nome" Style="width: 100%;">
-                        <RadzenTextBox Style="width: 100%;" @bind-Value="usuarioAdicionarRequest.Nome" Name="Nome" />
-                    </RadzenFormField>
-                    <RadzenRequiredValidator Component="Nome" Text="Nome é Obrigatório" />
-                </RadzenColumn>
+        <div class="form-group">
+            <InputText id="EmailLogin" @bind-Value="usuarioAdicionarRequest.EmailLogin" placeholder="Email" class="text-input" />
+        </div>
 
-                <RadzenColumn>
-                    <RadzenFormField Text="E-mail institucional" Style="width: 100%;">
-                        <RadzenTextBox Style="width: 100%;" @bind-Value="usuarioAdicionarRequest.EmailLogin" Name="EmailLogin" />
-                    </RadzenFormField>
-                    <RadzenRequiredValidator Component="EmailLogin" Text="Email é Obrigatório" />
-                    <RadzenRegexValidator Component="EmailLogin" Pattern="@etecPattern" Text="Email deve ser institucional da ETEC ou da CPS" />
-                </RadzenColumn>
+        <div class="form-group">
+            <InputText id="EmailLoginConfirmacao" @bind-Value="usuarioAdicionarRequest.EmailLoginConfirmacao" placeholder="Confirme o Email" class="text-input" />
+        </div>
 
-                <RadzenColumn>
-                    <RadzenFormField Text="Confirmação Email" Style="width: 100%;">
-                        <RadzenTextBox Style="width: 100%;" @bind-Value="usuarioAdicionarRequest.EmailLoginConfirmacao" Name="EmailLoginConfirmacao" />
-                    </RadzenFormField>
-                    <RadzenRequiredValidator Component="EmailLoginConfirmacao" Text="Confirmação do Email é Obrigatória" />
-                </RadzenColumn>
+        <div class="form-group">
+            <InputText id="Senha" @bind-Value="usuarioAdicionarRequest.Senha" placeholder="Senha" type="password" class="text-input" />
+        </div>
 
-                <RadzenRow>
-                    <RadzenColumn>
-                        <RadzenFormField Text="Senha" Style="width: 100%;">
-                            <RadzenPassword Style="width: 100%;" @bind-Value="usuarioAdicionarRequest.Senha" Name="Senha" />
-                        </RadzenFormField>
-                        <RadzenRequiredValidator Component="Senha" Text="Senha é obrigatória" />
-                        @if (!string.IsNullOrEmpty(usuarioAdicionarRequest.Senha))
-                        {
-                            <RadzenLengthValidator Component="Senha" Min="6" Text="O campo precisa ter no mínimo 6 caracteres." />
-                        }
-                    </RadzenColumn>
+        <div class="form-group">
+            <InputText id="SenhaConfirmacao" @bind-Value="usuarioAdicionarRequest.SenhaConfirmacao" placeholder="Confirme a senha" type="password" class="text-input" />
+        </div>
 
-                    <RadzenColumn>
-                        <RadzenFormField Text="Repita sua senha" Style="width: 100%;">
-                            <RadzenPassword Style="width: 100%;" @bind-Value="usuarioAdicionarRequest.SenhaConfirmacao" Name="SenhaConfirmacao" />
-                        </RadzenFormField>
-                        <RadzenRequiredValidator Component="SenhaConfirmacao" Text="Confirmação da senha é obrigatória" />
-                        @if (!string.IsNullOrEmpty(usuarioAdicionarRequest.SenhaConfirmacao))
-                        {
-                            <RadzenLengthValidator Component="SenhaConfirmacao" Min="6" Text="O campo precisa ter no mínimo 6 caracteres." />
-                        }
-                    </RadzenColumn>
-                </RadzenRow>
-
-                <RadzenFormField Variant="Variant.Text" Style="width: 100%;">
-                    <RadzenButton ButtonType="ButtonType.Submit" Shade="Shade.Lighter" ButtonStyle="ButtonStyle.Light" Disabled="@isLoading">
-                        @if (isLoading)
-                        {
-                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                            <span class="visually-hidden">Loading...</span>
-                        }
-                        else
-                        {
-                            <span>Cadastrar Administrador</span>
-                        }
-                    </RadzenButton>
-                </RadzenFormField>
-            </RadzenCard>
-        </RadzenColumn>
-    </RadzenRow>
-</RadzenTemplateForm>
+        <div class="form-group">
+            <button type="submit" class="btn-publicar" disabled="@isLoading">
+                @if (isLoading)
+                {
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span class="visually-hidden">Loading...</span>
+                }
+                else
+                {
+                    <span>Criar Administrador</span>
+                }
+            </button>
+        </div>
+    </EditForm>
+</div>
 
 <RadzenNotification />
 
+<style>
+    .text-input {
+        width: 80%;
+        border: none;
+        border-radius: 2rem;
+        height: 2rem;
+        padding: 1.5rem;
+        margin: 2rem auto;
+        display: block;
+        outline: none;
+        background-color: #e8e8e8;
+    }
+
+    .align {
+        text-align: center; /* Alinha o conteúdo ao centro */
+        background-color: #FFFFFF;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .btn-publicar {
+        display: block;
+        width: 80%;
+        margin: 1rem auto;
+        padding: 0.75rem;
+        border: none;
+        border-radius: 2rem;
+        background-color: #3685cd;
+        color: white;
+        font-weight: bold;
+        font-size: 1rem;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        z-index: 10;
+        position: relative;
+        margin-top: 3rem;
+    }
+
+        .btn-publicar:hover {
+            background-color: #0056b3;
+        }
+</style>
+
 @code {
     UsuarioAdicionarRequest usuarioAdicionarRequest = new UsuarioAdicionarRequest();
-
     public bool isLoading = false;
 
-    public async Task AdicionarUsuario(UsuarioAdicionarRequest request)
+    protected override void OnInitialized()
+    {
+        PageTitleService.SetPageTitle("CRIAR ADMINISTRADOR");
+        BackgroundColorService.SetBackgroundColor("#FFFFFF");
+    }
+
+    public async Task AdicionarUsuario()
     {
         isLoading = true;
         try
         {
             usuarioAdicionarRequest.EhAdmin = true;
 
-            var response = await HttpClient.PostAsJsonAsync("usuario/adicionar", request);
+            var response = await HttpClient.PostAsJsonAsync("usuario/adicionar", usuarioAdicionarRequest);
             if (response.IsSuccessStatusCode)
             {
-                var content = await response.Content.ReadAsStringAsync();
-
-                NotificationService.Notify(new NotificationMessage
-                    {
-                        Severity = NotificationSeverity.Success,
-                        Summary = "Sucesso",
-                        Detail = "Usuário administrador criado com sucesso!",
-                        Duration = 4000
-                    });
-
-                isLoading = false;
-
+                // Exibir notificação de sucesso
                 NavigationManager.NavigateTo("/usuario/list");
             }
             else
             {
-                isLoading = false;
-
-                var errorContent = await response.Content.ReadAsStringAsync();
-                NotificationService.Notify(new NotificationMessage
-                    {
-                        Severity = NotificationSeverity.Error,
-                        Summary = "Erro",
-                        Detail = $"Erro ao registrar usuário administrador: {errorContent}",
-                        Duration = 4000
-                    });
+                // Exibir notificação de erro
             }
         }
         catch (Exception ex)
         {
-            NotificationService.Notify(new NotificationMessage
-                {
-                    Severity = NotificationSeverity.Error,
-                    Summary = "Erro",
-                    Detail = $"Erro: {ex.Message}",
-                    Duration = 4000
-                });
+            // Exibir notificação de erro
+        }
+        finally
+        {
+            isLoading = false;
         }
     }
-
-    public void GoBack()
-    {
-        NavigationManager.NavigateTo("/area-adm");
-    }
 }
- *@

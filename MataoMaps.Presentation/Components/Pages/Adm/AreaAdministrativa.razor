@@ -1,13 +1,35 @@
 ﻿@page "/area-adm"
 
-<div class="mw-100 w-100 d-flex justify-content-evenly">
-    <a href="/usuario/admin/create" class="mt-2 mb-2">
-        <button class="btn btn-primary" style="width: 10rem;">Criar ADM</button>
-    </a>
-    <a href="/usuario/list" class="mt-2 mb-2">
-        <button class="btn btn-primary" style="width: 10rem;">Listar Usuários</button>
-    </a>
+<div class="d-flex justify-content-evenly align-items-center" style="min-height: 80vh;">
+    <div class="fundo">
+        <NavLink href="/usuario/admin/create" class="mt-2 mb-2 text-decoration-none" style="color: white;">
+            <button class="btn btn-primary" style="width: 10rem;">
+                Criar ADM
+            </button>
+        </NavLink>
+
+        <NavLink href="/usuario/list" class="mt-2 mb-2 text-decoration-none" style="color: white;">
+            <button class="btn btn-primary" style="width: 10rem;">
+                Listar Usuários
+            </button>
+        </NavLink>
+
+    </div>
 </div>
+
+<style>
+    .fundo {
+        background-color: #FFFFFF;
+        padding: 2rem;
+        width: 80%;
+        border-radius: 0.5rem;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 1rem auto;
+    }
+</style>
+
+
 @code {
     protected override void OnInitialized()
     {

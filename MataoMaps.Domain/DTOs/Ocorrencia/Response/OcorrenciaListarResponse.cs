@@ -13,6 +13,8 @@ namespace MataoMaps.Domain.DTOs.Ocorrencia.Response
         public string Endereco { get; set; }
         public string Descricao { get; set; }
         public string Resolucao { get; set; }
+
+        [JsonConverter(typeof(EnumStatusConverter))]
         public EnumStatus Status {  get; set; }
     }
 }

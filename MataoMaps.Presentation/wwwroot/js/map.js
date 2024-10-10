@@ -1,16 +1,15 @@
-var map; // Declare a vari�vel map fora da fun��o
+var map; // Declare a variável map fora da função
 
 function initializeMap() {
-
     // Inicializa o mapa
     map = L.map('map').setView([-21.6034, -48.3665], 13); // Coordenadas iniciais
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
-        attribution: '� OpenStreetMap'
+        attribution: '© OpenStreetMap'
     }).addTo(map);
 
-    // Verifica se a geolocaliza��o � suportada
+    // Verifica se a geolocalização é suportada
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
             var lat = position.coords.latitude;
@@ -19,16 +18,16 @@ function initializeMap() {
             console.log("Latitude: ", lat);
             console.log("Longitude: ", lon);
 
-            // Atualiza o mapa para a localiza��o do usu�rio
+            // Atualiza o mapa para a localização do usuário
             map.setView([lat, lon], 13);
             L.marker([lat, lon]).addTo(map)
-                .bindPopup('Voc� est� aqui!')
+                .bindPopup('Você está aqui!')
                 .openPopup();
         }, function (error) {
-            console.error("Erro ao obter a localiza��o: ", error);
-            alert("N�o foi poss�vel obter a localiza��o: " + error.message);
+            console.error("Erro ao obter a localização: ", error);
+            alert("Não foi possível obter a localização: " + error.message);
         });
     } else {
-        alert("Geolocaliza��o n�o suportada por este navegador.");
+        alert("Geolocalização não suportada por este navegador.");
     }
 }
