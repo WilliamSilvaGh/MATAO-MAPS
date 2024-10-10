@@ -1,215 +1,156 @@
-﻿@page "/ocorrencia/list"
-@using MataoMaps.Domain.DTOs.Ocorrencia.Response
-@using System.Text.Json
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Ocorrências</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+    <style>
+        .modal-dialog {
+            max-width: 500px;
+        }
 
-<RadzenRow Style="margin-top: 2rem;">
-    <h3>Listar Ocorrências</h3>
+        .text-black {
+            color: black;
+        }
 
-    <RadzenNotification />
-    <RadzenDialog />
+        .descricao-column {
+            white-space: normal;
+            word-wrap: break-word;
+            text-align: justify;
+            hyphens: auto;
+        }
 
-</RadzenRow>
+        .text-wrap {
+            white-space: normal;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h3>Listar Ocorrências</h3>
 
-<div style="width: 80%">
+        <div class="alert" id="notification" style="display:none;"></div>
 
-    <RadzenDataGrid lang="pt-br" class="text-wrap" AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="true" FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="10" AllowPaging="true" IsLoading="@_isLoading" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true"
-                    Data="@_listOcorrenciaListarResponse" TItem="OcorrenciaListarResponse" LogicalFilterOperator="LogicalFilterOperator.Or" GridLines="DataGridGridLines.Both" @ref="_grid">
-        <Columns>
-            <RadzenDataGridColumn TItem="OcorrenciaListarResponse" Property="Data" Title="Data" Filterable="true" Sortable="true" Width="140px" />
-            <RadzenDataGridColumn TItem="OcorrenciaListarResponse" Property="Hora" Title="Hora" Filterable="true" Sortable="true" Width="140px" />
-            <RadzenDataGridColumn TItem="OcorrenciaListarResponse" Property="UsuarioNome" Title="Nome do Usuario" Filterable="true" Sortable="true" Width="140px" MinWidth="140px" />
-            <RadzenDataGridColumn TItem="OcorrenciaListarResponse" Property="TipoOcorrencia" Title="Tipo de Ocorrencia" Filterable="true" Sortable="true" Width="140px" />
-            <RadzenDataGridColumn TItem="OcorrenciaListarResponse" Property="Descricao" Title="Descricao" Filterable="true" Sortable="true" Width="140px">
-                <Template Context="data">
-                    <div style="white-space: normal; word-wrap: break-word; text-align: justify; hyphens: auto;">
-                        @data.Descricao
+        <div style="width: 80%;">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th>Nome do Usuário</th>
+                        <th>Tipo de Ocorrência</th>
+                        <th>Descrição</th>
+                        <th>Resolução</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="ocorrencias-body">
+                    <!-- As ocorrências serão inseridas aqui via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Modal de Iniciar Atendimento -->
+        <div class="modal" id="modalEdicao" tabindex="-1" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-black">Iniciar Atendimento</h5>
+                        <button type="button" class="btn-close" onclick="cancelarEdicao()" aria-label="Close"></button>
                     </div>
-                </Template>
-            </RadzenDataGridColumn>
-
-            <RadzenDataGridColumn TItem="OcorrenciaListarResponse" Property="DescricaoResolucao" Title="Resolucao" Filterable="true" Sortable="true" Width="140px">
-                <Template Context="data">
-                    <div style="white-space: normal; word-wrap: break-word; text-align: justify; hyphens: auto;">
-                        @data.Resolucao
+                    <div class="modal-body text-black">
+                        <p>Deseja realmente iniciar o atendimento desta ocorrência?</p>
                     </div>
-                </Template>
-            </RadzenDataGridColumn>
-            <RadzenDataGridColumn TItem="OcorrenciaListarResponse" Property="Status" Title="Status" Filterable="true" Sortable="true" Width="140px" />
-            @if (UsuarioLogadoService.EhAdmin)
-            {
-                <RadzenDataGridColumn TItem="OcorrenciaListarResponse" Property="Ações" Title="Ações" Filterable="true" Sortable="true" Width="190px">
-                    <Template Context="data">
-                        @if (data.Status.ToString() == "AFazer")
-                        {
-                            <RadzenButton Icon="edit" ButtonStyle="ButtonStyle.Primary" class="rz-border-radius-10" Text="Iniciar Atendimento" Click="() => ConfirmarEdicao(data.Id)" />
-                        }
-                        else if (data.Status.ToString() == "EmAndamento")
-                        {
-                            <RadzenButton Icon="edit" ButtonStyle="ButtonStyle.Danger" class="rz-border-radius-10" Text="Encerrar Ocorrência" Click="() => ConfirmarEncerrar(data.Id)" />
-                        }
-                    </Template>
-                </RadzenDataGridColumn>
-            }
-        </Columns>
-    </RadzenDataGrid>
-
-
-
-</div>
-
-<style>
-    .descricao-column {
-        white-space: normal;
-        word-wrap: break-word;
-    }
-</style>
-
-
-
-<div class="modal" style="display: @(modalEdicao ? "block" : "none")" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-black">Iniciar Atendimento</h5>
-                <button type="button" class="btn-close" @onclick="CancelarEdicao" aria-label="Close"></button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" onclick="cancelarEdicao()">Cancelar</button>
+                        <button type="button" class="btn btn-primary" onclick="confirmarEdicao()">Confirmar</button>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body text-black">
-                <p>Deseja realmente iniciar o atendimento desta ocorrência?</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" @onclick="CancelarEdicao">Cancelar</button>
-                <button type="button" class="btn btn-primary" @onclick="ConfirmarEdicaoOcorrencia">Confirmar</button>
+        </div>
+
+        <!-- Modal de Encerrar Ocorrência -->
+        <div class="modal" id="modalEncerrar" tabindex="-1" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-black">Encerrar Ocorrência</h5>
+                        <button type="button" class="btn-close" onclick="cancelarEncerrar()" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-black">
+                        <p>Informe a resolução da ocorrência:</p>
+                        <textarea class="form-control" id="descricaoResolucao" required></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" onclick="cancelarEncerrar()">Cancelar</button>
+                        <button type="button" class="btn btn-primary" onclick="confirmarEncerrar()">Confirmar</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="modal" style="display: @(modalEncerrar ? "block" : "none")" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-black">Encerrar Ocorrência</h5>
-                <button type="button" class="btn-close" @onclick="CancelarEncerrar" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-black">
-                <p>Informe a resolução da ocorrência:</p>
-                <textarea class="form-control" @bind="descricaoResolucao" required></textarea>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" @onclick="CancelarEncerrar">Cancelar</button>
-                <button type="button" class="btn btn-primary" @onclick="ConfirmarEncerrarOcorrencia">Confirmar</button>
-            </div>
-        </div>
-    </div>
-</div>
+    <script>
+        let ocorrencias = []; // Aqui você deve preencher com as ocorrências obtidas via API
 
-@code {
-    private List<OcorrenciaListarResponse> _listOcorrenciaListarResponse = new();
-    private RadzenDataGrid<OcorrenciaListarResponse>? _grid;
-    private bool _isLoading;
-    private bool modalEdicao;
-    private bool modalEncerrar;
-    private Guid ocorrenciaIdEdicao;
-    private string descricaoResolucao;
+        function loadOcorrencias() {
+            const tbody = document.getElementById('ocorrencias-body');
+            tbody.innerHTML = ''; // Limpa o corpo da tabela
 
-    protected override async Task OnInitializedAsync()
-    {
-        _isLoading = true;
-        await CarregarOcorrencias();
-    }
-
-    private async Task ConfirmarEdicao(Guid ocorrenciaId)
-    {
-        modalEdicao = true;
-        ocorrenciaIdEdicao = ocorrenciaId;
-    }
-
-    private void CancelarEdicao()
-    {
-        modalEdicao = false;
-    }
-
-    private async Task ConfirmarEdicaoOcorrencia()
-    {
-        _isLoading = true;
-
-        var ocorrenciaIniciarAtendimentoRequest = new { Id = ocorrenciaIdEdicao };
-        var requestContent = new StringContent(JsonSerializer.Serialize(ocorrenciaIniciarAtendimentoRequest), System.Text.Encoding.UTF8, "application/json");
-
-        var response = await HttpClient.PutAsync("ocorrencia/iniciar-atendimento", requestContent);
-        if (response.IsSuccessStatusCode)
-        {
-            await CarregarOcorrencias();
-            modalEdicao = false;
-            NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Sucesso", Detail = "Atendimento iniciado com sucesso." });
-            _isLoading = false;
+            ocorrencias.forEach(data => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                            <td>${data.Data}</td>
+                            <td>${data.Hora}</td>
+                            <td>${data.UsuarioNome}</td>
+                            <td>${data.TipoOcorrencia}</td>
+                            <td class="descricao-column">${data.Descricao}</td>
+                            <td class="descricao-column">${data.DescricaoResolucao}</td>
+                            <td>${data.Status}</td>
+                            <td>
+                                ${data.Status === "AFazer" ? `<button class="btn btn-primary" onclick="confirmarEdicao('${data.Id}')">Iniciar Atendimento</button>` : ''}
+                                ${data.Status === "EmAndamento" ? `<button class="btn btn-danger" onclick="confirmarEncerrar('${data.Id}')">Encerrar Ocorrência</button>` : ''}
+                            </td>
+                        `;
+                tbody.appendChild(row);
+            });
         }
-        else
-        {
-            var errorMessage = await response.Content.ReadAsStringAsync();
-            NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Erro", Detail = $"Falha ao iniciar atendimento. Detalhes: {errorMessage}" });
+
+        function mostrarNotificacao(mensagem, tipo) {
+            const notification = document.getElementById('notification');
+            notification.className = `alert alert-${tipo}`;
+            notification.innerHTML = mensagem;
+            notification.style.display = 'block';
         }
-    }
 
-    private async Task ConfirmarEncerrar(Guid ocorrenciaId)
-    {
-        modalEncerrar = true;
-        ocorrenciaIdEdicao = ocorrenciaId;
-    }
-
-    private void CancelarEncerrar()
-    {
-        modalEncerrar = false;
-    }
-
-    private async Task ConfirmarEncerrarOcorrencia()
-    {
-        _isLoading = true;
-        var requestContent = new StringContent(JsonSerializer.Serialize(new { Id = ocorrenciaIdEdicao, DescricaoResolucao = descricaoResolucao }), System.Text.Encoding.UTF8, "application/json");
-        var response = await HttpClient.PutAsync("ocorrencia/encerrar", requestContent);
-        if (response.IsSuccessStatusCode)
-        {
-            await CarregarOcorrencias();
-            modalEncerrar = false;
-            NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Sucesso", Detail = "Ocorrência encerrada com sucesso." });
-            _isLoading = false;
+        function confirmarEdicao(id) {
+            // Lógica para confirmar edição
+            document.getElementById('modalEdicao').style.display = 'block';
         }
-        else
-        {
-            var errorMessage = await response.Content.ReadAsStringAsync();
-            NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Erro", Detail = $"Falha ao encerrar ocorrência. Detalhes: {errorMessage}" });
-        }
-    }
 
-    private async Task CarregarOcorrencias()
-    {
-        try
-        {
-            _isLoading = true;
-            var ocorrencias = await HttpClient.GetFromJsonAsync<List<OcorrenciaListarResponse>>("ocorrencia/listar");
-
-            // Ordenar as ocorrências: A Fazer e Em Andamento primeiro, seguidas das concluídas
-            _listOcorrenciaListarResponse = ocorrencias.OrderBy(o =>
-            {
-                if (o.Status.ToString() == "AFazer" || o.Status.ToString() == "EmAndamento")
-                {
-                    return 0; // Ocorrências A Fazer e Em Andamento têm prioridade 0
-                }
-                else
-                {
-                    return 1; // Ocorrências Concluídas têm prioridade 1
-                }
-            }).ToList();
+        function cancelarEdicao() {
+            document.getElementById('modalEdicao').style.display = 'none';
         }
-        catch (Exception ex)
-        {
-            NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Erro", Detail = $"Falha ao carregar ocorrências. Detalhes: {ex.Message}" });
-        }
-        finally
-        {
-            _isLoading = false;
-        }
-    }
 
+        function confirmarEncerrar(id) {
+            // Lógica para confirmar encerramento
+            document.getElementById('modalEncerrar').style.display = 'block';
+        }
 
-}
+        function cancelarEncerrar() {
+            document.getElementById('modalEncerrar').style.display = 'none';
+        }
+
+        function confirmarEncerrar() {
+            const descricaoResolucao = document.getElementById('descricaoResolucao').value;
+            // Lógica para fazer a requisição de encerramento
+        }
+
+        // Carregamento inicial
+        window.onload = loadOcorrencias;
+    </script>
+</body>
+</html>

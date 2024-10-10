@@ -1,0 +1,17 @@
+﻿@page "/area-adm"
+
+<div class="mw-100 w-100 d-flex justify-content-evenly">
+    <a href="/usuario/admin/create" class="mt-2 mb-2">
+        <button class="btn btn-primary" style="width: 10rem;">Criar ADM</button>
+    </a>
+    <a href="/usuario/list" class="mt-2 mb-2">
+        <button class="btn btn-primary" style="width: 10rem;">Listar Usuários</button>
+    </a>
+</div>
+@code {
+    protected override void OnInitialized()
+    {
+        PageTitleService.SetPageTitle("ÁREA ADMINISTRATIVA");
+        BackgroundColorService.SetBackgroundColor("#E8E8E8");
+    }
+}

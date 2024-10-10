@@ -1,87 +1,105 @@
 ﻿@page "/usuario/list"
 @using System.Text.Json
 
-<RadzenButton class="mt-5 rounded-circle d-flex align-items-center justify-content-center" Style="width: 48px;" Click="GoBack" ButtonType="ButtonType.Submit" Shade="Shade.Lighter" ButtonStyle="ButtonStyle.Light">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="32" fill="currentColor" class="bi bi-arrow-left d-flex justify-content-center" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
-    </svg>
-</RadzenButton>
+@inject HttpClient HttpClient
+@inject NavigationManager NavigationManager
 
-<h3 style="margin-top: 1rem;">UsuarioList</h3>
+<div class="container mt-4">
+    <button class="btn mt-4 mb-3 rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; background-color: #E8E8E8;" @onclick="GoBack">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="32" fill="currentColor" class="bi bi-arrow-left d-flex justify-content-center" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+        </svg>
+    </button>
 
-<RadzenDataGrid class="mw-100" AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="true" FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="10" AllowPaging="true" IsLoading="@_isLoading" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true"
-                Data="@_listUsuarioListarResponse" TItem="UsuarioListarResponse" ColumnWidth="auto" LogicalFilterOperator="LogicalFilterOperator.Or" GridLines="DataGridGridLines.Both" @ref="_grid">
-    <Columns>
-        <RadzenDataGridColumn TItem="UsuarioListarResponse" Property="Nome" Title="Nome do Usuário" Filterable="true" Sortable="true" />
-        <RadzenDataGridColumn TItem="UsuarioListarResponse" Property="EhAdmin" Title="Administrador" Filterable="true" Sortable="true">
-            <Template Context="data">
-                @if (data.EhAdmin)
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr class="text-center" style="background-color: #E8E8E8;">
+                    <th>Nome</th>
+                    <th>Administrador</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var usuario in _listUsuarioListarResponse)
                 {
-                    <span>Sim</span>
+                    <tr class="text-center">
+                        <td>@usuario.Nome</td>
+                        <td>@(usuario.EhAdmin ? "Sim" : "Não")</td>
+                        <td class="d-flex">
+                            <button class="btn btn-primary w-100" @onclick="() => ConfirmarExclusao(usuario.Id)">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                            <button class="btn btn-primary w-100 ms-2" @onclick="() => ConfirmarEdicao(usuario.Id)">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                        </td>
+                    </tr>
                 }
-                else
-                {
-                    <span>Não</span>
-                }
-            </Template>
-        </RadzenDataGridColumn>
-        <RadzenDataGridColumn TItem="UsuarioListarResponse" Property="Ações" Title="Ações" Filterable="false" Sortable="false">
-            <Template Context="data">
-                <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Gap="1rem" Wrap="FlexWrap.Wrap">
-                    <RadzenButton Icon="delete" ButtonStyle="ButtonStyle.Primary" class="rz-border-radius-10" Click="() => ConfirmarExclusao(data.Id)" />
-                    <RadzenButton Icon="edit" ButtonStyle="ButtonStyle.Primary" class="rz-border-radius-10" Click="() => ConfirmarEdicao(data.Id)" />
-                </RadzenStack>
-            </Template>
-        </RadzenDataGridColumn>
-    </Columns>
-</RadzenDataGrid>
+            </tbody>
+        </table>
+    </div>
 
-<RadzenNotification />
+    <RadzenNotification />
 
-<div class="modal" style="display: @(modalExclusao ? "block" : "none")" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-black">Confirmação de Exclusão</h5>
-                <button type="button" class="btn-close" @onclick="CancelarExclusao" aria-label="Close"></button>
+    <!-- Modal de Exclusão -->
+    <div class="modal" style="display: @(modalExclusao ? "block" : "none")" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-black">Confirmação de Exclusão</h5>
+                    <button type="button" class="btn-close" @onclick="CancelarExclusao" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-black">
+                    <p>Deseja realmente excluir este usuário?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" @onclick="CancelarExclusao">Cancelar</button>
+                    <button type="button" class="btn btn-danger" @onclick="ConfirmarExclusaoUsuario">Confirmar</button>
+                </div>
             </div>
-            <div class="modal-body text-black">
-                <p>Deseja realmente excluir este usuário?</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" @onclick="CancelarExclusao">Cancelar</button>
-                <button type="button" class="btn btn-danger" @onclick="ConfirmarExclusaoUsuario">Confirmar</button>
+        </div>
+    </div>
+
+    <!-- Modal de Edição -->
+    <div class="modal" style="display: @(modalEdicao ? "block" : "none")" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-black">Confirmação de Alteração de Visibilidade</h5>
+                    <button type="button" class="btn-close" @onclick="CancelarEdicao" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-black">
+                    <p>Deseja realmente alterar a visibilidade deste usuário?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" @onclick="CancelarEdicao">Cancelar</button>
+                    <button type="button" class="btn btn-primary" @onclick="ConfirmarEdicaoUsuario">Confirmar</button>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="modal" style="display: @(modalEdicao ? "block" : "none")" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-black">Confirmação de Alteração de Visibilidade</h5>
-                <button type="button" class="btn-close" @onclick="CancelarEdicao" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-black">
-                <p>Deseja realmente alterar a visibilidade deste usuário?</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" @onclick="CancelarEdicao">Cancelar</button>
-                <button type="button" class="btn btn-danger" @onclick="ConfirmarEdicaoUsuario">Confirmar</button>
-            </div>
-        </div>
-    </div>
-</div>
+<style>
+    .container {
+        color: black;
+    }
+</style>
 
 @code {
-    List<UsuarioListarResponse> _listUsuarioListarResponse = new();
-    RadzenDataGrid<UsuarioListarResponse>? _grid;
-    bool _isLoading;
-    bool modalExclusao = false;
-    bool modalEdicao = false;
-    Guid usuarioIdExclusao;
-    Guid usuarioIdEdicao;
+    private List<UsuarioListarResponse> _listUsuarioListarResponse = new();
+    private bool modalExclusao = false;
+    private bool modalEdicao = false;
+    private Guid usuarioIdExclusao;
+    private Guid usuarioIdEdicao;
+
+    protected override void OnInitialized()
+    {
+        PageTitleService.SetPageTitle("LISTAR USUÁRIOS");
+        BackgroundColorService.SetBackgroundColor("#FFFFFF");
+    }
+
 
     protected override async Task OnInitializedAsync()
     {
@@ -90,7 +108,6 @@
 
     private async Task CarregarUsuarios()
     {
-        _isLoading = true;
         var response = await HttpClient.GetAsync("usuario/listar");
 
         if (response.IsSuccessStatusCode)
@@ -99,124 +116,67 @@
             var optionsJson = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
             _listUsuarioListarResponse = JsonSerializer.Deserialize<List<UsuarioListarResponse>>(content, optionsJson) ?? new List<UsuarioListarResponse>();
         }
-        _isLoading = false;
-        StateHasChanged(); // Garantir que a UI seja atualizada
     }
 
-    public void ExcluidoComSucesso()
+    private void GoBack()
     {
-        NotificationService.Notify(new NotificationMessage
-            {
-                Severity = NotificationSeverity.Success,
-                Summary = "Sucesso",
-                Detail = "Usuário excluído com sucesso",
-                Duration = 2000
-            });
-        StateHasChanged(); // Atualizar o estado para refletir a notificação
+        NavigationManager.NavigateTo("/area-adm");
     }
 
-    public void NaoExcluido()
+    private void ConfirmarExclusao(Guid usuarioId)
     {
-        NotificationService.Notify(new NotificationMessage
-            {
-                Severity = NotificationSeverity.Error,
-                Summary = "Erro",
-                Detail = "Falha ao excluir o usuário",
-                Duration = 2000
-            });
-        StateHasChanged(); // Atualizar o estado para refletir a notificação
-    }
-
-    public void EditadoComSucesso()
-    {
-        NotificationService.Notify(new NotificationMessage
-            {
-                Severity = NotificationSeverity.Success,
-                Summary = "Sucesso",
-                Detail = "Visibilidade do usuário alterada com sucesso",
-                Duration = 2000
-            });
-        StateHasChanged(); // Atualizar o estado para refletir a notificação
-    }
-
-    public void NaoEditado()
-    {
-        NotificationService.Notify(new NotificationMessage
-            {
-                Severity = NotificationSeverity.Error,
-                Summary = "Erro",
-                Detail = "Falha ao alterar a visibilidade do usuário",
-                Duration = 2000
-            });
-        StateHasChanged(); // Atualizar o estado para refletir a notificação
-    }
-
-    public async Task ConfirmarExclusao(Guid usuarioId)
-    {
-        modalExclusao = true;
         usuarioIdExclusao = usuarioId;
+        modalExclusao = true;
     }
 
-    public async Task ConfirmarEdicao(Guid usuarioId)
-    {
-        modalEdicao = true;
-        usuarioIdEdicao = usuarioId;
-    }
-
-    public void CancelarExclusao()
+    private void CancelarExclusao()
     {
         modalExclusao = false;
     }
 
-    public void CancelarEdicao()
-    {
-        modalEdicao = false;
-    }
-
-    public async Task ConfirmarExclusaoUsuario()
+    private async Task ConfirmarExclusaoUsuario()
     {
         var response = await HttpClient.DeleteAsync($"usuario/{usuarioIdExclusao}");
         if (response.IsSuccessStatusCode)
         {
-            // Remover o usuário da lista e atualizar a grid
-            var usuario = _listUsuarioListarResponse.FirstOrDefault(u => u.Id == usuarioIdExclusao);
-            if (usuario != null)
-            {
-                _listUsuarioListarResponse.Remove(usuario);
-                await _grid.Reload();
-            }
-            ExcluidoComSucesso();
+            _listUsuarioListarResponse.RemoveAll(u => u.Id == usuarioIdExclusao);
+            await CarregarUsuarios();
+            // Notificação de sucesso
         }
         else
         {
-            NaoExcluido();
+            // Notificação de erro
         }
         modalExclusao = false;
     }
 
-    public async Task ConfirmarEdicaoUsuario()
+    private void ConfirmarEdicao(Guid usuarioId)
+    {
+        usuarioIdEdicao = usuarioId;
+        modalEdicao = true;
+    }
+
+    private void CancelarEdicao()
+    {
+        modalEdicao = false;
+    }
+
+    private async Task ConfirmarEdicaoUsuario()
     {
         var response = await HttpClient.PutAsync($"usuario/alterar-visibilidade/{usuarioIdEdicao}", null);
         if (response.IsSuccessStatusCode)
         {
-            // Atualizar a visibilidade do usuário na lista
             var usuario = _listUsuarioListarResponse.FirstOrDefault(u => u.Id == usuarioIdEdicao);
             if (usuario != null)
             {
-                usuario.EhAdmin = !usuario.EhAdmin; // Alternar a visibilidade
-                await _grid.Reload();
+                usuario.EhAdmin = !usuario.EhAdmin;
             }
-            EditadoComSucesso();
+            // Notificação de sucesso
         }
         else
         {
-            NaoEditado();
+            // Notificação de erro
         }
         modalEdicao = false;
-    }
-
-    public void GoBack()
-    {
-        NavigationManager.NavigateTo("/area-adm");
     }
 }
