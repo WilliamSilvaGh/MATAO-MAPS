@@ -236,3 +236,11 @@ C:\MATAO-MAPS\MataoMaps.API\obj\Debug\net8.0\scopedcss\bundle\MataoMaps.API.styl
 C:\MATAO-MAPS\MataoMaps.API\obj\Debug\net8.0\MataoMaps.API.dll
 C:\MATAO-MAPS\MataoMaps.API\obj\Debug\net8.0\refint\MataoMaps.API.dll
 C:\MATAO-MAPS\MataoMaps.API\obj\Debug\net8.0\MataoMaps.API.pdb
+C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\appsettings.Development.json
+C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\appsettings.json
+C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\MataoMaps.API.deps.json
+C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\MataoMaps.API.runtimeconfig.json
+C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\MataoMaps.API.pdb
+C:\MATAO-MAPS\MataoMaps.API\obj\Debug\net8.0\MataoMaps.API.csproj.CopyComplete
+C:\MATAO-MAPS\MataoMaps.API\obj\Debug\net8.0\MataoMaps.API.genruntimeconfig.cache
+C:\MATAO-MAPS\MataoMaps.API\obj\Debug\net8.0\ref\MataoMaps.API.dll

@@ -6,6 +6,14 @@
 
 <div class="container">
     <h3>Lista de Ocorrências</h3>
+    <div class="d-flex justify-content-end">
+        <button class="btn-nao-resolvidas @unresolvedButtonClass" @onclick="ShowUnresolved">
+            <i class="fas fa-exclamation-circle"></i>
+        </button>
+        <button class="btn-resolvidas @resolvedButtonClass" @onclick="ShowResolved">
+            <i class="fas fa-check-circle"></i>
+        </button>
+    </div>
     <div class="ocorrencias-list">
         @if (ocorrencias == null)
         {
@@ -32,6 +40,24 @@
             <p>Nenhuma ocorrência encontrada.</p>
         }
     </div>
+
+    <div class="pagination">
+        <button @onclick="PreviousPage" disabled="@(currentPage == 1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="page-number">
+            <input type="text" value="@currentPage"
+                   @onchange="HandlePageChange"
+                   style="width: 2rem; margin: 0; border: solid 1px black; outline: none; text-align: center; border-radius: 5px;" />
+
+            <span style="color:black;">/ @totalPages</span> <!-- Exibir o total de páginas aqui -->
+        </div>
+
+        <button @onclick="NextPage" disabled="@(currentPage == totalPages)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
 </div>
 
 @if (isModalOpen)
@@ -43,7 +69,7 @@
             </button>
             <h4>@selectedOcorrencia?.Descricao</h4>
             <img src="@($"data:image/png;base64,{selectedOcorrencia?.FotoBase64}")" class="modal-image" />
-            @if (UsuarioLogadoService.EhAdmin)
+            @if (UsuarioLogadoService.EhAdmin && selectedOcorrencia?.Resolucao == null)
             {
                 <textarea @bind="@resolution" placeholder="Digite a resolução aqui..."></textarea>
                 <button class="btn-submit" @onclick="SubmitResolution">Enviar Resolução</button>
@@ -77,6 +103,28 @@
         text-align: center;
         color: #333;
     }
+
+    .btn-resolvidas, .btn-nao-resolvidas {
+        margin-bottom: 1rem;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+    }
+
+    .btn-resolvidas {
+        background-color: #007BFF;
+        margin-left: 1rem;
+    }
+
+    .btn-nao-resolvidas {
+        background-color: #007BFF;
+    }
+
+        .btn-resolvidas.selected, .btn-nao-resolvidas.selected {
+            background-color: #0056b3; /* Cor mais escura quando selecionado */
+        }
 
     .ocorrencias-list {
         display: flex;
@@ -154,10 +202,10 @@
         position: absolute;
         top: 10px;
         right: 10px;
-        background-color: #007BFF; /* Fundo azul */
-        color: white; /* Cor do texto */
+        background-color: #007BFF;
+        color: white;
         border: none;
-        border-radius: 50%; /* Botão redondo */
+        border-radius: 50%;
         width: 30px;
         height: 30px;
         cursor: pointer;
@@ -167,7 +215,7 @@
     }
 
         .btn-close-modal:hover {
-            background-color: #0056b3; /* Escurecer ao passar o mouse */
+            background-color: #0056b3;
         }
 
     textarea {
@@ -194,16 +242,55 @@
 
     @@media (max-width: 600px) {
         .ocorrencia-card {
-            flex: 1 1 100%; /* Um card por linha em telas menores */
+            flex: 1 1 100%;
         }
     }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+        .pagination button {
+            margin: 0 10px;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+
+            .pagination button:disabled {
+                background-color: #ccc;
+                cursor: not-allowed;
+            }
+
+        .pagination input {
+            border: none; /* Remove a borda */
+            outline: none; /* Remove o contorno */
+            text-align: center; /* Centraliza o texto */
+        }
 </style>
 
 @code {
     private List<OcorrenciaListarResponse> ocorrencias;
+    private List<OcorrenciaListarResponse> todasOcorrencias;
     private bool isModalOpen = false;
     private OcorrenciaListarResponse selectedOcorrencia;
     private string resolution;
+
+    private string resolvedButtonClass = "";
+    private string unresolvedButtonClass = "";
+
+    private bool isFilteringResolved = false; // Para controlar o estado do filtro
+
+    private int currentPage = 1;
+    private int itemsPerPage = 5;
+    private int totalItems;
+    private int totalPages;
 
     protected override async Task OnInitializedAsync()
     {
@@ -217,7 +304,8 @@
     {
         try
         {
-            ocorrencias = await HttpClient.GetFromJsonAsync<List<OcorrenciaListarResponse>>("/ocorrencia/listar");
+            todasOcorrencias = await HttpClient.GetFromJsonAsync<List<OcorrenciaListarResponse>>("/ocorrencia/listar");
+            FilterAndPaginateOcorrencias();
         }
         catch (Exception ex)
         {
@@ -225,11 +313,34 @@
         }
     }
 
+    private void FilterAndPaginateOcorrencias()
+    {
+        // Filtra as ocorrências de acordo com o filtro
+        var filteredOcorrencias = todasOcorrencias;
+
+        if (isFilteringResolved)
+        {
+            filteredOcorrencias = filteredOcorrencias.Where(o => o.Status.ToString() == "Concluido").ToList();
+        }
+        else
+        {
+            filteredOcorrencias = filteredOcorrencias.Where(o => o.Status.ToString() != "Concluido").ToList();
+        }
+
+        totalItems = filteredOcorrencias.Count;
+        totalPages = (int)Math.Ceiling(totalItems / (double)itemsPerPage);
+
+        ocorrencias = filteredOcorrencias.Skip((currentPage - 1) * itemsPerPage)
+                                           .Take(itemsPerPage)
+                                           .ToList();
+    }
+
+
     private void OpenModal(OcorrenciaListarResponse ocorrencia)
     {
         selectedOcorrencia = ocorrencia;
         isModalOpen = true;
-        resolution = ""; // Limpa a resolução ao abrir o modal
+        resolution = "";
     }
 
     private void CloseModal()
@@ -257,13 +368,65 @@
         if (response.IsSuccessStatusCode)
         {
             Console.WriteLine($"Ocorrência {selectedOcorrencia?.Id} encerrada com sucesso.");
-            await LoadOcorrencias(); // Recarregar as ocorrências após o envio
+            await LoadOcorrencias();
             CloseModal();
         }
         else
         {
             var errorMessage = await response.Content.ReadAsStringAsync();
             Console.WriteLine($"Falha ao encerrar a ocorrência. Detalhes: {errorMessage}");
+        }
+    }
+
+    private void ShowResolved()
+    {
+        isFilteringResolved = true; // Atualiza o estado do filtro
+        FilterAndPaginateOcorrencias(); // Aplica o filtro e a paginação
+        UpdateButtonClasses(true);
+        StateHasChanged();
+    }
+
+    private void ShowUnresolved()
+    {
+        isFilteringResolved = false; // Atualiza o estado do filtro
+        FilterAndPaginateOcorrencias(); // Aplica o filtro e a paginação
+        UpdateButtonClasses(false);
+        StateHasChanged();
+    }
+
+    private void UpdateButtonClasses(bool isResolved)
+    {
+        resolvedButtonClass = isResolved ? "selected" : "";
+        unresolvedButtonClass = isResolved ? "" : "selected";
+    }
+
+    private void PreviousPage()
+    {
+        if (currentPage > 1)
+        {
+            currentPage--;
+            FilterAndPaginateOcorrencias();
+            StateHasChanged();
+        }
+    }
+
+    private void NextPage()
+    {
+        if (currentPage < totalPages)
+        {
+            currentPage++;
+            FilterAndPaginateOcorrencias();
+            StateHasChanged();
+        }
+    }
+
+    private void HandlePageChange(ChangeEventArgs e)
+    {
+        if (int.TryParse(e.Value.ToString(), out int newPage) && newPage >= 1 && newPage <= totalPages)
+        {
+            currentPage = newPage;
+            FilterAndPaginateOcorrencias();
+            StateHasChanged();
         }
     }
 }
