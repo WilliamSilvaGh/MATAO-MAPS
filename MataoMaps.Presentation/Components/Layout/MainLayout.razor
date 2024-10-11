@@ -1,17 +1,22 @@
 ﻿@inherits LayoutComponentBase
 
 
-    <div class="page" style="background-color: @BackgroundColorService.BackgroundColor;">
+<div class="page" style="background-color: @BackgroundColorService.BackgroundColor;">
     @if (PageTitleService.PageTitle != "LOGIN")
     {
         <div class="sidebar">
             <NavMenu />
         </div>
     }
-    <main>
+    @if (PageTitleService.PageTitle == "LOGIN"){
             @Body
-    </main>
-    </div>
+    } else
+    {
+        <main>
+            @Body
+        </main>
+    }
+</div>
 
 
 @code {

@@ -8,9 +8,11 @@
         <img src="/Images/logo.png" class="img-logo" />
         <div class="login">
             <div class="icone-input">
+                <i class="fa fa-user-circle" style="color: black"></i>
                 <input type="email" placeholder="Email" @bind="usuarioAutenticarRequest.EmailLogin" />
             </div>
             <div class="icone-input">
+                <i class="fa fa-expeditedssl" style="color: black"></i>
                 <input type="password" placeholder="Senha" @bind="usuarioAutenticarRequest.Senha" />
             </div>
 
@@ -41,8 +43,9 @@
 
     .img-logo {
         width: 11rem;
-        margin-left: auto;
-        margin-right: auto;
+        /* margin-left: auto;
+        margin-right: auto; */
+        margin: 1.5rem auto;
         display: flex;
         padding-top: 1rem;
     }
@@ -53,10 +56,30 @@
         margin: 1.5rem auto; /* Margem superior de 1rem e centraliza horizontalmente */
         opacity: 0.5; /* Mantendo a opacidade */
         transform: rotate(10deg); /* Rotação da imagem */
+        padding-top: 1rem;
     }
 
     .icone-input {
+        padding: 0px 10px;
+        display: flex;
+        align-items: center;
+        background-color: #E8E8E8;
+        border-radius: 20px;
+        border: 1px solid #E8E8E8;
+        width: 80%;
+        height: 2.5rem;
+        margin: 10px auto;
     }
+
+        .icone-input input {
+            background-color: transparent;
+            border: none;
+            font-size: 1rem;
+        }
+
+            .icone-input input:focus-visible {
+                outline: none;
+            }
 
     p{
         text-align: center;
@@ -79,11 +102,11 @@
     .login {
         background-color: #ffffff;
         width: 85%;
-        height: 35%;
+        height: 200px;
         max-width: 400px;
-        max-height: 190px;
         position: absolute;
-        top: 57vh;
+        margin-top: 130px;      
+        padding-top: 0.5vh;
         left: 50%;
         transform: translate(-50%, -50%);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -100,8 +123,9 @@
     .sobre-fundo {
         background-color: #e8e8e8;
         width: 100%;
-        height: 60vh;
+        height: 23rem;
         border-radius: 0 0.5rem 0.5rem;
+        margin-top: -2rem;
     }
 
     .btn-login {
@@ -136,6 +160,7 @@
     protected override void OnInitialized()
     {
         isLoading = false;
+        BackgroundColorService.SetBackgroundColor("#E8E8E8");
         PageTitleService.SetPageTitle("LOGIN");
         StateHasChanged();
     }
