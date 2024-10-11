@@ -281,7 +281,6 @@ C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-ios\iossimulator-x64\libxa
 C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-ios\iossimulator-x64\libxamarin-dotnet.dylib
 C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-ios\iossimulator-x64\MataoMaps.Domain.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-ios\iossimulator-x64\MataoMaps.Domain.pdb
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\build-signature\signature
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\staticwebassets.build.json
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\staticwebassets.development.json
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\staticwebassets\msbuild.MataoMaps.Presentation.Microsoft.AspNetCore.StaticWebAssets.props
@@ -346,3 +345,18 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\refin
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\MataoMaps.Presentation.pdb
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\MataoMaps.Presentation.genruntimeconfig.cache
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-ios\iossimulator-x64\ref\MataoMaps.Presentation.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-ios\iossimulator-x64\itext.barcodes.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-ios\iossimulator-x64\itext.bouncy-castle-connector.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-ios\iossimulator-x64\itext.forms.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-ios\iossimulator-x64\itext.io.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-ios\iossimulator-x64\itext.kernel.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-ios\iossimulator-x64\itext.layout.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-ios\iossimulator-x64\itext.pdfa.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-ios\iossimulator-x64\itext.pdfua.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-ios\iossimulator-x64\itext.sign.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-ios\iossimulator-x64\itext.styledxmlparser.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-ios\iossimulator-x64\itext.svg.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-ios\iossimulator-x64\itext.commons.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.DotNet.PlatformAbstractions.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.Extensions.DependencyModel.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-ios\iossimulator-x64\Newtonsoft.Json.dll

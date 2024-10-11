@@ -11,6 +11,9 @@ namespace MataoMaps.Data.Configuration
         {
             builder.HasKey(p => p.Id);
 
+            builder.Property(P => P.Data)
+                .IsRequired();
+
             builder.Property(P => P.Latitude)
                 .IsRequired();
 

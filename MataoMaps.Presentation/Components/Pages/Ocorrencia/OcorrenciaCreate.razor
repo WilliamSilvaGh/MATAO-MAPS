@@ -229,8 +229,10 @@
     {
         isLoading = true;
         // Aqui você pode ajustar Latitude e Longitude conforme necessário.
+        ocorrenciaAdicionarRequest.Data = DateOnly.FromDateTime(DateTime.Now); // Adapte conforme necessário
         ocorrenciaAdicionarRequest.Latitude = 0; // Adapte conforme necessário
         ocorrenciaAdicionarRequest.Longitude = 0; // Adapte conforme necessário
+
 
         var response = await HttpClient.PostAsJsonAsync("/ocorrencia/adicionar", ocorrenciaAdicionarRequest);
         if (response.IsSuccessStatusCode)

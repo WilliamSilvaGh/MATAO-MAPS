@@ -28,6 +28,9 @@ namespace MataoMaps.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)");
 
+                    b.Property<DateOnly>("Data")
+                        .HasColumnType("date");
+
                     b.Property<string>("Descricao")
                         .IsRequired()
                         .HasMaxLength(1000)

@@ -56,6 +56,7 @@ app.MapGet("/ocorrencia/listar", (MataoMapsContext context, ClaimsPrincipal user
             {
                 Id = ocorrencia.Id,
                 UsuarioNome = ocorrencia.Usuario.Nome,
+                Data = ocorrencia.Data,
                 Latitude = ocorrencia.Latitude,
                 Longitude = ocorrencia.Longitude,
                 FotoBase64 = ocorrencia.FotoBase64,
@@ -72,6 +73,7 @@ app.MapGet("/ocorrencia/listar", (MataoMapsContext context, ClaimsPrincipal user
         {
             Id = ocorrencia.Id,
             UsuarioNome = ocorrencia.Usuario.Nome,
+            Data = ocorrencia.Data,
             Latitude = ocorrencia.Latitude,
             Longitude = ocorrencia.Longitude,
             FotoBase64 = ocorrencia.FotoBase64,
@@ -110,6 +112,7 @@ app.MapGet("/ocorrencia/{ocorrenciaId}", (MataoMapsContext context, Guid ocorren
     {
         Id = ocorrencia.Id,
         UsuarioId = ocorrencia.UsuarioId,
+        Data = ocorrencia.Data,
         Latitude = ocorrencia.Latitude,
         Longitude = ocorrencia.Longitude,
         FotoBase64 = ocorrencia.FotoBase64,
@@ -141,6 +144,7 @@ app.MapPost("/ocorrencia/adicionar", (MataoMapsContext context, ClaimsPrincipal 
         SetarDadosToken(user);
 
         var ocorrencia = new Ocorrencia(
+            ocorrenciaAdicionarRequest.Data,
             ocorrenciaAdicionarRequest.Latitude,
             ocorrenciaAdicionarRequest.Longitude,
             ocorrenciaAdicionarRequest.FotoBase64,

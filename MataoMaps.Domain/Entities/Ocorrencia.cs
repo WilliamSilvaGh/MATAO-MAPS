@@ -5,6 +5,7 @@ namespace MataoMaps.Domain.Entities
 {
     public class Ocorrencia : EntityBase
     {
+        public DateOnly Data { get; set; }
         public decimal Latitude { get; set; }
         public decimal Longitude { get; set; }
         public string FotoBase64 { get; set; }
@@ -17,9 +18,10 @@ namespace MataoMaps.Domain.Entities
         public virtual Usuario Usuario { get; set; }
         public virtual Usuario UsuarioResolucao { get; set; }
 
-        protected Ocorrencia() {}
+        protected Ocorrencia() { }
 
         public Ocorrencia(
+            DateOnly data,
             decimal latitude,
             decimal longitude,
             string fotoBase64,
@@ -28,6 +30,7 @@ namespace MataoMaps.Domain.Entities
             Guid usuarioId)
         {
             Id = Guid.NewGuid();
+            Data = data;
             Latitude = latitude;
             Longitude = longitude;
             FotoBase64 = fotoBase64;

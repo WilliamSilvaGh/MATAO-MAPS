@@ -6,6 +6,7 @@ namespace MataoMaps.Domain.DTOs.Ocorrencia.Response
     {
         public Guid Id { get; set; }
         public Guid UsuarioId { get; set; }
+        public DateOnly Data { get; set; }
         public decimal Latitude { get; set; }
         public decimal Longitude { get; set; }
         public string FotoBase64 { get; set; }

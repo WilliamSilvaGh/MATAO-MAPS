@@ -6,6 +6,7 @@ namespace MataoMaps.Domain.DTOs.Ocorrencia.Response
     public class OcorrenciaListarResponse
     {
         public Guid Id { get; set; }  
+        public DateOnly Data { get; set; }
         public string UsuarioNome { get; set; }
         public decimal Latitude { get; set; }
         public decimal Longitude { get; set; }

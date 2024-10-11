@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MataoMaps.CrossCutting")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe46b8eb119685bc73b7e1ee18398c1782308641")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bc2bd0de72588c1589e0ae6b4eddc74d717b021b")]
 [assembly: System.Reflection.AssemblyProductAttribute("MataoMaps.CrossCutting")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MataoMaps.CrossCutting")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
