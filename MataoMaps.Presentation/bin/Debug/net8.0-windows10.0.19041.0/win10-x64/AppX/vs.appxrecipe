@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
+<<<<<<< Updated upstream
     <Machine>NOTE02</Machine>
+=======
+    <Machine>NOTE10</Machine>
+>>>>>>> Stashed changes
     <WindowsUser>Etec</WindowsUser>
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
@@ -17,7 +21,11 @@
     <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
+<<<<<<< Updated upstream
     <LayoutDir>C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
+=======
+    <LayoutDir>C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
+>>>>>>> Stashed changes
     <RegisteredManifestChecksum>416D09C7B62379BB4ACB7539271A2E1B211E36607456964E644D25E74D1C064A</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>com.companyname.mataomaps.presentation_1.0.0.1_x64__9zz4h110yvjzm</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>com.companyname.mataomaps.presentation_9zz4h110yvjzm!App</RegisteredUserModeAppID>
@@ -29,301 +37,597 @@
     <AppXManifest Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T14:30:00.559</Modified>
+=======
+      <Modified>2024-10-11T15:12:23.490</Modified>
+>>>>>>> Stashed changes
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T14:30:00.244</Modified>
+=======
+      <Modified>2024-10-11T13:08:52.035</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MataoMaps.Presentation.runtimeconfig.json">
       <PackagePath>MataoMaps.Presentation.runtimeconfig.json</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:28:34.260</Modified>
+=======
+      <Modified>2024-10-11T15:12:23.073</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MataoMaps.Presentation.dll">
       <PackagePath>MataoMaps.Presentation.dll</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T14:29:59.017</Modified>
+=======
+      <Modified>2024-10-11T15:12:21.956</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MataoMaps.Presentation.exe</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T14:29:59.081</Modified>
+=======
+      <Modified>2024-10-11T15:12:22.019</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:56.409</Modified>
+=======
+      <Modified>2024-10-11T13:04:53.366</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\wwwroot\css\app.css">
       <PackagePath>wwwroot\css\app.css</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.122</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.065</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\wwwroot\css\bootstrap\bootstrap.min.css">
       <PackagePath>wwwroot\css\bootstrap\bootstrap.min.css</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.122</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.065</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\wwwroot\css\bootstrap\bootstrap.min.css.map">
       <PackagePath>wwwroot\css\bootstrap\bootstrap.min.css.map</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.122</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.065</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\wwwroot\favicon.png">
       <PackagePath>wwwroot\favicon.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.122</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.065</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\wwwroot\Images\camera.png">
       <PackagePath>wwwroot\Images\camera.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.122</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.065</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\wwwroot\Images\logo.png">
       <PackagePath>wwwroot\Images\logo.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.122</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.065</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\wwwroot\Images\mapa.png">
       <PackagePath>wwwroot\Images\mapa.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.122</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.065</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\wwwroot\Images\niveis-urgencia.png">
       <PackagePath>wwwroot\Images\niveis-urgencia.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.122</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.065</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\wwwroot\index.html">
       <PackagePath>wwwroot\index.html</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.122</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.065</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\wwwroot\js\map.js">
       <PackagePath>wwwroot\js\map.js</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.122</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.065</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.049</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.049</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.049</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.049</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.049</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.002</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.002</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.002</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.002</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.002</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.002</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.017</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.020</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.020</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.020</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.020</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.020</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.020</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.020</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.020</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.020</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.020</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.020</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.020</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.020</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.020</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.020</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.020</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.020</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.020</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.091</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.020</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.020</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.020</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.020</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.034</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.034</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.034</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.034</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.034</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.034</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.034</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.034</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.034</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.034</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.034</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.034</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.034</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.034</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.034</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.034</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.034</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.034</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.049</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.049</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.049</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.049</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+      <Modified>2024-10-11T13:04:55.049</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MataoMaps.Presentation.deps.json">
       <PackagePath>MataoMaps.Presentation.deps.json</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:28:34.084</Modified>
+=======
+      <Modified>2024-10-11T15:12:22.932</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -747,7 +1051,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Domain\bin\Debug\net8.0\MataoMaps.Domain.dll">
       <PackagePath>MataoMaps.Domain.dll</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:28:22.063</Modified>
+=======
+      <Modified>2024-10-11T13:08:38.618</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\.nuget\packages\microsoft.maui.controls.compatibility\8.0.3\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
@@ -761,6 +1069,17 @@
       <PackagePath>Microsoft.Maui.pri</PackagePath>
       <Modified>2023-11-07T20:31:12.000</Modified>
     </AppxPackagedFile>
+<<<<<<< Updated upstream
+=======
+    <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\bundle\MataoMaps.Presentation.styles.css">
+      <PackagePath>wwwroot\MataoMaps.Presentation.styles.css</PackagePath>
+      <Modified>2024-10-11T14:57:09.215</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\MataoMaps.Presentation.bundle.scp.css">
+      <PackagePath>wwwroot\MataoMaps.Presentation.bundle.scp.css</PackagePath>
+      <Modified>2024-10-11T14:57:09.216</Modified>
+    </AppxPackagedFile>
+>>>>>>> Stashed changes
     <AppxPackagedFile Include="C:\Users\lenovo\.nuget\packages\radzen.blazor\5.1.11\staticwebassets\css\dark.css">
       <PackagePath>wwwroot\_content\Radzen.Blazor\css\dark.css</PackagePath>
       <Modified>2024-09-11T06:58:38.000</Modified>
@@ -933,9 +1252,15 @@
       <PackagePath>wwwroot\_content\Radzen.Blazor\Radzen.Blazor.js</PackagePath>
       <Modified>2024-09-09T06:32:42.000</Modified>
     </AppxPackagedFile>
+<<<<<<< Updated upstream
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\bundle\MataoMaps.Presentation.styles.css">
       <PackagePath>wwwroot\MataoMaps.Presentation.styles.css</PackagePath>
       <Modified>2024-10-11T13:14:58.107</Modified>
+=======
+    <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\Components\Layout\MainLayout.razor.css">
+      <PackagePath>Components\Layout\MainLayout.razor.css</PackagePath>
+      <Modified>2024-10-11T13:04:53.351</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\MataoMaps.Presentation.bundle.scp.css">
       <PackagePath>wwwroot\MataoMaps.Presentation.bundle.scp.css</PackagePath>
@@ -947,7 +1272,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\Components\Layout\NavMenu.razor.css">
       <PackagePath>Components\Layout\NavMenu.razor.css</PackagePath>
+<<<<<<< Updated upstream
       <Modified>2024-10-11T13:14:56.394</Modified>
+=======
+      <Modified>2024-10-11T14:57:08.554</Modified>
+>>>>>>> Stashed changes
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

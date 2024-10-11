@@ -501,9 +501,15 @@
     "restore": {
       "projectUniqueName": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.CrossCutting\\MataoMaps.CrossCutting.csproj",
       "projectName": "MataoMaps.CrossCutting",
+<<<<<<< Updated upstream
       "projectPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.CrossCutting\\MataoMaps.CrossCutting.csproj",
       "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.CrossCutting\\obj\\",
+=======
+      "projectPath": "C:\\MATAO-MAPS\\MataoMaps.CrossCutting\\MataoMaps.CrossCutting.csproj",
+      "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+      "outputPath": "C:\\MATAO-MAPS\\MataoMaps.CrossCutting\\obj\\",
+>>>>>>> Stashed changes
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

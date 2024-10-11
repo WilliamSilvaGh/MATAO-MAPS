@@ -2,8 +2,6 @@
 @using MataoMaps.Domain.DTOs.Ocorrencia.Response
 @using MataoMaps.Domain.DTOs.Ocorrencia.Request
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
 <div class="container">
     <h3>Lista de Ocorrências</h3>
     <div class="d-flex justify-content-end">
@@ -15,9 +13,13 @@
         </button>
     </div>
     <div class="ocorrencias-list">
+
         @if (ocorrencias == null)
         {
-            <p>Carregando ocorrências...</p>
+            <div style="color: black;" class="d-flex align-items-center">
+                <span class="spinner-border spinner-border-sm text-center" role="status" aria-hidden="true"></span>
+                <span class="visually-hidden">Loading...</span>
+            </div>
         }
         else if (ocorrencias.Any())
         {
@@ -37,7 +39,7 @@
         }
         else
         {
-            <p>Nenhuma ocorrência encontrada.</p>
+            <p style="color: black;">Nenhuma ocorrência encontrada.</p>
         }
     </div>
 
@@ -72,7 +74,18 @@
             @if (UsuarioLogadoService.EhAdmin && selectedOcorrencia?.Resolucao == null)
             {
                 <textarea @bind="@resolution" placeholder="Digite a resolução aqui..."></textarea>
-                <button class="btn-submit" @onclick="SubmitResolution">Enviar Resolução</button>
+                <button class="btn-submit" @onclick="SubmitResolution">
+                    @if (isLoading)
+                    {
+
+                        <span class="spinner-border spinner-border-sm text-center" role="status" aria-hidden="true"></span>
+                        <span class="visually-hidden">Loading...</span>
+                    }
+                    else
+                    {
+                        <span>Enviar Resolução</span>
+                    }
+                </button>
             }
             else
             {
@@ -279,6 +292,7 @@
     private List<OcorrenciaListarResponse> ocorrencias;
     private List<OcorrenciaListarResponse> todasOcorrencias;
     private bool isModalOpen = false;
+    private bool isLoading = false;
     private OcorrenciaListarResponse selectedOcorrencia;
     private string resolution;
 
@@ -287,17 +301,20 @@
 
     private bool isFilteringResolved = false; // Para controlar o estado do filtro
 
-    private int currentPage = 1;
+    private int currentPage = 0;
     private int itemsPerPage = 5;
     private int totalItems;
     private int totalPages;
 
     protected override async Task OnInitializedAsync()
     {
+        isLoading = true;
         PageTitleService.SetPageTitle("LISTAR OCORRÊNCIAS");
         BackgroundColorService.SetBackgroundColor("#FFFFFF");
 
         await LoadOcorrencias();
+        ShowUnresolved();
+        isLoading = false;
     }
 
     private async Task LoadOcorrencias()
@@ -351,6 +368,7 @@
 
     private async Task SubmitResolution()
     {
+        isLoading = true;
         if (string.IsNullOrWhiteSpace(resolution))
         {
             Console.WriteLine("A resolução não pode estar vazia.");
@@ -370,6 +388,7 @@
             Console.WriteLine($"Ocorrência {selectedOcorrencia?.Id} encerrada com sucesso.");
             await LoadOcorrencias();
             CloseModal();
+            isLoading = false;
         }
         else
         {

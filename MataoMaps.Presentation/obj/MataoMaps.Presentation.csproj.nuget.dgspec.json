@@ -9,9 +9,15 @@
       "restore": {
         "projectUniqueName": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj",
         "projectName": "MataoMaps.Domain",
+<<<<<<< Updated upstream
         "projectPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj",
         "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Domain\\obj\\",
+=======
+        "projectPath": "C:\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj",
+        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\MATAO-MAPS\\MataoMaps.Domain\\obj\\",
+>>>>>>> Stashed changes
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -70,9 +76,15 @@
       "restore": {
         "projectUniqueName": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj",
         "projectName": "MataoMaps.Presentation",
+<<<<<<< Updated upstream
         "projectPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj",
         "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Presentation\\obj\\",
+=======
+        "projectPath": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj",
+        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\obj\\",
+>>>>>>> Stashed changes
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [

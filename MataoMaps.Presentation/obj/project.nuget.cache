@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "pzXqrfieBVxdOApCEDqRxKdRk2KN470jtB9uDYObWoxDIChG4ncXprZeovl7kHhJY7DiWQnCVr2P6lDPWZ5AOw==",
+=======
+  "dgSpecHash": "Tc3tKi1/Ie0D28tUh1wONy/aobyAvw9KwJGF3EqBqce0gyIlsXEH84FlSZXz8rGtVYIxz4uTBZjgfjBLKhs7Hw==",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj",
   "expectedPackageFiles": [

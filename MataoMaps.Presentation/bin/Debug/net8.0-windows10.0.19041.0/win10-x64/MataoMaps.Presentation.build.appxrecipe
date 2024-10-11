@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
+<<<<<<< Updated upstream
     <Machine>NOTE02</Machine>
+=======
+    <Machine>NOTE10</Machine>
+>>>>>>> Stashed changes
     <WindowsUser>Etec</WindowsUser>
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
@@ -16,7 +20,11 @@
     <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
+<<<<<<< Updated upstream
     <LayoutDir>C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
+=======
+    <LayoutDir>C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
+>>>>>>> Stashed changes
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\lenovo\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
@@ -571,6 +579,15 @@
     <AppxPackagedFile Include="C:\Users\lenovo\.nuget\packages\microsoft.maui.core\8.0.3\lib\net8.0-windows10.0.19041\Microsoft.Maui.pri">
       <PackagePath>Microsoft.Maui.pri</PackagePath>
     </AppxPackagedFile>
+<<<<<<< Updated upstream
+=======
+    <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\bundle\MataoMaps.Presentation.styles.css">
+      <PackagePath>wwwroot\MataoMaps.Presentation.styles.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\MataoMaps.Presentation.bundle.scp.css">
+      <PackagePath>wwwroot\MataoMaps.Presentation.bundle.scp.css</PackagePath>
+    </AppxPackagedFile>
+>>>>>>> Stashed changes
     <AppxPackagedFile Include="C:\Users\lenovo\.nuget\packages\radzen.blazor\5.1.11\staticwebassets\css\dark.css">
       <PackagePath>wwwroot\_content\Radzen.Blazor\css\dark.css</PackagePath>
     </AppxPackagedFile>
