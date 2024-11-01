@@ -1,30 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj": {}
+    "C:\\MATAO-MAPS\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj": {
+    "C:\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj",
+        "projectUniqueName": "C:\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj",
         "projectName": "MataoMaps.Domain",
-<<<<<<< Updated upstream
-        "projectPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj",
-        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Domain\\obj\\",
-=======
         "projectPath": "C:\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj",
-        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
         "outputPath": "C:\\MATAO-MAPS\\MataoMaps.Domain\\obj\\",
->>>>>>> Stashed changes
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\William\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -46,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -67,32 +65,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj": {
+    "C:\\MATAO-MAPS\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj",
+        "projectUniqueName": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj",
         "projectName": "MataoMaps.Presentation",
-<<<<<<< Updated upstream
-        "projectPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj",
-        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Presentation\\obj\\",
-=======
         "projectPath": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\MataoMaps.Presentation.csproj",
-        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
         "outputPath": "C:\\MATAO-MAPS\\MataoMaps.Presentation\\obj\\",
->>>>>>> Stashed changes
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\William\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -111,32 +102,32 @@
           "net8.0-android34.0": {
             "targetAlias": "net8.0-android",
             "projectReferences": {
-              "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj": {
-                "projectPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj"
+              "C:\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj": {
+                "projectPath": "C:\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj"
               }
             }
           },
-          "net8.0-ios17.0": {
+          "net8.0-ios18.0": {
             "targetAlias": "net8.0-ios",
             "projectReferences": {
-              "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj": {
-                "projectPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj"
+              "C:\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj": {
+                "projectPath": "C:\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj"
               }
             }
           },
-          "net8.0-maccatalyst17.0": {
+          "net8.0-maccatalyst18.0": {
             "targetAlias": "net8.0-maccatalyst",
             "projectReferences": {
-              "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj": {
-                "projectPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj"
+              "C:\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj": {
+                "projectPath": "C:\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj"
               }
             }
           },
           "net8.0-windows10.0.19041": {
             "targetAlias": "net8.0-windows10.0.19041.0",
             "projectReferences": {
-              "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj": {
-                "projectPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj"
+              "C:\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj": {
+                "projectPath": "C:\\MATAO-MAPS\\MataoMaps.Domain\\MataoMaps.Domain.csproj"
               }
             }
           }
@@ -145,6 +136,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -153,7 +149,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Components.WebView.Maui": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
@@ -161,16 +157,16 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.0, )",
+              "version": "[8.0.10, )",
               "autoReferenced": true
             },
             "Radzen.Blazor": {
@@ -209,14 +205,14 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         },
-        "net8.0-ios17.0": {
+        "net8.0-ios18.0": {
           "targetAlias": "net8.0-ios",
           "dependencies": {
             "Microsoft.AspNetCore.Components.WebView.Maui": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
@@ -224,16 +220,16 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.0, )",
+              "version": "[8.0.10, )",
               "autoReferenced": true
             },
             "Radzen.Blazor": {
@@ -272,14 +268,14 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         },
-        "net8.0-maccatalyst17.0": {
+        "net8.0-maccatalyst18.0": {
           "targetAlias": "net8.0-maccatalyst",
           "dependencies": {
             "Microsoft.AspNetCore.Components.WebView.Maui": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
@@ -287,16 +283,16 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.0, )",
+              "version": "[8.0.10, )",
               "autoReferenced": true
             },
             "Radzen.Blazor": {
@@ -336,14 +332,14 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         },
         "net8.0-windows10.0.19041": {
           "targetAlias": "net8.0-windows10.0.19041.0",
           "dependencies": {
             "Microsoft.AspNetCore.Components.WebView.Maui": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
@@ -351,11 +347,11 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.82, )"
             },
             "Radzen.Blazor": {
               "target": "Package",
@@ -388,7 +384,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.Windows.SDK.NET.Ref",
-              "version": "[10.0.19041.31, 10.0.19041.31]"
+              "version": "[10.0.19041.44, 10.0.19041.44]"
             }
           ],
           "frameworkReferences": {
@@ -399,7 +395,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

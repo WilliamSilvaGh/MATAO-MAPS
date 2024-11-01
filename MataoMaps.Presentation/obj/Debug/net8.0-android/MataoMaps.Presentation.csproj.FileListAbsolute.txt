@@ -23,6 +23,7 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\scopedcss\Componen
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\scopedcss\bundle\MataoMaps.Presentation.styles.css
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\scopedcss\projectbundle\MataoMaps.Presentation.bundle.scp.css
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\staticwebassets.publish.json
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\_CompileBindingJava.FileList.txt
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\MataoMaps.Presentation.csproj.AssemblyReference.cache
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\mauiimage.inputs
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\mauifont.inputs
@@ -43,6 +44,11 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\resizetizer\r\draw
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\resizetizer\r\drawable-xhdpi\dotnet_bot.png
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\resizetizer\r\drawable-hdpi\dotnet_bot.png
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\resizetizer\r\drawable-mdpi\dotnet_bot.png
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\resizetizer\r\mipmap-xxxhdpi\appicon_round.png
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\resizetizer\r\mipmap-xxhdpi\appicon_round.png
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\resizetizer\r\mipmap-xhdpi\appicon_round.png
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\resizetizer\r\mipmap-hdpi\appicon_round.png
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\resizetizer\r\mipmap-mdpi\appicon_round.png
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\resizetizer\r\mipmap-xxxhdpi\appicon.png
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\resizetizer\r\mipmap-xxhdpi\appicon.png
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\resizetizer\r\mipmap-xhdpi\appicon.png
@@ -61,6 +67,7 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\resizetizer\r\mipm
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\resizetizer\r\mipmap-hdpi\appicon_background.png
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\resizetizer\r\mipmap-mdpi\appicon_background.png
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\mauiimage.stamp
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\mauiimage.outputs
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\libraryprojectimports.cache
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\stamp\_BuildLibraryImportsCache.stamp
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\case_map.txt
@@ -129,7 +136,7 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\MataoMaps.Presenta
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\MataoMaps.Presentation.csproj.CoreCompileInputs.cache
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\MataoMaps.Presentation.sourcelink.json
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\XamlC.stamp
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\MataoMaps.Presentation.csproj.CopyComplete
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\MataoMap.2939BD94.Up2Date
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\MataoMaps.Presentation.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\MataoMaps.Presentation.pdb
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\MataoMaps.Presentation.genruntimeconfig.cache
@@ -158,6 +165,18 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\hi\
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\hr\Microsoft.Maui.Controls.resources.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\hu\Microsoft.Maui.Controls.resources.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\id\Microsoft.Maui.Controls.resources.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\itext.barcodes.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\itext.bouncy-castle-connector.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\itext.commons.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\itext.forms.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\itext.io.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\itext.kernel.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\itext.layout.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\itext.pdfa.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\itext.pdfua.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\itext.sign.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\itext.styledxmlparser.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\itext.svg.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\it\Microsoft.Maui.Controls.resources.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Java.Interop.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Java.Interop.pdb
@@ -177,6 +196,7 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Mic
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.AspNetCore.Components.WebView.Maui.pdb
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.AspNetCore.Metadata.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.CSharp.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.DotNet.PlatformAbstractions.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.Extensions.Configuration.Binder.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.Extensions.Configuration.dll
@@ -184,6 +204,7 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Mic
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.Extensions.Configuration.Json.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.Extensions.DependencyInjection.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.Extensions.DependencyModel.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.Extensions.FileProviders.Composite.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.Extensions.FileProviders.Embedded.dll
@@ -220,6 +241,7 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\msc
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\ms\Microsoft.Maui.Controls.resources.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\nb\Microsoft.Maui.Controls.resources.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\netstandard.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Newtonsoft.Json.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\nl\Microsoft.Maui.Controls.resources.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\pl\Microsoft.Maui.Controls.resources.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\pt-BR\Microsoft.Maui.Controls.resources.dll
@@ -679,15 +701,11 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc643
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc64338477404e88479c\ControlsAccessibilityDelegate.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc64338477404e88479c\DragAndDropGestureHandler.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc64338477404e88479c\DragAndDropGestureHandler_CustomLocalStateData.java
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc64338477404e88479c\FormattedStringExtensions_FontSpan.java
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc64338477404e88479c\FormattedStringExtensions_LetterSpacingSpan.java
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc64338477404e88479c\FormattedStringExtensions_LineHeightSpan.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc64338477404e88479c\FragmentContainer.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc64338477404e88479c\GenericAnimatorListener.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc64338477404e88479c\GenericGlobalLayoutListener.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc64338477404e88479c\GenericMenuClickListener.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc64338477404e88479c\GradientStrokeDrawable.java
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc64338477404e88479c\GradientStrokeDrawable_GradientShaderFactory.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc64338477404e88479c\InnerGestureListener.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc64338477404e88479c\InnerScaleListener.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc64338477404e88479c\MauiViewPager.java
@@ -704,6 +722,7 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc645
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc6452ffdc5b34af3a0f\BorderDrawable.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc6452ffdc5b34af3a0f\ContainerView.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc6452ffdc5b34af3a0f\ContentViewGroup.java
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc6452ffdc5b34af3a0f\FragmentManagerExtensions_CallBacks.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc6452ffdc5b34af3a0f\LayoutViewGroup.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc6452ffdc5b34af3a0f\LocalizedDigitsKeyListener.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc6452ffdc5b34af3a0f\MauiAccessibilityDelegateCompat.java
@@ -712,6 +731,7 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc645
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc6452ffdc5b34af3a0f\MauiDatePicker.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc6452ffdc5b34af3a0f\MauiHorizontalScrollView.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc6452ffdc5b34af3a0f\MauiMaterialButton.java
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc6452ffdc5b34af3a0f\MauiMaterialButton_MauiResizableDrawable.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc6452ffdc5b34af3a0f\MauiPageControl.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc6452ffdc5b34af3a0f\MauiPageControl_TEditClickListener.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc6452ffdc5b34af3a0f\MauiPicker.java
@@ -741,7 +761,6 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc645
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc645d80431ce5f73f11\CarouselSpacingItemDecoration.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc645d80431ce5f73f11\CarouselViewAdapter_2.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc645d80431ce5f73f11\CarouselViewOnScrollListener.java
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc645d80431ce5f73f11\CarouselViewwOnGlobalLayoutListener.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc645d80431ce5f73f11\CenterSnapHelper.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc645d80431ce5f73f11\DataChangeObserver.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc645d80431ce5f73f11\EdgeSnapHelper.java
@@ -753,6 +772,7 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc645
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc645d80431ce5f73f11\ItemContentView.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc645d80431ce5f73f11\ItemsViewAdapter_2.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc645d80431ce5f73f11\MauiCarouselRecyclerView.java
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc645d80431ce5f73f11\MauiCarouselRecyclerView_CarouselViewOnGlobalLayoutListener.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc645d80431ce5f73f11\MauiRecyclerView_3.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc645d80431ce5f73f11\NongreedySnapHelper.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\crc645d80431ce5f73f11\NongreedySnapHelper_InitialScrollListener.java
@@ -1072,6 +1092,7 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\mono\c
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\mono\MonoPackageManager_Resources.java
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\bin\packaged_resources
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\src\com\companyname\mataomaps\presentation\R.java
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\_CompileJava.FileList.txt
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\compressed_assemblies.armeabi-v7a.ll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\compressed_assemblies.arm64-v8a.ll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\compressed_assemblies.x86.ll
@@ -1110,18 +1131,3 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\stamp\_ConvertReso
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\stamp\_GenerateJavaStubs.stamp
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\stamp\_ResolveLibraryProjectImports.stamp
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\itext.barcodes.dll
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\itext.bouncy-castle-connector.dll
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\itext.commons.dll
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\itext.forms.dll
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\itext.io.dll
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\itext.kernel.dll
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\itext.layout.dll
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\itext.pdfa.dll
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\itext.pdfua.dll
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\itext.sign.dll
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\itext.styledxmlparser.dll
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\itext.svg.dll
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.DotNet.PlatformAbstractions.dll
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.Extensions.DependencyModel.dll
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Newtonsoft.Json.dll

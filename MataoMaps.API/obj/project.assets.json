@@ -3150,31 +3150,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lenovo\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\William\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.API\\MataoMaps.API.csproj",
+      "projectUniqueName": "C:\\MATAO-MAPS\\MataoMaps.API\\MataoMaps.API.csproj",
       "projectName": "MataoMaps.API",
-<<<<<<< Updated upstream
-      "projectPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.API\\MataoMaps.API.csproj",
-      "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.API\\obj\\",
-=======
       "projectPath": "C:\\MATAO-MAPS\\MataoMaps.API\\MataoMaps.API.csproj",
-      "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
       "outputPath": "C:\\MATAO-MAPS\\MataoMaps.API\\obj\\",
->>>>>>> Stashed changes
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\William\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3190,11 +3182,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.CrossCutting\\MataoMaps.CrossCutting.csproj": {
-              "projectPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.CrossCutting\\MataoMaps.CrossCutting.csproj"
+            "C:\\MATAO-MAPS\\MataoMaps.CrossCutting\\MataoMaps.CrossCutting.csproj": {
+              "projectPath": "C:\\MATAO-MAPS\\MataoMaps.CrossCutting\\MataoMaps.CrossCutting.csproj"
             },
-            "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Data\\MataoMaps.Data.csproj": {
-              "projectPath": "C:\\Users\\lenovo\\MATAO-MAPS\\MataoMaps.Data\\MataoMaps.Data.csproj"
+            "C:\\MATAO-MAPS\\MataoMaps.Data\\MataoMaps.Data.csproj": {
+              "projectPath": "C:\\MATAO-MAPS\\MataoMaps.Data\\MataoMaps.Data.csproj"
             }
           }
         }
@@ -3203,6 +3195,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3255,7 +3252,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
