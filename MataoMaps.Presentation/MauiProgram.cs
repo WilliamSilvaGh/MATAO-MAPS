@@ -36,6 +36,7 @@ namespace MataoMaps.Presentation
             builder.Services.AddSingleton<PageTitleService>();
             builder.Services.AddSingleton<BackgroundColorService>();
             builder.Services.AddScoped<UsuarioLogadoService>();
+            builder.Services.AddScoped<MenuService>();
 
 #if DEBUG
             builder.Services.AddBlazorWebViewDeveloperTools();

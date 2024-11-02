@@ -709,11 +709,14 @@
     <AppxPackagedFile Include="C:\Users\William\.nuget\packages\radzen.blazor\5.1.11\staticwebassets\Radzen.Blazor.js">
       <PackagePath>wwwroot\_content\Radzen.Blazor\Radzen.Blazor.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\Components\Layout\MainLayout.razor.css">
-      <PackagePath>Components\Layout\MainLayout.razor.css</PackagePath>
+    <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\Components\Layout\MainLayout\MainLayout.razor.css">
+      <PackagePath>Components\Layout\MainLayout\MainLayout.razor.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\Components\Layout\NavMenu.razor.css">
-      <PackagePath>Components\Layout\NavMenu.razor.css</PackagePath>
+    <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\Components\Layout\Menu\Menu.razor.css">
+      <PackagePath>Components\Layout\Menu\Menu.razor.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\Components\Layout\Nav\Nav.razor.css">
+      <PackagePath>Components\Layout\Nav\Nav.razor.css</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

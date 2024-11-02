@@ -1,0 +1,35 @@
+﻿@using MataoMaps.Presentation.Components.Layout.Nav
+@inherits LayoutComponentBase
+
+
+<div class="page" style="background-color: @BackgroundColorService.BackgroundColor;">
+    @if (PageTitleService.PageTitle != "LOGIN")
+    {
+        <Nav />
+    }
+    @if (PageTitleService.PageTitle == "LOGIN")
+    {
+        @Body
+    }
+    else
+    {
+        <main>
+            @Body
+        </main>
+    }
+</div>
+
+
+@code {
+    protected override void OnInitialized()
+    {
+        PageTitleService.OnTitleChanged += StateHasChanged;
+        BackgroundColorService.OnBackgroundColorChanged += StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        PageTitleService.OnTitleChanged -= StateHasChanged;
+        BackgroundColorService.OnBackgroundColorChanged -= StateHasChanged;
+    }
+}

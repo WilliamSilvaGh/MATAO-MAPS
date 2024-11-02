@@ -1,0 +1,50 @@
+﻿@using MataoMaps.Presentation.Components.Layout.Menu
+<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <h2 class="navbar-brand text-break">
+            @if (PageTitleService.PageTitle == "CRIE SUA CONTA")
+            {
+                <p style="display: inline;">CRIE SUA</p>
+                <p style="color: #f9d857">CONTA</p>
+            }
+            else
+            {
+                @PageTitleService.PageTitle
+            }
+        </h2>
+    </div>
+</div>
+
+@if (UsuarioLogadoService.IsLogged)
+{
+    <input type="checkbox" id="navbar-toggler" title="Navigation menu" class="navbar-toggler" @bind="MenuService.IsMenuOpen" />
+    <label for="navbar-toggler" class="navbar-toggler-label">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    @if (MenuService.IsMenuOpen)
+    {
+        <Menu />
+    }
+}
+@code {
+
+    protected override void OnInitialized()
+    {
+        PageTitleService.OnTitleChanged += StateHasChanged;
+
+        MenuService.OnMenuToggle += (isOpen) =>
+        {
+            StateHasChanged(); // Atualiza o estado do componente quando o menu é aberto/fechado
+        };
+    }
+
+    public void Dispose()
+    {
+        PageTitleService.OnTitleChanged -= StateHasChanged;
+
+        MenuService.OnMenuToggle -= (isOpen) => StateHasChanged(); // Remove o evento ao descartar o componente
+    }
+}

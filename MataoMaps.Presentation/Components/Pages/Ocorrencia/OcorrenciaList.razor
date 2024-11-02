@@ -43,22 +43,23 @@
         }
     </div>
 
-    <div class="pagination">
-        <button @onclick="PreviousPage" disabled="@(currentPage == 1)">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <div class="page-number">
-            <input type="text" value="@currentPage"
-                   @onchange="HandlePageChange"
-                   style="width: 2rem; margin: 0; border: solid 1px black; outline: none; text-align: center; border-radius: 5px;" />
-
-            <span style="color:black;">/ @totalPages</span> <!-- Exibir o total de páginas aqui -->
+    @if (totalPages > 0)
+    {
+        <div class="pagination">
+            <button @onclick="PreviousPage" disabled="@(currentPage == 1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="page-number">
+                <input type="text" value="@currentPage"
+                       @onchange="HandlePageChange"
+                       style="width: 2rem; margin: 0; border: solid 1px black; outline: none; text-align: center; border-radius: 5px;" />
+                <span style="color:black;">/ @(totalPages > 0 ? totalPages.ToString() : "0")</span>
+            </div>
+            <button @onclick="NextPage" disabled="@(currentPage == totalPages)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
-
-        <button @onclick="NextPage" disabled="@(currentPage == totalPages)">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-    </div>
+    }
 
 </div>
 
@@ -301,7 +302,7 @@
 
     private bool isFilteringResolved = false; // Para controlar o estado do filtro
 
-    private int currentPage = 0;
+    private int currentPage = 1;
     private int itemsPerPage = 5;
     private int totalItems;
     private int totalPages;
@@ -345,7 +346,7 @@
         }
 
         totalItems = filteredOcorrencias.Count;
-        totalPages = (int)Math.Ceiling(totalItems / (double)itemsPerPage);
+        totalPages = totalItems > 0 ? (int)Math.Ceiling(totalItems / (double)itemsPerPage) : 0;
 
         ocorrencias = filteredOcorrencias.Skip((currentPage - 1) * itemsPerPage)
                                            .Take(itemsPerPage)

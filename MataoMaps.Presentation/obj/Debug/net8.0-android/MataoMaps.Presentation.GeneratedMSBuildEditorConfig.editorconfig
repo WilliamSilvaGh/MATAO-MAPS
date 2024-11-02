@@ -106,16 +106,23 @@ build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/MATAO-MAPS/MataoMaps.Presentation/Components/Layout/MainLayout.razor]
+[C:/MATAO-MAPS/MataoMaps.Presentation/Components/Layout/MainLayout/MainLayout.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dFxNYWluTGF5b3V0LnJhem9y
 build_metadata.AdditionalFiles.RelativePath = 
-build_metadata.AdditionalFiles.CssScope = b-l5uj9cdamt
+build_metadata.AdditionalFiles.CssScope = b-wz1jq4h0i5
 
-[C:/MATAO-MAPS/MataoMaps.Presentation/Components/Layout/NavMenu.razor]
+[C:/MATAO-MAPS/MataoMaps.Presentation/Components/Layout/Menu/Menu.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWVudVxNZW51LnJhem9y
 build_metadata.AdditionalFiles.RelativePath = 
-build_metadata.AdditionalFiles.CssScope = b-f9nat5od3m
+build_metadata.AdditionalFiles.CssScope = b-fnkjw7do2l
+
+[C:/MATAO-MAPS/MataoMaps.Presentation/Components/Layout/Nav/Nav.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2XE5hdi5yYXpvcg==
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = b-09zes5r45i
