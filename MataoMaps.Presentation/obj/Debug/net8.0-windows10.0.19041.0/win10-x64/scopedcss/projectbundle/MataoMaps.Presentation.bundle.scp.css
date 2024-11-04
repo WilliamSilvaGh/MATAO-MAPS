@@ -185,6 +185,19 @@ body[b-wz1jq4h0i5] {
     align-items: center;
 }
 /* /Components/Layout/Nav/Nav.razor.rz.scp.css */
+.logout[b-09zes5r45i] {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-right: 1rem;
+}
+
+.align-item-logout[b-09zes5r45i] {;
+    border: none;
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+}
+
 .navbar-toggler[b-09zes5r45i] {
     appearance: none;
     cursor: pointer;

@@ -95,6 +95,25 @@ body[b-wz1jq4h0i5] {
     }
 }*/
 /* /Components/Layout/Menu/Menu.razor.rz.scp.css */
+.nav-scrollable[b-fnkjw7do2l] {
+    background-color: #158fff;
+    width: 300px;
+    height: calc(100vh - 2rem);
+    margin-left: 1rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    z-index: 1000;
+    position: absolute;
+    transition: opacity 0.2s ease, transform 0.2s ease; /* Adicione a transi��o aqui */
+    opacity: 0; /* Come�a invis�vel */
+    transform: translateX(-100%); /* Come�a fora da tela */
+}
+
+    .nav-scrollable.open[b-fnkjw7do2l] {
+        opacity: 1; /* Torna vis�vel */
+        transform: translateX(0); /* Move para a posi��o normal */
+    }
+
 .bi[b-fnkjw7do2l] {
     display: inline-block;
     position: relative;
@@ -194,6 +213,7 @@ body[b-wz1jq4h0i5] {
     padding: 0;
     border: none;
     overflow: hidden;
+    transition: all .5s;
 }
 
     .navbar-toggler-label span[b-09zes5r45i] {
