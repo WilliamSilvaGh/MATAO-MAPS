@@ -95,15 +95,6 @@ body[b-wz1jq4h0i5] {
     }
 }*/
 /* /Components/Layout/Menu/Menu.razor.rz.scp.css */
-.nav-scrollable[b-fnkjw7do2l] {
-    background-color: cornflowerblue;
-    z-index: 1000;
-    position: absolute;
-    height: calc(100vh - 2rem);
-    margin-top: 1rem;
-    margin-left: 1rem;
-}
-
 .bi[b-fnkjw7do2l] {
     display: inline-block;
     position: relative;
@@ -157,6 +148,23 @@ body[b-wz1jq4h0i5] {
             background-color: rgba(255,255,255,0.1);
             color: white;
         }
+
+
+.btn-close-menu[b-fnkjw7do2l] {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* /Components/Layout/Nav/Nav.razor.rz.scp.css */
 .navbar-toggler[b-09zes5r45i] {
     appearance: none;

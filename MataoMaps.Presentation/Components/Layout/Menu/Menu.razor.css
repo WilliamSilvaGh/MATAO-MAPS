@@ -1,3 +1,22 @@
+.nav-scrollable {
+    background-color: #158fff;
+    width: 300px;
+    height: calc(100vh - 2rem);
+    margin-left: 1rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    z-index: 1000;
+    position: absolute;
+    transition: opacity 0.2s ease, transform 0.2s ease; /* Adicione a transição aqui */
+    opacity: 0; /* Começa invisível */
+    transform: translateX(-100%); /* Começa fora da tela */
+}
+
+    .nav-scrollable.open {
+        opacity: 1; /* Torna visível */
+        transform: translateX(0); /* Move para a posição normal */
+    }
+
 .bi {
     display: inline-block;
     position: relative;

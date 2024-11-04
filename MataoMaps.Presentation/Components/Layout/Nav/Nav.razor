@@ -17,17 +17,18 @@
 
 @if (UsuarioLogadoService.IsLogged)
 {
-    <input type="checkbox" id="navbar-toggler" title="Navigation menu" class="navbar-toggler" @bind="MenuService.IsMenuOpen" />
-    <label for="navbar-toggler" class="navbar-toggler-label">
-        <span></span>
-        <span></span>
-        <span></span>
-    </label>
+    <Menu IsOpen="MenuService.IsMenuOpen" />
 
-    @if (MenuService.IsMenuOpen)
+    @if (!MenuService.IsMenuOpen)
     {
-        <Menu />
+        <input type="checkbox" id="navbar-toggler" title="Navigation menu" class="navbar-toggler" @bind="MenuService.IsMenuOpen" />
+        <label for="navbar-toggler" class="navbar-toggler-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
     }
+
 }
 @code {
 

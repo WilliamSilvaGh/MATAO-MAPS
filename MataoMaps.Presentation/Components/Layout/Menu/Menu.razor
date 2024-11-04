@@ -1,4 +1,4 @@
-﻿<div class="nav-scrollable @(MenuService.IsMenuOpen == true ? "open" : "")">
+﻿<div class="nav-scrollable @(IsOpen ? "open" : "")">
     <nav class="flex-column">
         <button class="btn-close-menu" @onclick="() => MenuService.IsMenuOpen = false">
             <i class="fa-solid fa-x"></i>
@@ -57,3 +57,7 @@
         </nav>
     </nav>
 </div>
+
+@code {
+    [Parameter] public bool IsOpen { get; set; } // Propriedade para receber o estado do menu
+}
