@@ -1,5 +1,5 @@
 .nav-scrollable {
-    background-color: #158fff;
+    background-color: #3685cd;
     width: 300px;
     height: calc(100vh - 2rem);
     margin-left: 1rem;
@@ -10,6 +10,9 @@
     transition: opacity 0.2s ease, transform 0.2s ease; /* Adicione a transi��o aqui */
     opacity: 0; /* Come�a invis�vel */
     transform: translateX(-100%); /* Come�a fora da tela */
+    -webkit-box-shadow: -2px -1px 32px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px -1px 32px -1px rgba(0,0,0,0.75);
+    box-shadow: -2px -1px 32px -1px rgba(0,0,0,0.75);
 }
 
     .nav-scrollable.open {
@@ -42,6 +45,7 @@
 .nav-item {
     font-size: 0.9rem;
     padding-bottom: 0.5rem;
+    user-select: none;
 }
 
     .nav-item:first-of-type {
@@ -76,7 +80,7 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: #007BFF;
+    background-color: #0056B3;
     color: white;
     border: none;
     border-radius: 50%;
@@ -86,4 +90,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+    .btn-close-menu:hover {
+        background-color: #0056b3;
+    }
+
+.logout {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-right: 1rem;
+}
+
+.align-item-logout {
+    border: none;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    padding-top: 0.8rem;
+    display: flex;
 }

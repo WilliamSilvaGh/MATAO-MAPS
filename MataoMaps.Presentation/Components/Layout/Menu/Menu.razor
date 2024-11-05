@@ -1,22 +1,15 @@
-﻿<div class="nav-scrollable @(IsOpen ? "open" : "")">
+﻿<div class="nav-scrollable @(IsOpen ? "open" : "")" @onclick:stopPropagation>
     <nav class="flex-column">
         <button class="btn-close-menu" @onclick="() => MenuService.IsMenuOpen = false">
             <i class="fa-solid fa-x"></i>
         </button>
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+@*             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
                 <span aria-hidden="true">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                         <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                     </svg>
                 </span> Login
-            </NavLink>
-            <NavLink class="nav-link" href="/ocorrencia/create">
-                <span aria-hidden="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-megaphone-fill" viewBox="0 0 16 16">
-                        <path d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0zm-1 .724c-2.067.95-4.539 1.481-7 1.656v6.237a25 25 0 0 1 1.088.085c2.053.204 4.038.668 5.912 1.56zm-8 7.841V4.934c-.68.027-1.399.043-2.008.053A2.02 2.02 0 0 0 0 7v2c0 1.106.896 1.996 1.994 2.009l.496.008a64 64 0 0 1 1.51.048m1.39 1.081q.428.032.85.078l.253 1.69a1 1 0 0 1-.983 1.187h-.548a1 1 0 0 1-.916-.599l-1.314-2.48a66 66 0 0 1 1.692.064q.491.026.966.06" />
-                    </svg>
-                </span> Fazer Ocorrência
             </NavLink>
             <NavLink class="nav-link" href="/usuario/cadastro">
                 <span aria-hidden="true">
@@ -25,7 +18,17 @@
                         <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5" />
                     </svg>
                 </span> Criar Conta
+            </NavLink> *@
+            <NavLink class="nav-link" href="/ocorrencia/create">
+                <span aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-megaphone-fill" viewBox="0 0 16 16">
+                        <path d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0zm-1 .724c-2.067.95-4.539 1.481-7 1.656v6.237a25 25 0 0 1 1.088.085c2.053.204 4.038.668 5.912 1.56zm-8 7.841V4.934c-.68.027-1.399.043-2.008.053A2.02 2.02 0 0 0 0 7v2c0 1.106.896 1.996 1.994 2.009l.496.008a64 64 0 0 1 1.51.048m1.39 1.081q.428.032.85.078l.253 1.69a1 1 0 0 1-.983 1.187h-.548a1 1 0 0 1-.916-.599l-1.314-2.48a66 66 0 0 1 1.692.064q.491.026.966.06" />
+                    </svg>
+                </span> Fazer Ocorrência
             </NavLink>
+@* 
+            Tela pausada até conseguir um serviço de geocoding gratuito ou conseguir pagar pelo da google
+
             <NavLink class="nav-link" href="/ocorrencias">
                 <span aria-hidden="true">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-map-fill" viewBox="0 0 16 16">
@@ -33,6 +36,7 @@
                     </svg>
                 </span> Mapa de Ocorrências
             </NavLink>
+ *@
             <NavLink class="nav-link" href="/ocorrencia/list">
                 <span aria-hidden="true">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-task" viewBox="0 0 16 16">
@@ -42,6 +46,7 @@
                     </svg>
                 </span> Listar Ocorrências
             </NavLink>
+
             @if (UsuarioLogadoService.EhAdmin)
             {
                 <NavLink class="nav-link" href="/area-adm">
@@ -52,6 +57,14 @@
                     </span> Área Administrativa
                 </NavLink>
             }
+            <div class="nav-item fixed-bottom px-3 py-2 margin-top mt-5 d-none d-md-flex justify-content-start">
+                <button class="btn align-item-logout" @onclick="Logout">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left m-0 mb-1" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
+                        <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
+                    </svg>
+                </button>
+            </div>
         </div>
         <nav class="flex-column">
         </nav>
@@ -60,4 +73,13 @@
 
 @code {
     [Parameter] public bool IsOpen { get; set; } // Propriedade para receber o estado do menu
+
+
+    public void Logout()
+    {
+        UsuarioLogadoService.IsLogged = false;
+        UsuarioLogadoService.EhAdmin = false;
+        NavigationManager.NavigateTo("/");
+        StateHasChanged();
+    }
 }

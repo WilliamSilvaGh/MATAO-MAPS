@@ -2,7 +2,7 @@
 @inherits LayoutComponentBase
 
 
-<div class="page" style="background-color: @BackgroundColorService.BackgroundColor;">
+<div class="page" style="background-color: @BackgroundColorService.BackgroundColor;" @onclick="() => MenuService.IsMenuOpen = false">
     @if (PageTitleService.PageTitle != "LOGIN")
     {
         <Nav />
