@@ -145,6 +145,9 @@ C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relat
 C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
 C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\MySqlConnector.dll
 C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\PdfSharpCore.dll
+C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\ICSharpCode.SharpZipLib.dll
+C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\SixLabors.Fonts.dll
 C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\Humanizer.dll
 C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
@@ -155,9 +158,6 @@ C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Desig
 C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
 C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\Mono.TextTemplating.dll
-C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\PdfSharpCore.dll
-C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\ICSharpCode.SharpZipLib.dll
-C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\SixLabors.Fonts.dll
 C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\SixLabors.ImageSharp.dll
 C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\System.CodeDom.dll
 C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\System.Composition.AttributedModel.dll

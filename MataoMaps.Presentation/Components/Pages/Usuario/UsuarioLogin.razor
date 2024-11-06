@@ -7,16 +7,16 @@
     <!-- Tela de Carregamento -->
     <div class="loading-screen" style="display: @(isLoading ? "block" : "none")">
     </div>
-
     <div class="sobre-fundo">
         <img src="/Images/logo.png" class="img-logo" />
         <div class="login">
+            <form>
             <div class="icone-input">
-                <i class="fa fa-user-circle" style="color: black"></i>
+                <i class="fa-solid fa-user-large"></i>
                 <input type="email" placeholder="Email" @bind="usuarioAutenticarRequest.EmailLogin" />
             </div>
             <div class="icone-input">
-                <i class="fa fa-expeditedssl" style="color: black"></i>
+                <i class="fa-duotone fa-solid fa-lock"></i>
                 <input type="password" placeholder="Senha" @bind="usuarioAutenticarRequest.Senha" />
             </div>
 
@@ -31,7 +31,7 @@
                     <span>Login</span>
                 }
             </button>
-
+            </form>
             <p>Não tem uma conta? <a href="/usuario/cadastro" style="color: #3685cd; text-decoration: none;">Criar uma conta</a></p>
 
             <img src="/Images/mapa.png" class="img-mapa" />
@@ -92,7 +92,7 @@
     }
 
     input {
-        width: 80%;
+        width: 100%;
         border: none;
         border-radius: 2rem;
         height: 2rem;
@@ -101,6 +101,7 @@
         display: block;
         outline: none;
         background-color: #e8e8e8;
+        margin: -1.5px;
     }
 
     .login {
@@ -200,7 +201,7 @@
                 UsuarioLogadoService.EhAdmin = ehAdmin;
             }
 
-            NavigationManager.NavigateTo("/ocorrencia/create");
+            NavigationManager.NavigateTo("/ocorrencias");
         }
 
         StateHasChanged();
@@ -249,7 +250,7 @@
 
                 isLoading = false;
 
-                NavigationManager.NavigateTo("/ocorrencia/create");
+                NavigationManager.NavigateTo("/ocorrencias");
             }
             else
             {
