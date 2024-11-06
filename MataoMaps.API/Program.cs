@@ -11,6 +11,10 @@ using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System.IdentityModel.Tokens.Jwt;
+using PdfSharpCore.Drawing;
+using PdfSharpCore.Pdf;
+using Microsoft.EntityFrameworkCore;
+using MataoMaps.Domain.Enumerators;
 
 var builder = WebApplication.CreateBuilder(args);
 Guid usuarioLogadoId;
@@ -172,39 +176,6 @@ app.MapPost("/ocorrencia/adicionar", (MataoMapsContext context, ClaimsPrincipal 
     .WithTags("Ocorrencias")
     .RequireAuthorization();
 
-app.MapPut("/ocorrencia/encerrar", (MataoMapsContext context, ClaimsPrincipal user, OcorrenciaEncerrarRequest ocorrenciaEncerrarRequest) =>
-{
-    try
-    {
-        SetarDadosToken(user);
-        if (usuarioLogadoEhAdmin)
-        {
-            var ocorrencia = context.OcorrenciaSet.Find(ocorrenciaEncerrarRequest.Id);
-            if (ocorrencia is null)
-                return Results.BadRequest("Ocorrencia não Localizada.");
-
-            ocorrencia.Encerrar(ocorrenciaEncerrarRequest.Resolucao, usuarioLogadoId);
-            context.OcorrenciaSet.Update(ocorrencia);
-            context.SaveChanges();
-
-            return Results.Ok("Ocorrencia Encerrada com Sucesso.");
-        }
-        return Results.BadRequest("Usuário não permitido");
-    }
-    catch (Exception ex)
-    {
-        return Results.BadRequest(ex.InnerException?.Message ?? ex.Message);
-    }
-})
-    .WithOpenApi(operation =>
-    {
-        operation.Description = "Endpoint para Encerrar uma Ocorrencia";
-        operation.Summary = "Encerrar Ocorrencia";
-        return operation;
-    })
-    .WithTags("Ocorrencias")
-    .RequireAuthorization();
-
 app.MapPut("/ocorrencia/iniciar-atendimento", (MataoMapsContext context, ClaimsPrincipal user, OcorrenciaIniciarAtendimentoRequest ocorrenciaIniciarAtendimentoRequest) =>
 {
     try
@@ -240,6 +211,269 @@ app.MapPut("/ocorrencia/iniciar-atendimento", (MataoMapsContext context, ClaimsP
     })
     .WithTags("Ocorrencias")
     .RequireAuthorization();
+
+app.MapPut("/ocorrencia/encerrar", (MataoMapsContext context, ClaimsPrincipal user, OcorrenciaEncerrarRequest ocorrenciaEncerrarRequest) =>
+{
+    try
+    {
+        SetarDadosToken(user);
+        if (usuarioLogadoEhAdmin)
+        {
+            var ocorrencia = context.OcorrenciaSet.Find(ocorrenciaEncerrarRequest.Id);
+            if (ocorrencia is null)
+                return Results.BadRequest("Ocorrencia não Localizada.");
+
+            ocorrencia.Encerrar(ocorrenciaEncerrarRequest.Resolucao, usuarioLogadoId);
+            context.OcorrenciaSet.Update(ocorrencia);
+            context.SaveChanges();
+
+            return Results.Ok("Ocorrencia Encerrada com Sucesso.");
+        }
+        return Results.BadRequest("Usuário não permitido");
+    }
+    catch (Exception ex)
+    {
+        return Results.BadRequest(ex.InnerException?.Message ?? ex.Message);
+    }
+})
+    .WithOpenApi(operation =>
+    {
+        operation.Description = "Endpoint para Encerrar uma Ocorrencia";
+        operation.Summary = "Encerrar Ocorrencia";
+        return operation;
+    })
+    .WithTags("Ocorrencias")
+    .RequireAuthorization();
+
+
+app.MapGet("/ocorrencia/gerar-relatorio-pdf", async (MataoMapsContext context, ClaimsPrincipal user, DateOnly startDate, DateOnly endDate) =>
+{
+    try
+    {
+        SetarDadosToken(user);
+
+        if (!usuarioLogadoEhAdmin)
+        {
+            return Results.BadRequest("Apenas administradores podem gerar o relatório.");
+        }
+
+        var ocorrencias = await context.OcorrenciaSet
+            .Where(o => o.Data >= startDate && o.Data <= endDate)
+            .Select(o => new OcorrenciaListarResponse
+            {
+                Id = o.Id,
+                UsuarioNome = o.Usuario.Nome,
+                Data = o.Data,
+                Latitude = o.Latitude,
+                Longitude = o.Longitude,
+                FotoBase64 = o.FotoBase64,
+                Endereco = o.Endereco,
+                Descricao = o.Descricao,
+                Resolucao = o.Resolucao,
+                Status = o.Status
+            })
+            .ToListAsync();
+
+        if (!ocorrencias.Any())
+        {
+            return Results.BadRequest("Nenhuma ocorrência encontrada no intervalo de datas especificado.");
+        }
+
+        var pdfDocument = new PdfDocument();
+        var page = pdfDocument.AddPage();
+        var gfx = XGraphics.FromPdfPage(page);
+        var font = new XFont("Arial", 10);
+        var boldFont = new XFont("Arial", 12, XFontStyle.Bold);
+
+        double yPosition = 20;
+
+        // Título do Relatório
+        string tituloRelatorio = "Relatório de Ocorrências";
+        double tituloWidth = gfx.MeasureString(tituloRelatorio, boldFont).Width;
+        double tituloXPosition = (page.Width - tituloWidth) / 2;
+        gfx.DrawString(tituloRelatorio, boldFont, XBrushes.Black, new XPoint(tituloXPosition, yPosition));
+
+        yPosition += 20;
+
+        // Período
+        string periodoRelatorio = $"Período: {startDate:dd/MM/yyyy} a {endDate:dd/MM/yyyy}";
+        double periodoWidth = gfx.MeasureString(periodoRelatorio, font).Width;
+        double periodoXPosition = (page.Width - periodoWidth) / 2;
+        gfx.DrawString(periodoRelatorio, font, XBrushes.Black, new XPoint(periodoXPosition, yPosition));
+
+        yPosition += 40;
+
+
+        // Dividir Ocorrências Resolvidas e Não Resolvidas
+        var ocorrenciasResolvidas = ocorrencias.Where(o => o.Status == EnumStatus.Concluido).ToList();
+        var ocorrenciasNaoResolvidas = ocorrencias.Where(o => o.Status != EnumStatus.Concluido).ToList();
+
+        // Seção de Ocorrências Resolvidas
+        gfx.DrawString("Ocorrências Resolvidas", boldFont, XBrushes.Black, new XPoint(20, yPosition));
+        yPosition += 20;
+
+        // Adiciona uma Tabela para as Ocorrências Resolvidas
+        AddOcorrenciasTable(pdfDocument, gfx, ocorrenciasResolvidas, ref yPosition, font);
+
+        // Seção de Ocorrências Não Resolvidas
+        yPosition += 20;
+        gfx.DrawString("Ocorrências Não Resolvidas", boldFont, XBrushes.Black, new XPoint(20, yPosition));
+        yPosition += 20;
+
+        // Adiciona uma Tabela para as Ocorrências Não Resolvidas
+        AddOcorrenciasTable(pdfDocument, gfx, ocorrenciasNaoResolvidas, ref yPosition, font);
+
+        // Resumo final
+        yPosition += 20;
+        gfx.DrawString("Resumo do Relatório", boldFont, XBrushes.Black, new XPoint(20, yPosition));
+        yPosition += 20;
+
+        gfx.DrawString($"Total de Ocorrências Resolvidas: {ocorrenciasResolvidas.Count}", font, XBrushes.Black, new XPoint(20, yPosition));
+        yPosition += 20;
+        gfx.DrawString($"Total de Ocorrências Não Resolvidas: {ocorrenciasNaoResolvidas.Count}", font, XBrushes.Black, new XPoint(20, yPosition));
+
+        // Salvar o PDF
+        using (var stream = new MemoryStream())
+        {
+            pdfDocument.Save(stream, false);
+            byte[] fileBytes = stream.ToArray();
+
+            return Results.File(fileBytes, "application/pdf", "Relatorio_Ocorrencias.pdf");
+        }
+    }
+    catch (Exception ex)
+    {
+        return Results.BadRequest($"Ocorreu um erro ao gerar o relatório: {ex.Message}");
+    }
+}).WithTags("Ocorrencias")
+  .RequireAuthorization();
+
+static void AddOcorrenciasTable(PdfDocument pdfDocument, XGraphics gfx, List<OcorrenciaListarResponse> ocorrencias, ref double yPosition, XFont font)
+{
+    const double pageWidth = 595; // Largura da página em pontos (A4 595px)
+    const double pageHeight = 842; // Altura da página em pontos (A4 842px)
+
+    const double margin = 20; // Margem esquerda e direita
+    const double contentWidth = pageWidth - (2 * margin); // Largura do conteúdo (sem as margens)
+
+    // Largura das colunas ajustada para 100% da largura disponível com margens
+    const double col1Width = contentWidth * 0.30; // 30% da largura para a Descrição
+    const double col2Width = contentWidth * 0.35; // 35% da largura para o Endereço
+    const double col3Width = contentWidth * 0.20; // 20% da largura para o Status
+    const double col4Width = contentWidth * 0.15; // 15% da largura para a Resolução
+
+    const double padding = 7; // Aumentar o padding para um pouco mais de espaço vertical
+    const double lineHeight = 12; // Altura da linha
+    const double headerCellHeight = 25; // Altura da célula do título das colunas (aumentei para garantir mais espaço)
+
+    // Fonte em negrito para os títulos (tamanho reduzido para 10)
+    var boldFont = new XFont("Arial", 10, XFontStyle.Bold);
+
+    // Desenha a tabela de ocorrências
+    if (ocorrencias.Any())
+    {
+        // Adicionando o espaçamento para mover os títulos um pouco para baixo
+        double titleSpacing = 5;  // Ajuste esse valor para mover os títulos para baixo mais ou menos
+        yPosition += titleSpacing;  // Desloca os títulos para baixo
+
+        // Desenha as células de título com a largura ajustada
+        gfx.DrawRectangle(XPens.Black, margin, yPosition, col1Width, headerCellHeight);  // Descrição
+        gfx.DrawRectangle(XPens.Black, margin + col1Width, yPosition, col2Width, headerCellHeight);  // Endereço
+        gfx.DrawRectangle(XPens.Black, margin + col1Width + col2Width, yPosition, col3Width, headerCellHeight);  // Status
+        gfx.DrawRectangle(XPens.Black, margin + col1Width + col2Width + col3Width, yPosition, col4Width, headerCellHeight);  // Resolução
+
+        // Títulos centralizados (com fonte reduzida)
+        gfx.DrawString("Descrição", boldFont, XBrushes.Black, new XPoint(margin + col1Width / 2, yPosition + (headerCellHeight / 2) - (lineHeight / 2)), XStringFormats.Center);
+        gfx.DrawString("Endereço", boldFont, XBrushes.Black, new XPoint(margin + col1Width + col2Width / 2, yPosition + (headerCellHeight / 2) - (lineHeight / 2)), XStringFormats.Center);
+        gfx.DrawString("Status", boldFont, XBrushes.Black, new XPoint(margin + col1Width + col2Width + col3Width / 2, yPosition + (headerCellHeight / 2) - (lineHeight / 2)), XStringFormats.Center);
+        gfx.DrawString("Resolução", boldFont, XBrushes.Black, new XPoint(margin + col1Width + col2Width + col3Width + col4Width / 2, yPosition + (headerCellHeight / 2) - (lineHeight / 2)), XStringFormats.Center);
+
+        // Ajuste de yPosition para começar logo após os títulos
+        yPosition += headerCellHeight;  // Incrementa somente a altura do cabeçalho
+
+        // Dados das ocorrências
+        foreach (var ocorrencia in ocorrencias)
+        {
+            double rowHeight = 20; // Altura padrão da linha
+
+            // Quebra de texto nas células
+            var descricao = ocorrencia.Descricao;
+            var endereco = ocorrencia.Endereco;
+            var status = ocorrencia.Status.ToString();
+            var resolucao = ocorrencia.Resolucao ?? "Não Resolvida";
+
+            // Quebra de texto para ajustar dentro das células
+            var descricaoLines = BreakTextToFit(descricao, col1Width - 2 * padding, font, gfx);
+            var enderecoLines = BreakTextToFit(endereco, col2Width - 2 * padding, font, gfx);
+            var statusLines = BreakTextToFit(status, col3Width - 2 * padding, font, gfx);
+            var resolucaoLines = BreakTextToFit(resolucao, col4Width - 2 * padding, font, gfx);
+
+            // Determina a altura da linha com base no maior número de linhas
+            rowHeight = Math.Max(Math.Max(descricaoLines.Count, enderecoLines.Count),
+                Math.Max(statusLines.Count, resolucaoLines.Count)) * lineHeight;
+
+            // Desenha as células e o texto
+            DrawCell(gfx, margin, yPosition, col1Width, rowHeight, descricaoLines, font, padding);
+            DrawCell(gfx, margin + col1Width, yPosition, col2Width, rowHeight, enderecoLines, font, padding);
+            DrawCell(gfx, margin + col1Width + col2Width, yPosition, col3Width, rowHeight, statusLines, font, padding);
+            DrawCell(gfx, margin + col1Width + col2Width + col3Width, yPosition, col4Width, rowHeight, resolucaoLines, font, padding);
+
+            yPosition += rowHeight;
+
+            // Adiciona nova página, se necessário
+            if (yPosition > pageHeight - 50)
+            {
+                var newPage = pdfDocument.AddPage();
+                gfx = XGraphics.FromPdfPage(newPage);
+                yPosition = 0; // Recomeça no topo da página
+            }
+        }
+    }
+}
+
+
+// Método para desenhar uma célula com texto quebrado dentro dela
+static void DrawCell(XGraphics gfx, double x, double y, double width, double height, List<string> lines, XFont font, double padding)
+{
+    gfx.DrawRectangle(XPens.Black, x, y, width, height);
+    double textY = y + padding + 2; // Aumentando o espaço entre o topo da célula e o texto
+
+    // Desenha cada linha do texto dentro da célula
+    foreach (var line in lines)
+    {
+        gfx.DrawString(line, font, XBrushes.Black, new XPoint(x + padding, textY));
+        textY += 12; // Ajuste para a próxima linha
+    }
+}
+
+// Método para quebrar o texto nas linhas para caber nas células
+static List<string> BreakTextToFit(string text, double maxWidth, XFont font, XGraphics gfx)
+{
+    var lines = new List<string>();
+    var currentLine = "";
+    var words = text.Split(' ');
+
+    foreach (var word in words)
+    {
+        var testLine = string.IsNullOrEmpty(currentLine) ? word : currentLine + " " + word;
+        if (gfx.MeasureString(testLine, font).Width <= maxWidth)
+        {
+            currentLine = testLine;
+        }
+        else
+        {
+            lines.Add(currentLine);
+            currentLine = word;
+        }
+    }
+
+    if (!string.IsNullOrEmpty(currentLine))
+    {
+        lines.Add(currentLine);
+    }
+
+    return lines;
+}
 
 #endregion
 

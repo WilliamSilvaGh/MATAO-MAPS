@@ -71,6 +71,10 @@
               "target": "Package",
               "version": "[8.0.8, )"
             },
+            "PdfSharpCore": {
+              "target": "Package",
+              "version": "[1.3.65, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.7.3, )"

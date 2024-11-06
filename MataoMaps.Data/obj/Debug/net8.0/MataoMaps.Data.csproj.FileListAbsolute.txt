@@ -28,9 +28,9 @@ C:\MATAO-MAPS\MataoMaps.Data\obj\Debug\net8.0\MataoMaps.Data.AssemblyInfoInputs.
 C:\MATAO-MAPS\MataoMaps.Data\obj\Debug\net8.0\MataoMaps.Data.AssemblyInfo.cs
 C:\MATAO-MAPS\MataoMaps.Data\obj\Debug\net8.0\MataoMaps.Data.csproj.CoreCompileInputs.cache
 C:\MATAO-MAPS\MataoMaps.Data\obj\Debug\net8.0\MataoMaps.Data.sourcelink.json
+C:\MATAO-MAPS\MataoMaps.Data\obj\Debug\net8.0\MataoMap.AC9CF20E.Up2Date
 C:\MATAO-MAPS\MataoMaps.Data\obj\Debug\net8.0\MataoMaps.Data.dll
 C:\MATAO-MAPS\MataoMaps.Data\obj\Debug\net8.0\refint\MataoMaps.Data.dll
 C:\MATAO-MAPS\MataoMaps.Data\obj\Debug\net8.0\MataoMaps.Data.pdb
 C:\MATAO-MAPS\MataoMaps.Data\obj\Debug\net8.0\MataoMaps.Data.genruntimeconfig.cache
 C:\MATAO-MAPS\MataoMaps.Data\obj\Debug\net8.0\ref\MataoMaps.Data.dll
-C:\MATAO-MAPS\MataoMaps.Data\obj\Debug\net8.0\MataoMap.AC9CF20E.Up2Date

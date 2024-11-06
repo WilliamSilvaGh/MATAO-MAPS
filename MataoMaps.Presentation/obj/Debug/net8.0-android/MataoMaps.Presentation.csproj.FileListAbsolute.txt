@@ -18,8 +18,9 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\staticwebassets\ms
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\staticwebassets\msbuild.buildMultiTargeting.MataoMaps.Presentation.props
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\staticwebassets\msbuild.buildTransitive.MataoMaps.Presentation.props
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\staticwebassets.pack.json
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
-C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\scopedcss\Components\Layout\MainLayout\MainLayout.razor.rz.scp.css
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\scopedcss\Components\Layout\Menu\Menu.razor.rz.scp.css
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\scopedcss\Components\Layout\Nav\Nav.razor.rz.scp.css
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\scopedcss\bundle\MataoMaps.Presentation.styles.css
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\scopedcss\projectbundle\MataoMaps.Presentation.bundle.scp.css
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\staticwebassets.publish.json

@@ -4,6 +4,10 @@
 
 
 <div class="fundo">
+    <!-- Tela de Carregamento -->
+    <div class="loading-screen" style="display: @(isLoading ? "block" : "none")">
+    </div>
+
     <div class="sobre-fundo">
         <img src="/Images/logo.png" class="img-logo" />
         <div class="login">
@@ -44,7 +48,7 @@
     .img-logo {
         width: 11rem;
         /* margin-left: auto;
-        margin-right: auto; */
+                margin-right: auto; */
         margin: 1.5rem auto;
         display: flex;
         padding-top: 1rem;
@@ -81,7 +85,7 @@
                 outline: none;
             }
 
-    p{
+    p {
         text-align: center;
         font-size: 12px;
         color: black;
@@ -105,7 +109,7 @@
         height: 200px;
         max-width: 400px;
         position: absolute;
-        margin-top: 130px;      
+        margin-top: 130px;
         padding-top: 0.5vh;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -151,31 +155,68 @@
             background-color: #f8db52; /* Cor de fundo mais escura ao passar o mouse */
         }
 
+    .loading-screen {
+        position: fixed; /* Mudamos para "fixed" para cobrir a tela toda */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: white; /* Fundo branco com opacidade */
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        z-index: 9999;
+    }
+
 </style>
 
 @code {
-    private bool isLoading = false;
+    private bool isLoading = true;
     private UsuarioAutenticarRequest usuarioAutenticarRequest = new UsuarioAutenticarRequest();
 
-    protected override void OnInitialized()
+    protected async override void OnInitialized()
     {
-        isLoading = false;
+        isLoading = true;
         BackgroundColorService.SetBackgroundColor("#E8E8E8");
         PageTitleService.SetPageTitle("LOGIN");
+
+        // Verificar se o usuário já está logado ao iniciar
+        var token = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "access_token");
+        if (string.IsNullOrEmpty(token))
+        {
+            isLoading = false; // Não há token, mostra a tela de login
+        }
+        else
+        {
+            // Token encontrado, o usuário já está logado
+
+            UsuarioLogadoService.IsLogged = true;
+
+            var ehAdminString = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "EhAdmin");
+
+            if (bool.TryParse(ehAdminString, out var ehAdmin))
+            {
+                if(ehAdmin == true)
+                UsuarioLogadoService.EhAdmin = ehAdmin;
+            }
+
+            NavigationManager.NavigateTo("/ocorrencia/create");
+        }
+
         StateHasChanged();
     }
 
-    private async Task Autenticar()
+    public async Task Autenticar()
     {
         if (string.IsNullOrEmpty(usuarioAutenticarRequest.EmailLogin) || string.IsNullOrEmpty(usuarioAutenticarRequest.Senha))
         {
             NotificationService.Notify(new NotificationMessage
-            {
-                Severity = NotificationSeverity.Error,
-                Summary = "Erro",
-                Detail = "Por favor, preencha todos os campos.",
-                Duration = 4000
-            });
+                {
+                    Severity = NotificationSeverity.Error,
+                    Summary = "Erro",
+                    Detail = "Por favor, preencha todos os campos.",
+                    Duration = 4000
+                });
             return;
         }
 
@@ -195,6 +236,14 @@
                 UsuarioLogadoService.IsLogged = true;
                 UsuarioLogadoService.EhAdmin = usuarioAutenticarResponse.EhAdmin; // Define se o usuário é admin com base na resposta
 
+                if (UsuarioLogadoService.EhAdmin) {
+                // Após autenticação bem-sucedida
+                    await JSRuntime.InvokeVoidAsync("localStorage.setItem", "EhAdmin", usuarioAutenticarResponse.EhAdmin.ToString());
+                }
+
+                // Armazenar o token no localStorage
+                await JSRuntime.InvokeVoidAsync("localStorage.setItem", "access_token", usuarioAutenticarResponse.AccessToken);
+
                 HttpClient.DefaultRequestHeaders.Clear();
                 HttpClient.DefaultRequestHeaders.Add("authorization", $"bearer {usuarioAutenticarResponse.AccessToken}");
 
@@ -206,24 +255,24 @@
             {
                 isLoading = false;
                 NotificationService.Notify(new NotificationMessage
-                {
-                    Severity = NotificationSeverity.Error,
-                    Summary = "Erro",
-                    Detail = "Erro ao processar a resposta de autenticação.",
-                    Duration = 4000
-                });
+                    {
+                        Severity = NotificationSeverity.Error,
+                        Summary = "Erro",
+                        Detail = "Erro ao processar a resposta de autenticação.",
+                        Duration = 4000
+                    });
             }
         }
         else
         {
             isLoading = false;
             NotificationService.Notify(new NotificationMessage
-            {
-                Severity = NotificationSeverity.Error,
-                Summary = "Erro",
-                Detail = "Usuário ou senha inválidos.",
-                Duration = 4000
-            });
+                {
+                    Severity = NotificationSeverity.Error,
+                    Summary = "Erro",
+                    Detail = "Usuário ou senha inválidos.",
+                    Duration = 4000
+                });
         }
     }
 }
