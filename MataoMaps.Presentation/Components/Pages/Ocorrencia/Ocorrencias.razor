@@ -8,6 +8,10 @@
     <input type="text" placeholder="Pesquisar" />
 </div> *@
 
+<button class="btn-recarregar" @onclick="ReloadMap">
+    <i class="fa-solid fa-rotate-right"></i>
+</button>
+
 <div id="map" style="width: 80%; height: 65vh; margin: 2rem auto;"></div>
 
 @* <div class="urgencia">
@@ -22,13 +26,10 @@
     </div>
 </div> *@
 <button type="submit" class="btn-fazer-ocorrencia" disabled="@isLoading" @onclick="Redirecionar">
-    @if (isLoading)
-    {
+    @if (isLoading) {
         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
         <span class="visually-hidden">Loading...</span>
-    }
-    else
-    {
+    } else {
         <span>FAZER OCORRÊNCIA</span>
     }
 </button>
@@ -133,44 +134,61 @@
             background-color: #0056b3; /* Cor de fundo mais escura ao passar o mouse */
         }
 
+    .btn-recarregar {
+        position: fixed;
+        padding: 0.75rem;
+        border: none;
+        border-radius: 2rem;
+        background-color: #3685cd;
+        color: white;
+        font-weight: bold;
+        font-size: 1rem;
+        text-align: center;
+        cursor: pointer;
+        display: flex;
+        right: 0;
+        margin-top: 2.5rem;
+        margin-right: 8.5rem;
+        z-index: 9999;
+    }
+
+        .btn-recarregar:hover {
+            background-color: #0056b3;
+        }
+
 </style>
 @code {
     private bool _isMapInitialized;
     private bool isLoading = false;
 
-    protected override void OnInitialized()
-    {
+    protected override void OnInitialized() {
         PageTitleService.SetPageTitle("OCORRÊNCIAS");
         BackgroundColorService.SetBackgroundColor("#E8E8E8");
     }
 
-
-    public void Redirecionar()
-    {
+    public void Redirecionar() {
         isLoading = true;
         NavigationManager.NavigateTo("/ocorrencia/create");
         isLoading = false;
     }
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (firstRender || !_isMapInitialized) 
-        {
+    protected override async Task OnAfterRenderAsync(bool firstRender) {
+        if (firstRender || !_isMapInitialized) {
             await InitializeMap();
             _isMapInitialized = true;
         }
     }
-    private async Task InitializeMap()
-    {
-        await JSRuntime.InvokeVoidAsync("initializeMap");
 
+    private async Task InitializeMap() {
+        await JSRuntime.InvokeVoidAsync("initializeMap");
         StateHasChanged();
     }
 
-
-    public async ValueTask DisposeAsync()
-    {
-        // Implementar a lógica de descarte, se necessário
+    private async Task ReloadMap() {
+        await JSRuntime.InvokeVoidAsync("reloadMap");
     }
 
+    public async ValueTask DisposeAsync() {
+        // Implementar a lógica de descarte, se necessário
+    }
 }

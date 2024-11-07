@@ -1,4 +1,4 @@
-var map; // Declare a variável map fora da função
+var map; // Variável global do mapa
 
 function initializeMap() {
     // Inicializa o mapa
@@ -9,6 +9,11 @@ function initializeMap() {
         attribution: '© OpenStreetMap'
     }).addTo(map);
 
+    // Tenta pegar a localização atual do usuário
+    updateUserLocation();
+}
+
+function updateUserLocation() {
     // Verifica se a geolocalização é suportada
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
@@ -30,4 +35,10 @@ function initializeMap() {
     } else {
         alert("Geolocalização não suportada por este navegador.");
     }
+}
+
+// Função para recarregar o mapa (chamado do Blazor)
+function reloadMap() {
+    map.remove(); // Remove o mapa atual
+    initializeMap(); // Recria o mapa
 }
