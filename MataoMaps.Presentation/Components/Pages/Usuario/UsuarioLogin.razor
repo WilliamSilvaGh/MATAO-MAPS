@@ -201,6 +201,10 @@
                 UsuarioLogadoService.EhAdmin = ehAdmin;
             }
 
+
+            HttpClient.DefaultRequestHeaders.Clear();
+            HttpClient.DefaultRequestHeaders.Add("authorization", $"bearer {token}");
+
             NavigationManager.NavigateTo("/ocorrencias");
         }
 

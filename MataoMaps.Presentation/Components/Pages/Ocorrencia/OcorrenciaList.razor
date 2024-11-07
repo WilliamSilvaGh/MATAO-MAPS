@@ -4,7 +4,7 @@
 
 <div class="container">
     <h3>Lista de Ocorrências</h3>
-    <div class="d-flex justify-content-end">
+    <div class="d-flex justify-content-center justify-content-sm-end">
         <button class="btn-nao-resolvidas @unresolvedButtonClass" @onclick="ShowUnresolved">
             <i class="fas fa-exclamation-circle"></i>
         </button>
@@ -50,6 +50,7 @@
                         <span>Gerar Relatório</span>
                     }
                 </button>
+                <p style="@msgRelatorioClass">@msgRelatorio</p>
             </div>
         </div>
     }
@@ -369,6 +370,9 @@
     private int totalItems;
     private int totalPages;
 
+    private MarkupString msgRelatorio = new MarkupString("");
+    private string msgRelatorioClass = "";
+
     protected override async Task OnInitializedAsync()
     {
         isLoading = true;
@@ -395,8 +399,8 @@
 
     private void FilterAndPaginateOcorrencias()
     {
-        // Filtra as ocorrências de acordo com o filtro
-        var filteredOcorrencias = todasOcorrencias;
+        // Garantir que todasOcorrencias não seja null
+        var filteredOcorrencias = todasOcorrencias ?? new List<OcorrenciaListarResponse>();
 
         if (isFilteringResolved)
         {
@@ -414,7 +418,6 @@
                                            .Take(itemsPerPage)
                                            .ToList();
     }
-
 
     private void OpenModal(OcorrenciaListarResponse ocorrencia)
     {
@@ -540,17 +543,21 @@
 
                 // Força o download do PDF usando JSRuntime
                 await JSRuntime.InvokeVoidAsync("eval", $"var link = document.createElement('a'); link.href = '{fileUrl}'; link.download = 'Relatorio_Ocorrencias.pdf'; link.click();");
+                msgRelatorio = new MarkupString("Relatório gerado com sucesso. <strong>Verifique a pasta de downloads!</strong>");
+                msgRelatorioClass = "color: green; text-align: center; margin: 0; margin-top: 5px;";
                 isLoading = false;
             }
             else
             {
                 isLoading = false;
-                Console.WriteLine("Erro ao gerar o relatório. Status code: " + response.StatusCode);
+                msgRelatorio = new MarkupString("Erro ao gerar o relatório.");
+                msgRelatorioClass = "color: red; text-align: center; margin: 0; margin-top: 5px;";
             }
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Erro ao gerar o relatório: {ex.Message}");
+            msgRelatorio = new MarkupString("Erro ao gerar o relatório.");
+            msgRelatorioClass = "color: red; text-align: center; margin: 0; margin-top: 5px;";
         }
     }
 
