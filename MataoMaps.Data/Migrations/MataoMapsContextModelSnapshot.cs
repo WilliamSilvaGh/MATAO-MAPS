@@ -45,11 +45,11 @@ namespace MataoMaps.Data.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<decimal>("Latitude")
-                        .HasColumnType("decimal(65,30)");
+                    b.Property<double>("Latitude")
+                        .HasColumnType("double");
 
-                    b.Property<decimal>("Longitude")
-                        .HasColumnType("decimal(65,30)");
+                    b.Property<double>("Longitude")
+                        .HasColumnType("double");
 
                     b.Property<string>("Resolucao")
                         .HasMaxLength(1000)

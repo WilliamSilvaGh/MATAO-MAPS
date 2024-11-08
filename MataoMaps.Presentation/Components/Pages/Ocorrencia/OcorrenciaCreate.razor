@@ -228,13 +228,49 @@
     private async Task PublicarOcorrencia()
     {
         isLoading = true;
-        // Aqui você pode ajustar Latitude e Longitude conforme necessário.
-        ocorrenciaAdicionarRequest.Data = DateOnly.FromDateTime(DateTime.Now); // Adapte conforme necessário
-        ocorrenciaAdicionarRequest.Latitude = 0; // Adapte conforme necessário
-        ocorrenciaAdicionarRequest.Longitude = 0; // Adapte conforme necessário
 
+        bool usarLocalizacao = await App.Current.MainPage.DisplayAlert(
+            "Usar localização?",
+            "Deseja usar a sua localização atual como ponto de referência para a ocorrência?",
+            "Sim", "Não");
 
+        if (usarLocalizacao)
+        {
+            try
+            {
+                // Tenta obter a localização do usuário via JSRuntime
+                var localizacao = await JSRuntime.InvokeAsync<Location>("updateUserLocation");
+                // Verifica se a localização foi obtida com sucesso antes de atribuir
+                if (localizacao != null && localizacao.Latitude != 0 && localizacao.Longitude != 0)
+                {
+                    ocorrenciaAdicionarRequest.Latitude = localizacao.Latitude;
+                    ocorrenciaAdicionarRequest.Longitude = localizacao.Longitude;
+                }
+                else
+                {
+                    NotificationService.Notify(NotificationSeverity.Error, "Localização não disponível.");
+                    isLoading = false;
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                NotificationService.Notify(NotificationSeverity.Error, "Erro ao obter a localização: " + ex.Message);
+                isLoading = false;
+                return;
+            }
+        }
+
+        // Se a localização não foi usada, a latitude e longitude podem ser nulas ou 0, mas o envio deve continuar
+        if (ocorrenciaAdicionarRequest.Latitude == 0 || ocorrenciaAdicionarRequest.Longitude == 0)
+        {
+            NotificationService.Notify(NotificationSeverity.Warning, "A localização não foi definida. A ocorrência será publicada sem ela.");
+        }
+
+        // Publicar a ocorrência
+        ocorrenciaAdicionarRequest.Data = DateOnly.FromDateTime(DateTime.Now);
         var response = await HttpClient.PostAsJsonAsync("/ocorrencia/adicionar", ocorrenciaAdicionarRequest);
+
         if (response.IsSuccessStatusCode)
         {
             NotificationService.Notify(NotificationSeverity.Success, "Ocorrência publicada com sucesso!");
@@ -244,6 +280,7 @@
         {
             NotificationService.Notify(NotificationSeverity.Error, "Erro ao publicar ocorrência.");
         }
+
         isLoading = false;
     }
 

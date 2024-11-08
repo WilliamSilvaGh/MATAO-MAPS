@@ -20,6 +20,16 @@ var builder = WebApplication.CreateBuilder(args);
 Guid usuarioLogadoId;
 bool usuarioLogadoEhAdmin;
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()  // Permite qualquer origem
+              .AllowAnyMethod()  // Permite qualquer método (GET, POST, etc)
+              .AllowAnyHeader(); // Permite qualquer cabeçalho
+    });
+});
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
@@ -39,6 +49,8 @@ builder.Services.ConfigureAuthentication();
 builder.Services.ConfigureAuthenticateSwagger();
 
 var app = builder.Build();
+
+app.UseCors("AllowAll");
 
 app.UseSwagger();
 app.UseSwaggerUI();
