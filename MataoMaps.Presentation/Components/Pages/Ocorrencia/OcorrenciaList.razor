@@ -75,6 +75,7 @@
                         <p><strong>Endereço:</strong> @ocorrencia.Endereco</p>
                         <p><strong>Usuário:</strong> @ocorrencia.UsuarioNome</p>
                         <p><strong>Status:</strong> @ocorrencia.Status</p>
+                        <p><strong>Data de Resolução:</strong> @ocorrencia.DataResolucao</p>
                         <p><strong>Resolução:</strong> @ocorrencia.Resolucao</p>
                     </div>
                 </div>
@@ -113,20 +114,49 @@
             <button class="btn-close-modal" @onclick="CloseModal">
                 <i class="fas fa-times"></i>
             </button>
+
+            <!-- Contêiner de paginação centralizado -->
+            @if (selectedOcorrencia?.Status.ToString() == "Concluido")
+            {
+                <div class="pagination-imagem">
+                    <!-- Botão de "Previous" à esquerda -->
+                    <button class="btn-previous" @onclick="ShowPreviousImage" disabled="@(!CanNavigate)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <!-- Botão de "Next" à direita -->
+                    <button class="btn-next" @onclick="ShowNextImage" disabled="@(!CanNavigate)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            }
+
             <h4>@selectedOcorrencia?.Descricao</h4>
-            <img src="@($"data:image/png;base64,{selectedOcorrencia?.FotoBase64}")" class="modal-image" />
+
+            <img src="@GetCurrentImageUrl()" class="modal-image" />
+
             @if (UsuarioLogadoService.EhAdmin && selectedOcorrencia?.Resolucao == null)
             {
                 <label for="startDate">Data da Resolução:</label>
                 <RadzenDatePicker AllowInput="false" AllowClear="true" @bind-Value="@dataResolucao" DateFormat="dd/MM/yyyy" Name="Data" class="w-100" />
-
                 <br />
+                <label for="startDate">Foto da Resolução:</label>
+                <div class="input-image" @onclick="DisplayAction">
+                    <i class="fa-solid fa-upload"></i>
+                    @if (isImageUploaded)
+                    {
+                        <p class="success-message text-center">Imagem carregada com sucesso!</p>
+                    }
+                    else
+                    {
+                        <p class="text-center">Faça o upload da imagem</p>
+                    }
+                </div>
 
                 <textarea @bind="@resolution" placeholder="Digite a resolução aqui..."></textarea>
                 <button class="btn-submit" @onclick="SubmitResolution">
                     @if (isLoading)
                     {
-
                         <span class="spinner-border spinner-border-sm text-center" role="status" aria-hidden="true"></span>
                         <span class="visually-hidden">Loading...</span>
                     }
@@ -152,6 +182,7 @@
     </div>
 }
 
+
 <style>
     .container {
         max-width: 1200px;
@@ -166,6 +197,75 @@
         text-align: center;
         color: #333;
     }
+
+    .pagination-imagem {
+        display: flex; /* Usando flexbox */
+        justify-content: space-between; /* Coloca os botões nas extremidades */
+        align-items: center; /* Centraliza verticalmente */
+        position: absolute; /* Posicionamento absoluto dentro da modal */
+        top: 50%; /* Posiciona verticalmente no meio */
+        left: 0;
+        right: 0;
+        transform: translateY(-50%); /* Ajusta para centralizar exatamente no meio */
+        width: 100%; /* Largura do contêiner */
+        z-index: 10; /* Garante que os botões fiquem acima da imagem */
+    }
+
+    .btn-previous, .btn-next {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 5px;
+        border-radius: 50%;
+        opacity: 0.8;
+    }
+
+        .btn-previous:hover, .btn-next:hover {
+            background-color: #0056b3; /* Cor de fundo mais escura ao passar o mouse */
+        }
+
+    .input-image {
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 1rem;
+        display: flex;
+        justify-content: center; /* Centraliza o texto no centro */
+        align-items: center; /* Alinha o conteúdo verticalmente */
+        position: relative; /* Faz com que o ícone tenha um posicionamento absoluto */
+        margin-bottom: 0.5rem;
+    }
+
+        .input-image i {
+            font-size: 1rem; /* Ajuste o tamanho do ícone conforme necessário */
+            cursor: pointer;
+            position: absolute; /* Permite mover o ícone para a direita */
+            right: 10px; /* Coloca o ícone na extremidade direita */
+        }
+
+    .success-message {
+        color: green;
+        text-align: center;
+        margin-top: 0.5rem; /* Espaço entre o ícone e a mensagem */
+    }
+
+    .text-center {
+        text-align: center; /* Centraliza o texto dentro do parágrafo */
+        margin: 0; /* Remove a margem adicional que possa interferir */
+    }
+
+    .input-image:hover {
+        cursor: pointer;
+        backdrop-filter: brightness(1.1); /* Efeito de brilho ao passar o mouse */
+        background-color: #e8e8e8; /* Cor de fundo mais escura ao passar o mouse */
+    }
+
+
+
 
     .btn-relatorio {
         background-color: #28a745;
@@ -272,10 +372,15 @@
     }
 
     .modal-image {
-        width: 100%;
+        width: 100%; /* A imagem vai ocupar 100% da largura disponível, mas com um tamanho máximo */
+        max-width: 500px; /* Defina a largura máxima desejada */
+        max-height: 40vh; /* A altura máxima será 80% da altura da tela */
+        height: auto; /* A altura da imagem será ajustada proporcionalmente */
         border-radius: 5px;
         margin-bottom: 1rem;
+        object-fit: contain; /* Garantir que a imagem não será distorcida e será redimensionada para caber */
     }
+
 
     .btn-close-modal {
         position: absolute;
@@ -364,6 +469,18 @@
     private string resolution;
     private DateOnly dataResolucao = DateOnly.FromDateTime(DateTime.Now);
     private bool isRelatorioModalOpen = false;
+
+    private OcorrenciaEncerrarRequest ocorrenciaEncerrarRequest = new OcorrenciaEncerrarRequest();
+
+    private bool isImageUploaded = false;
+    private string ocorrenciaAdmFoto = "";
+    private string _ImageBase64Data;
+
+    private int currentImageIndex = 0; // 0 = Foto do Problema, 1 = Foto da Resolução
+
+    // Indica se as setas de navegação devem estar habilitadas
+    private bool CanNavigate => selectedOcorrencia?.Status.ToString() == "Concluido";
+
     private DateOnly startDate = DateOnly.FromDateTime(DateTime.Now.AddMonths(-1)); // Definir um valor padrão
     private DateOnly endDate = DateOnly.FromDateTime(DateTime.Now);
 
@@ -373,7 +490,7 @@
     private bool isFilteringResolved = false; // Para controlar o estado do filtro
 
     private int currentPage = 1;
-    private int itemsPerPage = 5;
+    private int itemsPerPage = 6;
     private int totalItems;
     private int totalPages;
 
@@ -401,6 +518,37 @@
         catch (Exception ex)
         {
             Console.WriteLine($"Erro ao carregar ocorrências: {ex.Message}");
+        }
+    }
+
+    // Função para obter a URL da imagem atual
+    private string GetCurrentImageUrl()
+    {
+        if (selectedOcorrencia?.Status.ToString() != "Concluido" || currentImageIndex == 0)
+        {
+            return $"data:image/png;base64,{selectedOcorrencia?.FotoBase64}"; // Foto do problema
+        }
+        else
+        {
+            return $"data:image/png;base64,{selectedOcorrencia?.FotoResolucao}"; // Foto da resolução
+        }
+    }
+
+    // Função para mostrar a imagem anterior
+    private void ShowPreviousImage()
+    {
+        if (CanNavigate)
+        {
+            currentImageIndex = currentImageIndex == 0 ? 1 : 0;
+        }
+    }
+
+    // Função para mostrar a próxima imagem
+    private void ShowNextImage()
+    {
+        if (CanNavigate)
+        {
+            currentImageIndex = currentImageIndex == 0 ? 1 : 0;
         }
     }
 
@@ -439,8 +587,74 @@
         selectedOcorrencia = null;
     }
 
+    private async void DisplayAction()
+    {
+        string response = await App.Current.MainPage.DisplayActionSheet("Escolha uma opção", "OK", null, "Tirar foto", "Escolher da galeria");
+
+        if (response == "Tirar foto")
+        {
+            if (MediaPicker.Default.IsCaptureSupported)
+            {
+                var photo = await MediaPicker.Default.CapturePhotoAsync();
+                if (photo != null)
+                {
+                    await ProcessPhoto(photo);
+                }
+            }
+        }
+        else if (response == "Escolher da galeria")
+        {
+            var photo = await MediaPicker.Default.PickPhotoAsync();
+            if (photo != null)
+            {
+                await ProcessPhoto(photo);
+            }
+        }
+    }
+
+    private async Task ProcessPhoto(FileResult photo)
+    {
+        // Obter o tipo MIME da imagem
+        string mimeType = photo.ContentType; // Ex: "image/jpeg", "image/png", etc.
+
+        // Definir formatos suportados
+        var supportedTypes = new[] { "image/jpeg", "image/png", "image/gif" };
+
+        // Validar se o tipo MIME é suportado
+        if (!supportedTypes.Contains(mimeType))
+        {
+            // Notificar o usuário sobre o tipo não suportado
+            NotificationService.Notify(NotificationSeverity.Error, "Tipo de imagem não suportado. Por favor, escolha uma foto JPEG, PNG ou GIF.");
+            return; // Saia da função se o tipo não for suportado
+        }
+
+        byte[] imageBytes;
+        var stream = await photo.OpenReadAsync();
+
+        using (MemoryStream ms = new MemoryStream())
+        {
+            await stream.CopyToAsync(ms);
+            imageBytes = ms.ToArray();
+        }
+
+        // Log do tamanho da imagem original
+        Console.WriteLine($"Tamanho da imagem original: {imageBytes.Length} bytes");
+
+        _ImageBase64Data = Convert.ToBase64String(imageBytes);
+        ocorrenciaEncerrarRequest.FotoResolucao = _ImageBase64Data; // Armazene a imagem em base64 na requisição
+        isImageUploaded = true;
+
+        // Defina o prefixo baseado no tipo MIME
+        ocorrenciaAdmFoto = $"data:{mimeType};base64,{_ImageBase64Data}";
+        this.StateHasChanged();
+    }
+
     private async Task SubmitResolution()
     {
+        ocorrenciaEncerrarRequest.Id = selectedOcorrencia.Id;
+        ocorrenciaEncerrarRequest.DataResolucao = dataResolucao;
+        ocorrenciaEncerrarRequest.Resolucao = resolution;
+
         isLoading = true;
         if (string.IsNullOrWhiteSpace(resolution))
         {
@@ -448,14 +662,7 @@
             return;
         }
 
-        var requestContent = new OcorrenciaEncerrarRequest
-        {
-                Id = selectedOcorrencia.Id,
-                Resolucao = resolution,
-                DataResolucao = dataResolucao
-        };
-
-        var response = await HttpClient.PutAsJsonAsync("/ocorrencia/encerrar", requestContent);
+        var response = await HttpClient.PutAsJsonAsync("/ocorrencia/encerrar", ocorrenciaEncerrarRequest);
 
         if (response.IsSuccessStatusCode)
         {

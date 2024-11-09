@@ -34,12 +34,16 @@ namespace MataoMaps.Data.Configuration
             builder.Property(p => p.Status)
                 .IsRequired();
 
+            builder.Property(p => p.DataResolucao)
+                .IsRequired();
+
+            builder.Property(p => p.FotoResolucao)
+                .HasColumnType("longtext")
+                .IsRequired(false);
+
             builder.Property(p => p.Resolucao)
                 .HasMaxLength(1000)
                 .IsRequired(false);
-
-            builder.Property(p => p.DataResolucao)
-                .IsRequired();
 
             builder.Property(p => p.UsuarioId)
                 .IsRequired();

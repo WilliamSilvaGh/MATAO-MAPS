@@ -12,8 +12,9 @@ namespace MataoMaps.Domain.Entities
         public string Endereco { get; set; }
         public string Descricao { get; set; }
         public EnumStatus Status { get; set; }
-        public string Resolucao { get; set; }
+        public string FotoResolucao { get; set; }
         public DateOnly DataResolucao { get; set; }
+        public string Resolucao { get; set; }
         public Guid UsuarioId { get; set; }
         public Guid? UsuarioResolucaoId { get; set; }
         public virtual Usuario Usuario { get; set; }
@@ -57,11 +58,12 @@ namespace MataoMaps.Domain.Entities
             Status = EnumStatus.EmAndamento;
         }
 
-        public void Encerrar(Guid usuarioResolucaoId, string resolucao, DateOnly dataResolucao)
+        public void Encerrar(Guid usuarioResolucaoId, DateOnly dataResolucao, string fotoResolucao, string resolucao)
         {
             UsuarioResolucaoId = usuarioResolucaoId;
-            Resolucao = resolucao;
             DataResolucao = dataResolucao;
+            FotoResolucao = fotoResolucao;
+            Resolucao = resolucao;
             Status = EnumStatus.Concluido;
         }
     }

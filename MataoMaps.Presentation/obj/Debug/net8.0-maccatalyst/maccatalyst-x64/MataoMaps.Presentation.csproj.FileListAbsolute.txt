@@ -22,6 +22,7 @@ C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-maccatalyst\maccatalyst-x6
 C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.AspNetCore.Components.WebView.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.AspNetCore.Components.WebView.Maui.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.AspNetCore.Metadata.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.AspNetCore.WebUtilities.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.DotNet.PlatformAbstractions.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.Extensions.Configuration.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.Extensions.Configuration.Abstractions.dll
@@ -48,6 +49,7 @@ C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-maccatalyst\maccatalyst-x6
 C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.Maui.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.Maui.Essentials.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.Maui.Graphics.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.Net.Http.Headers.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Newtonsoft.Json.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Radzen.Blazor.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\SixLabors.ImageSharp.dll

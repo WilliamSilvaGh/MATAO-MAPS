@@ -2,7 +2,6 @@
 @using MataoMaps.Domain.DTOs.Usuario.Request
 @using System.Text.Json
 
-
 <div class="fundo">
     <!-- Tela de Carregamento -->
     <div class="loading-screen" style="display: @(isLoading ? "block" : "none")">
@@ -11,26 +10,26 @@
         <img src="/Images/logo.png" class="img-logo" />
         <div class="login">
             <form>
-            <div class="icone-input">
-                <i class="fa-solid fa-user-large"></i>
-                <input type="email" placeholder="Email" @bind="usuarioAutenticarRequest.EmailLogin" />
-            </div>
-            <div class="icone-input">
-                <i class="fa-duotone fa-solid fa-lock"></i>
-                <input type="password" placeholder="Senha" @bind="usuarioAutenticarRequest.Senha" />
-            </div>
+                <div class="icone-input">
+                    <i class="fa-solid fa-user-large"></i>
+                    <input type="email" placeholder="Email" @bind="usuarioAutenticarRequest.EmailLogin" />
+                </div>
+                <div class="icone-input">
+                    <i class="fa-duotone fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Senha" @bind="usuarioAutenticarRequest.Senha" />
+                </div>
 
-            <button type="submit" class="btn-login" disabled="@isLoading" @onclick="Autenticar">
-                @if (isLoading)
-                {
-                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                    <span class="visually-hidden">Loading...</span>
-                }
-                else
-                {
-                    <span>Login</span>
-                }
-            </button>
+                <button type="submit" class="btn-login" disabled="@isLoading" @onclick="Autenticar">
+                    @if (isLoading)
+                    {
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        <span class="visually-hidden">Loading...</span>
+                    }
+                    else
+                    {
+                        <span>Login</span>
+                    }
+                </button>
             </form>
             <p>Não tem uma conta? <a href="/usuario/cadastro" style="color: #3685cd; text-decoration: none;">Criar uma conta</a></p>
 
@@ -175,42 +174,85 @@
     private bool isLoading = true;
     private UsuarioAutenticarRequest usuarioAutenticarRequest = new UsuarioAutenticarRequest();
 
-    protected async override void OnInitialized()
+    // Mudança para método assíncrono OnInitializedAsync()
+    protected override async Task OnInitializedAsync()
     {
         isLoading = true;
         BackgroundColorService.SetBackgroundColor("#E8E8E8");
         PageTitleService.SetPageTitle("LOGIN");
 
-        // Verificar se o usuário já está logado ao iniciar
+        // Recupera o token do localStorage
         var token = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "access_token");
+
         if (string.IsNullOrEmpty(token))
         {
-            isLoading = false; // Não há token, mostra a tela de login
+            // Se o token não existe no localStorage, apenas sai da função.
+            isLoading = false;
+            StateHasChanged();
         }
         else
         {
-            // Token encontrado, o usuário já está logado
+            // Verifica se o token é válido
+            var isTokenValid = await VerificarTokenValido(token);
 
-            UsuarioLogadoService.IsLogged = true;
-
-            var ehAdminString = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "EhAdmin");
-
-            if (bool.TryParse(ehAdminString, out var ehAdmin))
+            if (isTokenValid)
             {
-                if(ehAdmin == true)
-                UsuarioLogadoService.EhAdmin = ehAdmin;
+                // Token válido, realiza o login automático
+                UsuarioLogadoService.IsLogged = true;
+                var ehAdminString = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "EhAdmin");
+                if (bool.TryParse(ehAdminString, out var ehAdmin))
+                {
+                    UsuarioLogadoService.EhAdmin = ehAdmin;
+                }
+
+                HttpClient.DefaultRequestHeaders.Clear();
+                HttpClient.DefaultRequestHeaders.Add("authorization", $"bearer {token}");
+                NavigationManager.NavigateTo("/ocorrencias");
             }
-
-
-            HttpClient.DefaultRequestHeaders.Clear();
-            HttpClient.DefaultRequestHeaders.Add("authorization", $"bearer {token}");
-
-            NavigationManager.NavigateTo("/ocorrencias");
+            else
+            {
+                // Se o token for inválido, remove-o do localStorage e navega para a tela de login
+                await JSRuntime.InvokeVoidAsync("localStorage.removeItem", "access_token");
+                await JSRuntime.InvokeVoidAsync("localStorage.removeItem", "EhAdmin");
+                isLoading = false;
+                StateHasChanged();
+                NavigationManager.NavigateTo("/");
+            }
         }
-
-        StateHasChanged();
     }
 
+    // Função de verificação de validade do token
+    private async Task<bool> VerificarTokenValido(string token)
+    {
+        try
+        {
+            // Adiciona o token ao cabeçalho de autorização
+            HttpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+
+            // Faz a requisição para a API que valida o token
+            var response = await HttpClient.GetAsync("verificar-token");
+
+            if (response.IsSuccessStatusCode)
+            {
+                // Se a resposta for 200 OK, o token é válido
+                return true;
+            }
+            else
+            {
+                // Se não for sucesso, loga o código de erro
+                Console.WriteLine($"Erro na verificação do token: {response.StatusCode}");
+                return false;
+            }
+        }
+        catch (Exception ex)
+        {
+            // Se ocorrer erro, loga o erro
+            Console.WriteLine($"Erro ao verificar token: {ex.Message}");
+            return false;
+        }
+    }
+
+    // Função de login
     public async Task Autenticar()
     {
         if (string.IsNullOrEmpty(usuarioAutenticarRequest.EmailLogin) || string.IsNullOrEmpty(usuarioAutenticarRequest.Senha))
@@ -239,15 +281,11 @@
             {
                 // Atualiza o serviço UsuarioLogado
                 UsuarioLogadoService.IsLogged = true;
-                UsuarioLogadoService.EhAdmin = usuarioAutenticarResponse.EhAdmin; // Define se o usuário é admin com base na resposta
-
-                if (UsuarioLogadoService.EhAdmin) {
-                // Após autenticação bem-sucedida
-                    await JSRuntime.InvokeVoidAsync("localStorage.setItem", "EhAdmin", usuarioAutenticarResponse.EhAdmin.ToString());
-                }
+                UsuarioLogadoService.EhAdmin = usuarioAutenticarResponse.EhAdmin;
 
                 // Armazenar o token no localStorage
                 await JSRuntime.InvokeVoidAsync("localStorage.setItem", "access_token", usuarioAutenticarResponse.AccessToken);
+                await JSRuntime.InvokeVoidAsync("localStorage.setItem", "EhAdmin", usuarioAutenticarResponse.EhAdmin.ToString());
 
                 HttpClient.DefaultRequestHeaders.Clear();
                 HttpClient.DefaultRequestHeaders.Add("authorization", $"bearer {usuarioAutenticarResponse.AccessToken}");

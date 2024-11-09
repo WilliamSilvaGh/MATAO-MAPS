@@ -78,8 +78,9 @@ app.MapGet("/ocorrencia/listar", (MataoMapsContext context, ClaimsPrincipal user
                 FotoBase64 = ocorrencia.FotoBase64,
                 Endereco = ocorrencia.Endereco,
                 Descricao = ocorrencia.Descricao,
-                Resolucao = ocorrencia.Resolucao,
                 DataResolucao = ocorrencia.DataResolucao,
+                FotoResolucao = ocorrencia.FotoResolucao,
+                Resolucao = ocorrencia.Resolucao,
                 Status = ocorrencia.Status
             });
 
@@ -96,8 +97,9 @@ app.MapGet("/ocorrencia/listar", (MataoMapsContext context, ClaimsPrincipal user
             FotoBase64 = ocorrencia.FotoBase64,
             Endereco = ocorrencia.Endereco,
             Descricao = ocorrencia.Descricao,
-            Resolucao = ocorrencia.Resolucao,
             DataResolucao = ocorrencia.DataResolucao,
+            FotoResolucao = ocorrencia.FotoResolucao,
+            Resolucao = ocorrencia.Resolucao,
             Status = ocorrencia.Status
         }
         );
@@ -136,8 +138,9 @@ app.MapGet("/ocorrencia/{ocorrenciaId}", (MataoMapsContext context, Guid ocorren
         FotoBase64 = ocorrencia.FotoBase64,
         Endereco = ocorrencia.Endereco,
         Descricao = ocorrencia.Descricao,
+                DataResolucao = ocorrencia.DataResolucao,
+                FotoResolucao = ocorrencia.FotoResolucao,
         Resolucao = ocorrencia.Resolucao,
-        DataResolucao = ocorrencia.DataResolucao,
         Status = ocorrencia.Status
     };
 
@@ -238,7 +241,7 @@ app.MapPut("/ocorrencia/encerrar", (MataoMapsContext context, ClaimsPrincipal us
             if (ocorrencia is null)
                 return Results.BadRequest("Ocorrencia não Localizada.");
 
-            ocorrencia.Encerrar(usuarioLogadoId, ocorrenciaEncerrarRequest.Resolucao, ocorrenciaEncerrarRequest.DataResolucao);
+            ocorrencia.Encerrar(usuarioLogadoId, ocorrenciaEncerrarRequest.DataResolucao, ocorrenciaEncerrarRequest.FotoResolucao, ocorrenciaEncerrarRequest.Resolucao);
             context.OcorrenciaSet.Update(ocorrencia);
             context.SaveChanges();
 
@@ -731,7 +734,7 @@ app.MapPost("/autenticar", (MataoMapsContext context, UsuarioAutenticarRequest u
         issuer: "matao.maps",
         audience: "matao.maps",
         claims: claims,
-        expires: DateTime.Now.AddDays(1),
+        expires: DateTime.Now.AddDays(30),
         signingCredentials: creds
     );
 
@@ -750,6 +753,45 @@ app.MapPost("/autenticar", (MataoMapsContext context, UsuarioAutenticarRequest u
         return operation;
     })
     .WithTags("Segurança");
+
+app.MapGet("/verificar-token", (HttpContext httpContext) =>
+{
+    var token = httpContext.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
+
+    if (string.IsNullOrEmpty(token))
+        return Results.BadRequest("Token não fornecido.");
+
+    try
+    {
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("{469e8343-8fa6-42b9-9553-2f6e182c21fa}"));
+        var handler = new JwtSecurityTokenHandler();
+        var principal = handler.ValidateToken(token, new TokenValidationParameters
+        {
+            IssuerSigningKey = key,
+            ValidIssuer = "matao.maps",
+            ValidAudience = "matao.maps",
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,  // Verifica a expiração do token
+            ClockSkew = TimeSpan.Zero // Ignora a tolerância de tempo de 5 minutos padrão para expiração
+        }, out var validatedToken);
+
+        // Se o token for válido, retorna uma resposta de sucesso
+        return Results.Ok(new { Message = "Token válido." });
+    }
+    catch (Exception ex)
+    {
+        // Se o token for inválido ou expirado, retorna 401
+        return Results.BadRequest("Token inválido ou expirado.");
+    }
+})
+.WithOpenApi(operation =>
+{
+    operation.Description = "Endpoint para Verificar a Validade de um Token JWT";
+    operation.Summary = "Verificar Token";
+    return operation;
+})
+.WithTags("Segurança");
 
 #endregion
 

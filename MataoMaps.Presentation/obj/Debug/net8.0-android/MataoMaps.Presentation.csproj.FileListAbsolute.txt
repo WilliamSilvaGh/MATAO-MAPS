@@ -198,6 +198,7 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Mic
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.AspNetCore.Components.WebView.Maui.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.AspNetCore.Components.WebView.Maui.pdb
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.AspNetCore.Metadata.dll
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.AspNetCore.WebUtilities.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.CSharp.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.DotNet.PlatformAbstractions.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.Extensions.Configuration.Abstractions.dll
@@ -230,6 +231,7 @@ C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Mic
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.Maui.Graphics.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.Maui.Graphics.pdb
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.Maui.pdb
+C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.Net.Http.Headers.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.VisualBasic.Core.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.VisualBasic.dll
 C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-android\android\assets\Microsoft.Win32.Primitives.dll

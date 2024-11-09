@@ -61,6 +61,7 @@
         <PackageReference Include="Blazorise" Version="1.6.2" />
         <PackageReference Include="itext7" Version="8.0.5" />
         <PackageReference Include="leaflet" Version="0.7.3" />
+        <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="8.0.10" />
         <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
         <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
         <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Maui" Version="$(MauiVersion)" />

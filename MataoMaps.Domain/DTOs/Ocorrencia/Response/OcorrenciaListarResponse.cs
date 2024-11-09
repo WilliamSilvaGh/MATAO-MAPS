@@ -13,8 +13,9 @@ namespace MataoMaps.Domain.DTOs.Ocorrencia.Response
         public string FotoBase64 { get; set; }
         public string Endereco { get; set; }
         public string Descricao { get; set; }
-        public string Resolucao { get; set; }
         public DateOnly DataResolucao { get; set; }
+        public string FotoResolucao { get; set; }
+        public string Resolucao { get; set; }
 
         [JsonConverter(typeof(EnumStatusConverter))]
         public EnumStatus Status {  get; set; }
