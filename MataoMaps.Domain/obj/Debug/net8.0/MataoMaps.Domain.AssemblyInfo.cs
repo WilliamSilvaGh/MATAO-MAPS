@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MataoMaps.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84c95d5e6fb5f28d858603df66c58e99933200eb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f201eac25c62cdfc3da21d95536c13d8dd09d09")]
 [assembly: System.Reflection.AssemblyProductAttribute("MataoMaps.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MataoMaps.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

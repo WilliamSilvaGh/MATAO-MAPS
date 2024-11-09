@@ -31,12 +31,12 @@
                 <h4 style="color: black;">Gerar Relatório PDF</h4>
                 <div class="form-group">
                     <label for="startDate">Data Inicial:</label>
-                    <input type="date" id="startDate" @bind="startDate" class="form-control" />
+                    <RadzenDatePicker AllowInput="false" AllowClear="true" @bind-Value="@startDate" DateFormat="dd/MM/yyyy" Name="Data" class="w-100" />
                 </div>
                 <br />
                 <div class="form-group">
                     <label for="endDate">Data Final:</label>
-                    <input type="date" id="endDate" @bind="endDate" class="form-control" />
+                    <RadzenDatePicker AllowInput="false" AllowClear="true" @bind-Value="@endDate" DateFormat="dd/MM/yyyy" Name="Data" class="w-100" />
                 </div>
                 <button class="btn-submit" @onclick="GerarRelatorio">
                     @if (isLoading)
@@ -117,6 +117,11 @@
             <img src="@($"data:image/png;base64,{selectedOcorrencia?.FotoBase64}")" class="modal-image" />
             @if (UsuarioLogadoService.EhAdmin && selectedOcorrencia?.Resolucao == null)
             {
+                <label for="startDate">Data da Resolução:</label>
+                <RadzenDatePicker AllowInput="false" AllowClear="true" @bind-Value="@dataResolucao" DateFormat="dd/MM/yyyy" Name="Data" class="w-100" />
+
+                <br />
+
                 <textarea @bind="@resolution" placeholder="Digite a resolução aqui..."></textarea>
                 <button class="btn-submit" @onclick="SubmitResolution">
                     @if (isLoading)
@@ -135,6 +140,7 @@
             {
                 if (selectedOcorrencia?.Resolucao != null)
                 {
+                    <p style="color: black;"><strong>Data da Resolução:</strong> @selectedOcorrencia?.DataResolucao</p>
                     <p style="color: black;"><strong>Resolução:</strong> @selectedOcorrencia?.Resolucao</p>
                 }
                 else
@@ -356,6 +362,7 @@
     private bool isLoading = false;
     private OcorrenciaListarResponse selectedOcorrencia;
     private string resolution;
+    private DateOnly dataResolucao = DateOnly.FromDateTime(DateTime.Now);
     private bool isRelatorioModalOpen = false;
     private DateOnly startDate = DateOnly.FromDateTime(DateTime.Now.AddMonths(-1)); // Definir um valor padrão
     private DateOnly endDate = DateOnly.FromDateTime(DateTime.Now);
@@ -442,10 +449,11 @@
         }
 
         var requestContent = new OcorrenciaEncerrarRequest
-            {
+        {
                 Id = selectedOcorrencia.Id,
-                Resolucao = resolution
-            };
+                Resolucao = resolution,
+                DataResolucao = dataResolucao
+        };
 
         var response = await HttpClient.PutAsJsonAsync("/ocorrencia/encerrar", requestContent);
 

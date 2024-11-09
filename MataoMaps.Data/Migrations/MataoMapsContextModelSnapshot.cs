@@ -31,6 +31,9 @@ namespace MataoMaps.Data.Migrations
                     b.Property<DateOnly>("Data")
                         .HasColumnType("date");
 
+                    b.Property<DateOnly>("DataResolucao")
+                        .HasColumnType("date");
+
                     b.Property<string>("Descricao")
                         .IsRequired()
                         .HasMaxLength(1000)

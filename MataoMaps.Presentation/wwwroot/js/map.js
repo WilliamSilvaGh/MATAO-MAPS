@@ -3,7 +3,7 @@ var userMarker; // Marcador do usuário
 var userCircle; // Círculo de precisão
 
 // Inicializa o mapa
-function initializeMap() {
+function initializeMap() { 
     // Inicializa o mapa com coordenadas padrão
     map = L.map('map').setView([-21.6034, -48.3665], 13); // Coordenadas iniciais
     console.log("Mapa inicializado com coordenadas:", [-21.6034, -48.3665]);
@@ -28,18 +28,6 @@ function initializeMap() {
             userMarker.setLatLng([position.Latitude, position.Longitude]);
         }
 
-        // Verifica se o círculo de precisão já existe. Caso contrário, cria um novo.
-        if (!userCircle) {
-            userCircle = L.circle([position.Latitude, position.Longitude], {
-                color: 'blue',
-                fillColor: 'blue',
-                fillOpacity: 0.2,
-                radius: 300
-            }).addTo(map);
-        } else {
-            // Atualiza a posição do círculo
-            userCircle.setLatLng([position.Latitude, position.Longitude]);
-        }
     }).catch(() => {
         alert('Erro ao obter a localização. Você pode tentar habilitar a localização manualmente.');
     });
@@ -64,6 +52,54 @@ function updateUserLocation() {
         } else {
             reject(new Error("Geolocalização não suportada")); // Caso geolocalização não seja suportada
         }
+    });
+}
+
+// Função para criar ou atualizar o círculo para a ocorrência
+function createOcorrenciaCircle(ocorrencia) {
+    var lat = ocorrencia.latitude;  // Coordenadas da ocorrência
+    var lon = ocorrencia.longitude;
+    var descricao = ocorrencia.descricao;
+    var status = ocorrencia.status;  // Status da ocorrência
+    var resolucao = ocorrencia.resolucao;  // Resolução (resposta do administrador)
+
+    // Log do status para debug
+    console.log("Status da ocorrência:", status);  // Adicionado para verificar o valor exato de 'status'
+
+    // Verifica o status da ocorrência e define a cor do círculo
+    var circleColor = 'red';
+    var popupContent = descricao;
+
+    // Verificando o status, e ajustando a cor e o conteúdo do popup
+    if (status === 'concluido' || status === 'Concluido' || status === 1) {
+        // Se o status for 'concluido', muda a cor do círculo para verde
+        circleColor = 'green';
+        // Exibe a resolução (resposta do administrador) no popup
+        popupContent = `<strong>Resposta do Administrador:</strong><br>${resolucao || 'Sem resposta disponível'}`;
+    }
+
+    // Verifique se o marcador já existe, se não, cria um novo círculo
+    if (!ocorrencia.circle) {
+        // Criação do círculo (se ainda não existir)
+        ocorrencia.circle = L.circle([lat, lon], {
+            color: circleColor,
+            fillColor: circleColor,
+            fillOpacity: 0.4,
+            radius: 200
+        }).addTo(map);
+    } else {
+        // Se o círculo já existir, apenas atualize a cor e o conteúdo do popup
+        ocorrencia.circle.setLatLng([lat, lon]);  // Atualiza as coordenadas
+        ocorrencia.circle.setStyle({ color: circleColor, fillColor: circleColor });  // Atualiza a cor
+    }
+
+    // Adiciona o popup com a descrição ou resolução do administrador
+    ocorrencia.circle.on('mouseover', function () {
+        this.bindPopup(popupContent).openPopup();
+    });
+
+    ocorrencia.circle.on('mouseout', function () {
+        this.closePopup();
     });
 }
 
@@ -92,7 +128,7 @@ function fetchOcorrencias() {
                 // Verifique se as coordenadas estão presentes no formato esperado
                 if (ocorrencia.latitude && ocorrencia.longitude) {
                     console.log("Coordenadas da ocorrência:", ocorrencia.latitude, ocorrencia.longitude); // Log das coordenadas
-                    createOcorrenciaCircle(ocorrencia);  // Cria a bolinha vermelha para a ocorrência
+                    createOcorrenciaCircle(ocorrencia);  // Cria ou atualiza a bolinha para a ocorrência
                 } else {
                     console.error("Coordenadas inválidas para a ocorrência:", ocorrencia);
                 }
@@ -101,32 +137,6 @@ function fetchOcorrencias() {
         .catch(error => console.error('Erro ao buscar ocorrências:', error));
 }
 
-// Função para criar o círculo para a ocorrência
-function createOcorrenciaCircle(ocorrencia) {
-    var lat = ocorrencia.latitude;  // Coordenadas da ocorrência
-    var lon = ocorrencia.longitude;
-    var descricao = ocorrencia.descricao;
-
-    // Verifica as coordenadas da ocorrência
-    console.log("Criando círculo para ocorrência com coordenadas: Latitude =", lat, ", Longitude =", lon);
-    console.log("Descrição da ocorrência:", descricao);
-
-    var circle = L.circle([lat, lon], {
-        color: 'red',
-        fillColor: 'red',
-        fillOpacity: 0.4,
-        radius: 200
-    }).addTo(map);
-
-    // Adiciona o texto da descrição no popup
-    circle.on('mouseover', function () {
-        this.bindPopup(`<strong>${descricao}</strong>`).openPopup();
-    });
-
-    circle.on('mouseout', function () {
-        this.closePopup();
-    });
-}
 
 // Função para recarregar o mapa
 function reloadMap() {

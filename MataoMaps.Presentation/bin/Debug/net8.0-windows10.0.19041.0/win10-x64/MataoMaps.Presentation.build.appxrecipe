@@ -250,6 +250,12 @@
     <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.44\lib\net8.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\lib\net8.0\Blazorise.dll">
+      <PackagePath>Blazorise.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise.licensing\1.2.0\lib\net8.0\Blazorise.Licensing.dll">
+      <PackagePath>Blazorise.Licensing.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\William\.nuget\packages\itext\8.0.5\lib\netstandard2.0\itext.barcodes.dll">
       <PackagePath>itext.barcodes.dll</PackagePath>
     </AppxPackagedFile>
@@ -286,16 +292,16 @@
     <AppxPackagedFile Include="C:\Users\William\.nuget\packages\itext.commons\8.0.5\lib\netstandard2.0\itext.commons.dll">
       <PackagePath>itext.commons.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.aspnetcore.authorization\8.0.0\lib\net8.0\Microsoft.AspNetCore.Authorization.dll">
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.aspnetcore.authorization\8.0.10\lib\net8.0\Microsoft.AspNetCore.Authorization.dll">
       <PackagePath>Microsoft.AspNetCore.Authorization.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.aspnetcore.components\8.0.0\lib\net8.0\Microsoft.AspNetCore.Components.dll">
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.aspnetcore.components\8.0.10\lib\net8.0\Microsoft.AspNetCore.Components.dll">
       <PackagePath>Microsoft.AspNetCore.Components.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.aspnetcore.components.forms\8.0.0\lib\net8.0\Microsoft.AspNetCore.Components.Forms.dll">
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.aspnetcore.components.forms\8.0.10\lib\net8.0\Microsoft.AspNetCore.Components.Forms.dll">
       <PackagePath>Microsoft.AspNetCore.Components.Forms.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.aspnetcore.components.web\8.0.0\lib\net8.0\Microsoft.AspNetCore.Components.Web.dll">
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.aspnetcore.components.web\8.0.10\lib\net8.0\Microsoft.AspNetCore.Components.Web.dll">
       <PackagePath>Microsoft.AspNetCore.Components.Web.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.aspnetcore.components.webview\8.0.0\lib\net8.0\Microsoft.AspNetCore.Components.WebView.dll">
@@ -304,7 +310,7 @@
     <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.aspnetcore.components.webview.maui\8.0.82\lib\net8.0-windows10.0.19041\Microsoft.AspNetCore.Components.WebView.Maui.dll">
       <PackagePath>Microsoft.AspNetCore.Components.WebView.Maui.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.aspnetcore.metadata\8.0.0\lib\net8.0\Microsoft.AspNetCore.Metadata.dll">
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.aspnetcore.metadata\8.0.10\lib\net8.0\Microsoft.AspNetCore.Metadata.dll">
       <PackagePath>Microsoft.AspNetCore.Metadata.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.dotnet.platformabstractions\1.1.0\lib\netstandard1.3\Microsoft.DotNet.PlatformAbstractions.dll">
@@ -325,10 +331,10 @@
     <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.extensions.configuration.json\8.0.0\lib\net8.0\Microsoft.Extensions.Configuration.Json.dll">
       <PackagePath>Microsoft.Extensions.Configuration.Json.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.extensions.dependencyinjection\8.0.0\lib\net8.0\Microsoft.Extensions.DependencyInjection.dll">
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.extensions.dependencyinjection\8.0.1\lib\net8.0\Microsoft.Extensions.DependencyInjection.dll">
       <PackagePath>Microsoft.Extensions.DependencyInjection.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\8.0.0\lib\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll">
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\8.0.2\lib\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll">
       <PackagePath>Microsoft.Extensions.DependencyInjection.Abstractions.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.extensions.dependencymodel\1.1.0\lib\netstandard1.6\Microsoft.Extensions.DependencyModel.dll">
@@ -352,13 +358,13 @@
     <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.extensions.logging\8.0.0\lib\net8.0\Microsoft.Extensions.Logging.dll">
       <PackagePath>Microsoft.Extensions.Logging.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.extensions.logging.abstractions\8.0.0\lib\net8.0\Microsoft.Extensions.Logging.Abstractions.dll">
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.extensions.logging.abstractions\8.0.2\lib\net8.0\Microsoft.Extensions.Logging.Abstractions.dll">
       <PackagePath>Microsoft.Extensions.Logging.Abstractions.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.extensions.logging.debug\8.0.0\lib\net8.0\Microsoft.Extensions.Logging.Debug.dll">
       <PackagePath>Microsoft.Extensions.Logging.Debug.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.extensions.options\8.0.0\lib\net8.0\Microsoft.Extensions.Options.dll">
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.extensions.options\8.0.2\lib\net8.0\Microsoft.Extensions.Options.dll">
       <PackagePath>Microsoft.Extensions.Options.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.extensions.primitives\8.0.0\lib\net8.0\Microsoft.Extensions.Primitives.dll">
@@ -370,7 +376,7 @@
     <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.io.recyclablememorystream\3.0.1\lib\net6.0\Microsoft.IO.RecyclableMemoryStream.dll">
       <PackagePath>Microsoft.IO.RecyclableMemoryStream.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.jsinterop\8.0.0\lib\net8.0\Microsoft.JSInterop.dll">
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.jsinterop\8.0.10\lib\net8.0\Microsoft.JSInterop.dll">
       <PackagePath>Microsoft.JSInterop.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.maui.controls.compatibility\8.0.82\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.dll">
@@ -579,6 +585,114 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\MataoMaps.Presentation.bundle.scp.css">
       <PackagePath>wwwroot\MataoMaps.Presentation.bundle.scp.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\blazorise.css">
+      <PackagePath>wwwroot\_content\Blazorise\blazorise.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\blazorise.min.css">
+      <PackagePath>wwwroot\_content\Blazorise\blazorise.min.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\breakpoint.js">
+      <PackagePath>wwwroot\_content\Blazorise\breakpoint.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\button.js">
+      <PackagePath>wwwroot\_content\Blazorise\button.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\closable.js">
+      <PackagePath>wwwroot\_content\Blazorise\closable.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\colorPicker.js">
+      <PackagePath>wwwroot\_content\Blazorise\colorPicker.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\datePicker.js">
+      <PackagePath>wwwroot\_content\Blazorise\datePicker.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\dragDrop.js">
+      <PackagePath>wwwroot\_content\Blazorise\dragDrop.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\dropdown.js">
+      <PackagePath>wwwroot\_content\Blazorise\dropdown.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\fileEdit.js">
+      <PackagePath>wwwroot\_content\Blazorise\fileEdit.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\filePicker.js">
+      <PackagePath>wwwroot\_content\Blazorise\filePicker.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\floatingUi.js">
+      <PackagePath>wwwroot\_content\Blazorise\floatingUi.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\inputMask.js">
+      <PackagePath>wwwroot\_content\Blazorise\inputMask.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\io.js">
+      <PackagePath>wwwroot\_content\Blazorise\io.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\memoEdit.js">
+      <PackagePath>wwwroot\_content\Blazorise\memoEdit.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\numericPicker.js">
+      <PackagePath>wwwroot\_content\Blazorise\numericPicker.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\observer.js">
+      <PackagePath>wwwroot\_content\Blazorise\observer.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\table.js">
+      <PackagePath>wwwroot\_content\Blazorise\table.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\textEdit.js">
+      <PackagePath>wwwroot\_content\Blazorise\textEdit.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\theme.js">
+      <PackagePath>wwwroot\_content\Blazorise\theme.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\timePicker.js">
+      <PackagePath>wwwroot\_content\Blazorise\timePicker.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\tooltip.js">
+      <PackagePath>wwwroot\_content\Blazorise\tooltip.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\utilities.js">
+      <PackagePath>wwwroot\_content\Blazorise\utilities.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\validators\DateTimeMaskValidator.js">
+      <PackagePath>wwwroot\_content\Blazorise\validators\DateTimeMaskValidator.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\validators\NoValidator.js">
+      <PackagePath>wwwroot\_content\Blazorise\validators\NoValidator.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\validators\NumericMaskValidator.js">
+      <PackagePath>wwwroot\_content\Blazorise\validators\NumericMaskValidator.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\validators\RegExMaskValidator.js">
+      <PackagePath>wwwroot\_content\Blazorise\validators\RegExMaskValidator.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\vendors\autoNumeric.js">
+      <PackagePath>wwwroot\_content\Blazorise\vendors\autoNumeric.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\vendors\Behave.js">
+      <PackagePath>wwwroot\_content\Blazorise\vendors\Behave.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\vendors\flatpickr.js">
+      <PackagePath>wwwroot\_content\Blazorise\vendors\flatpickr.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\vendors\floating-ui.js">
+      <PackagePath>wwwroot\_content\Blazorise\vendors\floating-ui.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\vendors\floating-ui-core.js">
+      <PackagePath>wwwroot\_content\Blazorise\vendors\floating-ui-core.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\vendors\inputmask.js">
+      <PackagePath>wwwroot\_content\Blazorise\vendors\inputmask.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\vendors\jsencrypt.js">
+      <PackagePath>wwwroot\_content\Blazorise\vendors\jsencrypt.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\vendors\Pickr.js">
+      <PackagePath>wwwroot\_content\Blazorise\vendors\Pickr.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\William\.nuget\packages\blazorise\1.6.2\staticwebassets\vendors\sha512.js">
+      <PackagePath>wwwroot\_content\Blazorise\vendors\sha512.js</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\William\.nuget\packages\radzen.blazor\5.1.11\staticwebassets\css\dark.css">
       <PackagePath>wwwroot\_content\Radzen.Blazor\css\dark.css</PackagePath>

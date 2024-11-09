@@ -79,6 +79,7 @@ app.MapGet("/ocorrencia/listar", (MataoMapsContext context, ClaimsPrincipal user
                 Endereco = ocorrencia.Endereco,
                 Descricao = ocorrencia.Descricao,
                 Resolucao = ocorrencia.Resolucao,
+                DataResolucao = ocorrencia.DataResolucao,
                 Status = ocorrencia.Status
             });
 
@@ -96,6 +97,7 @@ app.MapGet("/ocorrencia/listar", (MataoMapsContext context, ClaimsPrincipal user
             Endereco = ocorrencia.Endereco,
             Descricao = ocorrencia.Descricao,
             Resolucao = ocorrencia.Resolucao,
+            DataResolucao = ocorrencia.DataResolucao,
             Status = ocorrencia.Status
         }
         );
@@ -135,6 +137,7 @@ app.MapGet("/ocorrencia/{ocorrenciaId}", (MataoMapsContext context, Guid ocorren
         Endereco = ocorrencia.Endereco,
         Descricao = ocorrencia.Descricao,
         Resolucao = ocorrencia.Resolucao,
+        DataResolucao = ocorrencia.DataResolucao,
         Status = ocorrencia.Status
     };
 
@@ -235,7 +238,7 @@ app.MapPut("/ocorrencia/encerrar", (MataoMapsContext context, ClaimsPrincipal us
             if (ocorrencia is null)
                 return Results.BadRequest("Ocorrencia não Localizada.");
 
-            ocorrencia.Encerrar(ocorrenciaEncerrarRequest.Resolucao, usuarioLogadoId);
+            ocorrencia.Encerrar(usuarioLogadoId, ocorrenciaEncerrarRequest.Resolucao, ocorrenciaEncerrarRequest.DataResolucao);
             context.OcorrenciaSet.Update(ocorrencia);
             context.SaveChanges();
 

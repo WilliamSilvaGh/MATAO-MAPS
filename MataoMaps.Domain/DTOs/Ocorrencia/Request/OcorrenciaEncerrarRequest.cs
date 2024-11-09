@@ -4,5 +4,6 @@
     {
         public Guid Id { get; set; }
         public string Resolucao { get; set; }
+        public DateOnly DataResolucao { get; set; }
     }
 }

@@ -11,7 +11,7 @@ namespace MataoMaps.Data.Configuration
         {
             builder.HasKey(p => p.Id);
 
-            builder.Property(P => P.Data)
+            builder.Property(p => p.Data)
                 .IsRequired();
 
             builder.Property(P => P.Latitude)
@@ -37,6 +37,9 @@ namespace MataoMaps.Data.Configuration
             builder.Property(p => p.Resolucao)
                 .HasMaxLength(1000)
                 .IsRequired(false);
+
+            builder.Property(p => p.DataResolucao)
+                .IsRequired();
 
             builder.Property(p => p.UsuarioId)
                 .IsRequired();
