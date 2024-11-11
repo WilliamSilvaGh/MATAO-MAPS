@@ -9,7 +9,7 @@
     <div class="sobre-fundo">
         <img src="/Images/logo.png" class="img-logo" />
         <div class="login">
-            <form>
+            <form @onsubmit="() => StateHasChanged()">
                 <div class="icone-input">
                     <i class="fa-solid fa-user-large"></i>
                     <input type="email" placeholder="Email" @bind="usuarioAutenticarRequest.EmailLogin" />
@@ -165,7 +165,7 @@
         display: flex;
         justify-content: center; /* Centraliza horizontalmente */
         align-items: center; /* Centraliza verticalmente */
-        z-index: 9999;
+        z-index: 99999999999;
     }
 
 </style>

@@ -145,6 +145,11 @@ C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\MataoMaps.CrossCutting.dll
 C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\MataoMaps.Data.dll
 C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\MataoMaps.Domain.dll
+C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\appsettings.Development.json
+C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\appsettings.json
+C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\MataoMaps.API.deps.json
+C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\MataoMaps.API.runtimeconfig.json
+C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\MataoMaps.API.pdb
 C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\Humanizer.dll
 C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\MATAO-MAPS\MataoMaps.API\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
@@ -237,6 +242,9 @@ C:\MATAO-MAPS\MataoMaps.API\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiT
 C:\MATAO-MAPS\MataoMaps.API\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.MataoMaps.API.props
 C:\MATAO-MAPS\MataoMaps.API\obj\Debug\net8.0\staticwebassets.pack.json
 C:\MATAO-MAPS\MataoMaps.API\obj\Debug\net8.0\scopedcss\bundle\MataoMaps.API.styles.css
+C:\MATAO-MAPS\MataoMaps.API\obj\Debug\net8.0\MataoMap.DD7417F6.Up2Date
 C:\MATAO-MAPS\MataoMaps.API\obj\Debug\net8.0\MataoMaps.API.dll
 C:\MATAO-MAPS\MataoMaps.API\obj\Debug\net8.0\refint\MataoMaps.API.dll
 C:\MATAO-MAPS\MataoMaps.API\obj\Debug\net8.0\MataoMaps.API.pdb
+C:\MATAO-MAPS\MataoMaps.API\obj\Debug\net8.0\MataoMaps.API.genruntimeconfig.cache
+C:\MATAO-MAPS\MataoMaps.API\obj\Debug\net8.0\ref\MataoMaps.API.dll

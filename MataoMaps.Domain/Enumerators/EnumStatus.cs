@@ -6,8 +6,8 @@ namespace MataoMaps.Domain.Enumerators
 {
     public enum EnumStatus
     {
-        [Description("A Fazer")]
-        AFazer,
+        [Description("Fazer")]
+        Fazer,
 
         [Description("Em Andamento")]
         EmAndamento,

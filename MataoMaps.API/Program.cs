@@ -138,8 +138,8 @@ app.MapGet("/ocorrencia/{ocorrenciaId}", (MataoMapsContext context, Guid ocorren
         FotoBase64 = ocorrencia.FotoBase64,
         Endereco = ocorrencia.Endereco,
         Descricao = ocorrencia.Descricao,
-                DataResolucao = ocorrencia.DataResolucao,
-                FotoResolucao = ocorrencia.FotoResolucao,
+        DataResolucao = ocorrencia.DataResolucao,
+        FotoResolucao = ocorrencia.FotoResolucao,
         Resolucao = ocorrencia.Resolucao,
         Status = ocorrencia.Status
     };
@@ -258,6 +258,86 @@ app.MapPut("/ocorrencia/encerrar", (MataoMapsContext context, ClaimsPrincipal us
     {
         operation.Description = "Endpoint para Encerrar uma Ocorrencia";
         operation.Summary = "Encerrar Ocorrencia";
+        return operation;
+    })
+    .WithTags("Ocorrencias")
+    .RequireAuthorization();
+
+// Endpoint para excluir todas as ocorrências
+app.MapDelete("/ocorrencia/excluir-todas", (MataoMapsContext context, ClaimsPrincipal user) =>
+{
+    try
+    {
+        SetarDadosToken(user);
+
+        // Verifica se o usuário é administrador
+        if (usuarioLogadoEhAdmin)
+        {
+            var ocorrencias = context.OcorrenciaSet.ToList();  // Obtém todas as ocorrências
+
+            if (ocorrencias.Any())
+            {
+                context.OcorrenciaSet.RemoveRange(ocorrencias); // Remove todas as ocorrências
+                context.SaveChanges();
+
+                return Results.Ok("Todas as ocorrências foram excluídas com sucesso.");
+            }
+
+            return Results.NotFound("Nenhuma ocorrência encontrada para excluir.");
+        }
+        else
+        {
+            return Results.BadRequest("Somente administradores podem excluir todas as ocorrências.");
+        }
+    }
+    catch (Exception ex)
+    {
+        return Results.BadRequest($"Erro ao excluir as ocorrências: {ex.Message}");
+    }
+})
+    .WithOpenApi(operation =>
+    {
+        operation.Description = "Endpoint para excluir todas as ocorrências do sistema (somente admin).";
+        operation.Summary = "Excluir todas as ocorrências";
+        return operation;
+    })
+    .WithTags("Ocorrencias")
+    .RequireAuthorization();
+
+// Endpoint para excluir uma ocorrência por ID
+app.MapDelete("/ocorrencia/excluir/{ocorrenciaId}", (MataoMapsContext context, ClaimsPrincipal user, Guid ocorrenciaId) =>
+{
+    try
+    {
+        SetarDadosToken(user);
+
+        var ocorrencia = context.OcorrenciaSet.Find(ocorrenciaId);
+        if (ocorrencia is null)
+            return Results.NotFound("Ocorrência não encontrada.");
+
+        // Verifica se o usuário é o proprietário da ocorrência ou um administrador
+        if (usuarioLogadoId == ocorrencia.UsuarioId || usuarioLogadoEhAdmin)
+        {
+            context.OcorrenciaSet.Remove(ocorrencia);
+            context.SaveChanges();
+
+            return Results.Ok("Ocorrência excluída com sucesso.");
+        }
+        else
+        {
+            return Results.BadRequest("Você não tem permissão para excluir esta ocorrência.");
+        }
+    }
+    catch (Exception ex)
+    {
+        return Results.BadRequest($"Erro ao excluir a ocorrência: {ex.Message}");
+    }
+})
+    .WithOpenApi(operation =>
+    {
+        operation.Description = "Endpoint para excluir uma ocorrência específica com base no ID.";
+        operation.Summary = "Excluir uma ocorrência";
+        operation.Parameters[0].Description = "ID da Ocorrência";
         return operation;
     })
     .WithTags("Ocorrencias")

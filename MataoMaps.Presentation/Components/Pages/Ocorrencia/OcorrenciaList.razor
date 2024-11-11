@@ -75,8 +75,18 @@
                         <p><strong>Endereço:</strong> @ocorrencia.Endereco</p>
                         <p><strong>Usuário:</strong> @ocorrencia.UsuarioNome</p>
                         <p><strong>Status:</strong> @ocorrencia.Status</p>
-                        <p><strong>Data de Resolução:</strong> @ocorrencia.DataResolucao</p>
-                        <p><strong>Resolução:</strong> @ocorrencia.Resolucao</p>
+                        @if (ocorrencia.Status.ToString() == "Concluido")
+                        {
+                            <p><strong>Data de Resolução:</strong> @ocorrencia.DataResolucao</p>
+                        }
+                        @if (ocorrencia.Resolucao == null)
+                        {
+                            <p><strong>Resolução:</strong> Aguarde... Iremos resolver isso para você o quanto antes! </p>
+                        }
+                        else
+                        {
+                            <p><strong>Resolução:</strong> @ocorrencia.Resolucao</p>
+                        }
                     </div>
                 </div>
             }
@@ -130,9 +140,14 @@
                     </button>
                 </div>
             }
-
-            <h4>@selectedOcorrencia?.Descricao</h4>
-
+            @if (currentImageIndex == 0)
+            {
+                <h4>@selectedOcorrencia?.Descricao</h4>
+            }
+            else
+            {
+                <h4>@selectedOcorrencia?.Resolucao</h4>
+            }
             <img src="@GetCurrentImageUrl()" class="modal-image" />
 
             @if (UsuarioLogadoService.EhAdmin && selectedOcorrencia?.Resolucao == null)
@@ -219,7 +234,7 @@
         font-size: 1rem;
         border-radius: 5px;
         cursor: pointer;
-        margin: 5px;
+        margin: 10px;
         border-radius: 50%;
         opacity: 0.8;
     }
@@ -372,13 +387,13 @@
     }
 
     .modal-image {
-        width: 100%; /* A imagem vai ocupar 100% da largura disponível, mas com um tamanho máximo */
-        max-width: 500px; /* Defina a largura máxima desejada */
-        max-height: 40vh; /* A altura máxima será 80% da altura da tela */
-        height: auto; /* A altura da imagem será ajustada proporcionalmente */
+        width: 100%;
+        max-width: 600px;
+        max-height: 40vh;
+        height: auto;
         border-radius: 5px;
         margin-bottom: 1rem;
-        object-fit: contain; /* Garantir que a imagem não será distorcida e será redimensionada para caber */
+        object-fit: scale-down;
     }
 
 
@@ -688,6 +703,7 @@
 
     private void ShowUnresolved()
     {
+        currentPage = 1;
         isFilteringResolved = false; // Atualiza o estado do filtro
         FilterAndPaginateOcorrencias(); // Aplica o filtro e a paginação
         UpdateButtonClasses(false);

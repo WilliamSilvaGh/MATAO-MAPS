@@ -38,7 +38,7 @@ namespace MataoMaps.Domain.Entities
             FotoBase64 = fotoBase64;
             Endereco = endereco;
             Descricao = descricao;
-            Status = EnumStatus.AFazer;
+            Status = EnumStatus.Fazer;
             UsuarioId = usuarioId;
         }
 
