@@ -119,7 +119,7 @@
 
 @if (isModalOpen)
 {
-    <div class="modal-overlay" @onclick="CloseModal">
+    <div class="modal-overlay" @onclick="CloseModal" @onkeydown="HandleKeyDown" tabindex="-1" @ref="modalRef">
         <div class="modal-content" @onclick:stopPropagation>
             <button class="btn-close-modal" @onclick="CloseModal">
                 <i class="fas fa-times"></i>
@@ -550,6 +550,8 @@
 
     private int currentImageIndex = 0; // 0 = Foto do Problema, 1 = Foto da Resolução
     private string arrowPositionClass = "";
+    private ElementReference modalRef;
+    private bool shouldFocusModal;
 
     // Indica se as setas de navegação devem estar habilitadas
     private bool CanNavigate => selectedOcorrencia?.Status.ToString() == "Concluido";
@@ -580,6 +582,15 @@
         currentImageIndex = 0;
         isLoading = false;
         StateHasChanged();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (shouldFocusModal && isModalOpen) // Verifica se o modal está aberto antes de focar
+        {
+            shouldFocusModal = false;
+            await modalRef.FocusAsync();
+        }
     }
 
     private async Task LoadOcorrencias()
@@ -631,9 +642,17 @@
         }
     }
 
-
-
-
+    private void HandleKeyDown(KeyboardEventArgs e)
+    {
+        if (e.Key == "ArrowLeft")
+        {
+            ShowPreviousImage();
+        }
+        else if (e.Key == "ArrowRight")
+        {
+            ShowNextImage();
+        }
+    }
 
 
     private void FilterAndPaginateOcorrencias()
@@ -663,6 +682,11 @@
         selectedOcorrencia = ocorrencia;
         isModalOpen = true;
         resolution = "";
+
+        shouldFocusModal = true;
+
+        // Garante que o componente será renderizado novamente
+        StateHasChanged();
     }
 
     private void CloseModal()

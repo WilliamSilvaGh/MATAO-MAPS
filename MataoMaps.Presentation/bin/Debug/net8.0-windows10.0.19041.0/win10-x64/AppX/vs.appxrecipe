@@ -30,7 +30,7 @@
     <AppXManifest Include="C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-11-12T17:01:08.433</Modified>
+      <Modified>2024-11-12T20:31:05.732</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MataoMaps.Presentation.dll">
       <PackagePath>MataoMaps.Presentation.dll</PackagePath>
-      <Modified>2024-11-12T17:01:06.768</Modified>
+      <Modified>2024-11-12T20:31:05.217</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MataoMaps.Presentation.exe</PackagePath>
-      <Modified>2024-11-12T17:01:06.912</Modified>
+      <Modified>2024-11-12T20:31:05.232</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Presentation\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -768,7 +768,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\MATAO-MAPS\MataoMaps.Domain\bin\Debug\net8.0\MataoMaps.Domain.dll">
       <PackagePath>MataoMaps.Domain.dll</PackagePath>
-      <Modified>2024-11-12T14:03:10.680</Modified>
+      <Modified>2024-11-12T20:20:35.789</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\William\.nuget\packages\microsoft.maui.controls.compatibility\8.0.82\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
