@@ -127,17 +127,17 @@
             var response = await HttpClient.PostAsJsonAsync("usuario/adicionar", usuarioAdicionarRequest);
             if (response.IsSuccessStatusCode)
             {
-                // Exibir notificação de sucesso
+                NotificationService.Notify(NotificationSeverity.Success, "Administrador cadastrado com sucesso!");
                 NavigationManager.NavigateTo("/usuario/list");
             }
             else
             {
-                // Exibir notificação de erro
+                NotificationService.Notify(NotificationSeverity.Error, "Erro ao cadastrar o administrador");
             }
         }
         catch (Exception ex)
         {
-            // Exibir notificação de erro
+            NotificationService.Notify(NotificationSeverity.Error, "Erro ao cadastrar o administrador");
         }
         finally
         {

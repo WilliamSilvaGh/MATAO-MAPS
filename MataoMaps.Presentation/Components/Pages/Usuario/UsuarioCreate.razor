@@ -1,5 +1,6 @@
 ﻿@page "/usuario/cadastro"
 @using MataoMaps.Domain.DTOs.Usuario.Request
+@using System.Text.RegularExpressions
 
 <!-- Formulário de Cadastro -->
 <div class="align">
@@ -61,7 +62,7 @@
     }
 
     .align {
-        text-align: center; /* Alinha o conteúdo ao centro */
+        text-align: center;
         background-color: #FFFFFF;
         width: 100%;
         position: relative;
@@ -98,14 +99,17 @@
     public bool isLoading = false;
     public UsuarioAdicionarRequest usuarioAdicionarRequest = new UsuarioAdicionarRequest();
 
+    private string emailRegex = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";  // Certifique-se de que não está vazio ou nulo
+
     protected override void OnInitialized()
     {
         PageTitleService.SetPageTitle("CRIE SUA CONTA");
-        BackgroundColorService.SetBackgroundColor("#FFFFFF");    
+        BackgroundColorService.SetBackgroundColor("#FFFFFF");
     }
 
     public async Task AdicionarUsuario()
     {
+        // Validação de campos vazios
         if (string.IsNullOrEmpty(usuarioAdicionarRequest.Nome) ||
             string.IsNullOrEmpty(usuarioAdicionarRequest.EmailLogin) ||
             string.IsNullOrEmpty(usuarioAdicionarRequest.EmailLoginConfirmacao) ||
@@ -117,6 +121,58 @@
                     Severity = NotificationSeverity.Error,
                     Summary = "Erro",
                     Detail = "Por favor, preencha todos os campos.",
+                    Duration = 4000
+                });
+            return;
+        }
+
+        // Validação de e-mail
+        if (!string.IsNullOrEmpty(usuarioAdicionarRequest.EmailLogin) && !Regex.IsMatch(usuarioAdicionarRequest.EmailLogin, emailRegex))
+        {
+            NotificationService.Notify(new NotificationMessage
+                {
+                    Severity = NotificationSeverity.Error,
+                    Summary = "Erro",
+                    Detail = "O e-mail fornecido não é válido.",
+                    Duration = 4000
+                });
+            return;
+        }
+
+        // Validação de e-mail de confirmação
+        if (usuarioAdicionarRequest.EmailLogin != usuarioAdicionarRequest.EmailLoginConfirmacao)
+        {
+            NotificationService.Notify(new NotificationMessage
+                {
+                    Severity = NotificationSeverity.Error,
+                    Summary = "Erro",
+                    Detail = "Os e-mails precisam ser iguais.",
+                    Duration = 4000
+                });
+            return;
+        }
+
+        // Validação de senha
+        if (usuarioAdicionarRequest.Senha != usuarioAdicionarRequest.SenhaConfirmacao)
+        {
+            NotificationService.Notify(new NotificationMessage
+                {
+                    Severity = NotificationSeverity.Error,
+                    Summary = "Erro",
+                    Detail = "As senhas precisam ser iguais.",
+                    Duration = 4000
+                });
+            return;
+        }
+
+        // Validação do comprimento da senha
+        if (usuarioAdicionarRequest.Senha.Length < 6)
+        {
+            NotificationService.Notify(new NotificationMessage
+                {
+                    Severity = NotificationSeverity.Error,
+                    Summary = "Erro",
+                    Detail = "A senha deve ter pelo menos 6 caracteres.",
                     Duration = 4000
                 });
             return;
@@ -152,3 +208,4 @@
         isLoading = false;
     }
 }
+

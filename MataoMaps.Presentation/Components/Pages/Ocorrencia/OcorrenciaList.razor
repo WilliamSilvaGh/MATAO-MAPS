@@ -209,6 +209,7 @@
     </div>
 }
 
+<RadzenNotification />
 
 <style>
     .container {
@@ -590,7 +591,7 @@
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Erro ao carregar ocorrências: {ex.Message}");
+            NotificationService.Notify(NotificationSeverity.Error, "Erro ao carregar ocorrências");
         }
     }
 
@@ -741,7 +742,7 @@
         isLoading = true;
         if (string.IsNullOrWhiteSpace(resolution))
         {
-            Console.WriteLine("A resolução não pode estar vazia.");
+            NotificationService.Notify(NotificationSeverity.Error, "A resolução não pode estar vazia.");
             return;
         }
 
@@ -749,15 +750,14 @@
 
         if (response.IsSuccessStatusCode)
         {
-            Console.WriteLine($"Ocorrência {selectedOcorrencia?.Id} encerrada com sucesso.");
+            NotificationService.Notify(NotificationSeverity.Success, "Ocorrência encerrada com sucesso");
             await LoadOcorrencias();
             CloseModal();
             isLoading = false;
         }
         else
         {
-            var errorMessage = await response.Content.ReadAsStringAsync();
-            Console.WriteLine($"Falha ao encerrar a ocorrência. Detalhes: {errorMessage}");
+            NotificationService.Notify(NotificationSeverity.Error, "Falha ao encerrar a ocorrência.");
         }
     }
 
@@ -845,18 +845,21 @@
                 msgRelatorio = new MarkupString("Relatório gerado com sucesso. <strong>Verifique a pasta de downloads!</strong>");
                 msgRelatorioClass = "color: green; text-align: center; margin: 0; margin-top: 5px;";
                 isLoading = false;
+                NotificationService.Notify(NotificationSeverity.Success, "Relatório gerado com sucesso.");
             }
             else
             {
                 isLoading = false;
                 msgRelatorio = new MarkupString("Erro ao gerar o relatório.");
                 msgRelatorioClass = "color: red; text-align: center; margin: 0; margin-top: 5px;";
+                NotificationService.Notify(NotificationSeverity.Error, "Erro ao gerar o relatório.");
             }
         }
         catch (Exception ex)
         {
             msgRelatorio = new MarkupString("Erro ao gerar o relatório.");
             msgRelatorioClass = "color: red; text-align: center; margin: 0; margin-top: 5px;";
+            NotificationService.Notify(NotificationSeverity.Error, "Erro ao gerar o relatório.");
         }
     }
 }

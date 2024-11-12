@@ -1,9 +1,6 @@
 ﻿@page "/usuario/list"
 @using System.Text.Json
 
-@inject HttpClient HttpClient
-@inject NavigationManager NavigationManager
-
 <div class="container mt-4">
     <button class="btn mt-4 mb-3 rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; background-color: #E8E8E8;" @onclick="GoBack">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="32" fill="currentColor" class="bi bi-arrow-left d-flex justify-content-center" viewBox="0 0 16 16">
@@ -115,6 +112,10 @@
             var content = await response.Content.ReadAsStringAsync();
             var optionsJson = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
             _listUsuarioListarResponse = JsonSerializer.Deserialize<List<UsuarioListarResponse>>(content, optionsJson) ?? new List<UsuarioListarResponse>();
+            NotificationService.Notify(NotificationSeverity.Success, "Usuários carregados com sucesso!");
+        } else
+        {
+            NotificationService.Notify(NotificationSeverity.Error, "Erro ao carregar os usuários");
         }
     }
 
@@ -141,11 +142,11 @@
         {
             _listUsuarioListarResponse.RemoveAll(u => u.Id == usuarioIdExclusao);
             await CarregarUsuarios();
-            // Notificação de sucesso
+            NotificationService.Notify(NotificationSeverity.Success, "Usuário excluído com sucesso!");
         }
         else
         {
-            // Notificação de erro
+            NotificationService.Notify(NotificationSeverity.Error, "Erro ao excluir o usuário");
         }
         modalExclusao = false;
     }
@@ -171,11 +172,11 @@
             {
                 usuario.EhAdmin = !usuario.EhAdmin;
             }
-            // Notificação de sucesso
+            NotificationService.Notify(NotificationSeverity.Success, "Visibilidade do usuário alterada com sucesso!");
         }
         else
         {
-            // Notificação de erro
+            NotificationService.Notify(NotificationSeverity.Error, "Erro ao alterar a visibilidade do usuário");
         }
         modalEdicao = false;
     }
