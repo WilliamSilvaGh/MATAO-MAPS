@@ -148,7 +148,19 @@
             {
                 <h4>@selectedOcorrencia?.Resolucao</h4>
             }
-            <img src="@GetCurrentImageUrl()" class="modal-image" />
+
+            <div class="carrossel-ocorrencias">
+                <!-- Imagem do problema -->
+                <img src="@($"data:image/png;base64,{selectedOcorrencia?.FotoBase64}")"
+                     class="modal-image @(currentImageIndex == 0 ? "visible" : "hidden") @(arrowPositionClass)" />
+
+                <!-- Imagem da resolução (caso exista) -->
+                @if (selectedOcorrencia?.Status.ToString() == "Concluido")
+                {
+                    <img src="@($"data:image/png;base64,{selectedOcorrencia?.FotoResolucao}")"
+                         class="modal-image @(currentImageIndex == 1 ? "visible" : "hidden") @(arrowPositionClass)" />
+                }
+            </div>
 
             @if (UsuarioLogadoService.EhAdmin && selectedOcorrencia?.Resolucao == null)
             {
@@ -384,6 +396,12 @@
         max-width: 600px;
         width: 100%;
         color: black;
+        margin: 5;
+    }
+
+    .carrossel-ocorrencias {
+        display: flex;
+        position: relative;
     }
 
     .modal-image {
@@ -394,7 +412,45 @@
         border-radius: 5px;
         margin-bottom: 1rem;
         object-fit: scale-down;
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
     }
+
+        .modal-image.hidden {
+            visibility: hidden;
+            position: absolute;
+            opacity: 0;
+        }
+
+        /* Imagem que vai da direita */
+        .modal-image.hidden.right {
+            visibility: hidden;
+            position: absolute;
+            opacity: 0;
+            transform: translateX(30%); /* A imagem começa fora da tela à direita */
+        }
+
+        .modal-image.visible.right {
+            visibility: visible;
+            position: relative;
+            opacity: 1;
+            transform: translateX(0); /* A imagem se move para a posição original */
+        }
+
+        /* Imagem que vai da esquerda */
+        .modal-image.hidden.left {
+            visibility: hidden;
+            position: absolute;
+            opacity: 0;
+            transform: translateX(-30%); /* A imagem começa fora da tela à esquerda */
+        }
+
+        .modal-image.visible.left {
+            visibility: visible;
+            position: relative;
+            opacity: 1;
+            transform: translateX(0); /* A imagem se move para a posição original */
+        }
+
 
 
     .btn-close-modal {
@@ -492,6 +548,7 @@
     private string _ImageBase64Data;
 
     private int currentImageIndex = 0; // 0 = Foto do Problema, 1 = Foto da Resolução
+    private string arrowPositionClass = "";
 
     // Indica se as setas de navegação devem estar habilitadas
     private bool CanNavigate => selectedOcorrencia?.Status.ToString() == "Concluido";
@@ -517,10 +574,11 @@
         isLoading = true;
         PageTitleService.SetPageTitle("LISTAR OCORRÊNCIAS");
         BackgroundColorService.SetBackgroundColor("#FFFFFF");
-
         await LoadOcorrencias();
         ShowUnresolved();
+        currentImageIndex = 0;
         isLoading = false;
+        StateHasChanged();
     }
 
     private async Task LoadOcorrencias()
@@ -536,36 +594,46 @@
         }
     }
 
-    // Função para obter a URL da imagem atual
-    private string GetCurrentImageUrl()
-    {
-        if (selectedOcorrencia?.Status.ToString() != "Concluido" || currentImageIndex == 0)
-        {
-            return $"data:image/png;base64,{selectedOcorrencia?.FotoBase64}"; // Foto do problema
-        }
-        else
-        {
-            return $"data:image/png;base64,{selectedOcorrencia?.FotoResolucao}"; // Foto da resolução
-        }
-    }
-
-    // Função para mostrar a imagem anterior
-    private void ShowPreviousImage()
+    private async Task ShowPreviousImage()
     {
         if (CanNavigate)
         {
+            // Atualiza a direção da animação para a esquerda
+            arrowPositionClass = "left";
+
+            // Aguarda o tempo de animação (ajuste conforme necessário)
+            await Task.Delay(500); // Aumentando o delay para 1000 ms (1 segundo)
+
+            // Troca a imagem após o delay
             currentImageIndex = currentImageIndex == 0 ? 1 : 0;
+
+            // Força a renderização da UI após a troca de imagem
+            await InvokeAsync(StateHasChanged);
         }
     }
 
-    // Função para mostrar a próxima imagem
-    private void ShowNextImage()
+    private async Task ShowNextImage()
     {
         if (CanNavigate)
         {
+            // Atualiza a direção da animação para a direita
+            arrowPositionClass = "right";
+
+            // Aguarda o tempo de animação (ajuste conforme necessário)
+            await Task.Delay(500); // Aumentando o delay para 1000 ms (1 segundo)
+
+            // Troca a imagem após o delay
             currentImageIndex = currentImageIndex == 0 ? 1 : 0;
+
+            // Força a renderização da UI após a troca de imagem
+            await InvokeAsync(StateHasChanged);
         }
     }
+
+
+
+
+
 
     private void FilterAndPaginateOcorrencias()
     {
