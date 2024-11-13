@@ -21,6 +21,55 @@
 
     </div>
 
+    <div class="btn-open-filter">
+        <button @onclick="ToggleFiltro" class="open-filter">
+            <i class="fa-solid fa-filter"></i>
+        </button>
+    </div>
+
+
+    @if (modalFiltro)
+    {
+        <div class="align-date">
+            <div class="d-flex justify-content-center justify-content-sm-end">
+                <div class="container-filter">
+                    <!-- Dia -->
+                    <RadzenDropDown @bind-Value="selectedDay"
+                                    Data="@availableDays"
+                                    Style="width: 100%; max-width: 60px; margin-right: 5px;"
+                                    Placeholder="Selecione o Dia">
+                    </RadzenDropDown>
+
+                    <!-- Mês -->
+                    <RadzenDropDown @bind-Value="selectedMonth"
+                                    Data="@availableMonths"
+                                    TextProperty="MonthName"
+                                    ValueProperty="MonthNumber"
+                                    Style="width: 100%; max-width: 110px; margin-right: 5px;"
+                                    Placeholder="Selecione o Mês">
+                    </RadzenDropDown>
+
+                    <!-- Ano -->
+                    <RadzenDropDown @bind-Value="selectedYear"
+                                    Data="@availableYears"
+                                    Style="width: 100%; max-width: 90px;"
+                                    Placeholder="Selecione o Ano">
+                    </RadzenDropDown>
+
+                    <!-- Botão para aplicar o filtro -->
+                    <div class="btn-filter">
+                        <button @onclick="RemoveFilters" class="remove-filter @removeButtonClass" style="margin-right: 10px;">
+                            <i class="fa-solid fa-filter-circle-xmark"></i>
+                        </button>
+                        <button @onclick="ApplyFilters" class="apply-filter @applyButtonClass">
+                            <i class="fa-solid fa-filter"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
     @if (isRelatorioModalOpen)
     {
         <div class="modal-overlay" @onclick="CloseRelatorioModal">
@@ -212,11 +261,56 @@
 <RadzenNotification />
 
 <style>
+
+    .align-date {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .btn-open-filter {
+        display: flex;
+        justify-content: end;
+        margin-bottom: 5px;
+    }
+
+    .open-filter {
+        background-color: #3685cd;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        color: white;
+    }
+
+    .container-filter {
+        padding: 2rem;
+        border-radius: 8px;
+        background-color: #f0f4f8;
+        z-index: 1;
+        position: absolute;
+        -webkit-box-shadow: 1px 10px 65px -24px rgba(0,0,0,0.75);
+        -moz-box-shadow: 1px 10px 65px -24px rgba(0,0,0,0.75);
+        box-shadow: 1px 10px 65px -24px rgba(0,0,0,0.75);
+    }
+
+    .btn-filter {
+        display: flex;
+        justify-content: end;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
+
+        .btn-filter button {
+            background-color: #63abff;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            padding: 0.5rem 1rem;
+        }
+
     .container {
         max-width: 1200px;
         margin: 0 auto;
         padding: 2rem;
-        background-color: #ffffff;
         border-radius: 8px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
@@ -332,6 +426,10 @@
             background-color: #0056b3; /* Cor mais escura quando selecionado */
         }
 
+        .apply-filter.selected, .remove-filter.selected {
+            background-color: #0056b3; /* Cor mais escura quando selecionado */
+        }
+
     .ocorrencias-list {
         display: flex;
         flex-wrap: wrap;
@@ -422,13 +520,13 @@
             opacity: 0;
         }
 
-        /* Imagem que vai da direita */
-        .modal-image.hidden.right {
-            visibility: hidden;
-            position: absolute;
-            opacity: 0;
-            transform: translateX(30%); /* A imagem começa fora da tela à direita */
-        }
+            /* Imagem que vai da direita */
+            .modal-image.hidden.right {
+                visibility: hidden;
+                position: absolute;
+                opacity: 0;
+                transform: translateX(30%); /* A imagem começa fora da tela à direita */
+            }
 
         .modal-image.visible.right {
             visibility: visible;
@@ -451,8 +549,6 @@
             opacity: 1;
             transform: translateX(0); /* A imagem se move para a posição original */
         }
-
-
 
     .btn-close-modal {
         position: absolute;
@@ -561,6 +657,8 @@
 
     private string resolvedButtonClass = "";
     private string unresolvedButtonClass = "";
+    private string applyButtonClass = "";
+    private string removeButtonClass = "";
 
     private bool isFilteringResolved = false; // Para controlar o estado do filtro
 
@@ -572,8 +670,30 @@
     private MarkupString msgRelatorio = new MarkupString("");
     private string msgRelatorioClass = "";
 
+    private bool modalFiltro = false;
+
+    private List<int> availableYears = new();
+    private List<int> availableDays = new();
+    private List<MonthItem> availableMonths = new();  // Lista de meses como objetos MonthItem
+
+    private int selectedYear;
+    private int selectedMonth;  // Usado como número do mês selecionado
+    private int selectedDay;
+
     protected override async Task OnInitializedAsync()
     {
+        base.OnInitialized();
+
+        selectedYear = DateTime.Now.Year;
+        selectedMonth = DateTime.Now.Month;
+
+        availableYears = DateService.GetAvailableYears(2024); // Exemplo de ano inicial
+        availableDays = DateService.GetAvailableDays(selectedMonth, selectedYear);
+
+        // Preenche a lista de meses com MonthItem
+        availableMonths = DateService.GetMonths();
+        selectedDay = DateTime.Now.Day;
+
         isLoading = true;
         PageTitleService.SetPageTitle("LISTAR OCORRÊNCIAS");
         BackgroundColorService.SetBackgroundColor("#FFFFFF");
@@ -583,6 +703,93 @@
         isLoading = false;
         StateHasChanged();
     }
+
+    // Método que aplica os filtros
+    private void ApplyFilters()
+    {
+        // Começa com todas as ocorrências disponíveis
+        var filteredOcorrencias = todasOcorrencias ?? new List<OcorrenciaListarResponse>();
+
+        // Aplica o filtro de status baseado no isFilteringResolved
+        if (isFilteringResolved)
+        {
+            filteredOcorrencias = filteredOcorrencias.Where(o => o.Status.ToString() == "Concluido").ToList();
+        }
+        else
+        {
+            filteredOcorrencias = filteredOcorrencias.Where(o => o.Status.ToString() != "Concluido").ToList();
+        }
+
+        // Aplica o filtro de data se valores válidos forem selecionados
+        filteredOcorrencias = filteredOcorrencias.Where(o =>
+            o.Data.Day == selectedDay &&
+            o.Data.Month == selectedMonth &&
+            o.Data.Year == selectedYear).ToList();
+
+        // Atualiza a lista de ocorrências filtradas
+        ocorrencias = filteredOcorrencias;
+
+        // Atualiza as ocorrências filtradas e aplica paginação
+        totalItems = filteredOcorrencias.Count;
+        totalPages = totalItems > 0 ? (int)Math.Ceiling(totalItems / (double)itemsPerPage) : 0;
+
+        currentPage = 1; // Sempre começa na primeira página após aplicar os filtros
+        ocorrencias = filteredOcorrencias.Skip((currentPage - 1) * itemsPerPage)
+                                          .Take(itemsPerPage)
+                                          .ToList();
+
+        UpdateButtonFilterDateClasses(true);
+
+        // Força a renderização da UI
+        StateHasChanged();
+    }
+
+
+    public void RemoveFilters()
+    {
+        // Restaura a lista de ocorrências para a lista completa
+        ocorrencias = todasOcorrencias?.ToList() ?? new List<OcorrenciaListarResponse>();
+
+        // Reseta os valores selecionados dos filtros
+        selectedDay = DateTime.Now.Day;
+        selectedMonth = DateTime.Now.Month;
+        selectedYear = DateTime.Now.Year;
+
+        // Atualiza os dias disponíveis com base no mês e ano resetados
+        UpdateDays();
+
+        UpdateButtonFilterDateClasses(false);
+
+        FilterAndPaginateOcorrencias();
+
+        // Força a renderização da UI
+        StateHasChanged();
+    }
+
+
+    private void ToggleFiltro()
+    {
+        modalFiltro = !modalFiltro; // Alterna o valor de modalFiltro
+    }
+
+    private void OnMonthChanged(int month)
+    {
+        selectedMonth = month;
+        UpdateDays();
+    }
+
+    private void OnYearChanged(int year)
+    {
+        selectedYear = year;
+        UpdateDays();
+    }
+
+    private void UpdateDays()
+    {
+        availableDays = DateService.GetAvailableDays(selectedMonth, selectedYear);
+        StateHasChanged();
+    }
+
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -805,7 +1012,13 @@
     private void UpdateButtonClasses(bool isResolved)
     {
         resolvedButtonClass = isResolved ? "selected" : "";
-        unresolvedButtonClass = isResolved ? "" : "selected";
+        unresolvedButtonClass = isResolved ? "" : "selected"; 
+    }
+
+    private void UpdateButtonFilterDateClasses(bool isApply)
+    {
+        applyButtonClass = isApply ? "selected" : "";
+        removeButtonClass = isApply ? "" : "selected";
     }
 
     private void PreviousPage()
