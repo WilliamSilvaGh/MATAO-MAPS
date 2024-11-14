@@ -27,7 +27,6 @@
         </button>
     </div>
 
-
     @if (modalFiltro)
     {
         <div class="align-date">
@@ -426,9 +425,9 @@
             background-color: #0056b3; /* Cor mais escura quando selecionado */
         }
 
-        .apply-filter.selected, .remove-filter.selected {
-            background-color: #0056b3; /* Cor mais escura quando selecionado */
-        }
+    .apply-filter.selected, .remove-filter.selected {
+        background-color: #0056b3; /* Cor mais escura quando selecionado */
+    }
 
     .ocorrencias-list {
         display: flex;
@@ -495,7 +494,7 @@
         max-width: 600px;
         width: 100%;
         color: black;
-        margin: 5;
+        margin: 5px;
     }
 
     .carrossel-ocorrencias {
@@ -684,15 +683,14 @@
     {
         base.OnInitialized();
 
-        selectedYear = DateTime.Now.Year;
-        selectedMonth = DateTime.Now.Month;
+        // Valores padrão para o filtro
+        selectedYear = 0; // Significa "nenhum ano selecionado"
+        selectedMonth = 0; // Significa "nenhum mês selecionado"
+        selectedDay = 0; // Significa "nenhum dia selecionado"
 
-        availableYears = DateService.GetAvailableYears(2024); // Exemplo de ano inicial
-        availableDays = DateService.GetAvailableDays(selectedMonth, selectedYear);
-
-        // Preenche a lista de meses com MonthItem
-        availableMonths = DateService.GetMonths();
-        selectedDay = DateTime.Now.Day;
+        availableYears = DateService.GetAvailableYears(2024); // Anos disponíveis para o filtro
+        availableDays = DateService.GetAvailableDays(DateTime.Now.Month, DateTime.Now.Year); // Dias disponíveis para o mês atual
+        availableMonths = DateService.GetMonths(); // Meses disponíveis
 
         isLoading = true;
         PageTitleService.SetPageTitle("LISTAR OCORRÊNCIAS");
@@ -704,13 +702,26 @@
         StateHasChanged();
     }
 
-    // Método que aplica os filtros
     private void ApplyFilters()
     {
-        // Começa com todas as ocorrências disponíveis
+        // Verifica se o usuário selecionou o dia, mas não o mês e o ano
+        if (selectedDay > 0 && (selectedMonth == 0 || selectedYear == 0))
+        {
+            NotificationService.Notify(NotificationSeverity.Warning, "Selecione o Mês e o Ano", "Para filtrar por dia, você precisa selecionar o mês e o ano.");
+            return; // Impede aplicar o filtro se o dia foi selecionado sem o mês/ano
+        }
+
+        // Verifica se o usuário selecionou o mês, mas não o ano
+        if (selectedMonth > 0 && selectedYear == 0)
+        {
+            NotificationService.Notify(NotificationSeverity.Warning, "Selecione o Ano", "Para filtrar por mês, você precisa selecionar o ano.");
+            return; // Impede aplicar o filtro se o mês foi selecionado sem o ano
+        }
+
+        // Agora pode aplicar os filtros, pois as verificações passaram
         var filteredOcorrencias = todasOcorrencias ?? new List<OcorrenciaListarResponse>();
 
-        // Aplica o filtro de status baseado no isFilteringResolved
+        // Filtro de status
         if (isFilteringResolved)
         {
             filteredOcorrencias = filteredOcorrencias.Where(o => o.Status.ToString() == "Concluido").ToList();
@@ -720,23 +731,56 @@
             filteredOcorrencias = filteredOcorrencias.Where(o => o.Status.ToString() != "Concluido").ToList();
         }
 
-        // Aplica o filtro de data se valores válidos forem selecionados
-        filteredOcorrencias = filteredOcorrencias.Where(o =>
-            o.Data.Day == selectedDay &&
-            o.Data.Month == selectedMonth &&
-            o.Data.Year == selectedYear).ToList();
+        // Filtro por ano (não depende de nada)
+        if (selectedYear > 0)
+        {
+            filteredOcorrencias = filteredOcorrencias.Where(o =>
+                (isFilteringResolved ? o.DataResolucao.Year == selectedYear : o.Data.Year == selectedYear)
+            ).ToList();
+        }
+
+        // Filtro por mês (depende do ano)
+        if (selectedMonth > 0 && selectedYear > 0)
+        {
+            filteredOcorrencias = filteredOcorrencias.Where(o =>
+                (isFilteringResolved ? o.DataResolucao.Month == selectedMonth : o.Data.Month == selectedMonth)
+            ).ToList();
+        }
+
+        // Filtro por dia (depende do mês e do ano)
+        if (selectedDay > 0 && selectedMonth > 0 && selectedYear > 0)
+        {
+            filteredOcorrencias = filteredOcorrencias.Where(o =>
+                (isFilteringResolved ? o.DataResolucao.Day == selectedDay : o.Data.Day == selectedDay)
+            ).ToList();
+        }
+
+        // Verifica se não há ocorrências após o filtro
+        if (filteredOcorrencias.Count == 0)
+        {
+            msgRelatorio = new MarkupString("<b>Não foram encontradas ocorrências para esse filtro.</b>");
+            msgRelatorioClass = "alert alert-info"; // Ou outro estilo para informar o usuário
+
+            // Exibe notificação para o usuário
+            NotificationService.Notify(NotificationSeverity.Info, "Nenhuma ocorrência encontrada", "Tente ajustar seus filtros.");
+        }
+        else
+        {
+            msgRelatorio = new MarkupString(""); // Limpa a mensagem de erro, se houver
+            msgRelatorioClass = "";
+        }
 
         // Atualiza a lista de ocorrências filtradas
         ocorrencias = filteredOcorrencias;
 
-        // Atualiza as ocorrências filtradas e aplica paginação
+        // Aplica paginação
         totalItems = filteredOcorrencias.Count;
         totalPages = totalItems > 0 ? (int)Math.Ceiling(totalItems / (double)itemsPerPage) : 0;
 
         currentPage = 1; // Sempre começa na primeira página após aplicar os filtros
         ocorrencias = filteredOcorrencias.Skip((currentPage - 1) * itemsPerPage)
-                                          .Take(itemsPerPage)
-                                          .ToList();
+                                           .Take(itemsPerPage)
+                                           .ToList();
 
         UpdateButtonFilterDateClasses(true);
 
@@ -747,47 +791,112 @@
 
     public void RemoveFilters()
     {
-        // Restaura a lista de ocorrências para a lista completa
-        ocorrencias = todasOcorrencias?.ToList() ?? new List<OcorrenciaListarResponse>();
-
-        // Reseta os valores selecionados dos filtros
-        selectedDay = DateTime.Now.Day;
-        selectedMonth = DateTime.Now.Month;
-        selectedYear = DateTime.Now.Year;
+        // Limpar apenas os filtros de data (ano, mês, dia)
+        selectedDay = 0; // Nenhum dia selecionado
+        selectedMonth = 0; // Nenhum mês selecionado
+        selectedYear = 0; // Nenhum ano selecionado
 
         // Atualiza os dias disponíveis com base no mês e ano resetados
         UpdateDays();
 
-        UpdateButtonFilterDateClasses(false);
-
+        // Recarrega as ocorrências com base no status atual (resolvidas ou não resolvidas)
         FilterAndPaginateOcorrencias();
 
         // Força a renderização da UI
         StateHasChanged();
     }
 
+    private void UpdateDays()
+    {
+        // Se o ano e o mês não estiverem selecionados (zerados), definimos os dias para o mês atual
+        if (selectedYear == 0 && selectedMonth == 0)
+        {
+            // Pega os dias do mês atual
+            availableDays = DateService.GetAvailableDays(DateTime.Now.Month, DateTime.Now.Year);
+        }
+        else if (selectedYear > 0 && selectedMonth > 0)
+        {
+            // Se o mês e o ano estiverem selecionados, atualiza os dias para esse mês/ano
+            availableDays = DateService.GetAvailableDays(selectedMonth, selectedYear);
+        }
+        else
+        {
+            // Se não houver mês ou ano, limpa a lista de dias
+            availableDays = new List<int>();
+        }
+
+        // Força a renderização da UI para refletir as alterações
+        StateHasChanged();
+    }
 
     private void ToggleFiltro()
     {
         modalFiltro = !modalFiltro; // Alterna o valor de modalFiltro
     }
 
-    private void OnMonthChanged(int month)
+    private void OnDayChanged(int day)
     {
-        selectedMonth = month;
-        UpdateDays();
+        // Verifica se o mês foi selecionado antes de permitir selecionar o dia
+        if (selectedMonth == 0)
+        {
+            NotificationService.Notify(NotificationSeverity.Warning, "Selecione um Mês", "Para selecionar o dia, primeiro escolha o mês.");
+            return; // Impede a seleção do dia se o mês não estiver selecionado
+        }
+
+        // Verifica se o ano foi selecionado antes de permitir selecionar o dia
+        if (selectedYear == 0)
+        {
+            NotificationService.Notify(NotificationSeverity.Warning, "Selecione um Ano", "Para selecionar o dia, primeiro escolha o ano.");
+            return; // Impede a seleção do dia se o ano não estiver selecionado
+        }
+
+        selectedDay = day; // Se tudo estiver correto, seleciona o dia
     }
+
 
     private void OnYearChanged(int year)
     {
         selectedYear = year;
-        UpdateDays();
+
+        if (selectedYear > 0)
+        {
+            // Atualiza os meses e os dias disponíveis quando o ano é selecionado
+            availableMonths = DateService.GetMonths();
+            UpdateDays();  // Atualiza a lista de dias
+        }
+        else
+        {
+            // Resetando o mês e o dia se o ano for desmarcado
+            selectedMonth = 0;
+            selectedDay = 0;
+            availableMonths = new List<MonthItem>();  // Sem meses se o ano não for selecionado
+            availableDays = new List<int>();  // Não há dias disponíveis sem ano
+        }
+
+        StateHasChanged();
     }
 
-    private void UpdateDays()
+    private void OnMonthChanged(int month)
     {
-        availableDays = DateService.GetAvailableDays(selectedMonth, selectedYear);
-        StateHasChanged();
+        selectedMonth = month;
+
+        // Verifica se o mês foi selecionado sem o ano
+        if (selectedMonth > 0 && selectedYear == 0)
+        {
+            NotificationService.Notify(NotificationSeverity.Warning, "Selecione um Ano", "Para selecionar o mês, primeiro escolha o ano.");
+            return; // Impede a seleção do mês se o ano não estiver selecionado
+        }
+
+        // Atualiza os dias se o mês e o ano forem válidos
+        if (selectedMonth > 0 && selectedYear > 0)
+        {
+            UpdateDays(); // Atualiza os dias quando o mês é alterado
+        }
+        else
+        {
+            availableDays = new List<int>(); // Não há dias disponíveis sem mês ou ano
+            StateHasChanged();
+        }
     }
 
 
@@ -867,6 +976,7 @@
         // Garantir que todasOcorrencias não seja null
         var filteredOcorrencias = todasOcorrencias ?? new List<OcorrenciaListarResponse>();
 
+        // Filtragem por status de resolução (se é resolvido ou não)
         if (isFilteringResolved)
         {
             filteredOcorrencias = filteredOcorrencias.Where(o => o.Status.ToString() == "Concluido").ToList();
@@ -876,13 +986,56 @@
             filteredOcorrencias = filteredOcorrencias.Where(o => o.Status.ToString() != "Concluido").ToList();
         }
 
+        // Filtragem por data, caso algum filtro de data tenha sido aplicado
+        if (selectedYear > 0)
+        {
+            filteredOcorrencias = filteredOcorrencias.Where(o => o.Data.Year == selectedYear).ToList();
+        }
+
+        if (selectedMonth > 0 && selectedYear > 0)
+        {
+            filteredOcorrencias = filteredOcorrencias.Where(o => o.Data.Month == selectedMonth).ToList();
+        }
+
+        if (selectedDay > 0 && selectedMonth > 0 && selectedYear > 0)
+        {
+            filteredOcorrencias = filteredOcorrencias.Where(o => o.Data.Day == selectedDay).ToList();
+        }
+
+        // Verifica se não há ocorrências após o filtro
+        if (filteredOcorrencias.Count == 0)
+        {
+            msgRelatorio = new MarkupString("<b>Não foram encontradas ocorrências para esse filtro.</b>");
+            msgRelatorioClass = "alert alert-info"; // Ou outro estilo para informar o usuário
+
+            // Exibe notificação para o usuário
+            NotificationService.Notify(NotificationSeverity.Info, "Nenhuma ocorrência encontrada", "Tente ajustar seus filtros.");
+        }
+        else
+        {
+            msgRelatorio = new MarkupString(""); // Limpa a mensagem de erro, se houver
+            msgRelatorioClass = "";
+        }
+
+        // Atualiza a lista de ocorrências filtradas
+        ocorrencias = filteredOcorrencias;
+
+        // Aplica paginação
         totalItems = filteredOcorrencias.Count;
         totalPages = totalItems > 0 ? (int)Math.Ceiling(totalItems / (double)itemsPerPage) : 0;
 
+        currentPage = 1; // Sempre começa na primeira página após aplicar os filtros
         ocorrencias = filteredOcorrencias.Skip((currentPage - 1) * itemsPerPage)
                                            .Take(itemsPerPage)
                                            .ToList();
+
+        // Atualiza as classes dos botões de filtro
+        UpdateButtonFilterDateClasses(true);
+
+        // Força a renderização da UI
+        StateHasChanged();
     }
+
 
     private void OpenModal(OcorrenciaListarResponse ocorrencia)
     {
@@ -994,7 +1147,7 @@
 
     private void ShowResolved()
     {
-        isFilteringResolved = true; // Atualiza o estado do filtro
+        isFilteringResolved = true; // Atualiza o estado do filtro para "resolvidas"
         FilterAndPaginateOcorrencias(); // Aplica o filtro e a paginação
         UpdateButtonClasses(true);
         StateHasChanged();
@@ -1003,16 +1156,18 @@
     private void ShowUnresolved()
     {
         currentPage = 1;
-        isFilteringResolved = false; // Atualiza o estado do filtro
+        isFilteringResolved = false; // Atualiza o estado do filtro para "não resolvidas"
         FilterAndPaginateOcorrencias(); // Aplica o filtro e a paginação
         UpdateButtonClasses(false);
         StateHasChanged();
     }
 
+
+
     private void UpdateButtonClasses(bool isResolved)
     {
         resolvedButtonClass = isResolved ? "selected" : "";
-        unresolvedButtonClass = isResolved ? "" : "selected"; 
+        unresolvedButtonClass = isResolved ? "" : "selected";
     }
 
     private void UpdateButtonFilterDateClasses(bool isApply)
