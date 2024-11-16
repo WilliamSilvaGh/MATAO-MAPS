@@ -108,7 +108,7 @@ function fetchOcorrencias() {
     var token = localStorage.getItem('access_token');
     console.log("Token obtido para a requisição da API:", token);
 
-    fetch('http://localhost:5033/ocorrencia/listar', {
+    fetch('https://api-matao-maps.tccnapratica.com.br/ocorrencia/listar', {
         method: 'GET',
         headers: { 'Authorization': 'Bearer ' + token }
     })

@@ -22,13 +22,13 @@ namespace MataoMaps.Presentation
             //5033 -> porta http
             //7153 -> porta https e http
 
-            var baseAddress = Device.RuntimePlatform == Device.Android
-                ? "http://10.0.2.2:5033"
-                : "http://localhost:5033";
+            //var baseAddress = Device.RuntimePlatform == Device.Android
+            //    ? "http://10.0.2.2:5033"
+            //    : "http://localhost:5033";
 
             builder.Services.AddScoped(sp => new HttpClient
             {
-                BaseAddress = new Uri(baseAddress)
+                BaseAddress = new Uri("https://api-matao-maps.tccnapratica.com.br/")
             });
 
             builder.Services.AddScoped<DialogService>();

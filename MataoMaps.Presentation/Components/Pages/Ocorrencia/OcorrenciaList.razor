@@ -21,52 +21,55 @@
 
     </div>
 
-    <div class="btn-open-filter">
-        <button @onclick="ToggleFiltro" class="open-filter">
-            <i class="fa-solid fa-filter"></i>
-        </button>
-    </div>
-
-    @if (modalFiltro)
+    @if (UsuarioLogadoService.EhAdmin)
     {
-        <div class="align-date">
-            <div class="d-flex justify-content-center justify-content-sm-end">
-                <div class="container-filter">
-                    <!-- Dia -->
-                    <RadzenDropDown @bind-Value="selectedDay"
-                                    Data="@availableDays"
-                                    Style="width: 100%; max-width: 60px; margin-right: 5px;"
-                                    Placeholder="Selecione o Dia">
-                    </RadzenDropDown>
+        <div class="btn-open-filter">
+            <button @onclick="ToggleFiltro" class="open-filter">
+                <i class="fa-solid fa-filter"></i>
+            </button>
+        </div>
 
-                    <!-- Mês -->
-                    <RadzenDropDown @bind-Value="selectedMonth"
-                                    Data="@availableMonths"
-                                    TextProperty="MonthName"
-                                    ValueProperty="MonthNumber"
-                                    Style="width: 100%; max-width: 110px; margin-right: 5px;"
-                                    Placeholder="Selecione o Mês">
-                    </RadzenDropDown>
+        @if (modalFiltro)
+        {
+            <div class="align-date">
+                <div class="d-flex justify-content-center justify-content-sm-end">
+                    <div class="container-filter">
+                        <!-- Dia -->
+                        <RadzenDropDown @bind-Value="selectedDay"
+                                        Data="@availableDays"
+                                        Style="width: 100%; max-width: 60px; margin-right: 5px;"
+                                        Placeholder="Selecione o Dia">
+                        </RadzenDropDown>
 
-                    <!-- Ano -->
-                    <RadzenDropDown @bind-Value="selectedYear"
-                                    Data="@availableYears"
-                                    Style="width: 100%; max-width: 90px;"
-                                    Placeholder="Selecione o Ano">
-                    </RadzenDropDown>
+                        <!-- Mês -->
+                        <RadzenDropDown @bind-Value="selectedMonth"
+                                        Data="@availableMonths"
+                                        TextProperty="MonthName"
+                                        ValueProperty="MonthNumber"
+                                        Style="width: 100%; max-width: 110px; margin-right: 5px;"
+                                        Placeholder="Selecione o Mês">
+                        </RadzenDropDown>
 
-                    <!-- Botão para aplicar o filtro -->
-                    <div class="btn-filter">
-                        <button @onclick="RemoveFilters" class="remove-filter @removeButtonClass" style="margin-right: 10px;">
-                            <i class="fa-solid fa-filter-circle-xmark"></i>
-                        </button>
-                        <button @onclick="ApplyFilters" class="apply-filter @applyButtonClass">
-                            <i class="fa-solid fa-filter"></i>
-                        </button>
+                        <!-- Ano -->
+                        <RadzenDropDown @bind-Value="selectedYear"
+                                        Data="@availableYears"
+                                        Style="width: 100%; max-width: 90px;"
+                                        Placeholder="Selecione o Ano">
+                        </RadzenDropDown>
+
+                        <!-- Botão para aplicar o filtro -->
+                        <div class="btn-filter">
+                            <button @onclick="RemoveFilters" class="remove-filter @removeButtonClass" style="margin-right: 10px;">
+                                <i class="fa-solid fa-filter-circle-xmark"></i>
+                            </button>
+                            <button @onclick="ApplyFilters" class="apply-filter @applyButtonClass">
+                                <i class="fa-solid fa-filter"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        }
     }
 
     @if (isRelatorioModalOpen)
@@ -1002,20 +1005,20 @@
             filteredOcorrencias = filteredOcorrencias.Where(o => o.Data.Day == selectedDay).ToList();
         }
 
-        // Verifica se não há ocorrências após o filtro
-        if (filteredOcorrencias.Count == 0)
-        {
-            msgRelatorio = new MarkupString("<b>Não foram encontradas ocorrências para esse filtro.</b>");
-            msgRelatorioClass = "alert alert-info"; // Ou outro estilo para informar o usuário
+        // // Verifica se não há ocorrências após o filtro
+        // if (filteredOcorrencias.Count == 0)
+        // {
+        //     msgRelatorio = new MarkupString("<b>Não foram encontradas ocorrências para esse filtro.</b>");
+        //     msgRelatorioClass = "alert alert-info"; // Ou outro estilo para informar o usuário
 
-            // Exibe notificação para o usuário
-            NotificationService.Notify(NotificationSeverity.Info, "Nenhuma ocorrência encontrada", "Tente ajustar seus filtros.");
-        }
-        else
-        {
-            msgRelatorio = new MarkupString(""); // Limpa a mensagem de erro, se houver
-            msgRelatorioClass = "";
-        }
+        //     // Exibe notificação para o usuário
+        //     NotificationService.Notify(NotificationSeverity.Info, "Nenhuma ocorrência encontrada", "Tente ajustar seus filtros.");
+        // }
+        // else
+        // {
+        //     msgRelatorio = new MarkupString(""); // Limpa a mensagem de erro, se houver
+        //     msgRelatorioClass = "";
+        // }
 
         // Atualiza a lista de ocorrências filtradas
         ocorrencias = filteredOcorrencias;
